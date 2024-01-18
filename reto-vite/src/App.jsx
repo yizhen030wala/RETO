@@ -8,7 +8,8 @@ function App() {
     <>
 
       <p className="read-the-docs">
-        Heyyyyrrrrrrr
+        this is text
+        
       </p>
 
     </>
