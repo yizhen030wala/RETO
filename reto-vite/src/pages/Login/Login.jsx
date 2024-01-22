@@ -1,5 +1,6 @@
 // import { useState } from 'react'
-import './dist/Login.css'
+import './CSS/Login.css'
+import Logo from '../../assets/img/Teng.png'
 import Gooogle from '../../assets/img/google.svg'
 
 function App() {
@@ -10,8 +11,12 @@ function App() {
 
             <main>
                 <div className="box">
-                    <button className="login"> <img src={Gooogle} alt="" />Google 登入</button>
+                    <figure className='imgBox' ><img src={Logo} alt="logo" className='logo' /></figure>
+                    
+                    <a href="#"><button className="login"> <img src={Gooogle} alt="google" />Google 登入</button></a>
+                    
                     <p>註冊/登入以繼續</p>
+                    <p className="agree">註冊即同意<a>隱私權政策</a>和<a>使用者條款</a></p>
                 </div>
             </main>
 

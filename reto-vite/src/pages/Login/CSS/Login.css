@@ -1,0 +1,66 @@
+@charset "UTF-8";
+@import url("https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@200;300;400;500;600;700;800;900&display=swap");
+* {
+  margin: 0;
+  font-family: "Noto Sans TC", 微軟正黑體;
+  color: #333;
+}
+
+.box {
+  height: 90vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.box a {
+  color: #D9D9D9;
+  text-decoration: none;
+}
+.box .imgBox {
+  text-align: right;
+  min-width: 235px;
+  padding: 0;
+  margin: 0;
+}
+.box .imgBox .logo {
+  width: 100px;
+  margin: -4px;
+}
+.box .login {
+  min-width: 235px;
+  font-size: 1rem;
+  display: flex;
+  padding: 1.3rem 3.5rem;
+  justify-content: center;
+  align-items: center;
+  gap: 0.8rem;
+  border-radius: 1.5rem;
+  background-color: #F5F5F5;
+  border: none;
+  cursor: pointer;
+  transition: 0.3s;
+}
+.box .login img {
+  width: 20px;
+  height: 20px;
+}
+.box .login:hover {
+  background-color: #D9D9D9;
+}
+.box p {
+  padding: 1rem;
+}
+.box .agree {
+  font-size: 0.8rem;
+  margin-top: 0;
+  color: #D9D9D9;
+}
+.box .agree a {
+  text-decoration-line: underline;
+  color: #D9D9D9;
+  cursor: pointer;
+}
+.box .agree a:hover {
+  color: #333;
+}

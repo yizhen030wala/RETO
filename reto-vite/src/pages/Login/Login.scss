@@ -1,37 +1,63 @@
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@200;300;400;500;600;700;800;900&display=swap');
+
 $color_gray2: #D9D9D9;
 $color_gray3: #F5F5F5;
 
-@mixin size($w,$h){
-    width: $w;
-    height: $h;
+@mixin size($w, $h) {
+  width: $w;
+  height: $h;
 }
 
-@mixin icon_20px{
-   @include size(20px, 20px);
+@mixin icon_20px {
+  @include size(20px, 20px);
 }
- 
-@mixin center{
+
+@mixin center {
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
 }
+
 // ===============================================
 
-*{
+* {
   margin: 0;
-  font-family:'Noto Sans TC',微軟正黑體;
+  font-family: 'Noto Sans TC', 微軟正黑體;
+  color: #333;
 }
 
-.box{
+// ===============================================
+
+.box {
   height: 90vh;
-//   border: 1px solid red;
+  // border: 1px solid red;
   @include center;
-  
-  .login{
-    img{
+
+  a {
+    color: $color_gray2;
+    text-decoration: none;
+  }
+
+  .imgBox {
+    // border: 1px solid red;
+    text-align: right;
+    min-width: 235px;
+    padding: 0;
+    margin: 0;
+
+    .logo {
+      width: 100px;
+      margin: -4px;
+    }
+  }
+
+
+  .login {
+    img {
       @include icon_20px;
     }
+
     min-width: 235px;
     font-size: 1rem;
     display: flex;
@@ -42,16 +68,36 @@ $color_gray3: #F5F5F5;
     border-radius: 1.5rem;
     background-color:$color_gray3;
     border: none;
+    cursor: pointer;
     transition: 0.3s;
-    
-    &:hover{
-      background-color:$color_gray2;
-      
+
+    &:hover {
+      background-color: $color_gray2;
+
     }
   }
-  p{
+
+  p {
     padding: 1rem;
-    
+
   }
-  
+
+  .agree {
+    font-size: 0.8rem;
+    margin-top: 0;
+    color: $color_gray2;
+
+    a {
+      text-decoration-line: underline;
+      color: $color_gray2;
+      cursor: pointer;
+
+
+      &:hover {
+        color: #333;
+      }
+    }
+
+  }
+
 }
