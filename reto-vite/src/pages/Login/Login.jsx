@@ -10,7 +10,7 @@ function App() {
         <>
 
             <main>
-                <div className="box">
+                <div className="login-box">
                     <figure className='imgBox' ><img src={Logo} alt="logo" className='logo' /></figure>
                     
                     <a href="#"><button className="login"> <img src={Gooogle} alt="google" />Google 登入</button></a>

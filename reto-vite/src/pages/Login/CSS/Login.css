@@ -6,28 +6,28 @@
   color: #333;
 }
 
-.box {
+.login-box {
   height: 90vh;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
 }
-.box a {
+.login-box a {
   color: #D9D9D9;
   text-decoration: none;
 }
-.box .imgBox {
+.login-box .imgBox {
   text-align: right;
   min-width: 235px;
   padding: 0;
   margin: 0;
 }
-.box .imgBox .logo {
+.login-box .imgBox .logo {
   width: 100px;
   margin: -4px;
 }
-.box .login {
+.login-box .login {
   min-width: 235px;
   font-size: 1rem;
   display: flex;
@@ -41,26 +41,26 @@
   cursor: pointer;
   transition: 0.3s;
 }
-.box .login img {
+.login-box .login img {
   width: 20px;
   height: 20px;
 }
-.box .login:hover {
+.login-box .login:hover {
   background-color: #D9D9D9;
 }
-.box p {
+.login-box p {
   padding: 1rem;
 }
-.box .agree {
+.login-box .agree {
   font-size: 0.8rem;
   margin-top: 0;
   color: #D9D9D9;
 }
-.box .agree a {
+.login-box .agree a {
   text-decoration-line: underline;
   color: #D9D9D9;
   cursor: pointer;
 }
-.box .agree a:hover {
+.login-box .agree a:hover {
   color: #333;
 }

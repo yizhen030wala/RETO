@@ -2,7 +2,8 @@ import './CSS/header.css'
 import Logo from '../../assets/img/RETO logo//logo & text/32px.svg'
 import User from '../../assets/img/Avatar/Mask Group.svg'
 import Menu from '../../assets/img/icon/icon-black/menu.svg'
-
+import UnLogin from '../ShowUnlogin/ShowUnlogin.jsx'
+import Login from '../ShowLogin/Showlogin.jsx'
 
 function Header() {
 
@@ -25,15 +26,21 @@ function Header() {
         </nav>
         {/* 會員登入  */}
         <div className="user">
-          <figure className="user_box">
-            <a href="#">
-              <img src={User} alt="user" />
-            </a>
-          </figure >
+          <div className="hover-trigger">
+            <figure className="user_box">
+              <a href="#">
+                <img src={User} alt="user" />
+              </a>
+            </figure >
 
-          <figure className="menu_box">
-            <a href="" id='menu'><img src={Menu} alt="" /></a>
-          </figure>
+            <figure className="menu_box">
+              <a href="" id='menu'><img src={Menu} alt="" /></a>
+            </figure>
+          </div>
+          <div className="popup-content">
+            <UnLogin/>
+          </div>
+
         </div>
 
       </header>

@@ -3,11 +3,13 @@
 $color_gray2: #D9D9D9;
 $color_gray3: #F5F5F5;
 $color_yellow: #FFDF06;
+$color_black: #333333;
+$border_radius_20px: 20px;
 
 @mixin size($w, $h) {
     width: $w;
     height: $h;
-     
+
 }
 
 @mixin icon_20px {
@@ -20,6 +22,17 @@ $color_yellow: #FFDF06;
     justify-content: center;
     align-items: center;
 }
+@mixin shadow{
+    box-shadow: 0px 3px 3px 0px rgba(0, 0, 0, 0.25);
+  }
+  @mixin itemCenter{
+    display: flex;
+    align-content: center;
+    flex-wrap: wrap;
+    text-align: center;
+  }
+
+// @use "../../assets/scssRule" as *;
 
 // ===================RWD============================
 
@@ -84,6 +97,7 @@ $color_yellow: #FFDF06;
 
         a {
             font-size: 1rem;
+
             &:hover {
                 font-weight: 500;
             }
@@ -94,12 +108,14 @@ $color_yellow: #FFDF06;
         width: 120px;
         display: flex;
         justify-content: flex-end;
+        position: relative;
 
 
         .user_box {
             @include size(32px, 32px);
             border-radius: 100%;
             background-color: $color_yellow;
+            z-index: 0;
 
             img {
                 width: 100%;
@@ -114,10 +130,25 @@ $color_yellow: #FFDF06;
                 width: 100%;
 
             }
-            @media (max-width: 809px){
+
+            @media (max-width: 809px) {
                 display: block;
             }
         }
+
+        .popup-content {
+            display: none;
+            position: absolute;
+            top: 5vh;
+            right: 0;
+            z-index: 1;
+            
+            
+        }
+        .hover-trigger:hover + .popup-content, .popup-content:hover {
+            display: block;
+          }
+          
 
     }
 

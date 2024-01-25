@@ -50,12 +50,14 @@
   width: 120px;
   display: flex;
   justify-content: flex-end;
+  position: relative;
 }
 .header .user .user_box {
   width: 32px;
   height: 32px;
   border-radius: 100%;
   background-color: #FFDF06;
+  z-index: 0;
 }
 .header .user .user_box img {
   width: 100%;
@@ -72,4 +74,14 @@
   .header .user .menu_box {
     display: block;
   }
+}
+.header .user .popup-content {
+  display: none;
+  position: absolute;
+  top: 5vh;
+  right: 0;
+  z-index: 1;
+}
+.header .user .hover-trigger:hover + .popup-content, .header .user .popup-content:hover {
+  display: block;
 }

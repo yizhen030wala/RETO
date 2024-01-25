@@ -11,7 +11,7 @@
   color: #333;
 }
 
-.UnLogin-box {
+.Showlogin-box {
   background-color: white;
   width: 126px;
   box-shadow: 0px 3px 3px 0px rgba(0, 0, 0, 0.25);
@@ -23,7 +23,7 @@
   justify-content: center;
   gap: 16px;
 }
-.UnLogin-box figure {
+.Showlogin-box figure {
   height: 48px;
   width: 48px;
   background-color: #FFDF06;
@@ -31,21 +31,21 @@
   margin-top: 20px;
   margin-bottom: 0px;
 }
-.UnLogin-box figure img {
+.Showlogin-box figure img {
   width: 100%;
 }
-.UnLogin-box p {
+.Showlogin-box p {
   font-size: 1rem;
   margin-top: 0;
   margin-bottom: 20px;
 }
-.UnLogin-box p .icon-log-out {
+.Showlogin-box p .icon-log-out {
   font-weight: 600;
   width: 20px;
   height: 20px;
   margin-right: 5px;
 }
-.UnLogin-box .menu {
+.Showlogin-box .menu {
   margin: 0;
   padding: 1rem;
   padding-top: 0px;
@@ -55,13 +55,13 @@
   gap: 10px;
   align-self: stretch;
 }
-.UnLogin-box .menu li {
+.Showlogin-box .menu li {
   gap: 10px;
   padding: 10px;
   padding-bottom: 0px;
   text-decoration: none;
 }
-.UnLogin-box .menu li:hover {
+.Showlogin-box .menu li:hover {
   font-weight: 600;
   padding-bottom: 0px;
   text-decoration: #3D9D35 wavy underline;

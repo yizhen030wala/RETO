@@ -1,23 +1,26 @@
-@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@200;300;400;500;600;700;800;900&display=swap');
 
-$color_gray2: #D9D9D9;
-$color_gray3: #F5F5F5;
 
-@mixin size($w, $h) {
-  width: $w;
-  height: $h;
-}
+// $color_gray2: #D9D9D9;
+// $color_gray3: #F5F5F5;
 
-@mixin icon_20px {
-  @include size(20px, 20px);
-}
+// @mixin size($w, $h) {
+//   width: $w;
+//   height: $h;
+// }
 
-@mixin center {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-}
+// @mixin icon_20px {
+//   @include size(20px, 20px);
+// }
+
+// @mixin center {
+//   display: flex;
+//   flex-direction: column;
+//   justify-content: center;
+//   align-items: center;
+// }
+
+@use "../../assets/scssRule/rule";
+
 
 // ===============================================
 
@@ -29,7 +32,7 @@ $color_gray3: #F5F5F5;
 
 // ===============================================
 
-.box {
+.login-box {
   height: 90vh;
   // border: 1px solid red;
   @include center;
