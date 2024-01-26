@@ -1,38 +1,7 @@
-@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@200;300;400;500;600;700;800;900&display=swap');
 
-$color_gray2: #D9D9D9;
-$color_gray3: #F5F5F5;
-$color_yellow: #FFDF06;
-$color_black: #333333;
-$border_radius_20px: 20px;
+@import "../../assets/scssRule/rule";
+@import "../../assets/scssRule/all";
 
-@mixin size($w, $h) {
-    width: $w;
-    height: $h;
-
-}
-
-@mixin icon_20px {
-    @include size(20px, 20px);
-}
-
-@mixin center {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-}
-@mixin shadow{
-    box-shadow: 0px 3px 3px 0px rgba(0, 0, 0, 0.25);
-  }
-  @mixin itemCenter{
-    display: flex;
-    align-content: center;
-    flex-wrap: wrap;
-    text-align: center;
-  }
-
-// @use "../../assets/scssRule" as *;
 
 // ===================RWD============================
 

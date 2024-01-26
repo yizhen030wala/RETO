@@ -1,39 +1,11 @@
-@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@200;300;400;500;600;700;800;900&display=swap');
 
-$color_black: #333333;
-$border_radius_20px: 20px;
-$color_green1: #3D9D35;
-$color_yellow: #FFDF06;
+@import "../../assets/scssRule/rule";
+@import "../../assets/scssRule/all";
 
-@mixin shadow{
-  box-shadow: 0px 3px 3px 0px rgba(0, 0, 0, 0.25);
-}
-@mixin itemCenter{
-  display: flex;
-  align-content: center;
-  flex-wrap: wrap;
-  text-align: center;
-}
 
-@mixin size($w,$h){
-  width: $w;
-  height: $h;
-}
-  
-
-// @use "../../assets/scssRule/index";
 // ======================================================
   
-*{
-  font-family: 'Noto Sans TC', 微軟正黑體;
-  ul{
-    list-style: none;
-  }
-  a{
-    text-decoration: none;
-    color: #333;
-  }
-}
+
   
 .UnLogin-box{
   background-color: white;
@@ -59,11 +31,10 @@ $color_yellow: #FFDF06;
     font-size: 1rem;
     margin-top: 0;
     margin-bottom: 20px;
-
-    .icon-log-out{
+  }
+  p.in{
+    &:hover{
       font-weight: 600;
-      @include size(20px, 20px);
-      margin-right:5px;
     }
   }
   .menu{

@@ -1,39 +1,13 @@
-@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@200;300;400;500;600;700;800;900&display=swap');
 
-$color_black: #333333;
-$border_radius_20px: 20px;
-$color_green1: #3D9D35;
-$color_yellow: #FFDF06;
+@import "../../assets/scssRule/rule";
+@import "../../assets/scssRule/all";
 
-$border_radius_10px: 10px;
-
-@mixin shadow {
-    box-shadow: 0px 2px 8px 0px rgba(0, 0, 0, 0.25);
-}
-
-@mixin itemCenter {
-    display: flex;
-    align-content: center;
-    flex-wrap: wrap;
-    text-align: center;
-}
-
-@mixin size($w, $h) {
-    width: $w;
-    height: $h;
-}
-
-// ====================================
-* {
-    font-family: 'Noto Sans TC', 微軟正黑體;
-    color: $color_black;
-}
 
 // ====================================
 .textToast-box {
     margin: 10px; //用來看設計
     background-color: white;
-    width: 158px;
+    width: 142px;
     height: 40px;
     @include shadow;
     border-radius: $border_radius_10px;
@@ -43,7 +17,7 @@ $border_radius_10px: 10px;
     figure {
         margin: auto;
         position: relative;
-        background-color: $color_black;
+        background-color: $color_red;
         @include size(20px, 20px);
         align-items: center;
         border-radius: 100%;
@@ -51,9 +25,9 @@ $border_radius_10px: 10px;
 
         img {
             position: absolute;
-            top: 4.5px;
-            left: 2.5px;
-            width: 80%;
+            // top: 4.5px;
+            // left: 2.5px;
+            width: 100%;
         }
     }
     p{

@@ -12,33 +12,25 @@
   color: #333333;
 }
 
-.addToast-box {
+.deleteToast-box {
   margin: 10px;
   background-color: white;
-  width: 158px;
+  width: 80px;
   height: 40px;
   box-shadow: 0px 3px 3px 0px rgba(0, 0, 0, 0.25);
   border-radius: 10px;
-  display: inline-flex;
-  padding: 0px 10px;
+  display: flex;
+  padding: 0 10px;
 }
-.addToast-box figure {
-  margin: auto;
-  position: relative;
-  background-color: #333333;
-  width: 20px;
-  height: 20px;
-  align-items: center;
-  border-radius: 100%;
-  margin-right: 0;
-}
-.addToast-box figure img {
-  position: absolute;
-  top: 4.5px;
-  left: 2.5px;
-  width: 80%;
-}
-.addToast-box p {
+.deleteToast-box p {
   font-size: 0.9rem;
   margin: auto;
+  display: flex;
+  gap: 8px;
+}
+.deleteToast-box p span {
+  font-size: 20px;
+}
+.deleteToast-box:hover {
+  background-color: #F5F5F5;
 }

@@ -15,7 +15,7 @@ const Showlogin = () => {
                 <li><a href="#">我的景點</a></li>
                 <li><a href="#">行程表</a></li>
             </ul>
-            <p><span className="icon-log-out"></span>登出</p>
+            <p className='in'><span className="icon-log-out"></span>登出</p>
         </div>
     )
 }

@@ -1,3 +1,5 @@
+import React from 'react'
+import { Link } from 'react-router-dom'; //物件內用到連結跳轉就需要放
 import './CSS/header.css'
 import Logo from '../../assets/img/RETO logo//logo & text/32px.svg'
 import User from '../../assets/img/Avatar/Mask Group.svg'
@@ -12,9 +14,9 @@ function Header() {
       <header className="header">
         {/* LOGO  */}
         <div className='logo'>
-          <a href="./index.html">
+          <Link to="/">
             <img src={Logo} alt="RETO logo" />
-          </a>
+          </Link>
         </div>
         {/* 置頂導覽按鈕  */}
         <nav>

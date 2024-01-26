@@ -1,9 +1,10 @@
 import React from 'react'
+import { Link } from 'react-router-dom';
 import './CSS/ShowUnlogin.css'
 import User from '../../assets/img/Avatar/Mask Group.svg'
-// import Icon from '../../assets/fonts/iconfont/icon'
-
 import '../../assets/fonts/iconfont/style.css'
+
+// import '../../assets/scssRule'
 
 
 
@@ -17,9 +18,12 @@ const ShowUnlogin = () => {
                 <li><a href="#">我的景點</a></li>
                 <li><a href="#">行程表</a></li>
             </ul>
-            <p>
-                {/* <span className="icon-log-out"></span> */}
-                登入/註冊</p>
+            
+            <Link to="/login">
+                <p className="in">登入/註冊</p>
+            </Link>
+            
+
         </div>
     )
 }
