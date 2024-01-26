@@ -1,0 +1,78 @@
+
+@import "../../assets/scssRule/rule";
+@import "../../assets/scssRule/all";
+
+// ===============================================
+
+.login-box {
+  height: 90vh;
+  // border: 1px solid red;
+  @include center;
+
+  a {
+    color: $color_gray2;
+    text-decoration: none;
+  }
+
+  .imgBox {
+    // border: 1px solid red;
+    text-align: right;
+    min-width: 235px;
+    padding: 0;
+    margin: 0;
+
+    .logo {
+      width: 100px;
+      margin: -4px;
+    }
+  }
+
+
+  .login {
+    img {
+      @include icon_20px;
+    }
+
+    min-width: 235px;
+    font-size: 1rem;
+    display: flex;
+    padding: 1.3rem 3.5rem;
+    justify-content: center;
+    align-items: center;
+    gap: 0.8rem;
+    border-radius: 1.5rem;
+    background-color:$color_gray3;
+    border: none;
+    cursor: pointer;
+    transition: 0.3s;
+
+    &:hover {
+      background-color: $color_gray2;
+
+    }
+  }
+
+  p {
+    padding: 1rem;
+
+  }
+
+  .agree {
+    font-size: 0.8rem;
+    margin-top: 0;
+    color: $color_gray2;
+
+    a {
+      text-decoration-line: underline;
+      color: $color_gray2;
+      cursor: pointer;
+
+
+      &:hover {
+        color: #333;
+      }
+    }
+
+  }
+
+}
