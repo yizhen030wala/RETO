@@ -1,15 +1,22 @@
 import React from 'react'
-import { Link } from 'react-router-dom';
+import { Link,Outlet } from 'react-router-dom';
 import Header from '../../components-common/Header/Header'
 
 const index = () => {
   return (
     <div>
       <Header/>
+      <p><Link to="/login">登入頁</Link></p>
+      <br></br>
       <p>here is 首頁</p>
       <Link to="/login">登入頁</Link>
       <br></br>
       <Link to="/test">test demo page</Link>
+      <br></br>
+      <Link to="/MyTrip">我的行程MyTrip</Link>
+      <br></br>
+      <Link to="/Schedule">行程頁</Link>
+      <Outlet />
     </div>
   )
 }

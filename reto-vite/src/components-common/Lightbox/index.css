@@ -1,0 +1,13 @@
+.text-wrap{
+    display: flex;
+    flex-direction: row;
+}
+
+.icon-luggage {
+    color: #FFFFFF;
+    transition: .3s;
+}
+
+.btn-list:hover  .icon-luggage {
+    color: #333333;
+}

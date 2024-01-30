@@ -1,13 +1,16 @@
 import React from 'react'
 import { Link } from 'react-router-dom';
+import './CSS/index.css'
 import AddToast from '../../components-common/addToast/addToast.jsx'
 import RemoveToast from '../../components-common/removeToast/removeToast.jsx'
 import MemberToast from '../../components-common/memberToast/memberToast.jsx'
 import TextToast from '../../components-common/textToast/textToast.jsx'
 import DeleteToast from '../../components-common/deleteToast/deleteToast.jsx'
 import DatePicker from '../../components-common/datePicker/datePicker.jsx'
+import LightboxLine from '../../components-common/LightboxLine'
 
-import './CSS/index.css'
+
+
 
 const index = () => {
   return (

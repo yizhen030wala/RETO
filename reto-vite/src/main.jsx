@@ -8,12 +8,13 @@ import App from './App';
 import Home from './pages/Home/index.jsx'
 import Header from './components-common/Header/Header.jsx'
 import Login from './pages/Login/Login.jsx'
+import { BrowserRouter } from 'react-router-dom';
 
 
 ReactDOM.createRoot(document.getElementById('root')).render(
   <React.StrictMode>
-
-    <App/>
-
+    <BrowserRouter>
+      <App />
+    </BrowserRouter>
   </React.StrictMode>,
 )
