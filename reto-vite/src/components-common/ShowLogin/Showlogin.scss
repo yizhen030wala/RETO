@@ -66,6 +66,7 @@
     align-items: center;
     gap: 10px;
     align-self: stretch;
+    display: none;
 
     li {
       gap: 10px;
@@ -81,7 +82,9 @@
       }
 
     }
-
+    @media (max-width: 809px) {
+      display: block;
+    }
   }
 
 }
