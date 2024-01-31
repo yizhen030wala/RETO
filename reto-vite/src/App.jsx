@@ -6,6 +6,7 @@ import Login from './pages/Login';
 import Test from './pages/Test'
 import MyTrip from './pages/MyTrip'
 import Schedule from './pages/Schedule'
+import Search from './pages/Search/Search';
 
 const App = () => {
   return (
@@ -16,7 +17,7 @@ const App = () => {
         <Route path="/Test" element={<Test />} />
         <Route path="/MyTrip" element={<MyTrip />} />
         <Route path="/Schedule" element={<Schedule />} />
-
+        <Route path="/Search" element={<Search />} />
       </Routes>
     </>
   );
