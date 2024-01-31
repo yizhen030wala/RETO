@@ -25,6 +25,7 @@ const index = () => {
       <Link to="/">登入頁</Link>
       <p className="test">scss變數導入測試</p>
       <p>各位身體健康</p>
+      <span>好</span>
     </div>
   )
 }
