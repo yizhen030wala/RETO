@@ -56,15 +56,6 @@ h3 {
     /* 24px */
 }
 
-p {
-    color: var(--white, #fff);
-    font-family: Noto Sans TC;
-    font-size: 16px;
-    font-style: normal;
-    font-weight: 500;
-    line-height: 150%;
-}
-
 .time,
 .adviseTime {
     color: #000000;
