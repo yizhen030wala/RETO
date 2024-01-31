@@ -10,13 +10,13 @@
     "preview": "vite preview"
   },
   "dependencies": {
+    "@robertforrest/react18-masonry-component": "^6.3.7",
     "consola": "^3.2.3",
     "date-fns": "^3.3.1",
     "icomoon-react": "^3.0.0",
     "react": "^18.2.0",
     "react-datepicker": "^5.0.0",
     "react-dom": "^18.2.0",
-    "react-masonry-component": "^6.3.0",
     "react-router-dom": "^6.21.3"
   },
   "devDependencies": {
