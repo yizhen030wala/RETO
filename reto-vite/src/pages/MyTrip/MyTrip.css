@@ -12,7 +12,6 @@
     color: #333333;
 }
 
-/* -------------------字體管理----------------- */
 
 /* 我的旅行 */
 .title-name {
@@ -215,39 +214,6 @@
     text-decoration: none;
 }
 
-.btn_del {
-    position: absolute;
-    top: 15px;
-    right: 15px;
-    z-index: 1;
-
-    width: 20px;
-    height: 20px;
-
-    border-radius: 10px;
-    background-color: #f5f5f5;
-
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-
-.btn_del img {
-    width: 12px;
-    height: 12px;
-    flex-shrink: 0;
-    object-fit: cover;
-    object-position: center;
-}
-
-.btn_del span {
-    /* width: 12px; */
-    /* height: 12px; */
-    font-size: 12px;
-    flex-shrink: 0;
-    object-fit: cover;
-    object-position: center;
-}
 
 /* 行程頁面圖 */
 

@@ -182,25 +182,35 @@
 
 
 import React from 'react';
+import { Link } from 'react-router-dom';
 import "./MyTripCard.css";
+import ButtonDel from "../Button/ButtonDel/ButtonDel.jsx"
 
 const MyTripCard = ({ imageUrl, name, days }) => {
     return (
         <div className="schedule_card">
-            <a href="#" className="btn_del">
-                <span className="icon-more_horiz"></span>
-            </a>
 
-            <div className="schedule_cover">
-                <img src={imageUrl} alt="spot" />
+            {/* 右上角刪除按鈕 */}
+            <div className="ctrl_ButtonDel">
+                <ButtonDel />
             </div>
 
-            <div className="schedule_text">
-                <a href="#" className="schedule_name">
-                    {name}
-                </a>
-                <p className="schedule_day">{days}</p>
-            </div>
+
+            {/* 使用絕對路徑而不是相對路徑 */}
+            <Link to="/schedule">
+                {/* 圖片 */}
+                <div className="schedule_cover">
+                    <img src={imageUrl} alt="spot" />
+                </div>
+
+                {/* 名稱 */}
+                <div className="schedule_text">
+                    <div className="schedule_name">
+                        {name}
+                    </div>
+                    <p className="schedule_day">{days}</p>
+                </div>
+            </Link>
         </div>
     );
 };

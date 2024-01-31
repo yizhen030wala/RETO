@@ -177,7 +177,9 @@ h3 {
 }
 
 .breadCrumb li {
-    padding: 0 20px;
+    padding: 0 8px;
+    display: flex;
+    align-items: center;
 }
 
 .breadCrumb a {
@@ -201,12 +203,6 @@ h3 {
 .breadCrumb li:first-child {
     padding-left: 0;
     /* 设置第一个 li 的左边距为 0 */
-}
-
-.breadCrumb li + li:before {
-    content: "›";
-    color: #828282;
-    margin-right: 20px;
 }
 
 /* 行程表頭 */

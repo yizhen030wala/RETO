@@ -1,7 +1,10 @@
 import React from 'react'
-import { Link, Outlet } from 'react-router-dom';
+// import { Link, Outlet } from 'react-router-dom';
 import "./Schedule.css"
 import Lightbox from '../../components-common/Lightbox/index'
+import gorightImage from '../../assets/img/icon/icon-go/goright.svg';
+import goleftImage from '../../assets/img/icon/icon-go/goleft.svg';
+
 
 const Schedule = () => {
     return (
@@ -11,7 +14,9 @@ const Schedule = () => {
                 <div className="wrap">
                     <ul className="breadCrumb">
                         <li><a href="#">首頁</a></li>
+                        <li><img src={gorightImage} alt="" /></li>
                         <li><a href="#">行程表</a></li>
+                        <li><img src={gorightImage} alt="" /></li>
                         <li><a href="#">旅藤台南行</a></li>
                     </ul>
                 </div>
@@ -57,7 +62,7 @@ const Schedule = () => {
                         <div className='LB-container'>
                             <Lightbox />
                         </div>
-                        
+
                         <a><span className="set_icon icon-map "></span></a>
                     </div>
                 </div>
@@ -65,6 +70,7 @@ const Schedule = () => {
                 {/* 行程天數列 */}
                 <div className="date">
                     <div className='btn-day-control'>
+                        <img src={goleftImage} alt="" />
                     </div>
                     <div className="btn_day-wrap">
                         <div className="btn_day">
@@ -81,7 +87,7 @@ const Schedule = () => {
                         </div>
                     </div>
                     <div className='btn-day-control'>
-
+                        <img src={gorightImage} alt="" />
                     </div>
                     {/* 以此類推... */}
                 </div>
@@ -417,7 +423,6 @@ const Schedule = () => {
                     </div>
                 </div>
             </main >
-            <Outlet />
         </>
     )
 }

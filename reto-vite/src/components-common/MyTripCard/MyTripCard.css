@@ -23,17 +23,11 @@
     overflow: hidden;
 }
 
-.btn_del {
+.ctrl_ButtonDel {
     position: absolute;
-    top: 15px;
-    right: 15px;
+    top: 0px;
+    right: 0px;
     z-index: 1;
-
-    width: 20px;
-    height: 20px;
-
-    border-radius: 10px;
-    background-color: #f5f5f5;
 
     display: flex;
     justify-content: center;

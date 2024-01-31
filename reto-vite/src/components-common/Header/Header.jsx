@@ -23,7 +23,7 @@ function Header() {
           <ul className="nav_btn">
             <li><a href="#">開始探索</a></li>
             <li><a href="#">我的景點</a></li>
-            <li><a href="#">行程表</a></li>
+            <li><Link to="/mytrip"> 行程表</Link></li>
           </ul>
         </nav>
         {/* 會員登入  */}

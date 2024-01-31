@@ -8,6 +8,7 @@
   height: 90vh;
   // border: 1px solid red;
   @include center;
+  z-index: 999;
 
   a {
     color: $color_gray2;

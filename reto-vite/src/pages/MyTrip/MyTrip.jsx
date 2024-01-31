@@ -1,4 +1,5 @@
 import React from 'react'
+// import { Link } from 'react-router-dom';
 import MyTripCard from '../../components-common/MyTripCard/MyTripCard.jsx';
 import ButtonChk from '../../components-common/Button/ButtonChk/ButtonChk.jsx';
 import "./MyTrip.css";
@@ -26,12 +27,23 @@ const MyTrip = () => {
 
                     <div className="schedule_contain">
                         {/* 第一個行程集卡片 */}
+                        
+                            <MyTripCard
+                                imageUrl="https://images.unsplash.com/photo-1583889659384-64d9df2347ba?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+                                name="台北吃到飽"
+                                days="3天2夜"
+                            // onNameClick={handleNameClick}
+                            >
+                            </MyTripCard>
+                        
+
                         <MyTripCard
                             imageUrl="https://images.unsplash.com/photo-1583889659384-64d9df2347ba?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
                             name="台北吃到飽"
                             days="3天2夜"
-                        // onNameClick={handleNameClick}
-                        />
+                        >
+                        </MyTripCard>
+
 
                         {/* 第二個行程集卡片 */}
                         <MyTripCard
@@ -71,7 +83,7 @@ const MyTrip = () => {
 
                     </div>
                 </div>
-            </main>
+            </main >
         </>
     )
 }
