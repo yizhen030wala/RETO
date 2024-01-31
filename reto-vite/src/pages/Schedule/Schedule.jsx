@@ -411,7 +411,7 @@ const Schedule = () => {
 
                         {/* 添加行程表按鈕 */}
                         <div className='btn-add-control'>
-                            <span className='icon-add'></span>
+                            <span className='icon-add icon-add-color'></span>
                         </div>
 
                     </div>

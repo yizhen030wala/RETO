@@ -1,11 +1,12 @@
 import React from 'react'
-import Schedule from './Schedule'
 import Header from '../../components-common/Header/Header'
+import { Outlet } from 'react-router-dom'
 
 const index = () => {
     return (
         <>
-            <Schedule />
+            <Header />
+            <Outlet />
         </>
     )
 }

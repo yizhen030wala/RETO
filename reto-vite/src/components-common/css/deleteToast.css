@@ -21,16 +21,19 @@
   border-radius: 10px;
   display: flex;
   padding: 0 10px;
+  cursor: pointer;
 }
 .deleteToast-box p {
   font-size: 0.9rem;
   margin: auto;
   display: flex;
   gap: 8px;
-}
-.deleteToast-box p span {
-  font-size: 20px;
+  align-items: center span;
+  align-items-font-size: 20px;
 }
 .deleteToast-box:hover {
   background-color: #F5F5F5;
+}
+.deleteToast-box:hover span {
+  color: #F5F5F5;
 }/*# sourceMappingURL=deleteToast.css.map */

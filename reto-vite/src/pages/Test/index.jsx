@@ -7,7 +7,7 @@ import MemberToast from '../../components-common/memberToast/memberToast.jsx'
 import TextToast from '../../components-common/textToast/textToast.jsx'
 import DeleteToast from '../../components-common/deleteToast/deleteToast.jsx'
 import DatePicker from '../../components-common/datePicker/datePicker.jsx'
-import LightboxLine from '../../components-common/LightboxLine'
+import ButtonDel from '../../components-common/Button/ButtonDel/ButtonDel.jsx'
 
 
 
@@ -15,6 +15,7 @@ import LightboxLine from '../../components-common/LightboxLine'
 const index = () => {
   return (
     <div>
+      <ButtonDel/>
       <AddToast/>
       <DeleteToast/>
       <MemberToast/>
