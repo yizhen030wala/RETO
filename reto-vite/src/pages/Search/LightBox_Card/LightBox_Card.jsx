@@ -72,7 +72,7 @@ const LightBox_Card = ({ image, onClose }) => {
             </div>
             {/* 營業資訊 */}
             <div className="info_business">
-              <h6 className="time_stay">停留時間約 1 小時</h6>
+              <h6>停留時間約 1 小時</h6>
               {/* 營業時間 */}
               <p>星期一、07:00-21:30</p>
               <p>星期二、07:00-21:30</p>

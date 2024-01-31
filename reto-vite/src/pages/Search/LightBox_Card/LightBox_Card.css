@@ -391,11 +391,11 @@ body {
     height: 100%;
 }
 
-.time_stay {
+.info_business h6 {
     width: 100%;
 
     font-family: Noto Sans TC, sans-serif;
-    font-size: 14px;
+    font-size: 16px;
     font-style: normal;
     font-weight: 400;
     line-height: 160%;
@@ -405,6 +405,11 @@ body {
 .info_business p {
     width: 100%;
     margin-bottom: 10px;
+    
+    font-family: Noto Sans TC, sans-serif;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 400;
     line-height: 160%;
 }
 
