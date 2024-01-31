@@ -1,0 +1,11 @@
+@import "../../assets/scssRule/rule";
+@import "../../assets/scssRule/all";
+
+.test {
+    color: $color_red;
+}
+
+.Lightbox-wrapped {
+    margin: 0;
+    padding: 0;
+}

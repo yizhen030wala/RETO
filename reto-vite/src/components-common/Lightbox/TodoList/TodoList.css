@@ -1,0 +1,46 @@
+@import url("https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@100;300;400;500;700;900&display=swap");
+
+.check-wrap {
+  margin-bottom: 16px;
+
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  flex-wrap: wrap;
+  justify-content: flex-start;
+  align-items: flex-start;
+
+  text-align: center;
+  font-family: "Noto Sans TC";
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 150%;
+}
+
+label {
+  padding: 0;
+  cursor: pointer;
+  gap: 8px;
+}
+input[type="checkbox"] {
+  display: none;
+}
+input[type="checkbox"] + span {
+  display: inline-block;
+  padding-left: 26px;
+  line-height: 20px;
+  background: url(./Box.png) no-repeat left top;
+  user-select: none;
+}
+input[type="checkbox"]:checked + span {
+  background: url(./check.png) no-repeat left top;
+}
+
+input[type="checkbox"]:hover + span {
+  background: url(./Box-1.png) no-repeat left top;
+}
+
+input[type="checkbox"]:checked:hover + span {
+  background: url(./check.png) no-repeat left top;
+}
