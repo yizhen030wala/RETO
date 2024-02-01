@@ -1,11 +1,14 @@
 import React from 'react';
 import '../CSS/Search.css';
+import './LoginBtn.scss';
 import NavBar from '../NavBar/NavBar';
 import Recommends from '../Recommends/Recommends';
 import magnifier from '../../../assets/img_hsc/search_bar/magnifier.svg';
 import login from '../../../assets/img_hsc/login/login-yellow.svg';
 import filter from '../../../assets/img_hsc/search_bar/filter.svg';
 import logoGreen from '../../../assets/img_hsc/logo/logo_green.svg';
+import LoginBtn from './LoginBtn';
+import { Link } from 'react-router-dom'; //物件內用到連結跳轉就需要放
 
 const HeaderSearch = () => {
   return (
@@ -14,17 +17,20 @@ const HeaderSearch = () => {
         {/* LOGO */}
         <h1 className="logo_search">
           <a href="./index.html">
-            <img src={logoGreen} alt="" />
+          <Link to="/">
+            <img src={logoGreen} alt="RETO logo" />
+          </Link>
           </a>
         </h1>
         {/* 置頂切頁按鈕 */}
         <NavBar />
         {/* 會員登入 */}
-        <div className="login_search">
+        <LoginBtn />
+        {/* <div className="login_search">
           <a href="#">
             <img src={login} alt="" />
           </a>
-        </div>
+        </div> */}
       </div>
       {/* 搜尋列 */}
       <div className="search">
