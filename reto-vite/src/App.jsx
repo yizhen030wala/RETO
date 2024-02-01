@@ -7,6 +7,7 @@ import Test from './pages/Test'
 import MyTrip from './pages/MyTrip'
 import Schedule from './pages/Schedule'
 import Reto from './pages/Reto'
+import MyMap from './pages/MyMap'
 
 const App = () => {
   return (
@@ -19,7 +20,7 @@ const App = () => {
           <Route path="/test" element={<Test />} />
           <Route path="/mytrip" element={<MyTrip />} />
           <Route path="/schedule" element={<Schedule />} />
-          {/* <Route path="/tripmap" element={<TripMap />} /> */}
+          <Route path="/mymap" element={<MyMap />} />
         </Route>
       </Routes>
     </>
