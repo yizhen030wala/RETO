@@ -80,7 +80,7 @@
 /* -----------中間內容頁-------------- */
 
 .MyTrip-container {
-    margin: 0px 15%;
+    margin: 0px 16%;
     display: flex;
     justify-content: center;
     flex-direction: column;
@@ -139,7 +139,7 @@
 /* ------------------行程卡片區域--------------------- */
 
 .schedule_contain {
-    gap: 31px;
+    gap: 48px;
 
     display: flex;
     flex-wrap: wrap;
