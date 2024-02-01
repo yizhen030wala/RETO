@@ -1,5 +1,5 @@
 import React from 'react';
-import './Search.css';
+import '../CSS/Search.css';
 import arrowLeft from '../../../assets/img_hsc/fixed_btn/arrow-left.svg';
 import arrowRight from '../../../assets/img_hsc/fixed_btn/arrow-right.svg';
 

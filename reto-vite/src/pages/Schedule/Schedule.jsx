@@ -26,7 +26,7 @@ const Schedule = () => {
                         </div>
                         {/* 行程表日期 */}
                         <div>
-                            <h2>2022/2/23-2/26</h2>
+                            <h2 className='time_schedule'>2022/2/23-2/26</h2>
                         </div>
                     </div>
                     {/* 功能按鈕 */}

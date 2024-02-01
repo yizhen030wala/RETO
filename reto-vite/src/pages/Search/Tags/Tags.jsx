@@ -1,5 +1,5 @@
 import React from 'react';
-import './Search.css';
+import '../CSS/Search.css';
 
 //卡片內的標籤元件
 const Tags = () => {

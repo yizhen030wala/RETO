@@ -1,5 +1,5 @@
 import React from 'react';
-import './Search.css';
+import '../CSS/Search.css';
 
 //輪播區塊的標籤元件
 const Tags_carousel = () => {

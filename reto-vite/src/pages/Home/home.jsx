@@ -1,5 +1,6 @@
 import React from 'react';
 import './CSS/home.css';
+import guideimg from '../../assets/img_hsc/index/guideimg.svg';
 import FrontCover from './FrontCover/FrontCover';
 import Subtitle from './Subtitle/Subtitle';
 import About from './About/About';
@@ -24,7 +25,7 @@ function Home() {      //做React元件必定要字首大寫(判斷字首大寫�
                 <BoxFeat />
                 {/* 如何使用旅藤 */}
                 <section id="how">
-                    <h2>如何使用旅藤?</h2>
+                    <h2 className='title_section_home'>如何使用旅藤?</h2>
                     {/* 步驟按鈕 */}
                     <Step />
                     {/* 說明區塊，尚待JS */}
@@ -34,7 +35,7 @@ function Home() {      //做React元件必定要字首大寫(判斷字首大寫�
                                 <h3>使用說明1</h3>
                                 <p>使用說明使用說明使用說明</p>
                             </div>
-                            <figure><img src="./Images/guideimg.svg" alt="使用說明" /></figure>
+                            <figure><img src={guideimg} alt="使用說明" /></figure>
                         </div>
                         {/* <div className="direction">
                             <h3>使用說明2</h3>

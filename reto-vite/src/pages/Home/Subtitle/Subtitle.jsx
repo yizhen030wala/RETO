@@ -8,7 +8,7 @@ const Subtitle = () => {
     return (
         <div className="page_right">
             {/* 會員登入 */}
-            <div className="user"> <a href="#"><img src={login} alt="" /></a></div>
+            <div className="login_home"> <a href="#"><img src={login} alt="" /></a></div>
             {/* 垂直RETO字條 */}
             <div className="bar_col"><img src={reto_bar} alt="" /></div>
         </div>

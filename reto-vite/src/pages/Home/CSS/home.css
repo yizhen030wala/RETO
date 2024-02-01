@@ -253,44 +253,52 @@ section {
 .bar_top_home {
 	display: flex;
 	justify-content: space-between;
+	align-items: center;
 
 	background-color: #81E6FD;
+	height: 82px;
+	padding: 20px;
 }
 
-.logo {
+/* .logo_home {
 	margin: 16px 0;
 	margin-left: 20px;
-}
+} */
 
-.logo img {
+.logo_home img {
 	width: 120px;
 	height: 48px;
 }
 
 /*至頂按鈕*/
-nav ul {
+.nav_home ul {
 	display: flex;
 	justify-content: center;
 	align-items: center;
 
-	width: 274px;
+	/* width: 274px; */
+	/* margin: 25px 0; */
 	height: 32px;
-	margin: 25px 0;
-	padding: 5px 20px;
-	gap: 40px;
+	padding: 5px 30px;
+	gap: 0 2rem;
 
 	background-color: #FFFFFF;
-	border-radius: 50px;
+	border-radius: 20px;
 	background: rgba(236, 236, 236, 0.50);
+	white-space: nowrap;
 }
 
-nav ul li a {
+.nav_home ul li a {
 	font-family: 'Noto Sans TC', sans-serif;
 	font-size: 14px;
 	font-style: normal;
-	font-weight: 600;
-	/*網頁上600看起來跟figma上400一樣*/
+	font-weight: 500;
 	line-height: 160%;
+}
+
+/* 佔位置協助排版的空div */
+.empty_header {
+	width: 0.55%;
 }
 
 .area_attention {
@@ -396,12 +404,12 @@ nav ul li a {
 	display: flex;
 	flex-direction: column;
 	align-items: center;
-	/* width: 110px; */
+	/* width: 140px; */
 	width: 6%;
 	margin-left: 1%;
 }
 
-.user {
+.login_home {
 	height: 82px;
 	width: 100%;
 	background-color: #FFFFFF;
@@ -432,7 +440,7 @@ nav ul li a {
 	/* margin-top: 64px; */
 }
 
-#about h2 {
+#about .title_section_home {
 	text-align: center;
 	margin-bottom: 20px;
 
@@ -457,7 +465,7 @@ nav ul li a {
 
 /*Features*/
 
-#features h2 {
+#features .title_section_home {
 	text-align: center;
 	margin-bottom: 20px;
 
@@ -551,7 +559,7 @@ nav ul li a {
 	gap: 24px;
 }
 
-#how h2 {
+#how .title_section_home {
 	text-align: center;
 
 	font-family: 'Noto Sans TC', sans-serif;

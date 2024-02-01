@@ -1,5 +1,5 @@
 import React from 'react';
-import './Search.css';
+import '../CSS/Search.css';
 
 const Recommends = () => {
     const arr_recommend = ['一日遊', '兩天一夜', '三天兩夜', '我想隨便看看'];

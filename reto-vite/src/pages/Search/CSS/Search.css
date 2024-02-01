@@ -234,44 +234,47 @@ a {
 
 /*Nav*/
 
-.bar_top {
+.logo_search {
+    width: 120px;
+}
+
+.bar_top_search {
     display: flex;
     justify-content: space-between;
     align-items: center;
     background-color: #3D9D35;
     padding: 20px;
+    height: 82px;
 }
 
-.login {
+.login_search {
     /* width: 100%;
     flex: 1; */
-    width: 110px;
+    width: 120px;
     display: flex;
     justify-content: flex-end;
 }
 
-.login img {
+.login_search img {
     width: 40px;
     height: 40px;
 }
 
-nav ul{
-    background-color: #FFFFFF;
+.nav_search ul{
     display: flex;
-    width: 274px;
-    height: 32px;
-
-    padding: 5px 20px;
     justify-content: center;
     align-items: center;
-    gap: 40px;
+    /* width: 274px; */
+    height: 32px;
+    padding: 5px 30px;
+    gap: 0 2rem;
 
-    border-radius: 50px;
-    background: white;
-    /* flex: 1; */
+    border-radius: 20px;
+    background-color: #FFFFFF;
+    white-space: nowrap;
 }
 
-nav li a {
+.nav_search li a {
     font-family: 'Noto Sans TC', sans-serif;
     font-size: 14px;
     font-style: normal;

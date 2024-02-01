@@ -1,5 +1,5 @@
 import React from 'react';
-import './Search.css';
+import '../CSS/Search.css';
 import NavBar from '../NavBar/NavBar';
 import Recommends from '../Recommends/Recommends';
 import magnifier from '../../../assets/img_hsc/search_bar/magnifier.svg';
@@ -10,9 +10,9 @@ import logoGreen from '../../../assets/img_hsc/logo/logo_green.svg';
 const HeaderSearch = () => {
   return (
     <header>
-      <div className="bar_top">
+      <div className="bar_top_search">
         {/* LOGO */}
-        <h1 className="logo">
+        <h1 className="logo_search">
           <a href="./index.html">
             <img src={logoGreen} alt="" />
           </a>
@@ -20,7 +20,7 @@ const HeaderSearch = () => {
         {/* 置頂切頁按鈕 */}
         <NavBar />
         {/* 會員登入 */}
-        <div className="login">
+        <div className="login_search">
           <a href="#">
             <img src={login} alt="" />
           </a>
