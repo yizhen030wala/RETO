@@ -1,5 +1,5 @@
 import React from 'react';
-import './home.css';
+import './CSS/home.css';
 import FrontCover from './FrontCover/FrontCover';
 import Subtitle from './Subtitle/Subtitle';
 import About from './About/About';

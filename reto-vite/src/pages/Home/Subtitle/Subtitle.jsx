@@ -1,5 +1,5 @@
 import React from 'react';
-import './home.css';
+import '../CSS/home.css';
 import login from '../../../assets/img_hsc/login/login.svg';
 import reto_bar from '../../../assets/img_hsc/index/reto_bar.svg';
 

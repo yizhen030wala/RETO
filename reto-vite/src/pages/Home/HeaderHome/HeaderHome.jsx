@@ -1,10 +1,11 @@
 import React from 'react';
 import NavBar from '../NavBar/NavBar';
 import logo from '../../../assets/img_hsc/logo/logo.svg';
+import '../CSS/home.css';
 
 const HeaderHome = () => {
     return (
-        <header className="bar_top">
+        <header className="bar_top_home">
             {/* LOGO */}
             <div className="logo">
                 <a href="./index.html"><img src={logo} alt="" /></a>

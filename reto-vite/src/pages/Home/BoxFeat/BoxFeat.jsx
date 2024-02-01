@@ -1,5 +1,5 @@
 import React from 'react';
-import './home.css';
+import '../CSS/home.css';
 
 const title = ['Web App有夠輕便', '大圖好決定', '行程行李一起整理', '行程備案輕鬆換'];
 const content = [
