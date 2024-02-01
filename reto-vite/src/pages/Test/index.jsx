@@ -8,6 +8,7 @@ import TextToast from '../../components-common/textToast/textToast.jsx'
 import DeleteToast from '../../components-common/deleteToast/deleteToast.jsx'
 import DatePicker from '../../components-common/datePicker/datePicker.jsx'
 import ButtonDel from '../../components-common/Button/ButtonDel/ButtonDel.jsx'
+import LightboxLine from '../../components-common/LightboxLine';
 
 
 
@@ -15,7 +16,8 @@ import ButtonDel from '../../components-common/Button/ButtonDel/ButtonDel.jsx'
 const index = () => {
   return (
     <div>
-      <ButtonDel/>
+      <LightboxLine />
+      {/* <ButtonDel/>
       <AddToast/>
       <DeleteToast/>
       <MemberToast/>
@@ -24,7 +26,7 @@ const index = () => {
       <DatePicker/>
       <div id="calendar"></div>
       <Link to="/">登入頁</Link>
-      <p className="test">scss變數導入測試</p>
+      <p className="test">scss變數導入測試</p> */}
     </div>
   )
 }

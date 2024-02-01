@@ -27,8 +27,7 @@
 
 .lightbox-container {
   background-color: white;
-  width: 600px; /* 修改寬度為 300px */
-  /* height: 300px; 修改高度為 300px */
+  width: 500px;
   padding: 40px 38px 40px 40px;
   border-radius: 20px;
 

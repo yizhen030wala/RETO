@@ -14,7 +14,7 @@ const MyTrip = () => {
     return (
         <>
             <main className="MyTrip-container">
-                <div className="content">
+                <div className="MyTrip-content">
                     {/* 標題欄 */}
                     <div className="title">
                         <div className="title-name">我的旅行</div>

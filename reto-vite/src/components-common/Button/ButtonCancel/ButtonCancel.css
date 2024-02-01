@@ -13,15 +13,15 @@
 }
 
 /* ------------------------------------------------------------------- */
-.lightbox-c-green,
-.lightbox-c-green-yes,
-.lightbox-c-green-yes span {
+.buttoncancel,
+.buttoncancel-yes,
+.buttoncancel-yes span {
     width: auto;
     display: flex;
     flex-direction: row;
+    padding: 10px 20px;
     justify-content: center;
     align-items: center;
-    padding: 8px 20px;
     gap: 10px;
     border-radius: 20px;
     color: #ffffff;
@@ -34,21 +34,17 @@
     line-height: 1;
 }
 
-.lightbox-c-green:hover,
-.lightbox-c-green-yes:hover{
+.buttoncancel:hover,
+.buttoncancel:hover{
     color: #333333;
     background-color: #b8eb35;
 }
 
-.lightbox-c-green-yes {
+.buttoncancel-yes {
     gap: 10px;
 }
 
-.lightbox-c-white {
-    color: #d9d9d9;
-}
-
-.lightbox-c-green {
+.buttoncancel{
     font-family: "Noto Sans TC";
     font-size: 14px;
     font-style: normal;

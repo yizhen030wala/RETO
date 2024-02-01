@@ -13,19 +13,19 @@
 }
 
 /* ------------------------------------------------------------------- */
-.lightbox-c-green,
-.lightbox-c-green-yes,
-.lightbox-c-green-yes span {
+.buttoncancel,
+.buttoncancel-yes,
+.buttoncancel-yes span {
     width: auto;
     display: flex;
     flex-direction: row;
+    padding: 5px 20px;
     justify-content: center;
     align-items: center;
-    padding: 8px 20px;
     gap: 10px;
     border-radius: 20px;
-    color: #ffffff;
-    background-color: #3d9d35;
+    color: #929292;
+    background-color: #ffffff;
 
     cursor: pointer;
     transition: 0.3s;
@@ -34,24 +34,20 @@
     line-height: 1;
 }
 
-.lightbox-c-green:hover,
-.lightbox-c-green-yes:hover{
-    color: #333333;
-    background-color: #b8eb35;
+.buttoncancel:hover,
+.buttoncancel:hover{
+    color: #E7E7E7;
+    background-color: #ffffff;
 }
 
-.lightbox-c-green-yes {
+.buttoncancel-yes {
     gap: 10px;
 }
 
-.lightbox-c-white {
-    color: #d9d9d9;
-}
-
-.lightbox-c-green {
+.buttoncancel{
     font-family: "Noto Sans TC";
-    font-size: 14px;
+    font-size: 16px;
     font-style: normal;
-    font-weight: 400;
-    line-height: 160%; /* 22.4px */
+    font-weight: 500;
+    line-height: 150%;
 }

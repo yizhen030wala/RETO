@@ -19,9 +19,9 @@
     width: auto;
     display: flex;
     flex-direction: row;
+    padding: 5px 20px;
     justify-content: center;
     align-items: center;
-    padding: 8px 20px;
     gap: 10px;
     border-radius: 20px;
     color: #ffffff;
@@ -50,8 +50,8 @@
 
 .lightbox-c-green {
     font-family: "Noto Sans TC";
-    font-size: 14px;
+    font-size: 16px;
     font-style: normal;
-    font-weight: 400;
-    line-height: 160%; /* 22.4px */
+    font-weight: 500;
+    line-height: 150%;
 }
