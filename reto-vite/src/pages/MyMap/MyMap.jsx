@@ -1,5 +1,6 @@
 import React from 'react'
 import "./MyMap.css"
+import BreadCrumb from '../../components-common/BreadCrumb/BreadCrumb.tsx'
 
 const MyMap = () => {
     return (
@@ -8,7 +9,7 @@ const MyMap = () => {
                 <div className="left_div">
                     {/* 麵包屑導覽列 */}
                     <div className="SM_wrap">
-                        {/* 放上ulli的控制列 */}
+                        <BreadCrumb />
                     </div>
 
                     {/* 行程表表頭資訊 */}

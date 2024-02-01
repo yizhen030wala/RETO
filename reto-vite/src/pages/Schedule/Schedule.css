@@ -164,46 +164,7 @@ h3 {
     margin: 20px 9%;
 }
 
-/* 麵包屑導覽 */
-.wrap {
-    padding: 0px 0px;
-    /* background-color: black; */
-}
 
-.breadCrumb {
-    /* width: 90%; */
-    margin: auto;
-    display: flex;
-}
-
-.breadCrumb li {
-    padding: 0 8px;
-    display: flex;
-    align-items: center;
-}
-
-.breadCrumb a {
-    font-family: Noto Sans TC;
-    font-size: 12px;
-    font-style: normal;
-    font-weight: 400;
-    text-decoration: none;
-    color: #828282;
-}
-
-.breadCrumb a:hover,
-.breadCrumb li:last-child a {
-    color: #3d9d35;
-}
-
-.breadCrumb li + li {
-    padding-left: 0;
-}
-
-.breadCrumb li:first-child {
-    padding-left: 0;
-    /* 设置第一个 li 的左边距为 0 */
-}
 
 /* 行程表頭 */
 .tripHead {

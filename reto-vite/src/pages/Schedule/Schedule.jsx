@@ -5,7 +5,7 @@ import Lightbox from '../../components-common/Lightbox/index'
 import LightboxLine from '../../components-common/LightboxLine/index'
 import gorightImage from '../../assets/img/icon/icon-go/goright.svg';
 import goleftImage from '../../assets/img/icon/icon-go/goleft.svg';
-
+import BreadCrumb from '../../components-common/BreadCrumb/BreadCrumb.tsx'
 
 const Schedule = () => {
     return (
@@ -13,13 +13,7 @@ const Schedule = () => {
             <main className="container">
                 {/* 麵包屑導覽列 */}
                 <div className="wrap">
-                    <ul className="breadCrumb">
-                        <li><a href="#">首頁</a></li>
-                        <li><img src={gorightImage} alt="" /></li>
-                        <li><Link to="/mytrip">行程表</Link></li>
-                        <li><img src={gorightImage} alt="" /></li>
-                        <li><a href="#">旅藤台南行</a></li>
-                    </ul>
+                    <BreadCrumb />
                 </div>
 
                 {/* 行程表表頭資訊 */}
@@ -53,7 +47,7 @@ const Schedule = () => {
                             <Lightbox />
                         </div>
 
-                        <a><span className="set_icon icon-map "></span></a>
+                        <Link to='/mymap'><spa
                     </div>
                 </div>
 
