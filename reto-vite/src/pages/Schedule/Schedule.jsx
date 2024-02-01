@@ -47,7 +47,7 @@ const Schedule = () => {
                             <Lightbox />
                         </div>
 
-                        <Link to='/mymap'><span className='.icon-map .set_icon' ></span></Link>
+                        <Link to='/mymap'><span className="set_icon icon-map "></span></Link>
                     </div>
                 </div>
 
