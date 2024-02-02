@@ -238,7 +238,7 @@ const MyMap = () => {
                         <iframe
                             src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d14457.513043160428!2d121.50391680386691!3d25.055165444839425!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3442a96d2ecfd72b%3A0x21c4c5b2853cd189!2z5aSn56i75Z-V6a2v6IKJ6aOv!5e0!3m2!1szh-TW!2stw!4v1706777706117!5m2!1szh-TW!2stw"
                             style={{ width: '100%', height: '100%', border: '0' }}
-                            allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade" />
+                            allowfullscreen="" loading="lazy"  />
                     </div>
 
                     {/* 右上icon */}

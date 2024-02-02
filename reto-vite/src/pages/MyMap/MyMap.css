@@ -5,6 +5,7 @@
   font-family: "Noto Sans TC", 微軟正黑體;
 }
 * ul {
+  padding: 0;
   list-style: none;
 }
 * a {
@@ -456,14 +457,18 @@
 .SM_container .right_div .spot_card_wrapper .spot_card .card_info_list {
   display: flex;
   flex-direction: row;
-  align-items: center span;
-  align-items-margin-right: 2.5px;
+  align-items: center
+}
+.SM_container .right_div .spot_card_wrapper .spot_card .card_info_list span {
+  margin-right: 2.5px;
 }
 .SM_container .right_div .spot_card_wrapper .spot_card .card_info_list2 {
   display: flex;
   flex-direction: row;
-  align-items: center span;
-  align-items-margin-right: 10px;
+  align-items: center
+}
+.SM_container .right_div .spot_card_wrapper .spot_card .card_info_list2 span {
+  margin-right: 10px;
 }
 .SM_container .right_div .spot_card_wrapper .spot_card .card_info_list2 .card_info_filter {
   padding: 2.5px 13px;

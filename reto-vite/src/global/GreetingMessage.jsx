@@ -29,7 +29,7 @@ const GreetingMessage = () => {
 
   return (
     <div>
-      <p style={myStyle}>{greeting}，旅人!</p>
+      <p style={myStyle}><span> {greeting}，旅人! </span></p>
     </div>
   );
 };
