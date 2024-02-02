@@ -1,185 +1,3 @@
-// import React, { useState } from 'react';
-
-// const MyTripCard = ({ imageUrl, initialName, days }) => {
-//     const [name, setName] = useState(initialName);
-//     const [isEditing, setIsEditing] = useState(false);
-
-//     const handleNameClick = () => {
-//         setIsEditing(true);
-//     };
-
-//     const handleNameChange = (e) => {
-//         setName(e.target.value);
-//     };
-
-//     const handleNameBlur = () => {
-//         setIsEditing(false);
-//         // 在這裡處理名稱儲存
-//         console.log('儲存名稱:', name);
-//     };
-
-//     const handleKeyDown = (e) => {
-//         if (e.key === 'Enter') {
-//             handleNameBlur();
-//         }
-//     };
-
-//     return (
-//         <div className="schedule_card">
-//             <a href="#" className="btn_del">
-//                 <span className="icon-more_horiz"></span>
-//             </a>
-
-//             <div className="schedule_cover">
-//                 <img src={imageUrl} alt="spot" />
-//             </div>
-
-//             <div className="schedule_text">
-//                 {isEditing ? (
-//                     <input
-//                         type="text"
-//                         value={name}
-//                         onChange={handleNameChange}
-//                         onBlur={handleNameBlur}
-//                         onKeyDown={handleKeyDown}
-//                         autoFocus
-//                     />
-//                 ) : (
-//                     <a href="#" className="schedule_name" onClick={handleNameClick}>
-//                         {name}
-//                     </a>
-//                 )}
-//                 <p className="schedule_day">{days}</p>
-//             </div>
-//         </div>
-//     );
-// };
-
-// export default MyTripCard;
-
-// ------------------------------------------------------------------------------------ 
-
-// import React, { useState } from 'react';
-
-// const MyTripCard = ({ imageUrl, name, days, onNameClick }) => { // 正確地使用 name prop
-//     const [isEditing, setIsEditing] = useState(false);
-
-//     const handleNameClick = () => {
-//         setIsEditing(true);
-//     };
-
-//     const handleNameChange = (e) => {
-//         // 在此處進行名稱更改的處理
-//     };
-
-//     const handleNameBlur = () => {
-//         setIsEditing(false);
-//         // 在這裡處理名稱儲存
-//         console.log('儲存名稱:', name);
-//     };
-
-//     const handleKeyDown = (e) => {
-//         if (e.key === 'Enter') {
-//             handleNameBlur();
-//         }
-//     };
-
-//     return (
-//         <div className="schedule_card">
-//             <a href="#" className="btn_del">
-//                 <span className="icon-more_horiz"></span>
-//             </a>
-
-//             <div className="schedule_cover">
-//                 <img src={imageUrl} alt="spot" />
-//             </div>
-
-//             <div className="schedule_text">
-//                 {isEditing ? (
-//                     <input
-//                         type="text"
-//                         value={name}
-//                         onChange={handleNameChange}
-//                         onBlur={handleNameBlur}
-//                         onKeyDown={handleKeyDown}
-//                         autoFocus
-//                     />
-//                 ) : (
-//                     <a href="#" className="schedule_name" onClick={onNameClick}>
-//                         {name}
-//                     </a>
-//                 )}
-//                 <p className="schedule_day">{days}</p>
-//             </div>
-//         </div>
-//     );
-// };
-
-// export default MyTripCard;
-
-// ===============================================================================
-// import React, { useState } from 'react';
-// import "./MyTripCard.css";
-
-// const MyTripCard = ({ imageUrl, name, days, onNameChange }) => {
-//     const [editedName, setEditedName] = useState(name);
-//     const [isEditing, setIsEditing] = useState(false);
-
-//     const handleNameClick = () => {
-//         setIsEditing(true);
-//     };
-
-//     const handleNameChange = (e) => {
-//         setEditedName(e.target.value);
-//     };
-
-//     const handleNameBlur = () => {
-//         setIsEditing(false);
-//         // 在這裡處理名稱儲存
-//         onNameChange(editedName);
-//     };
-
-//     const handleKeyDown = (e) => {
-//         if (e.key === 'Enter') {
-//             handleNameBlur();
-//         }
-//     };
-
-//     return (
-//         <div className="schedule_card">
-//             <a href="#" className="btn_del">
-//                 <span className="icon-more_horiz"></span>
-//             </a>
-
-//             <div className="schedule_cover">
-//                 <img src={imageUrl} alt="spot" />
-//             </div>
-
-//             <div className="schedule_text">
-//                 {isEditing ? (
-//                     <input
-//                         type="text"
-//                         className="editable-input" // 添加可編輯的輸入框樣式
-//                         value={editedName}
-//                         onChange={handleNameChange}
-//                         onBlur={handleNameBlur}
-//                         onKeyDown={handleKeyDown}
-//                         autoFocus
-//                     />
-//                 ) : (
-//                     <a href="#" className="schedule_name" onClick={handleNameClick}>
-//                         {name}
-//                     </a>
-//                 )}
-//                 <p className="schedule_day">{days}</p>
-//             </div>
-//         </div>
-//     );
-// };
-
-// export default MyTripCard;
-
-
 
 import React from 'react';
 import { Link } from 'react-router-dom';
@@ -188,7 +6,7 @@ import ButtonDel from "../Button/ButtonDel/ButtonDel.jsx"
 
 const MyTripCard = ({ imageUrl, name, days }) => {
     return (
-        <div className="schedule_card">
+        <div className="mytripcard">
 
             {/* 右上角刪除按鈕 */}
             <div className="ctrl_ButtonDel">
@@ -199,16 +17,16 @@ const MyTripCard = ({ imageUrl, name, days }) => {
             {/* 使用絕對路徑而不是相對路徑 */}
             <Link to="/schedule">
                 {/* 圖片 */}
-                <div className="schedule_cover">
+                <div className="mytripcard_cover">
                     <img src={imageUrl} alt="spot" />
                 </div>
 
                 {/* 名稱 */}
-                <div className="schedule_text">
-                    <div className="schedule_name">
+                <div className="mytripcard_text">
+                    <div className="mytripcard_name">
                         {name}
                     </div>
-                    <p className="schedule_day">{days}</p>
+                    <p className="mytripcard_day">{days}</p>
                 </div>
             </Link>
         </div>

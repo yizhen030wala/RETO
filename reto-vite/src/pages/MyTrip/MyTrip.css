@@ -40,7 +40,7 @@
 }
 
 /* 去你的名字 */
-.schedule_name {
+.mytripcard_name {
     color: var(--black1, #000);
 
     /* (D)/body/20px */
@@ -50,10 +50,10 @@
     font-weight: 500;
     line-height: 150%;
 }
-.schedule_text a {
+.mytripcard_text a {
     text-decoration: none;
 }
-.schedule_day {
+.mytripcard_day {
     align-self: stretch;
     color: #747474;
 
@@ -64,16 +64,6 @@
     font-weight: 400;
     line-height: 150%;
 }
-
-/* ------------------網頁內容---------------- */
-
-.div {
-    background-color: var(--white, #fff);
-    display: flex;
-    flex-direction: column;
-}
-
-/* -----------------頁首-------------------- */
 
 
 
@@ -138,7 +128,7 @@
 
 /* ------------------行程卡片區域--------------------- */
 
-.schedule_contain {
+.MyTrip_contain {
     gap: 48px;
 
     display: flex;
@@ -149,13 +139,13 @@
 }
 
 @media (max-width: 991px) {
-    .schedule_contain {
+    .MyTrip_contain {
         max-width: 100%;
         padding-right: 20px;
     }
 }
 
-.schedule_card {
+.mytripcard {
     width: 250px;
     gap: 10px;
 
@@ -167,20 +157,20 @@
 }
 
 @media (max-width: 991px) {
-    .schedule_card {
+    .mytripcard {
         width: 100%;
     }
 }
 
 /* -----------右上刪除鍵--------------- */
-.schedule_card a {
+.mytripcard a {
     text-decoration: none;
 }
 
 
 /* 行程頁面圖 */
 
-.schedule_cover {
+.mytripcard_cover {
     position: relative;
     overflow: hidden;
 
@@ -191,7 +181,7 @@
     height: 140px; /* 假設高度為250px，請根據需求自行調整 */
 }
 
-.schedule_cover img {
+.mytripcard_cover img {
     width: 100%;
     height: 100%;
     object-fit: cover; /* 讓圖片填滿容器並保持比例 */
@@ -199,7 +189,7 @@
 
 /* -------------行程卡片文字區域----------------- */
 
-.schedule_text {
+.mytripcard_text {
     margin-top: 12px;
     display: flex;
     flex-direction: column;

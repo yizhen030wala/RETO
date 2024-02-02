@@ -25,7 +25,7 @@ const MyTrip = () => {
 
                     </div>
 
-                    <div className="schedule_contain">
+                    <div className="MyTrip_contain">
                         {/* 第一個行程集卡片 */}
                         
                             <MyTripCard
