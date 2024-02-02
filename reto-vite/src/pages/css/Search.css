@@ -228,53 +228,50 @@ section {
 
 
 
-/* a {
+a {
     color: black;
-} */
+}
 
 /*Nav*/
 
-.logo_search {
-    width: 120px;
-}
-
-.bar_top_search {
+.bar_top {
     display: flex;
     justify-content: space-between;
     align-items: center;
     background-color: #3D9D35;
     padding: 20px;
-    height: 82px;
 }
 
-.login_search {
+.login {
     /* width: 100%;
     flex: 1; */
-    width: 120px;
+    width: 110px;
     display: flex;
     justify-content: flex-end;
 }
 
-.login_search img {
+.login img {
     width: 40px;
     height: 40px;
 }
 
-.nav_search ul{
+nav ul{
+    background-color: #FFFFFF;
     display: flex;
+    width: 274px;
+    height: 32px;
+
+    padding: 5px 20px;
     justify-content: center;
     align-items: center;
-    /* width: 274px; */
-    height: 32px;
-    padding: 5px 30px;
-    gap: 0 2rem;
+    gap: 40px;
 
-    border-radius: 20px;
-    background-color: #FFFFFF;
-    white-space: nowrap;
+    border-radius: 50px;
+    background: white;
+    /* flex: 1; */
 }
 
-.nav_search li a {
+nav li a {
     font-family: 'Noto Sans TC', sans-serif;
     font-size: 14px;
     font-style: normal;
