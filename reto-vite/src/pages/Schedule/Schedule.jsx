@@ -31,10 +31,6 @@ const Schedule = () => {
                     </div>
                     {/* 功能按鈕 */}
                     <div className="tripFunc">
-                        {/* Button trigger modal */}
-                        {/* <button type="button" className="btn lightbox-c-green" data-bs-toggle="modal" data-bs-target="#exampleModal">
-                            路線整理
-                        </button> */}
                         {/* 開始:路線整理的燈箱效果 */}
                         <div className='LB-container'>
                             <LightboxLine />
