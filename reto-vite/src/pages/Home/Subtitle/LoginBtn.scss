@@ -7,7 +7,7 @@
 
 // 手機
 @media screen and (max-width: 809px) {
-    .bar_top_search {
+    .bar_top_search,.bar_top_home {
 
         ul.nav_btn {
             display: none;
@@ -26,7 +26,7 @@
 }
 
 // ===============================================
-.bar_top_search {
+.bar_top_search,.bar_top_home {
     margin: 0;
     font-family: 'Noto Sans TC', 微軟正黑體;
     color: #333;
@@ -44,7 +44,7 @@
 
 //佔用原本的
 
-.bar_top_search {
+.bar_top_search,.bar_top_home {
 //     height: 8vh;
 //     display: flex;
 //     justify-content: space-between;
