@@ -92,28 +92,8 @@ p {
 
 
 /* ---------icon 對照----------------------------------- */
-.set_icon {
-    padding: 10px 12px;
-    display: flex;
-    align-items: center;
-    text-align: center;
-    justify-items: center;
-    background-color: #3D9D35;
-    border-radius: 30px;
-    color: #fff;
-}
 
-/* 加一天減一天 */
-.icon_day {
-    /* width: 12px;
-    height: 12px; */
-    padding: 5px 5px;
-    display: flex;
-    align-items: center;
-    background-color: #3D9D35;
-    border-radius: 20px;
-    color: #fff;
-}
+
 
 .icon_copy .icon_car {
     padding: auto;

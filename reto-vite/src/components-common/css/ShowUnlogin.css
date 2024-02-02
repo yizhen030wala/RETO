@@ -23,6 +23,7 @@
   text-align: center;
   justify-content: center;
   gap: 16px;
+  z-index: 999;
 }
 .UnLogin-box figure {
   height: 48px;
