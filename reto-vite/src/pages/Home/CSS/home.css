@@ -180,7 +180,7 @@ input {
 a {
 	display: block;
 	text-decoration: none;
-	color: black;
+	/* color: black; */
 	/*a自帶有底線與點擊顏色*/
 }
 

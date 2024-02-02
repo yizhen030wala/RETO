@@ -7,7 +7,7 @@ const NavBar = () => {
   const arr_nav_link = ["search", "collections", "mytravel"];
   const arr_link = ["Search", "Collections", "MyTrip"];
   return (
-    <nav className="nav_home">
+    <nav className="nav_search">
       <ul>
         {arr_nav.map((nav, index) => (
           <Link to={`/${arr_link[index]}`}>
