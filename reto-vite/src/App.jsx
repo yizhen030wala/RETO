@@ -8,7 +8,9 @@ import MyTrip from './pages/MyTrip'
 import Schedule from './pages/Schedule'
 import Search from './pages/Search/Search';
 
+//Test Page
 import Header from './components-common/Header/Header';
+import Relevant_Card from './pages/Search/Relevant_Card/Relevant_Card';
 
 
 const App = () => {
@@ -21,7 +23,9 @@ const App = () => {
         <Route path="/MyTrip" element={<MyTrip />} />
         <Route path="/Schedule" element={<Schedule />} />
         <Route path="/Search" element={<Search />} />
+        
         <Route path="/Header" element={<Header />} />
+        <Route path="/Relevant_Card" element={<Relevant_Card />} />
       </Routes>
     </>
   );

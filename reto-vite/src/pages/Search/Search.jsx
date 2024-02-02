@@ -16,7 +16,7 @@ function Search() {
     return (
         <div>
             <HeaderSearch />
-            <main>
+            <main className='main_search'>  
                 {/* 區塊輪播/瀑布流搜尋結果 */}
                 <Carousel updateSelectedCount={updateSelectedCount} />
                 {/* Fixed固定左右切換/加入行程按鈕 */}
