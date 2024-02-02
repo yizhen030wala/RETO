@@ -7,8 +7,8 @@ import Menu from '../../assets/img/icon/icon-black/menu.svg'
 import UnLogin from '../ShowUnlogin/ShowUnlogin.jsx'
 import Login from '../ShowLogin/Showlogin.jsx'
 
-function Header() {
 
+function Header() {
   return (
     <>
       <header className="header">
@@ -30,17 +30,16 @@ function Header() {
         <div className="user">
           <div className="hover-trigger">
             <figure className="user_box">
-              <a href="#">
-                <img src={User} alt="user" />
-              </a>
+              <img src={User} alt="user" />
             </figure >
 
             <figure className="menu_box">
-              <a href="" id='menu'><img src={Menu} alt="" /></a>
+              <img src={Menu} alt="" />
             </figure>
           </div>
           <div className="popup-content">
-            <UnLogin/>
+            <UnLogin />
+
           </div>
 
         </div>

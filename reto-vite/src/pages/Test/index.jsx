@@ -11,13 +11,11 @@ import ButtonDel from '../../components-common/Button/ButtonDel/ButtonDel.jsx'
 import LightboxLine from '../../components-common/LightboxLine';
 
 
-
-
 const index = () => {
   return (
     <div>
       <LightboxLine />
-      {/* <ButtonDel/>
+      <ButtonDel/>
       <AddToast/>
       <DeleteToast/>
       <MemberToast/>
@@ -26,7 +24,7 @@ const index = () => {
       <DatePicker/>
       <div id="calendar"></div>
       <Link to="/">登入頁</Link>
-      <p className="test">scss變數導入測試</p> */}
+      <p className="test">scss變數導入測試</p>
     </div>
   )
 }

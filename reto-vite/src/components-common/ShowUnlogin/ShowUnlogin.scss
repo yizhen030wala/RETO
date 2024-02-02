@@ -2,58 +2,71 @@
 @import "../../assets/scssRule/all";
 
 // ======================================================
+  
 
-.UnLogin-box {
-    background-color: white;
-    width: 126px;
-    @include shadow;
-    border-radius: $border_radius_20px;
-    @include itemCenter;
-    justify-content: center;
-    gap: 16px;
-    z-index: 999;
+  
+.UnLogin-box{
+  background-color: white;
+  width: 126px;
+  @include shadow;
+  border-radius: $border_radius_20px;
+  @include itemCenter;
+  justify-content: center;
+  gap: 16px;
+  z-index: 900;
 
-    figure {
-        height: 48px;
-        width: 48px;
-        background-color: $color_yellow;
-        border-radius: 100%;
-        margin-top: 20px;
-        margin-bottom: 0px;
-        img {
-            width: 100%;
-        }
+  figure{
+    height: 48px;
+    width: 48px;
+    background-color: $color_yellow;
+    border-radius: 100%;
+    margin-top: 20px;
+    margin-bottom: 0px;
+    img{
+      width: 100%;
     }
-    p {
-        font-size: 1rem;
-        margin-top: 0;
-        margin-bottom: 20px;
+    
+  }
+  p{
+    font-size: 1rem;
+    margin-top: 0;
+    margin-bottom: 20px;
+  }
+  p.in{
+    &:hover{
+      font-weight: 600;
     }
-    p.in {
-        &:hover {
-            font-weight: 600;
-        }
-    }
-    .menu {
-        margin: 0;
-        padding: 1rem;
-        padding-top: 0px;
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        gap: 10px;
-        align-self: stretch;
+  }
+  .menu{
+    margin: 0;
+    padding: 1rem;
+    padding-top: 0px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+    align-self: stretch;
+    display: none;
+    
+    li{
+      gap: 10px;
+      padding: 10px;
+      padding-bottom: 0px;
+      text-decoration: none;
 
-        li {
-            gap: 10px;
-            padding: 10px;
-            padding-bottom: 0px;
-            text-decoration: none;
-            &:hover {
-                font-weight: 600;
-                padding-bottom: 0px;
-                text-decoration: $color_green1 wavy underline;
-            }
-        }
+      &:hover {
+        font-weight: 600;
+        padding-bottom: 0px;
+        text-decoration: $color_green1 wavy underline;
+  
+      }
+      
     }
+
+    @media (max-width: 809px) {
+      display: block;
+    }
+    
+  }
+ 
 }
