@@ -2,21 +2,19 @@
 @import url("https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@200;300;400;500;600;700;800;900&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@200;300;400;500;600;700;800;900&display=swap");
 * {
-  font-family: "Noto Sans TC", 微軟正黑體;
+    font-family: "Noto Sans TC", 微軟正黑體;
 }
 * ul {
-  list-style: none;
+    list-style: none;
 }
 * a {
-  text-decoration: none;
-  color: #333333;
+    text-decoration: none;
+    color: #333333;
 }
-
-/* -------------------字體管理----------------- */
 
 
 /* 我的旅行 */
-.title div {
+.title-name {
     color: var(--black1, #000);
 
     /* (D)/body/20px */
@@ -27,14 +25,13 @@
     line-height: 150%;
 }
 
-
 /* 新增行程 */
 .title a {
     text-decoration: none;
 }
 
 .title a div {
-    color: var(--white, #FFF);
+    color: var(--white, #fff);
     font-family: Noto Sans TC;
     font-size: 16px;
     font-style: normal;
@@ -59,18 +56,16 @@
 .schedule_day {
     align-self: stretch;
     color: #747474;
-    
+
     /* (D)/body/16px */
     font-family: Noto Sans TC;
     font-size: 16px;
     font-style: normal;
     font-weight: 400;
-    line-height: 150%
+    line-height: 150%;
 }
 
-
 /* ------------------網頁內容---------------- */
-
 
 .div {
     background-color: var(--white, #fff);
@@ -80,77 +75,33 @@
 
 /* -----------------頁首-------------------- */
 
-.header {
-    width: 1440 px;
-    height: 80 px;
-    padding: 20px 20px;
-
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-
-    /* background-color: #B8EB35; */
-}
-
-@media (max-width: 991px) {
-    .header {
-        max-width: 100%;
-        flex-wrap: wrap;
-    }
-}
-
-
-
-
-
-.btn_nav {
-    margin: auto 0;
-    padding: 10px 30px;
-    gap: 0 60px;
-
-    display: flex;
-    align-items: center;
-    align-self: center;
-    justify-content: space-between;
-
-    border-radius: 50px;
-    background-color: #F5F5F5;
-}
-
-
-/* @media (max-width: 991px) {
-    .btn_nav {
-        padding: 0 20px;
-    }
-} */
-
 
 
 /* -----------中間內容頁-------------- */
 
 .MyTrip-container {
-    margin: 0px 14%;
+    margin: 0px 16%;
     display: flex;
     justify-content: center;
     flex-direction: column;
 }
 
 @media (max-width: 991px) {
-    .container {
+    .MyTrip-container {
         /* max-width: 100%; */
         padding: 0 20px;
     }
 }
 
-.content {
+.MyTrip-content {
     display: flex;
     flex-direction: column;
     margin: 120px 0px;
-    gap:35px;
+    gap: 35px;
 }
 
 @media (max-width: 991px) {
-    .content {
+    .MyTrip-content {
         /* max-width: 100%; */
         margin: 40px 10px 40px 0;
     }
@@ -172,7 +123,6 @@
     }
 }
 
-
 /* ---------------新增行程按鈕--------------------- */
 .add_schedule {
     gap: 10px;
@@ -188,9 +138,8 @@
 
 /* ------------------行程卡片區域--------------------- */
 
-
 .schedule_contain {
-    gap: 31px;
+    gap: 48px;
 
     display: flex;
     flex-wrap: wrap;
@@ -205,7 +154,6 @@
         padding-right: 20px;
     }
 }
-
 
 .schedule_card {
     width: 250px;
@@ -225,43 +173,10 @@
 }
 
 /* -----------右上刪除鍵--------------- */
-.schedule_card a{
+.schedule_card a {
     text-decoration: none;
 }
 
-.btn_del {
-    position: absolute;
-    top: 15px;
-    right: 15px;
-    z-index: 1;
-
-    width: 20px;
-    height: 20px;
-
-    border-radius: 10px;
-    background-color: #f5f5f5;
-
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-
-.btn_del img {
-    width: 12px;
-    height: 12px;
-    flex-shrink: 0;
-    object-fit: cover;
-    object-position: center;
-}
-
-.btn_del span {
-    /* width: 12px; */
-    /* height: 12px; */
-    font-size: 12px;
-    flex-shrink: 0;
-    object-fit: cover;
-    object-position: center;
-}
 
 /* 行程頁面圖 */
 
@@ -276,7 +191,6 @@
     height: 140px; /* 假設高度為250px，請根據需求自行調整 */
 }
 
-
 .schedule_cover img {
     width: 100%;
     height: 100%;
@@ -286,16 +200,35 @@
 /* -------------行程卡片文字區域----------------- */
 
 .schedule_text {
+    margin-top: 12px;
     display: flex;
     flex-direction: column;
     width: 100%;
 
-    gap:6px;
+    gap: 6px;
 }
 
-.icon-add{
-    color:white;
+.btn-add-wrap {
+    display: flex;
+    flex-direction: row;
+    gap: 10px;
 }
-.icon-more_horiz{
-    position: none;
+
+.icon-add-map {
+    color: white;
+    font-size: 20px;
+}
+
+.text-add {
+    color: var(--white, #fff);
+    font-family: "Noto Sans TC";
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 150%; /* 24px */
+}
+
+.btn-add-wrap:hover .icon-add-map,
+.btn-add-wrap:hover .text-add {
+    color: #333;
 }

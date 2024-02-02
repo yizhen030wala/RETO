@@ -6,7 +6,6 @@ import Lightbox from '../../components-common/Lightbox'
 const index = () => {
     return (
         <div>
-            <Header />
             <MyTrip />
         </div>
     )

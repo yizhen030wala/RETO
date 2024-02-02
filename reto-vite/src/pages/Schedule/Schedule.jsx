@@ -1,7 +1,11 @@
 import React from 'react'
-import { Link, Outlet } from 'react-router-dom';
+import { Link } from 'react-router-dom';
 import "./Schedule.css"
 import Lightbox from '../../components-common/Lightbox/index'
+import LightboxLine from '../../components-common/LightboxLine/index'
+import gorightImage from '../../assets/img/icon/icon-go/goright.svg';
+import goleftImage from '../../assets/img/icon/icon-go/goleft.svg';
+import BreadCrumb from '../../components-common/BreadCrumb/BreadCrumb.tsx'
 
 const Schedule = () => {
     return (
@@ -9,11 +13,7 @@ const Schedule = () => {
             <main className="container">
                 {/* 麵包屑導覽列 */}
                 <div className="wrap">
-                    <ul className="breadCrumb">
-                        <li><a href="#">首頁</a></li>
-                        <li><a href="#">行程表</a></li>
-                        <li><a href="#">旅藤台南行</a></li>
-                    </ul>
+                    <BreadCrumb />
                 </div>
 
                 {/* 行程表表頭資訊 */}
@@ -26,7 +26,7 @@ const Schedule = () => {
                         </div>
                         {/* 行程表日期 */}
                         <div>
-                            <h2 className='time_schedule'>2022/2/23-2/26</h2>
+                            <h2 className='day_Schedule'>2022/2/23-2/26</h2>
                         </div>
                     </div>
                     {/* 功能按鈕 */}
@@ -36,20 +36,9 @@ const Schedule = () => {
                             路線整理
                         </button> */}
                         {/* 開始:路線整理的燈箱效果 */}
-                        {/* Modal */}
-                        {/* <div className="modal fade" id="exampleModal" tabIndex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
-                            <div className="modal-dialog modal-dialog-centered">
-                                <div className="modal-content container-fluid wrapped">
-                                    <div className="modal-body">
-                                        確定以第一個地點做路線整理?
-                                    </div>
-                                    <div className="modal-footer">
-                                        <button type="button" className="btn lightbox-c-white" data-bs-dismiss="modal">取消</button>
-                                        <button type="button" className="btn lightbox-c-green" data-bs-dismiss="modal">確定</button>
-                                    </div>
-                                </div>
-                            </div>
-                        </div> */}
+                        <div className='LB-container'>
+                            <LightboxLine />
+                        </div>
                         {/* 結束:路線整理的燈箱效果 */}
 
 
@@ -57,14 +46,15 @@ const Schedule = () => {
                         <div className='LB-container'>
                             <Lightbox />
                         </div>
-                        
-                        <a><span className="set_icon icon-map "></span></a>
+
+                        <Link to='/mymap'><span className="set_icon icon-map "></span></Link>
                     </div>
                 </div>
 
                 {/* 行程天數列 */}
                 <div className="date">
                     <div className='btn-day-control'>
+                        <img src={goleftImage} alt="" />
                     </div>
                     <div className="btn_day-wrap">
                         <div className="btn_day">
@@ -81,7 +71,7 @@ const Schedule = () => {
                         </div>
                     </div>
                     <div className='btn-day-control'>
-
+                        <img src={gorightImage} alt="" />
                     </div>
                     {/* 以此類推... */}
                 </div>
@@ -411,13 +401,12 @@ const Schedule = () => {
 
                         {/* 添加行程表按鈕 */}
                         <div className='btn-add-control'>
-                            <span className='icon-add'></span>
+                            <span className='icon-add icon-add-color'></span>
                         </div>
 
                     </div>
                 </div>
             </main >
-            <Outlet />
         </>
     )
 }

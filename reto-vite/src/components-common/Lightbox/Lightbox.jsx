@@ -151,10 +151,11 @@
 // ======================================================================
 import React, { useRef, useState } from 'react';
 import './Lightbox.css';
-import "./Button/ButtonChk.css";
+// import "./Button/ButtonChk.css";
 import TodoList from './TodoList/TodoList';
 import TodoListStart from './TodoList/TodoListStart';
 import ButtonChk from "../Button/ButtonChk/ButtonChk.jsx";
+import ButtonTag from "../../components-common/Button/ButtonTag/ButtonTag.jsx";
 
 const Lightbox = ({ onClose }) => {
   const lightboxRef = useRef(null); // 取得燈箱的參考
@@ -223,10 +224,10 @@ const Lightbox = ({ onClose }) => {
           <p className="note-title">行李清單</p>
           {/* 篩選項目 */}
           <div className="filter-wrap">
-            <ButtonChk onClick={() => handleAddItem('跑山行')}>跑山行</ButtonChk>
-            <ButtonChk onClick={() => handleAddItem('玩水')}>玩水</ButtonChk>
-            <ButtonChk onClick={() => handleAddItem('網美景點')}>網美景點</ButtonChk>
-            <ButtonChk onClick={() => handleAddItem('三天兩夜')}>三天兩夜</ButtonChk>
+            <ButtonTag onClick={() => handleAddItem('跑山行')}>跑山行</ButtonTag>
+            <ButtonTag onClick={() => handleAddItem('玩水')}>玩水</ButtonTag>
+            <ButtonTag onClick={() => handleAddItem('網美景點')}>網美景點</ButtonTag>
+            <ButtonTag onClick={() => handleAddItem('三天兩夜')}>三天兩夜</ButtonTag>
           </div>
           <div className="list-wrap">
             <TodoListStart/>
