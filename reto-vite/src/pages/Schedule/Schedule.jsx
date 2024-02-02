@@ -10,7 +10,7 @@ import BreadCrumb from '../../components-common/BreadCrumb/BreadCrumb.tsx'
 const Schedule = () => {
     return (
         <>
-            <main className="container">
+            <main className="Schedule_container">
                 {/* 麵包屑導覽列 */}
                 <div className="wrap">
                     <BreadCrumb />
@@ -22,11 +22,11 @@ const Schedule = () => {
                     <div className="tripTitle">
                         {/* 行程表名稱 */}
                         <div>
-                            <h3>旅藤台南行</h3>
+                            <h3 className='h3_title'>旅藤台南行</h3>
                         </div>
                         {/* 行程表日期 */}
                         <div>
-                            <h2 className='day_Schedule'>2022/2/23-2/26</h2>
+                            <h2 className='day_font day_select'>2022/2/23-2/26</h2>
                         </div>
                     </div>
                     {/* 功能按鈕 */}
@@ -52,7 +52,7 @@ const Schedule = () => {
                 </div>
 
                 {/* 行程天數列 */}
-                <div className="date">
+                <div className="Schedule_date">
                     <div className='btn-day-control'>
                         <img src={goleftImage} alt="" />
                     </div>
@@ -89,7 +89,7 @@ const Schedule = () => {
                             {/* 行程表刪除鍵 */}
                             <a href="#" className="icon-more_horiz loc-icon-more_horiz"></a>
                             {/* 星期N */}
-                            <div className="day">星期五</div>
+                            <div className="schedule_day">星期五</div>
                             {/* 備註 */}
                             <div className="note">
                                 星期五猴子去跳舞
@@ -253,7 +253,7 @@ const Schedule = () => {
                                 <div className="btn_addspot">
                                     <div className="btnAddSpotTitle">
                                         <span className="icon-love"></span>
-                                        <h3>從收藏加入</h3>
+                                        <h3 className='h3_title'>從收藏加入</h3>
                                     </div>
                                 </div>
                                 {/* 回到探索 */}
@@ -261,7 +261,7 @@ const Schedule = () => {
                                     <div className="btnAddSpotTitle">
                                         <span className="icon-search"></span>
                                         <span className="icon-eat"></span>
-                                        <h3>從探索加入</h3>
+                                        <h3 className='h3_title'>從探索加入</h3>
                                     </div>
                                 </div>
                             </div>
@@ -385,7 +385,7 @@ const Schedule = () => {
                                 <div className="btn_addspot">
                                     <div className="btnAddSpotTitle">
                                         <span className="icon-love"></span>
-                                        <h3>從收藏加入</h3>
+                                        <h3 className='h3_title'>從收藏加入</h3>
                                     </div>
                                 </div>
                                 {/* 回到探索 */}
@@ -393,7 +393,7 @@ const Schedule = () => {
                                     <div className="btnAddSpotTitle">
                                         <span className="icon-search"></span>
                                         <span className="icon-eat"></span>
-                                        <h3>從探索加入</h3>
+                                        <h3 className='h3_title'>從探索加入</h3>
                                     </div>
                                 </div>
                             </div>
