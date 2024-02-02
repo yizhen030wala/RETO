@@ -171,6 +171,7 @@ p {
     display: flex;
     justify-content: space-between;
     gap: 10px;
+    z-index: 20;
 }
 
 .tripItem {
