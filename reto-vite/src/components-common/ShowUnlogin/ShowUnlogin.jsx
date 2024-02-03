@@ -13,7 +13,7 @@ const ShowUnlogin = () => {
     return (
         <div className="UnLogin-box">
             <figure><img src={User} alt=""/></figure>
-            <p className="hi"><GreetingMessage/></p>
+            <div className="hi"><GreetingMessage/></div>
             <ul className="menu">
                 <li><a href="#">開始探索</a></li>
                 <li><a href="#">我的景點</a></li>
