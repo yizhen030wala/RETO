@@ -4,6 +4,7 @@ import Card from '../Card/Card';
 import Tags_carousel from '../Tags_carousel/Tags_carousel.jsx';
 import LightBox_Card from '../LightBox_Card/LightBox_Card.jsx';
 import './Relevant_Card.scss';
+import cancel from '../../../assets/img_hsc/card_viewpoint/cancel.svg';
 
 const Relevant_Card = () => {
     return (
@@ -35,12 +36,16 @@ const Relevant_Card = () => {
                                     data_img={data_img}
                                 />
                             ))}
-                        </Masonry> */} 
+                        </Masonry> */}
                     </div>
                 </div>
                 <div className="empty_relevant"></div>
-
-                {/* 按鈕及卷軸位置參照Carousel元件 */}
+                {/* 關閉按鈕 */}
+                <figure className="btn_cancel">
+                    <img src={cancel} alt="" />
+                </figure>
+                {/* 加入按鈕(置於右底) */}
+                <button className="btn_relevant journey">替換行程</button>
             </div>
         </div>
     )
