@@ -11,6 +11,7 @@ import Search from './pages/Search/Search';
 //Test Page
 import Header from './components-common/Header/Header';
 import Relevant_Card from './pages/Search/Relevant_Card/Relevant_Card';
+import Set_Journey from './pages/Search/Set_Journey/Set_journey';
 
 
 const App = () => {
@@ -23,9 +24,10 @@ const App = () => {
         <Route path="/MyTrip" element={<MyTrip />} />
         <Route path="/Schedule" element={<Schedule />} />
         <Route path="/Search" element={<Search />} />
-        
+
         <Route path="/Header" element={<Header />} />
         <Route path="/Relevant_Card" element={<Relevant_Card />} />
+        <Route path="/Set_Journey" element={<Set_Journey />} />
       </Routes>
     </>
   );
