@@ -102,8 +102,7 @@
 .icon-content_copy,
 .icon-car,
 .icon-love,
-.icon-search,
-.loc-icon-more_horiz {
+.icon-search, {
     font-size: 20px;
 }
 
@@ -334,19 +333,9 @@
     justify-content: center;
 }
 
-.loc-icon-more_horiz {
-    text-decoration: none;
 
-    position: absolute;
-    top: 8px;
-    right: 27px;
 
-    color: #d9d9d9;
-}
 
-.loc-icon-more_horiz:hover {
-    color: #333333;
-}
 
 .schedule_map_list {
     width: 30%;

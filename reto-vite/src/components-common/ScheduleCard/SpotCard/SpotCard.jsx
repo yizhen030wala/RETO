@@ -1,3 +1,4 @@
+// 行程頁和地圖頁當中景點卡片組件
 import React from 'react';
 import InfoCard from './InfoCard/InfoCard';
 import "../css/SpotCard.css";

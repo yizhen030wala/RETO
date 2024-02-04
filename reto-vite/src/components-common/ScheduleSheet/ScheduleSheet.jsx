@@ -2,13 +2,16 @@ import React from 'react'
 import "../css/ScheduleSheet.css"
 import SpotCard from '../ScheduleCard/SpotCard/SpotCard.jsx'
 import TimeCard from '../ScheduleCard/TimeCard/TimeCard.jsx'
+import ButtonDel_NB from '../Button/ButtonDel_NB/ButtonDel_NB.jsx'
 
 const ScheduleSheet = () => {
     return (
         <>
             <fieldset className="schedule">
                 {/* 行程表刪除鍵 */}
-                <a href="#" className="icon-more_horiz loc-icon-more_horiz"></a>
+                <div className="loc-icon-more_horiz">
+                    <ButtonDel_NB />
+                </div>
                 {/* 星期N */}
                 <div className="schedule_day">星期五</div>
                 {/* 備註 */}

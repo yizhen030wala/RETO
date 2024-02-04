@@ -19,20 +19,18 @@
     justify-content: center;
 
     // 行程表刪除鍵
-    .icon-more_horiz {
+    .loc-icon-more_horiz {
         text-decoration: none;
 
         position: absolute;
-        top: 8px;
-        right: 27px;
+        top: 0px;
+        right: 6px;
 
-        color: #d9d9d9;
-    }
-    .loc-icon-more_horiz {
-        &:hover {
+        &:hover{
             color: #333333;
         }
     }
+    
 
     // 星期N
     .schedule_day {
