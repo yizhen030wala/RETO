@@ -9,12 +9,19 @@ import DeleteToast from '../../components-common/deleteToast/deleteToast.jsx'
 import DatePicker from '../../components-common/datePicker/datePicker.jsx'
 import ButtonDel from '../../components-common/Button/ButtonDel/ButtonDel.jsx'
 import LightboxLine from '../../components-common/LightboxLine';
-import SpotCard from '../../components-common/ScheduleCard/SpotCard/SpotCard.jsx';
+// import SpotCard from '../../components-common/ScheduleCard/SpotCard/SpotCard.jsx';
+import Spottag from '../../components-common/ScheduleCard/SpotCard/Spottag/Spottag.jsx';
+import ExchangeCard from "../../components-common/ScheduleCard/SpotCard/ExchangeCard/ExchangeCard.jsx"
+import LightboxExchange from "../../components-common/ScheduleCard/SpotCard/ExchangeCard/ExchangeCard.jsx"
+import BtnExchange from "../../components-common/ScheduleCard/SpotCard/BtnExchange/BtnExchange.jsx"
+
 
 const index = () => {
   return (
     <div>
-      <SpotCard />
+     <BtnExchange />
+
+      {/* <Spottag>下午茶</Spottag> */}
 
       {/* <LightboxLine />
       <ButtonDel/>

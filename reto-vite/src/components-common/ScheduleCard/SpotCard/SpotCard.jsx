@@ -1,7 +1,8 @@
 // 行程頁和地圖頁當中景點卡片組件
 import React from 'react';
-import InfoCard from './InfoCard/InfoCard';
 import "../css/SpotCard.css";
+import InfoCard from './InfoCard/InfoCard';
+import BtnExchange from "./BtnExchange/BtnExchange.jsx"
 
 
 const SpotCard = () => {
@@ -14,7 +15,7 @@ const SpotCard = () => {
                     {/* 拖曳 */}
                     <span className="icon-drag_indicator"></span>
                     {/* 替換 */}
-                    <span className="icon-exchange"></span>
+                    <BtnExchange className="BtnExchange" />
                 </div>
 
                 {/* 右側景點資訊 */}

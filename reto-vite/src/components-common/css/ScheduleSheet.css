@@ -27,8 +27,8 @@
 .schedule .loc-icon-more_horiz {
   text-decoration: none;
   position: absolute;
-  top: 0px;
-  right: 6px;
+  top: 12px;
+  right: 33px;
 }
 .schedule .loc-icon-more_horiz:hover {
   color: #333333;

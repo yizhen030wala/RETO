@@ -28,13 +28,13 @@ const ButtonDel_NB =  () => {
     return (
         <>
             <div className='btn_content_del2'>
-                <div className="btn_wrap">
-                    <div className={`btn_del ${showWrapDel ? 'clicked' : ''}`} onClick={handleButtonClick} ref={buttonRef}>
+                <div className="btn_wrap2">
+                    <div className={`btn_del2 ${showWrapDel ? 'clicked' : ''}`} onClick={handleButtonClick} ref={buttonRef}>
                         <span className="icon-more_horiz ctrl-icon-more"></span>
                     </div>
 
                     {showWrapDel && (
-                        <div className='wrap-del' ref={wrapDelRef}>
+                        <div className='wrap-del2' ref={wrapDelRef}>
                             <DeleteToast></DeleteToast>
                         </div>
                     )}
