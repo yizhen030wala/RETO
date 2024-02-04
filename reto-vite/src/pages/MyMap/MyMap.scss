@@ -6,7 +6,7 @@
 .SM_container {
     display: flex;
     flex-direction: row;
-    justify-content: space-evenly;
+    justify-content: space-between;
     /* width: 1440px; */
     margin: auto;
     padding: 2% 8%;
@@ -387,7 +387,7 @@
     // 右側資訊 地圖欄位
     .right_div {
         position: relative;
-        width: 830px;
+        width: 59%;
         height: 730px;
 
         // 地圖本體
