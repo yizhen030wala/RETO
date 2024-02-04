@@ -1,0 +1,43 @@
+// 行程頁的漢堡刪除按鈕
+
+
+
+// ====================================
+
+.btn_content_del2 {
+    position: relative;
+    top: -40px;
+    right: -13px;
+
+    .btn_wrap {
+        position: relative; /* 父元素需設置為相對定位 */
+        
+        .btn_del {
+            position: absolute;
+            top: 15px;
+            right: 15px;
+            z-index: 1;
+
+            width: 20px;
+            height: 20px;
+
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            cursor: pointer;
+
+            .ctrl-icon-more{
+                font-size: 20px;
+                color: #828282;
+            }
+        }
+        .wrap-del {
+            margin: 0;
+            padding: 0;
+            position: absolute;
+            top: calc(100% + 30px); /* 框框在按鈕的下方，可以調整間距 */
+            right: 5px; /* 與按鈕右邊對齊 */
+            z-index: 1; /* 確保框框在最上層 */
+        }
+    }
+}

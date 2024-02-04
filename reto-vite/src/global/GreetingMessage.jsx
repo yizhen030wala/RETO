@@ -1,9 +1,9 @@
 import React, { useState, useEffect } from 'react';
 
-const myStyle={
-  margin:'0',
+const myStyle = {
+  margin: '0',
   padding: '0',
-}
+};
 
 const GreetingMessage = () => {
   const [greeting, setGreeting] = useState('');
@@ -28,8 +28,8 @@ const GreetingMessage = () => {
   }, []);
 
   return (
-    <div>
-      <p style={myStyle}><span> {greeting}，旅人! </span></p>
+    <div style={myStyle}>
+      <div> {greeting}，旅人! </div>
     </div>
   );
 };

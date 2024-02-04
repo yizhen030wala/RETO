@@ -2,10 +2,13 @@
 import React from 'react';
 import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
 import Home from './pages/Home';
+import Search from './pages/Search'
 import Login from './pages/Login';
 import Test from './pages/Test'
 import MyTrip from './pages/MyTrip'
+import MyMap from './pages/MyMap'
 import Schedule from './pages/Schedule'
+import Reto from './pages/Reto'
 
 const App = () => {
   return (
