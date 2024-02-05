@@ -795,7 +795,9 @@ section {
     background-image: linear-gradient(to right, #D9D9D9 0%, #828282 50%, #D9D9D9 100%);
     background-size: 200% 100%;
     background-repeat: no-repeat;
-    animation: gradientAnimation 1s linear infinite;
+    animation: gradientAnimation 3s ease-in-out infinite;
+
+    transition: .35s;
 }
 
 @keyframes gradientAnimation {
