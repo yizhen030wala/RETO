@@ -22,14 +22,6 @@
 }
 * {
   margin: 0;
-  font-family: "Noto Sans TC", 微軟正黑體;
-  color: #333;
-}
-* li {
-  list-style: none;
-}
-* a {
-  text-decoration: none;
 }
 
 .header {

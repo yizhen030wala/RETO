@@ -28,16 +28,16 @@
 // ===============================================
 * {
     margin: 0;
-    font-family: 'Noto Sans TC', 微軟正黑體;
-    color: #333;
+    // font-family: 'Noto Sans TC', 微軟正黑體;
+    // color: #333;
 
-    li {
-        list-style: none;
-    }
+    // li {
+    //     list-style: none;
+    // }
 
-    a {
-        text-decoration: none;
-    }
+    // a {
+    //     text-decoration: none;
+    // }
 }
 
 // ===============================================
@@ -111,8 +111,7 @@
             top: 110%;
             right: 0;
             z-index: 1;
-            
-            
+     
         }
         .hover-trigger:hover + .popup-content, .popup-content:hover {
             display: block;
