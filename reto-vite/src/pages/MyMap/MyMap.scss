@@ -13,7 +13,7 @@
     gap: 35px;
 
     .left_div {
-        width: 440px;
+        width: 35%;
 
         // 麵包屑導覽列
         .SM_wrap {
@@ -66,37 +66,40 @@
             padding-bottom: 42px;
             display: flex;
 
-            h2:first-child {
-                color: #000;
-                /* 第一个 <h2> 设置为黑色 */
-            }
+            // div:first-child {
+            //     color: #333333;
+            //     /* 第一个 <h2> 设置为黑色 */
+            // }
             .btn_day {
-                padding: 8px 20px;
+                padding: 8px 15px;
                 display: flex;
                 align-items: center;
 
                 border-bottom: solid;
-                border-color: #929292;
+                border-color: #828282;
+                opacity: .5;
 
                 font-family: Noto Sans TC;
                 font-size: 14px;
                 font-style: normal;
                 font-weight: 400;
                 line-height: 160%;
-                color: #929292;
+                color: #828282;
                 /* 设置所有的 <h2> 初始为灰色 */
             }
 
             .btn_day:hover {
-                color: black;
+                color: #333333;
                 /* 设置所有的 <h2> 初始为灰色 */
                 border-bottom: solid;
-                border-color: black;
+                border-color: #333333;
+                opacity: 1;
             }
 
             .btn_day:first-child {
-                color: black;
-                border-color: black;
+                color: #333333;
+                border-color: #333333;
+                opacity: 1;
             }
         }
 
@@ -387,7 +390,7 @@
     // 右側資訊 地圖欄位
     .right_div {
         position: relative;
-        width: 59%;
+        width: 57%;
         height: 730px;
 
         // 地圖本體

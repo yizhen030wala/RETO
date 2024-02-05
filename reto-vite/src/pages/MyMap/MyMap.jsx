@@ -1,5 +1,6 @@
 import React from 'react'
-import "./MyMap.css"
+// import "./MyMap.css"
+import "../css/MyMap.css"
 import BreadCrumb from '../../components-common/BreadCrumb/BreadCrumb.tsx'
 // import ButtonDel_NB from '../../components-common/Button/ButtonDel_NB/ButtonDel_NB.jsx'
 import ScheduleSheet from '../../components-common/ScheduleSheet/ScheduleSheet.jsx'
@@ -36,6 +37,7 @@ const MyMap = () => {
                         <div className="btn_day">第 2 天</div>
                         <div className="btn_day">第 3 天</div>
                         <div className="btn_day">第 4 天</div>
+                        <div className="btn_day">第 5 天</div>
                     </div>
 
                     {/* 行程表顯示外框 */}

@@ -1,5 +1,7 @@
+// 行程頁和地圖頁上面的麵包屑導覽
+
 import React from "react";
-import "./BreadCrumb.css";
+import "../css/BreadCrumb.css";
 import { Link } from 'react-router-dom';
 import goright from '../../assets/img/icon/icon-go/goright.svg';
 

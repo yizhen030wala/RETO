@@ -72,10 +72,34 @@
   align-items: center;
   gap: 5px;
 }
-.info_SpotCard .spotInfo_SpotCard .spotName_Fuc .icon_copy {
-  padding: auto;
+.info_SpotCard .spotInfo_SpotCard .spotName_Fuc:hover .btn_copy,
+.info_SpotCard .spotInfo_SpotCard .spotName_Fuc:hover .btn_copy .icon-content_copy {
+  opacity: 1;
+}
+.info_SpotCard .spotInfo_SpotCard .spotName_Fuc .btn_copy {
+  width: 18px;
+  height: 18px;
+  border-radius: 10px;
+  background-color: #d9d9d9;
   display: flex;
+  align-content: center;
+  justify-content: center;
   align-items: center;
+  opacity: 0;
+  transition: 0.3s;
+  cursor: pointer;
+}
+.info_SpotCard .spotInfo_SpotCard .spotName_Fuc .btn_copy .icon-content_copy {
+  font-size: 12px;
+  color: #333333;
+  opacity: 0;
+  transition: 0.3s;
+}
+.info_SpotCard .spotInfo_SpotCard .spotName_Fuc .btn_copy:hover {
+  background-color: #828282;
+}
+.info_SpotCard .spotInfo_SpotCard .spotName_Fuc .btn_copy:hover .icon-content_copy {
+  color: #d9d9d9;
 }
 .info_SpotCard .spotInfo_SpotCard .adviseTime {
   font-family: Noto Sans TC;

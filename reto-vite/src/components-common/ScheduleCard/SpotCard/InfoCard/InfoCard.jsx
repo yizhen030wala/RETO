@@ -30,7 +30,7 @@ const InfoCard = () => {
                     {/* 地點名稱 */}
                     <div className="spotName_Fuc">
                         <div className="spotName">大稻埕魯肉飯</div>
-                        <div className="btn-copy">
+                        <div className="btn_copy">
                             <span className="icon-content_copy"></span>
                         </div>
                     </div>
