@@ -194,7 +194,6 @@ a {
 
 figure {
     position: relative;
-    ;
 }
 
 img {
@@ -260,7 +259,7 @@ section {
     height: 40px;
 }
 
-.nav_search ul{
+.nav_search ul {
     display: flex;
     justify-content: center;
     align-items: center;
@@ -557,6 +556,7 @@ section {
     width: 980px;
     height: auto;
 }
+
 .wrapper * {
     transition-property: all !important;
     /* 這裡會寫important是因為Masonry載入時，會動態給.card_search一個property設定，
@@ -585,7 +585,7 @@ section {
     box-shadow: 0px 0px 10px 2px transparent;
     transition: box-shadow .35s, transform .35s;
     /* js套件自動設定，改為預設才能正常顯示transition */
-    
+
 }
 
 /* 避免使用者重複點選時反白 */
@@ -600,9 +600,10 @@ section {
     width: 60px;
     height: 60px;
     border-radius: 50%;
-    
+
     text-align: center;
-    line-height: 20px; /* 使文字垂直居中 */
+    line-height: 20px;
+    /* 使文字垂直居中 */
     cursor: pointer;
     z-index: 999;
 
@@ -622,7 +623,7 @@ section {
 
     font-weight: bold;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2),
-    inset -1px -1px .5px .5px #c7c7c7;
+        inset -1px -1px .5px .5px #c7c7c7;
 }
 
 /* 確認勾選圓點 */
@@ -665,7 +666,7 @@ section {
 
 /* hover時圖片放大1.3倍 */
 
-.card_search:hover img{
+.card_search:hover img {
     cursor: pointer;
     transform: scale(110%);
 }
@@ -678,6 +679,23 @@ section {
     object-fit: cover;
     border-radius: 15px;
 } */
+
+
+/* 給卡片預設圖片 */
+/* .container_card_img {
+    background-color: red;
+    width: 230px;
+    height: 400px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.container_card_img img {
+    max-width: 100%;
+    height: auto;
+} */
+
 
 .card_search_info {
     padding: 12px;
@@ -764,4 +782,27 @@ section {
 .accommodation,
 .fun {
     scale: 0.95;
+}
+
+
+/* 圖片尚未載入時的樣式 */
+
+.img_loading {
+    width: 230px;
+    height: 300px;
+
+    background-color: #D9D9D9; /* 底色 */
+    background-image: linear-gradient(to right, #D9D9D9 0%, #828282 50%, #D9D9D9 100%);
+    background-size: 200% 100%;
+    background-repeat: no-repeat;
+    animation: gradientAnimation 1s linear infinite;
+}
+
+@keyframes gradientAnimation {
+    0% {
+        background-position: left bottom;
+    }
+    100% {
+        background-position: right bottom;
+    }
 }

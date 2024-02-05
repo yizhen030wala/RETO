@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState } from "react";
 import '../CSS/Search.css';
 import Tags from '../Tags/Tags';
 import Marker from '../../../assets/img_hsc/search_card/selected_mark.svg';
@@ -28,6 +28,9 @@ const Card = ({ img, index, onSelect, selected, onOpenLightbox }) => {
     };
 
 
+    //處理預設圖片樣式(尚未加載前)
+    const [isImageLoaded, setIsImageLoaded] = useState(false);
+
 
     return (
         <div className={cardClass} onClick={handleOpenLightbox}>
@@ -42,7 +45,15 @@ const Card = ({ img, index, onSelect, selected, onOpenLightbox }) => {
             </div>
 
             {/* 搜尋圖片 */}
-            <figure><img src={img.imgUrl} alt={`隨機圖片${img.desc}`} /></figure>
+            <figure className='container_card_img'>
+                <img
+                    src={img.imgUrl}
+                    alt={`隨機圖片${img.desc}`}
+                    onLoad={() => setIsImageLoaded(true)}
+                    style={{ display: isImageLoaded ? 'block' : 'none' }}
+                />
+                 {!isImageLoaded && <div className="img_loading"></div>}
+            </figure>
             <div className="card_search_info">
                 {/* Title */}
                 <p className="card_title">景點名稱</p>
