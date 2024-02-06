@@ -34,6 +34,7 @@
   text-align: center;
   justify-content: center;
   gap: 16px;
+  z-index: 999;
 }
 .Showlogin-box figure {
   height: 48px;
@@ -69,6 +70,7 @@
   align-items: center;
   gap: 10px;
   align-self: stretch;
+  display: none;
 }
 .Showlogin-box .menu li {
   gap: 10px;
@@ -80,4 +82,9 @@
   font-weight: 600;
   padding-bottom: 0px;
   text-decoration: #3D9D35 wavy underline;
+}
+@media (max-width: 809px) {
+  .Showlogin-box .menu {
+    display: block;
+  }
 }

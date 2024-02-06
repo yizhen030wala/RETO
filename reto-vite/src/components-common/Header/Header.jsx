@@ -7,8 +7,8 @@ import Menu from '../../assets/img/icon/icon-black/menu.svg'
 import UnLogin from '../ShowUnlogin/ShowUnlogin.jsx'
 import Login from '../ShowLogin/Showlogin.jsx'
 
-function Header() {
 
+function Header() {
   return (
     <>
       <header className="header">
@@ -23,24 +23,23 @@ function Header() {
           <ul className="nav_btn">
             <li><a href="#">開始探索</a></li>
             <li><a href="#">我的景點</a></li>
-            <li><a href="#">行程表</a></li>
+            <li><Link to="/mytrip"> 行程表</Link></li>
           </ul>
         </nav>
         {/* 會員登入  */}
         <div className="user">
           <div className="hover-trigger">
             <figure className="user_box">
-              <a href="#">
-                <img src={User} alt="user" />
-              </a>
+              <img src={User} alt="user" />
             </figure >
 
             <figure className="menu_box">
-              <a href="" id='menu'><img src={Menu} alt="" /></a>
+              <img src={Menu} alt="" />
             </figure>
           </div>
           <div className="popup-content">
-            <UnLogin/>
+            <UnLogin />
+
           </div>
 
         </div>

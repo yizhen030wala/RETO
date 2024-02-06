@@ -12,23 +12,37 @@
     display: flex;
     justify-content: center;
     align-items: center;
+    z-index: 50;
 }
 
 .lightbox-container2 {
     background-color: white;
-    width: 300px;
-    padding: 10px;
     border-radius: 20px;
 
     animation: lightbox-fade-in 0.5s ease, slide-from-center 0.5s ease; /* 新增滑入效果 */
 }
 
-.content {
+
+
+.LL-wrapped {
+    height: 90px;
+    padding: 15px 30px 10px 30px;
+    border-radius: 20px;
+    gap: 18px;
+
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
+
+    font-family: "Noto Sans TC";
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 150%;
 }
+
+
 
 /* 動畫 */
 
@@ -95,22 +109,23 @@
     line-height: 150%; /* 24px */
 }
 /* --------------【按鈕區】--------------- */
-.btn-wrapped{
+ .LL-btn-wrapped{
     display: flex;
+    gap:24px;
     flex-direction: row;
-    
+    position: relative;
 }
 
 
-
-.btn-check-wrap {
+.LL-btn-check-wrap {
     margin: 0;
     padding: 0;
     cursor: pointer;
 }
 
-.btn-close-wrap {
+.LL-btn-close-wrap {
     margin: 0;
     padding: 0;
     cursor: pointer;
 }
+

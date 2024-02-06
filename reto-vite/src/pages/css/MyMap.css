@@ -1,0 +1,514 @@
+@charset "UTF-8";
+@import url("https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@200;300;400;500;600;700;800;900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@200;300;400;500;600;700;800;900&display=swap");
+* {
+  font-family: "Noto Sans TC", 微軟正黑體;
+}
+* ul {
+  list-style: none;
+}
+* a {
+  text-decoration: none;
+  color: #333333;
+}
+
+.SM_container {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  /* width: 1440px; */
+  margin: auto;
+  padding: 2% 8%;
+  gap: 35px;
+}
+.SM_container .left_div {
+  width: 35%;
+}
+.SM_container .left_div .SM_wrap {
+  padding: 0;
+}
+.SM_container .left_div .tripHead {
+  padding: 20px 0;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.SM_container .left_div .tripHead .tripTitle {
+  display: flex;
+  flex-direction: column;
+}
+.SM_container .left_div .tripHead .tripTitle h2 {
+  font-family: Noto Sans TC;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 160%;
+  color: #929292;
+  /* 设置所有的 <h2> 初始为灰色 */
+}
+.SM_container .left_div .tripHead .tripTitle h2:hover {
+  font-family: Noto Sans TC;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 160%;
+  color: black;
+  /* 设置所有的 <h2> 初始为灰色 */
+}
+.SM_container .left_div .tripHead .tripTitle h3 {
+  font-family: Noto Sans TC;
+  font-size: 24px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 150%;
+}
+.SM_container .left_div .SM_date {
+  padding-bottom: 42px;
+  display: flex;
+}
+.SM_container .left_div .SM_date .btn_day {
+  padding: 8px 15px;
+  display: flex;
+  align-items: center;
+  border-bottom: solid;
+  border-color: #828282;
+  opacity: 0.5;
+  font-family: Noto Sans TC;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 160%;
+  color: #828282;
+  /* 设置所有的 <h2> 初始为灰色 */
+}
+.SM_container .left_div .SM_date .btn_day:hover {
+  color: #333333;
+  /* 设置所有的 <h2> 初始为灰色 */
+  border-bottom: solid;
+  border-color: #333333;
+  opacity: 1;
+}
+.SM_container .left_div .SM_date .btn_day:first-child {
+  color: #333333;
+  border-color: #333333;
+  opacity: 1;
+}
+.SM_container .left_div .schedule-wrap .SM_scheduleList {
+  display: flex;
+  justify-content: flex-start;
+  gap: 0 10px;
+  position: relative;
+  /* 以下是消除卷軸的方式 */
+  /* 卷軸寬度width */
+  /* 卷軸高度的底色(軌跡底色)Track */
+  /* 卷軸控制塊 Handle */
+}
+.SM_container .left_div .schedule-wrap .SM_scheduleList .SM_day {
+  z-index: 100;
+  padding: 8px 20px;
+  display: flex;
+  align-items: center;
+  color: #fff;
+  line-height: 160%;
+  background-color: #3d9d35;
+  border-radius: 10px;
+  position: absolute;
+  top: -23px;
+  left: 20px;
+  font-family: Noto Sans TC;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 400;
+}
+.SM_container .left_div .schedule-wrap .SM_scheduleList .SM_schedule {
+  width: 100%;
+  padding: 40px 20px 20px 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  /* border: solid black; */
+  border: none;
+  border-radius: 20px;
+  background: var(--gray-light, #f5f5f5);
+  position: relative;
+  overflow-y: scroll;
+  height: 500px;
+}
+.SM_container .left_div .schedule-wrap .SM_scheduleList .SM_schedule .note {
+  padding: 0 8%;
+  /* background-color: gray; */
+  font-family: Noto Sans TC;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 150%;
+}
+.SM_container .left_div .schedule-wrap .SM_scheduleList .SM_schedule .spotList {
+  display: flex;
+  margin: 8px 0;
+  flex-direction: column;
+  gap: 8px;
+}
+.SM_container .left_div .schedule-wrap .SM_scheduleList .SM_schedule .spotList .spot {
+  display: flex;
+  overflow: hidden;
+}
+.SM_container .left_div .schedule-wrap .SM_scheduleList .SM_schedule .spotList .spot .leftFunc {
+  width: 8%;
+  /* padding: 3px; */
+  display: flex;
+  gap: 7px;
+  flex-direction: column;
+  align-items: center;
+}
+.SM_container .left_div .schedule-wrap .SM_scheduleList .SM_schedule .spotList .spot .info {
+  width: 92%;
+  background-color: floralwhite;
+  display: flex;
+  flex-direction: row;
+  position: relative;
+  border-radius: 14px;
+  background: var(--white, #fff);
+  overflow: hidden;
+}
+.SM_container .left_div .schedule-wrap .SM_scheduleList .SM_schedule .spotList .spot .info .num {
+  display: flex;
+  align-content: center;
+  justify-content: center;
+  position: absolute;
+  top: 5px;
+  left: 5px;
+  z-index: 1;
+  width: 20px;
+  height: 20px;
+  color: black;
+  background-color: white;
+  /* padding: 5px 10px; */
+  border-radius: 10px;
+  font-family: Noto Sans TC;
+  font-size: 12px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 150%;
+}
+.SM_container .left_div .schedule-wrap .SM_scheduleList .SM_schedule .spotList .spot .info .pic {
+  width: 45%;
+  /* 讓 figure 佔滿父元素的寬度 */
+  height: 100%;
+  /* 讓 figure 佔滿父元素的高度 */
+  overflow: hidden;
+  /* 隱藏超出 figure 的內容 */
+}
+.SM_container .left_div .schedule-wrap .SM_scheduleList .SM_schedule .spotList .spot .info .pic img {
+  width: 100%;
+  /* 讓圖片寬度填滿 figure */
+  height: 100%;
+  /* 讓圖片高度填滿 figure */
+  object-fit: cover;
+  /* 讓圖片填滿整個容器，保持比例 */
+}
+.SM_container .left_div .schedule-wrap .SM_scheduleList .SM_schedule .spotList .spot .info .spotInfo {
+  width: 55%;
+  padding: 10px 15px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+.SM_container .left_div .schedule-wrap .SM_scheduleList .SM_schedule .spotList .spot .info .spotInfo .spotTitle {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+}
+.SM_container .left_div .schedule-wrap .SM_scheduleList .SM_schedule .spotList .spot .info .spotInfo .spotTitle .iconTime {
+  display: flex;
+  flex-direction: row;
+  gap: 0px 10px;
+  justify-content: space-between;
+  align-items: center;
+}
+.SM_container .left_div .schedule-wrap .SM_scheduleList .SM_schedule .spotList .spot .info .spotInfo .spotTitle .iconTime .icon {
+  width: 16px;
+  height: 16px;
+  display: flex;
+  align-content: center;
+  justify-content: center;
+}
+.SM_container .left_div .schedule-wrap .SM_scheduleList .SM_schedule .spotList .spot .info .spotInfo .spotTitle .iconTime .time {
+  font-family: Noto Sans TC;
+  font-size: 12px;
+  font-style: normal;
+}
+.SM_container .left_div .schedule-wrap .SM_scheduleList .SM_schedule .spotList .spot .info .spotInfo .spotName_Fuc {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+}
+.SM_container .left_div .schedule-wrap .SM_scheduleList .SM_schedule .spotList .spot .info .spotInfo .spotName_Fuc .btn-copy .icon_copy {
+  padding: auto;
+  display: flex;
+  align-items: center;
+}
+.SM_container .left_div .schedule-wrap .SM_scheduleList .SM_schedule .spotList .spot .info .spotInfo .adviseTime {
+  font-family: Noto Sans TC;
+  font-size: 12px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 150%;
+}
+.SM_container .left_div .schedule-wrap .SM_scheduleList .SM_schedule .spotList .traffic {
+  padding: 3% 8%;
+}
+.SM_container .left_div .schedule-wrap .SM_scheduleList .SM_schedule .spotList .traffic .trafficInfo {
+  display: flex;
+  gap: 5px 10px;
+  padding: 6% 6%;
+  border-left: 3px solid #d9d9d9;
+}
+.SM_container .left_div .schedule-wrap .SM_scheduleList .SM_schedule .spotList .traffic .trafficInfo .icon-car {
+  padding: auto;
+  display: flex;
+  align-items: center;
+}
+.SM_container .left_div .schedule-wrap .SM_scheduleList .SM_schedule .spotList .traffic .trafficInfo .driveTime {
+  color: rgba(0, 0, 0, 0.5);
+  font-family: Noto Sans TC;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 160%;
+}
+.SM_container .left_div .schedule-wrap .SM_scheduleList .SM_schedule .btn_addspot-wrap .btn_addspot {
+  display: flex;
+  padding: 10px 20px;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  border-radius: 20px;
+  background: var(--white, #fff);
+}
+.SM_container .left_div .schedule-wrap .SM_scheduleList .SM_schedule .btn_addspot-wrap .btn_addspot .btnAddSpotTitle {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  gap: 5px;
+}
+.SM_container .left_div .schedule-wrap .SM_scheduleList .SM_schedule .btn_addspot-wrap .btn_addspot .btnAddSpotTitle h3 {
+  color: var(--black2, #333);
+  font-family: Noto Sans TC;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 150%;
+  /* 24px */
+}
+.SM_container .left_div .schedule-wrap .SM_scheduleList .SM_schedule::-webkit-scrollbar {
+  width: 3px;
+}
+.SM_container .left_div .schedule-wrap .SM_scheduleList .SM_schedule::-webkit-scrollbar-track {
+  background: transparent;
+}
+.SM_container .left_div .schedule-wrap .SM_scheduleList .SM_schedule::-webkit-scrollbar-thumb {
+  background: transparent;
+}
+.SM_container .right_div {
+  position: relative;
+  width: 57%;
+  height: 730px;
+  /* 卷軸控制 */
+  /* 卷軸寬度width */
+  /* 卷軸高度的底色(軌跡底色)Track */
+  /* 卷軸控制塊 Handle */
+  /* 卷軸控制塊 Handle on hover */
+}
+.SM_container .right_div .SM_map {
+  width: 100%;
+  height: 100%;
+  border-radius: 20px;
+  background-color: #f5f5f5;
+  overflow: hidden;
+}
+.SM_container .right_div .SM_map iframe {
+  width: 100%;
+  height: 100%;
+}
+.SM_container .right_div .link_google {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  position: absolute;
+  top: 15px;
+  right: 15px;
+  z-index: 1;
+  padding: 10px 20px;
+  gap: 10px;
+  background-color: #fff;
+  border-radius: 20px;
+  text-decoration: none;
+}
+.SM_container .right_div .link_google figure {
+  display: flex;
+}
+.SM_container .right_div .link_google div p {
+  color: var(--black2, #333);
+  font-family: Noto Sans TC;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 150%;
+}
+.SM_container .right_div .spot_card_wrapper {
+  padding: 30px 20px 20px 20px;
+  width: 80%;
+  height: 200px;
+  background-color: #fff;
+  border-radius: 20px;
+  display: flex;
+  overflow: auto;
+  position: absolute;
+  bottom: 20px;
+  left: 50%;
+  transform: translate(-50%);
+}
+.SM_container .right_div .spot_card_wrapper .btn_close {
+  position: absolute;
+  right: 15px;
+  top: 26px;
+  /* scale: 0.7 */
+  z-index: 999;
+}
+.SM_container .right_div .spot_card_wrapper .spot_card {
+  overflow: auto;
+  position: relative;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  width: 100%;
+  /* padding:0px 0px 0px 0px; */
+  background-color: #fff;
+  overflow-y: scroll;
+  height: 200px;
+}
+.SM_container .right_div .spot_card_wrapper .spot_card .map_card {
+  width: 55%;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+.SM_container .right_div .spot_card_wrapper .spot_card .map_card .map_card_wrap {
+  display: flex;
+  flex-direction: column;
+  gap: 17px;
+  font-family: Noto Sans TC;
+  font-size: 12px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 150%;
+}
+.SM_container .right_div .spot_card_wrapper .spot_card .map_card .map_card_wrap a {
+  text-decoration: none;
+}
+.SM_container .right_div .spot_card_wrapper .spot_card .map_card .map_card_wrap .spot_name {
+  display: flex;
+  align-items: center;
+  font-family: Noto Sans TC;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 150%;
+}
+.SM_container .right_div .spot_card_wrapper .spot_card .map_card .map_card_wrap .map_card_info {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+.SM_container .right_div .spot_card_wrapper .spot_card .map_card .map_card_wrap .map_card_info .map_card_score_money {
+  display: flex;
+  gap: 4px;
+}
+.SM_container .right_div .spot_card_wrapper .spot_card .map_card .map_card_wrap .map_card_info .map_card_score {
+  display: flex;
+}
+.SM_container .right_div .spot_card_wrapper .spot_card .map_card .map_card_wrap .map_card_info .map_card_score .map_card_text {
+  font-family: Noto Sans TC;
+  font-size: 12px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 150%;
+}
+.SM_container .right_div .spot_card_wrapper .spot_card .map_card .map_card_wrap .map_card_info .map_card_score .icon-grade {
+  font-family: Noto Sans TC;
+  font-size: 12px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 150%;
+}
+.SM_container .right_div .spot_card_wrapper .spot_card .map_card .map_card_wrap .map_card_info .map_card_text {
+  font-family: Noto Sans TC;
+  font-size: 12px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 150%;
+}
+.SM_container .right_div .spot_card_wrapper .spot_card .card_info_list {
+  display: flex;
+  flex-direction: row;
+  align-items: center span;
+  align-items-margin-right: 2.5px;
+}
+.SM_container .right_div .spot_card_wrapper .spot_card .card_info_list2 {
+  display: flex;
+  flex-direction: row;
+  align-items: center span;
+  align-items-margin-right: 10px;
+}
+.SM_container .right_div .spot_card_wrapper .spot_card .card_info_list2 .card_info_filter {
+  padding: 2.5px 13px;
+  margin-right: 3px;
+  border-radius: 5px;
+  background: #d9d9d9;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: Inter;
+  font-size: 10px;
+  font-style: normal;
+}
+.SM_container .right_div .spot_card_wrapper .operation_time {
+  gap: 10px;
+}
+.SM_container .right_div .spot_card_wrapper .operation_time p {
+  color: var(--white, #000000);
+  font-family: Noto Sans TC;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 150%;
+}
+.SM_container .right_div .map_img {
+  width: 45%;
+  display: flex;
+  padding: 0px 60px 0 70px;
+}
+.SM_container .right_div .map_img img {
+  width: 100%;
+  border-radius: 20px;
+}
+.SM_container .right_div .spot_card::-webkit-scrollbar {
+  width: 3px;
+}
+.SM_container .right_div .spot_card::-webkit-scrollbar-track {
+  background: transparent;
+  border-radius: 10px;
+  /* 卷軸圓角 */
+  margin: 70px 0px 0px 0px;
+  /* 卷軸位置 */
+}
+.SM_container .right_div .spot_card::-webkit-scrollbar-thumb {
+  background: #d9d9d9;
+}
+.SM_container .right_div .spot_card::-webkit-scrollbar-thumb:hover {
+  background: #555;
+}/*# sourceMappingURL=MyMap.css.map */

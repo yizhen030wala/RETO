@@ -6,8 +6,7 @@ const deleteToast = () => {
     return (
         <>
             <div className="deleteToast-box">
-              
-                <p> <span className="icon-delete"></span>刪除</p>
+                <p><span className="icon-delete"></span>刪除</p>
             </div>
         </>
     )

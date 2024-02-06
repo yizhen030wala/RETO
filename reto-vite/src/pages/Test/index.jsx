@@ -7,14 +7,24 @@ import MemberToast from '../../components-common/memberToast/memberToast.jsx'
 import TextToast from '../../components-common/textToast/textToast.jsx'
 import DeleteToast from '../../components-common/deleteToast/deleteToast.jsx'
 import DatePicker from '../../components-common/datePicker/datePicker.jsx'
-import LightboxLine from '../../components-common/LightboxLine'
-
-
+import ButtonDel from '../../components-common/Button/ButtonDel/ButtonDel.jsx'
+import LightboxLine from '../../components-common/LightboxLine';
+// import SpotCard from '../../components-common/ScheduleCard/SpotCard/SpotCard.jsx';
+import Spottag from '../../components-common/ScheduleCard/SpotCard/Spottag/Spottag.jsx';
+import ExchangeCard from "../../components-common/ScheduleCard/SpotCard/ExchangeCard/ExchangeCard.jsx"
+import LightboxExchange from "../../components-common/ScheduleCard/SpotCard/ExchangeCard/ExchangeCard.jsx"
+import BtnExchange from "../../components-common/ScheduleCard/SpotCard/BtnExchange/BtnExchange.jsx"
 
 
 const index = () => {
   return (
     <div>
+     <BtnExchange />
+
+      {/* <Spottag>下午茶</Spottag> */}
+
+      {/* <LightboxLine />
+      <ButtonDel/>
       <AddToast/>
       <DeleteToast/>
       <MemberToast/>
@@ -23,9 +33,7 @@ const index = () => {
       <DatePicker/>
       <div id="calendar"></div>
       <Link to="/">登入頁</Link>
-      <p className="test">scss變數導入測試</p>
-      <p>各位身體健康</p>
-      <span>好</span>
+      <p className="test">scss變數導入測試</p> */}
     </div>
   )
 }
