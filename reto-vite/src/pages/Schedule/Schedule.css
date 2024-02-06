@@ -627,7 +627,7 @@
 
 .LB-container {
     position: relative;
-    z-index: 1000; /* 設置一個足夠高的值 */
+    /* z-index: 1000; 設置一個足夠高的值 */
     
     padding: 0px;
 }

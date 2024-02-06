@@ -1,9 +1,10 @@
-@import "../../../../assets/scssRule/all.scss";
-@import "../../../../assets/scssRule/rule.scss";
+@import "../../assets/scssRule/rule";
+@import "../../assets/scssRule/all";
 
 // ====================================
 
-.lightboxEX-overlay {
+// 燈箱樣式
+.lightbox-overlay {
     position: fixed;
     top: 0;
     left: 0;
@@ -13,11 +14,10 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    z-index: 30;
-
-    .lightboxEX-container {
+    z-index: 20;
+    .lightbox-container {
         background-color: white;
-        width: 625px;
+        width: 500px;
         padding: 40px 38px 40px 40px;
         border-radius: 20px;
 
@@ -27,10 +27,65 @@
         position: relative;
         animation: lightbox-fade-in 0.5s ease, slide-from-center 0.5s ease; /* 新增滑入效果 */
 
-        
+        // ----------------以下是動畫區------------
+        /* 動畫 */
 
-        // 內容區
-        .scrollerEX {
+        @keyframes lightbox-fade-in {
+            from {
+                transform: translateY(-10%); /* 調整起始位置 */
+                opacity: 0;
+            }
+            to {
+                transform: translateY(0);
+                opacity: 1;
+            }
+        }
+
+        @keyframes slide-from-center {
+            from {
+                transform: translateY(-10%); /* 調整起始位置 */
+                opacity: 0;
+            }
+            to {
+                transform: translateY(0);
+                opacity: 1;
+            }
+        }
+
+        /* 新增的部分 */
+        .fade-out {
+            animation: fade-out 0.5s ease forwards;
+        }
+
+        @keyframes fade-out {
+            from {
+                opacity: 1;
+            }
+            to {
+                opacity: 0;
+            }
+        }
+
+        /* 新增的部分 */
+        .slide-up-and-fade-out {
+            animation: slide-up-and-fade-out 0.5s ease forwards;
+        }
+
+        @keyframes slide-up-and-fade-out {
+            from {
+                transform: translateY(0);
+                opacity: 1;
+            }
+            to {
+                transform: translateY(-10%);
+                opacity: 0;
+            }
+        }
+
+        // ----------------以上是動畫區------------
+
+        //   /* 卷軸控制 */
+        .scroller {
             width: 100%;
 
             max-height: 350px; /* 設定最大高度為850px，超過部分將出現卷軸 */
@@ -69,53 +124,28 @@
                 background: #555;
             }
 
-            .content_spottag{
-                display: flex;
-                flex-wrap: wrap;
-                flex-direction: row;
-                align-items: center;
-                align-content: center;
-                justify-content: center;
-                gap:12px;
+            .note-title {
+                margin: 0;
+                font-family: "Noto Sans TC";
+                font-size: 24px;
+                font-style: normal;
+                font-weight: 500;
+                line-height: 150%; /* 36px */
 
-                // 標題
-                .spottag_title {
-                    margin: 0;
-                    font-family: "Noto Sans TC";
-                    font-size: 24px;
-                    font-style: normal;
-                    font-weight: 500;
-                    line-height: 150%; /* 36px */
-                  
-                    color: #333333;
-                }
-                .spottag_wrap {
-                    display: flex;
-                flex-wrap: wrap;
-                flex-direction: row;
-                align-items: center;
-                align-content: center;
-                justify-content: center;
-                gap:12px;
-                }
+                color: #333333;
             }
-
-            // 兩欄卡片控制區
-            .cardEX_wrap {
+            .filter-wrap {
                 display: flex;
                 flex-direction: row;
+                align-items: center;
+                justify-content: flex-start;
                 gap: 12px;
-
-                .card_col {
-                    display: flex;
-                    flex-direction: column;
-                }
+            }
+            .list-wrap {
+                margin: 12px 0px;
             }
         }
 
-        // 按鈕放置區
-
-        // 關閉按鈕
         .btn-close-wrap {
             margin: 0;
             padding: 0;
@@ -129,20 +159,19 @@
             right: 30px;
 
             cursor: pointer;
+
             .icon-close {
                 color: #d9d9d9;
 
                 &:hover {
                     color: #333333;
                 }
-
                 &:active {
                     color: #333333;
                 }
             }
         }
 
-        // 確認替換按鈕
         .btn-check-wrap {
             margin: 0;
             padding: 0;
@@ -155,60 +184,5 @@
             bottom: 40px;
             right: 30px;
         }
-    }
-}
-
-
-/* 動畫 */
-
-@keyframes lightbox-fade-in {
-    from {
-        transform: translateY(-10%); /* 調整起始位置 */
-        opacity: 0;
-    }
-    to {
-        transform: translateY(0);
-        opacity: 1;
-    }
-}
-
-@keyframes slide-from-center {
-    from {
-        transform: translateY(-10%); /* 調整起始位置 */
-        opacity: 0;
-    }
-    to {
-        transform: translateY(0);
-        opacity: 1;
-    }
-}
-
-/* 新增的部分 */
-.fade-out {
-    animation: fade-out 0.5s ease forwards;
-}
-
-@keyframes fade-out {
-    from {
-        opacity: 1;
-    }
-    to {
-        opacity: 0;
-    }
-}
-
-/* 新增的部分 */
-.slide-up-and-fade-out {
-    animation: slide-up-and-fade-out 0.5s ease forwards;
-}
-
-@keyframes slide-up-and-fade-out {
-    from {
-        transform: translateY(0);
-        opacity: 1;
-    }
-    to {
-        transform: translateY(-10%);
-        opacity: 0;
     }
 }

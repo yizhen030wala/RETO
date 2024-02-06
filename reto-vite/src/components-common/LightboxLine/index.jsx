@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
-import ButtonChk from "../Button/ButtonChk/ButtonChk.jsx";
 import ButtonLine from '../Button/ButtonLine/ButtonLine.jsx';
+import LightboxLine from "./LightboxLine.jsx";
 
 const Index = () => {
     const [isLightboxOpen, setIsLightboxOpen] = useState(false);

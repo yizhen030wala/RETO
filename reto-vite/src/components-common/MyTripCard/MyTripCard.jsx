@@ -1,7 +1,9 @@
+// 行程總頁/我的行程上面的行程卡片
 
 import React from 'react';
 import { Link } from 'react-router-dom';
-import "./MyTripCard.css";
+// import "./MyTripCard.css";
+import "../../components-common/css/MyTripCard.css";
 import ButtonDel from "../Button/ButtonDel/ButtonDel.jsx"
 
 const MyTripCard = ({ imageUrl, name, days }) => {

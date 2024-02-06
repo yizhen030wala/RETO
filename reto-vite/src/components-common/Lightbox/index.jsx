@@ -1,7 +1,10 @@
+// 行李清單的綠色按鈕
+
 import React, { useState } from 'react';
 import Lightbox from './Lightbox';
 import ButtonChk from "../Button/ButtonChk/ButtonChk.jsx";
-import "./index.css"
+// import "./index.css"
+import "../css/index.css"
 
 const App = () => {
   const [isLightboxOpen, setIsLightboxOpen] = useState(false);

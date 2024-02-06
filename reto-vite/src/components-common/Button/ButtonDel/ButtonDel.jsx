@@ -1,5 +1,6 @@
 import React, { useState, useRef, useEffect } from 'react';
-import "./ButtonDel.css";
+// import "./ButtonDel.css";
+import "../css/ButtonDel.css";
 import DeleteToast from '../../deleteToast/deleteToast.jsx'
 
 const ButtonDel = () => {

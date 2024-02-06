@@ -1,8 +1,11 @@
+// 頁面 - 行程總頁/我的行程
+
 import React from 'react'
 // import { Link } from 'react-router-dom';
 import MyTripCard from '../../components-common/MyTripCard/MyTripCard.jsx';
 import ButtonChk from '../../components-common/Button/ButtonChk/ButtonChk.jsx';
-import "./MyTrip.css";
+// import "./MyTrip.css";
+import "../css/MyTrip.css"
 
 
 const MyTrip = () => {
@@ -19,7 +22,7 @@ const MyTrip = () => {
                     <div className="title">
                         <div className="title-name">我的旅行</div>
                         <ButtonChk className="btn-add-wrap">
-                            <span className="icon-add icon-add-map"></span>
+                            <div className="icon-add-map icon-add"></div>
                             <div className="text-add">新增行程</div>
                         </ButtonChk>
 

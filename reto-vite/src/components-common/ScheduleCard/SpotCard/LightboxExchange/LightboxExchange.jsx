@@ -22,13 +22,13 @@ const LightboxExchange = ({ onClose }) => {
 
     return (
         <>
-            <div ref={overlayRef} className="lightbox-overlay" onClick={handleClose}>
+            <div ref={overlayRef} className="lightboxEX-overlay" onClick={handleClose}>
                 <div
                     ref={lightboxRef}
-                    className="lightbox-container"
+                    className="lightboxEX-container"
                     onClick={(e) => e.stopPropagation()}
                 >
-                    <div className="scroller">
+                    <div className="scrollerEX">
                         <div className='content_spottag'>
                             <div className='spottag_title'>你的景點中和</div>
                             <div className='spottag_wrap'>
@@ -38,7 +38,7 @@ const LightboxExchange = ({ onClose }) => {
                             </div>
                             <div className='spottag_title'>一樣的有...</div>
                         </div>
-                        <div className='card_wrap'>
+                        <div className='cardEX_wrap'>
                             <div className='card_col'>
                                 <ExchangeCard
                                     imgSrc="https://images.unsplash.com/photo-1504669887860-f6d4cc3feb4b?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
