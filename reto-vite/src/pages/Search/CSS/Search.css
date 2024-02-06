@@ -1,0 +1,810 @@
+@charset "UTF-8";
+/*須設定才能抓得到中文字*/
+
+@import url('https://fonts.googleapis.com/css2?family=Alegreya&family=Grenze+Gotisch:wght@200&display=swap');
+/*Google Fonts*/
+
+
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@300;400;500;600;700&display=swap');
+/*Google Fonts*/
+
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+
+html,
+body,
+div,
+span,
+applet,
+object,
+iframe,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+a,
+abbr,
+acronym,
+address,
+big,
+cite,
+code,
+del,
+dfn,
+em,
+img,
+ins,
+kbd,
+q,
+s,
+samp,
+small,
+strike,
+strong,
+sub,
+sup,
+tt,
+var,
+b,
+u,
+i,
+center,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+fieldset,
+form,
+label,
+legend,
+table,
+caption,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td,
+article,
+aside,
+canvas,
+details,
+embed,
+figure,
+figcaption,
+footer,
+header,
+hgroup,
+menu,
+nav,
+output,
+ruby,
+section,
+summary,
+time,
+mark,
+audio,
+video {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    font-size: 100%;
+    font: inherit;
+    vertical-align: baseline;
+}
+
+/* HTML5 display-role reset for older browsers */
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+menu,
+nav,
+section {
+    display: block;
+}
+
+body {
+    line-height: 1;
+}
+
+ol,
+ul {
+    list-style: none;
+}
+
+blockquote,
+q {
+    quotes: none;
+}
+
+blockquote:before,
+blockquote:after,
+q:before,
+q:after {
+    content: '';
+    content: none;
+}
+
+table {
+    border-collapse: collapse;
+    border-spacing: 0;
+}
+
+/*清除input標籤自帶樣式*/
+input {
+    border: 0;
+    /* 清除自帶的2px的邊框 */
+    padding: 0;
+    /* 清除自帶的padding間距 */
+    outline: none;
+    /* 清除input點擊之後的黑色邊框 */
+}
+
+/*清除button標籤自帶樣式*/
+button {
+    background: none;
+    border: none;
+    color: inherit;
+    font: inherit;
+    padding: 0;
+    cursor: pointer;
+    text-decoration: underline;
+}
+
+/*定義css變數*/
+:root {
+    /*灰階*/
+    --light_grey: #ccc;
+    --grey: #999;
+    --deep_grey: #666;
+    /*主色調*/
+    --major-color: #f2edf0;
+    --major-color2: #e6ece5;
+    --major-color3: #ecf0f4;
+    /*輔助色調*/
+    --lesser-color: #bf9899;
+}
+
+/*網頁常用設定*/
+
+* {
+    /*"*"表全域選擇器，改變所有標籤*/
+    box-sizing: border-box;
+    /*不累加邊框和內距，間距還是會累積*/
+}
+
+a {
+    display: block;
+    text-decoration: none;
+}
+
+figure {
+    position: relative;
+}
+
+img {
+    display: block;
+    width: 100%;
+}
+
+body {
+    /* background-color: blanchedalmond; */
+    font-family:
+        /*西文*/
+        -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Ubuntu, "Helvetica Neue", Helvetica, Arial,
+        /*中文*/
+        "蘋方-繁", "PingFang TC", "黑體-繁", "Heiti TC", "微軟正黑體", "Microsoft JhengHei", "Noto Sans TC", sans-serif;
+}
+
+/*共用區*/
+
+section {
+    height: 100vh;
+    /*100vh表示剛好一個視窗高，會自動彈性符合*/
+    display: flex;
+    /*轉變後預設主軸方向變為水平*/
+    flex-direction: column;
+    /*轉變主軸方向為垂直*/
+    align-items: center;
+    /*副軸(水平)置中*/
+    justify-content: center;
+    /*主軸(垂直)置中*/
+}
+
+
+
+/* a {
+    color: black;
+} */
+
+/*Nav*/
+
+.logo_search {
+    width: 120px;
+}
+
+.bar_top_search {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #3D9D35;
+    padding: 20px;
+    height: 82px;
+}
+
+.login_search {
+    /* width: 100%;
+    flex: 1; */
+    width: 120px;
+    display: flex;
+    justify-content: flex-end;
+}
+
+.login_search img {
+    width: 40px;
+    height: 40px;
+}
+
+.nav_search ul {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    /* width: 274px; */
+    height: 32px;
+    padding: 5px 30px;
+    gap: 0 2rem;
+
+    border-radius: 20px;
+    background-color: #FFFFFF;
+    white-space: nowrap;
+}
+
+.nav_search li a {
+    font-family: 'Noto Sans TC', sans-serif;
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 600;
+    /*網頁上600看起來跟figma上400一樣*/
+    line-height: 160%;
+}
+
+
+/*Search*/
+
+.search {
+    display: flex;
+    flex-direction: column;
+    background-color: #3D9D35;
+    align-items: center;
+    border-radius: 0px 0px 50px 50px;
+    height: 24vh;
+    padding-top: 42.5px;
+}
+
+.bar_search {
+    display: flex;
+    padding: 8px 12px;
+    gap: 4px;
+    background-color: white;
+    width: 460px;
+
+    border-radius: 10px;
+    justify-content: space-between;
+    border: 1px solid rgba(0, 0, 0, 0.10);
+    align-items: center;
+}
+
+.bar_search input {
+    overflow: hidden;
+    color: rgba(0, 0, 0, 0.50);
+    text-overflow: ellipsis;
+    white-space: nowrap;
+
+    font-family: 'Noto Sans TC', sans-serif;
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 160%;
+    /* 22.4px */
+}
+
+.bar_search img {
+    width: 20px;
+    height: 20px;
+}
+
+.bar_search div {
+    display: flex;
+}
+
+.bar_search div img {
+    margin: 4px;
+}
+
+.bar_search div a {
+    padding: 4px 16px;
+    justify-content: center;
+    align-items: center;
+    gap: 8.951px;
+
+    border-radius: 17.902px;
+    background: #FFDF06;
+
+    font-family: 'Noto Sans TC', sans-serif;
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 160%;
+    /* 22.4px */
+}
+
+/*Recommend*/
+
+.recommend {
+    margin-top: 24px;
+}
+
+.recommend ul {
+    display: flex;
+}
+
+.recommend a {
+    border-radius: 10px;
+    background: #FFF;
+    display: flex;
+    padding: 2px 20px;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    font-family: Noto Sans TC;
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 160%;
+    /* 22.4px */
+
+    margin: 8px;
+}
+
+.recommend a:active {
+    background-color: #333;
+    color: white;
+}
+
+/*輪播區/瀑布流搜尋結果*/
+
+.box_turn {
+    background-color: #F5F5F5;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+
+    padding: 50px 40px;
+    margin: 70px 0;
+    border-radius: 20px;
+
+    box-sizing: border-box;
+
+    /* position: relative; */
+}
+
+.search_text {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 12px;
+    margin-bottom: 12px;
+}
+
+.main_search {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+/*輪播區域標題*/
+
+.item h3 {
+    display: flex;
+    padding: 0px 30px;
+    justify-content: center;
+    align-items: center;
+
+    border-radius: 20px 0px;
+    background: #FFDF06;
+    height: 36px;
+
+    font-family: 'Noto Sans TC', sans-serif;
+    font-size: 24px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 150%;
+    /* 36px */
+}
+
+.item p {
+    text-align: center;
+    font-family: 'Noto Sans TC', sans-serif;
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 160%;
+    /* 22.4px */
+
+    margin-top: 10px;
+}
+
+/*輪播區域分類*/
+
+.tag_turn ul {
+    display: flex;
+    /* padding: 0 12px; */
+    justify-content: flex-start;
+}
+
+.tag_turn ul a {
+    /* (D)/body/14px */
+    font-family: Noto Sans TC;
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 160%;
+    /* 22.4px */
+
+    padding: 2px 20px;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    border-radius: 10px;
+    background: #FFF;
+    margin-right: 8px;
+}
+
+.tag_turn ul a:active {
+    background-color: #333;
+    color: white;
+}
+
+/*Fixed固定左右切換/加入行程按鈕*/
+
+.btn_fixed {
+    position: fixed;
+    left: 43vw;
+    bottom: 15vh;
+    transition: 0.35s;
+    z-index: 999;
+}
+
+.btn_fixed ul {
+    display: flex;
+    padding: 10px 20px;
+    justify-content: center;
+    align-items: center;
+    gap: 8px;
+
+    border-radius: 50px;
+    background: #FFF;
+    box-shadow: 0px 2px 5px 0px rgba(0, 0, 0, 0.25);
+}
+
+.btn_fixed .arrowLeft,
+.btn_fixed .arrowRight {
+    width: 20px;
+    height: 20px;
+}
+
+.btn_fixed .myJour a {
+    color: #FFF;
+    font-family: Noto Sans TC;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 160%;
+    /* 25.6px */
+
+    padding: 8px 16px;
+    justify-content: center;
+    align-items: center;
+
+    border-radius: 20px;
+    background: #3D9D35;
+    transition: 0.35s;
+
+    transform-origin: bottom;
+    white-space: nowrap;
+}
+
+/* 固定按鈕hover(放大1.2倍，a改變顏色 */
+/* .btn_fixed:hover {
+    scale: 110%;
+}
+
+.btn_fixed:active {
+    scale: 100%;
+} */
+
+.btn_fixed .myJour a:hover {
+    background-color: #B8EB35;
+    color: #333;
+}
+
+/* .btn_fixed .myJour a:hover {
+    background-color: #FFDF06;
+    color: black;
+} */
+
+/*瀑布流內容設定*/
+
+
+.wrapper {
+    width: 980px;
+    height: auto;
+}
+
+.wrapper * {
+    transition-property: all !important;
+    /* 這裡會寫important是因為Masonry載入時，會動態給.card_search一個property設定，
+    並且是某些才給，無法找到規律，且因為是動態所以試過許多方法都無法覆蓋，因其設定會導致
+    transition無法正確運行，故用important覆蓋 */
+}
+
+#card_container {
+    position: relative;
+    width: 100%;
+    height: auto;
+}
+
+.card_search {
+    width: 230px;
+    height: auto;
+    background-color: white;
+    border-radius: 20px;
+    overflow: hidden;
+    margin-bottom: 20px;
+
+    cursor: pointer;
+    position: absolute;
+    /* left、top交給Masonry套件去設定給予 */
+
+    box-shadow: 0px 0px 10px 2px transparent;
+    transition: box-shadow .35s, transform .35s;
+    /* js套件自動設定，改為預設才能正常顯示transition */
+
+}
+
+/* 避免使用者重複點選時反白 */
+.card_search * {
+    user-select: none;
+}
+
+.card_search .dot_card {
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+
+    text-align: center;
+    line-height: 20px;
+    /* 使文字垂直居中 */
+    cursor: pointer;
+    z-index: 999;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.dot {
+    position: absolute;
+    top: 15px;
+    right: 15px;
+    width: 20px;
+    height: 20px;
+    background-color: #fff;
+    border-radius: 50%;
+
+    font-weight: bold;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2),
+        inset -1px -1px .5px .5px #c7c7c7;
+}
+
+/* 確認勾選圓點 */
+
+.circle {
+    position: absolute;
+    top: 15px;
+    right: 15px;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.checkmark {
+    z-index: 999;
+    object-fit: cover;
+    height: 100%;
+    width: 100%;
+}
+
+
+.card_search.selected {
+    box-shadow: 1.5px 1.5px 5px 1px #7e7e7e;
+}
+
+.card_search figure {
+    overflow: hidden;
+    object-fit: cover;
+    border-radius: 20px;
+}
+
+.card_search img {
+    width: 100%;
+    display: block;
+    border-radius: 20px;
+    /* box-shadow: 0 0 10px 0 rgb(0 0 0 / 30%); */
+    transition: 0.35s;
+}
+
+/* hover時圖片放大1.3倍 */
+
+.card_search:hover img {
+    cursor: pointer;
+    transform: scale(110%);
+}
+
+/* 卡片樣式 */
+
+/* 開始設置 */
+
+/* .card_search img {
+    object-fit: cover;
+    border-radius: 15px;
+} */
+
+
+/* 給卡片預設圖片 */
+/* .container_card_img {
+    background-color: red;
+    width: 230px;
+    height: 400px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.container_card_img img {
+    max-width: 100%;
+    height: auto;
+} */
+
+
+.card_search_info {
+    padding: 12px;
+}
+
+/* 標題 */
+
+.card_title {
+    font-family: Noto Sans TC, sans-serif;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 150%;
+
+    margin-bottom: 6px;
+}
+
+/* 總評價、評論數及價格  */
+.evaluate {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    font-family: Noto Sans TC, sans-serif;
+    font-size: 12px;
+    font-style: normal;
+    font-weight: 400;
+
+    margin-bottom: 6px;
+}
+
+.evaluate figure,
+.address figure,
+.link figure {
+    display: flex;
+    align-items: center;
+
+    margin-right: 5px;
+}
+
+.evaluate_left {
+    display: flex;
+}
+
+.evaluate_left img {
+    width: 14px;
+    height: 14px;
+}
+
+/* 標籤 */
+
+.tag_search {
+    display: flex;
+    gap: 5px;
+}
+
+.tag_search a {
+    font-family: Noto Sans TC, sans-serif;
+    font-size: 12px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 150%;
+    /* 18px */
+
+    border-radius: 5px;
+    background: #F5F5F5;
+
+    padding: 2.5px 12px;
+}
+
+
+/* 處理輪播區塊 */
+
+.box_carousel {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    overflow: hidden;
+
+    gap: 2%;
+}
+
+.accommodation,
+.fun {
+    scale: 0.95;
+}
+
+
+/* 圖片尚未載入時的樣式 */
+
+.img_loading {
+    width: 230px;
+    height: 300px;
+
+    background-color: #D9D9D9; /* 底色 */
+    background-image: linear-gradient(to right, #D9D9D9 0%, #828282 50%, #D9D9D9 100%);
+    background-size: 200% 100%;
+    background-repeat: no-repeat;
+    animation: gradientAnimation 3s ease-in-out infinite;
+
+    transition: .35s;
+}
+
+@keyframes gradientAnimation {
+    0% {
+        background-position: left bottom;
+    }
+    100% {
+        background-position: right bottom;
+    }
+}

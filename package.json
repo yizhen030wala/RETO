@@ -1,0 +1,8 @@
+{
+  "dependencies": {
+    "react-masonry-component": "^6.3.0"
+  },
+  "devDependencies": {
+    "sass": "^1.70.0"
+  }
+}
