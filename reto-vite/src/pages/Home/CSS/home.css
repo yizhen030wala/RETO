@@ -180,7 +180,7 @@ input {
 a {
 	display: block;
 	text-decoration: none;
-	color: black;
+	/* color: black; */
 	/*a自帶有底線與點擊顏色*/
 }
 
@@ -438,6 +438,10 @@ section {
 #about {
 	height: 50vh;
 	/* margin-top: 64px; */
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	flex-direction: column;
 }
 
 #about .title_section_home {
@@ -464,6 +468,10 @@ section {
 }
 
 /*Features*/
+
+#features {
+	display: flex;	
+}
 
 #features .title_section_home {
 	text-align: center;
@@ -556,6 +564,7 @@ section {
 /*How*/
 
 #how {
+	display: flex;
 	gap: 24px;
 }
 

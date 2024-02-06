@@ -1,6 +1,7 @@
 import Masonry from "react-masonry-component";
-import React, { useState } from "react";
+import React, { useState, useEffect } from 'react';
 import { data_img } from "./data.js";
+import { data_img as initialDataImg } from './data.js';
 import '../CSS/Search.css';
 import Card from '../Card/Card.jsx';
 import Tags_carousel from '../Tags_carousel/Tags_carousel.jsx';
@@ -16,6 +17,8 @@ const Carousel = ({ updateSelectedCount }) => {
   //燈箱
   const [lightboxOpen, setLightboxOpen] = useState(false); // 燈箱開關狀態
   const [selectedImage, setSelectedImage] = useState(null); // 選中的圖片
+
+
 
   //打開燈箱LightBox_Card
   const handleOpenLightbox = (img) => {
@@ -107,6 +110,23 @@ const Carousel = ({ updateSelectedCount }) => {
     };
   }, []);
 
+
+  //↓↓監聽卷軸觸底載入更多↓↓
+  const [images, setImages] = useState(initialDataImg); // 使用初始圖片數據初始化狀態
+  // 捲軸到底部加載更多圖片
+  useEffect(() => {
+    const handleScroll = () => {
+      if (window.innerHeight + document.documentElement.scrollTop >= document.documentElement.offsetHeight - 1) {
+        // 當滾動到底部，追加圖片數據
+        setImages(prevImages => [...prevImages, ...prevImages]); // 使用當前 images 狀態來追加
+      }
+    };
+
+    window.addEventListener('scroll', handleScroll);
+    return () => window.removeEventListener('scroll', handleScroll);
+  }, []); // 這裡不需要將 images 加入依賴數組
+
+
   return (
     <div className="box_carousel">
       {" "}
@@ -130,6 +150,7 @@ const Carousel = ({ updateSelectedCount }) => {
           <div className="wrapper">
             <div id="card_container">
               <Masonry
+                // key={images.length}
                 options={masonryOptions}
                 ref={masonryRef}
                 disableImagesLoaded={false}

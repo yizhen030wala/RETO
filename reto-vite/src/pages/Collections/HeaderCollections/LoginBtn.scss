@@ -1,0 +1,124 @@
+@import "../../../assets/scssRule/rule";
+@import "../../../assets/scssRule/all";
+
+// ===================RWD============================
+
+// 手機
+@media screen and (max-width: 809px) {
+  .bar_top_search,
+  .bar_top_home {
+    ul.nav_btn {
+      display: none;
+    }
+
+    .user {
+      .user_box {
+        display: none;
+      }
+
+      // .menu_box {
+      //     display: block;
+      // }顯示不出來所以放到下面QQ
+    }
+  }
+}
+
+// ===============================================
+.bar_top_search,
+.bar_top_home {
+  margin: 0;
+  font-family: "Noto Sans TC", 微軟正黑體;
+  color: #333;
+
+  li {
+    list-style: none;
+  }
+
+  a {
+    text-decoration: none;
+  }
+}
+
+// ===============================================
+
+//佔用原本的
+
+.bar_top_search,
+.bar_top_home,
+.bar_top_collections {
+  //     height: 8vh;
+  //     display: flex;
+  //     justify-content: space-between;
+  //     align-items: center;
+  //     padding: 0 40px;
+
+  //     .logo {
+  //         width: 120px;
+
+  //     }
+
+  //     /* 表頭功能列 */
+  //     .nav_btn {
+  //         height: 32px;
+  //         padding: 5px 30px;
+  //         display: flex;
+  //         align-items: center;
+  //         gap: 0 2rem;
+  //         border-radius: 20px;
+  //         background-color: $color_gray3;
+
+  //         a {
+  //             font-size: 1rem;
+
+  //             &:hover {
+  //                 font-weight: 500;
+  //             }
+  //         }
+  //     }
+
+  .user {
+    width: 120px;
+    display: flex;
+    justify-content: flex-end;
+    position: relative;
+
+    .user_box {
+      @include size(32px, 32px);
+      border-radius: 100%;
+      background-color: $color_yellow;
+      z-index: 0;
+
+      img {
+        width: 100%;
+      }
+    }
+
+    .menu_box {
+      display: none;
+      @include size(32px, 32px);
+
+      img {
+        width: 100%;
+      }
+
+      @media (max-width: 809px) {
+        display: block;
+      }
+    }
+
+    .popup-content {
+      display: none;
+      position: absolute;
+      /* Ralph adjusted */
+      top: 65px;
+      right: 10px;
+      /* Ralph adjusted */
+      z-index: 1;
+      
+    }
+    .hover-trigger:hover + .popup-content,
+    .popup-content:hover {
+      display: block;
+    }
+  }
+}
