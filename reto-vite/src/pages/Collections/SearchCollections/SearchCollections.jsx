@@ -6,9 +6,9 @@ import filter from '../../../assets/img_hsc/search_bar/filter.svg';
 
 const SearchCollections = () => {
   return (
-    <section className="area_search">
-      <div className="search">
-        <div className="bar_search">
+    <section className="area_search_collections">
+      <div className="search_collections">
+        <div className="bar_search_collections">
           <div>
             <input type="text" placeholder="想去哪裡玩？" />
           </div>

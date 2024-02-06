@@ -1,6 +1,6 @@
 @use '../../css/reset' as *;
 
-.area_search {
+.area_search_collections {
     height: 17vh;
     /* 100vh表示剛好一個視窗高，會自動彈性符合 */
     display: flex;
@@ -22,7 +22,7 @@ a {
 
 /*Nav*/
 
-.header_collections {
+.bar_top_collections {
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -31,16 +31,6 @@ a {
     height: 10vh;
 }
 
-.login {
-    width: 110px;
-    display: flex;
-    justify-content: flex-end;
-}
-
-.login img {
-    width: 40px;
-    height: 40px;
-}
 
 .nav_collections ul {
     background-color: #F5F5F5;
@@ -70,7 +60,7 @@ a {
 
 /*搜尋列*/
 
-.search {
+.search_collections {
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -80,7 +70,7 @@ a {
     /* padding: 32px 70px 0 70px; */
 }
 
-.bar_search {
+.bar_search_collections {
     display: flex;
     padding: 8px 12px;
     gap: 4px;
@@ -96,7 +86,7 @@ a {
 
 }
 
-.bar_search input {
+.bar_search_collections input {
     overflow: hidden;
     color: rgba(0, 0, 0, 0.50);
 
@@ -111,20 +101,20 @@ a {
     /* 22.4px */
 }
 
-.bar_search img {
+.bar_search_collections img {
     width: 20px;
     height: 20px;
 }
 
-.bar_search div {
+.bar_search_collections div {
     display: flex;
 }
 
-.bar_search div img {
+.bar_search_collections div img {
     margin: 4px;
 }
 
-.bar_search div a {
+.bar_search_collections div a {
     padding: 4px 16px;
     justify-content: center;
     align-items: center;
@@ -227,123 +217,123 @@ a {
 
 /*瀑布流內容設定*/
 
-main {
-    display: flex;
-    justify-content: center;
+// main {
+//     display: flex;
+//     justify-content: center;
 
-    padding-top: 24px;
-}
+//     padding-top: 24px;
+// }
 
-.wrapper {
-    width: 980px;
-    /* margin: 20px 35px 0; */
-    height: auto;
-}
+// .wrapper {
+//     width: 980px;
+//     /* margin: 20px 35px 0; */
+//     height: auto;
+// }
 
-#card_container {
-    position: relative;
-    width: 100%;
-    /*100vw;*/
-    height: auto;
-}
+// #card_container {
+//     position: relative;
+//     width: 100%;
+//     /*100vw;*/
+//     height: auto;
+// }
 
-.card_search {
-    width: 230px;
-    height: auto;
-    /* position: absolute; */
-}
+// .card_search {
+//     width: 230px;
+//     height: auto;
+//     /* position: absolute; */
+// }
 
-.card_search img {
-    width: 100%;
-    display: block;
-    border-radius: 20px;
-    /* box-shadow: 0 0 10px 0 rgb(0 0 0 / 30%); */
-}
+// .card_search img {
+//     width: 100%;
+//     display: block;
+//     border-radius: 20px;
+//     /* box-shadow: 0 0 10px 0 rgb(0 0 0 / 30%); */
+// }
 
-/* 卡片樣式 */
+// /* 卡片樣式 */
 
-/* 開始設置 */
+// /* 開始設置 */
 
-.card_search {
-    /* width: 230px; */
-    /* height: auto; */
+// .card_search {
+//     /* width: 230px; */
+//     /* height: auto; */
 
-    background-color: white;
-    border-radius: 20px;
-    overflow: hidden;
-    margin-bottom: 20px;
-}
+//     background-color: white;
+//     border-radius: 20px;
+//     overflow: hidden;
+//     margin-bottom: 20px;
+// }
 
-.card_search img {
-    object-fit: cover;
-    border-radius: 15px;
-}
+// .card_search img {
+//     object-fit: cover;
+//     border-radius: 15px;
+// }
 
-.card_search_info {
-    padding: 12px;
-}
+// .card_search_info {
+//     padding: 12px;
+// }
 
-/* 標題 */
+// /* 標題 */
 
-.card_title {
-    font-family: Noto Sans TC, sans-serif;
-    font-size: 16px;
-    font-style: normal;
-    font-weight: 400;
-    line-height: 150%;
+// .card_title {
+//     font-family: Noto Sans TC, sans-serif;
+//     font-size: 16px;
+//     font-style: normal;
+//     font-weight: 400;
+//     line-height: 150%;
 
-    margin-bottom: 6px;
-}
+//     margin-bottom: 6px;
+// }
 
-/* 總評價、評論數及價格  */
-.evaluate {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
+// /* 總評價、評論數及價格  */
+// .evaluate {
+//     display: flex;
+//     justify-content: space-between;
+//     align-items: center;
 
-    font-family: Noto Sans TC, sans-serif;
-    font-size: 12px;
-    font-style: normal;
-    font-weight: 400;
+//     font-family: Noto Sans TC, sans-serif;
+//     font-size: 12px;
+//     font-style: normal;
+//     font-weight: 400;
 
-    margin-bottom: 6px;
-}
+//     margin-bottom: 6px;
+// }
 
-.evaluate figure,
-.address figure,
-.link figure {
-    display: flex;
-    align-items: center;
+// .evaluate figure,
+// .address figure,
+// .link figure {
+//     display: flex;
+//     align-items: center;
 
-    margin-right: 5px;
-}
+//     margin-right: 5px;
+// }
 
-.evaluate_left {
-    display: flex;
-}
+// .evaluate_left {
+//     display: flex;
+// }
 
-.evaluate_left img {
-    width: 14px;
-    height: 14px;
-}
+// .evaluate_left img {
+//     width: 14px;
+//     height: 14px;
+// }
 
-/* 標籤 */
+// /* 標籤 */
 
-.tag_search {
-    display: flex;
-    gap: 5px;
-}
+// .tag_search {
+//     display: flex;
+//     gap: 5px;
+// }
 
-.tag_search a {
-    font-family: Noto Sans TC, sans-serif;
-    font-size: 12px;
-    font-style: normal;
-    font-weight: 400;
-    line-height: 150%;
-    /* 18px */
+// .tag_search a {
+//     font-family: Noto Sans TC, sans-serif;
+//     font-size: 12px;
+//     font-style: normal;
+//     font-weight: 400;
+//     line-height: 150%;
+//     /* 18px */
 
-    border-radius: 5px;
-    background: #F5F5F5;
+//     border-radius: 5px;
+//     background: #F5F5F5;
 
-    padding: 2.5px 12px;
-}
+//     padding: 2.5px 12px;
+// }
