@@ -1,6 +1,6 @@
 import React from 'react'
 import { Link,Outlet } from 'react-router-dom';
-import Header from '../../components-common/Header/Header'
+import Home from './home.jsx'
 
 const index = () => {
   return (

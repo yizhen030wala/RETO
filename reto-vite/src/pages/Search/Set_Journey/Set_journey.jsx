@@ -1,6 +1,7 @@
 import React, { useState, useRef, useEffect } from 'react';
 import DatePicker from 'react-datepicker';
-import { data_img } from "../Carousel/data";
+// import { data_img } from "../Carousel/data";
+import { data_img } from "../Carousel/data.js";
 import Card from '../Card/Card';
 import Tags_carousel from '../Tags_carousel/Tags_carousel.jsx';
 import LightBox_Card from '../LightBox_Card/LightBox_Card.jsx';

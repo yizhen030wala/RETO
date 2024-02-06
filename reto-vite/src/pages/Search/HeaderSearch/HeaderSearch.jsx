@@ -1,7 +1,7 @@
 import React from "react";
 import "../CSS/Search.css";
 import NavBar from "../NavBar/NavBar";
-import Recommends from "../Recommends/Recommends";
+import Recommends from "../Recommends/Recommends.jsx";
 import magnifier from "../../../assets/img_hsc/search_bar/magnifier.svg";
 import login from "../../../assets/img_hsc/login/login-yellow.svg";
 import filter from "../../../assets/img_hsc/search_bar/filter.svg";

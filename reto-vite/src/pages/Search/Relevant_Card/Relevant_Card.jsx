@@ -1,7 +1,10 @@
 import React, { useState } from "react";
-import { data_img } from "../Carousel/data";
+import { data_img } from "../Carousel/data.js";
 import Card from '../Card/Card';
+// import Tags_carousel from '../Tags_carousel/Tags_carousel.jsx';
 import Tags_carousel from '../Tags_carousel/Tags_carousel.jsx';
+
+
 import LightBox_Card from '../LightBox_Card/LightBox_Card.jsx';
 import './Relevant_Card.scss';
 import cancel from '../../../assets/img_hsc/card_viewpoint/cancel.svg';
