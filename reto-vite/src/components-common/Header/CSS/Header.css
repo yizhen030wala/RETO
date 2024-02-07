@@ -44,10 +44,10 @@
   border-radius: 20px;
   background-color: #F5F5F5;
 }
-.header .nav_btn a {
+.header .nav_btn li {
   font-size: 1rem;
 }
-.header .nav_btn a:hover {
+.header .nav_btn li:hover {
   font-weight: 500;
 }
 .header .user {
