@@ -91,6 +91,7 @@ const Carousel = ({ updateSelectedCount }) => {
     horizontalOrder: true,
     isInitLayout: true,
     imagesLoaded: true,
+    originTop: true,
   };
 
   //滾動卷軸時，使用ref更新布局
