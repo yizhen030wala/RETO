@@ -1,5 +1,5 @@
 import React from 'react'
-import './CSS/deleteToast.css'
+import './deleteToast.scss'
 import "../../assets/fonts/iconfont/style.css"
 
 const deleteToast = () => {

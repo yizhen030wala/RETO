@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import HeaderSearch from './HeaderSearch/HeaderSearch';
 import Carousel from './Carousel/Carousel';
 import FixedBtn from './FixedBtn/FixedBtn';
-import './CSS/Search.css';
+import './CSS/Search.scss';
 
 
 function Search() {

@@ -1,22 +1,26 @@
 import React from "react";
-import NavBar from "../NavBar/NavBar";
+// import NavBar from "../NavBar/NavBar";
 import logo from "../../../assets/img_hsc/logo/logo.svg";
-import "../CSS/home.css";
-import { Link } from "react-router-dom"; //物件內用到連結跳轉就需要放
+import "./HeaderHome.scss";
+import { Link } from "react-router-dom"; 
 
 const HeaderHome = () => {
   return (
-    <header className="bar_top_home">
-      {/* LOGO */}
-      <div className="logo_home">
-        <Link to="/">
-          <a href="./index.html">
-            <img src={logo} alt="" />
-          </a>
+    <header className="header_home">
+      {/* LOGO  */}
+      <div className='logo'>
+        <Link to="/home">
+          <img src={logo} alt="RETO logo" />
         </Link>
       </div>
-      {/* 置頂切頁按鈕 */}
-      <NavBar />
+      {/* 置頂導覽按鈕  */}
+      <nav>
+        <ul className="nav_btn">
+          <li><Link to="/search">開始探索</Link></li>
+          <li><Link to="/Collections">我的景點</Link></li>
+          <li><Link to="/mytrip"> 行程表</Link></li>
+        </ul>
+      </nav>
       {/* 對齊用(空div) */}
       <div className="empty_header"></div>
     </header>

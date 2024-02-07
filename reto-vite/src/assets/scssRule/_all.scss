@@ -2,11 +2,29 @@
 
 *{
     font-family: 'Noto Sans TC', 微軟正黑體;
-    ul{
+    margin: 0;
+    ul ol{
       list-style: none;
     }
     a{
       text-decoration: none;
       color: $color_black;
+    }
+    input{
+      border:0;
+      padding: 0;
+      outline: none;
+    }
+    figure{
+      position: relative;
+    }
+    img{
+      display: block;
+      width: 100%;
+    }
+
+    section {
+      height: 100vh;
+      @include center;
     }
   }

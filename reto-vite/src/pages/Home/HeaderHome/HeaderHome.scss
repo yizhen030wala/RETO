@@ -1,0 +1,71 @@
+@import "../../../assets/scssRule/rule";
+@import "../../../assets/scssRule/all";
+
+
+// ===================RWD============================
+
+// 手機
+@media screen and (max-width: 809px) {
+    .header {
+
+        ul.nav_btn {
+            display: none;
+        }
+
+        .user {
+            .user_box {
+                display: none;
+            }
+
+            // .menu_box {
+            //     display: block;
+            // }顯示不出來所以放到下面QQ
+        }
+    }
+}
+
+// ===============================================
+
+.header_home {
+    background-color: $color_blue;
+    height: 8vh;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 5px 40px;
+
+    .logo {
+        width: 120px;
+
+    }
+
+    /* 表頭功能列 */
+    .nav_btn {
+        height: 30px;
+        padding: 5px 30px;
+        display: flex;
+        align-items: center;
+        gap: 0 2rem;
+        border-radius: $border_radius_20px;
+        background: rgba(236, 236, 236, 0.5);
+
+        ul {
+            li {
+                font-size: 1rem;
+
+                &:hover {
+                    font-weight: 500;
+                }
+            }
+        }
+
+        @media (max-width: 809px) {
+            display: none;
+        }
+    }
+
+    .empty_header {
+        width: 0.55%;
+    }
+
+}

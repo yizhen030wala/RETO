@@ -1,12 +1,11 @@
-@import "../../assets/scssRule/rule";
-@import "../../assets/scssRule/all";
+@import "../../../assets/scssRule/rule";
+@import "../../../assets/scssRule/all";
 
-
-// ===================RWD============================
+// ===============================================
 
 // 手機
 @media screen and (max-width: 809px) {
-    .header {
+    .header_search {
 
         ul.nav_btn {
             display: none;
@@ -16,22 +15,19 @@
             .user_box {
                 display: none;
             }
-
-            // .menu_box {
-            //     display: block;
-            // }顯示不出來所以放到下面QQ
         }
     }
 }
 
 // ===============================================
 
-.header {
+.header_search {
     height: 8vh;
     display: flex;
     justify-content: space-between;
     align-items: center;
     padding: 5px 40px;
+    background-color: $color_green1;
 
     .logo {
         width: 120px;

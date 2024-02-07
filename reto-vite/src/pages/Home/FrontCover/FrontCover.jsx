@@ -1,5 +1,5 @@
 import React from "react";
-import "../CSS/home.css";
+import "../CSS/home.scss";
 import bg_land_page from "../../../assets/img_hsc/index/LandingPageBackground.svg";
 import HeaderHome from "../HeaderHome/HeaderHome";
 import { Link } from "react-router-dom"; //物件內用到連結跳轉就需要放

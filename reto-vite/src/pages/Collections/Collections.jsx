@@ -1,7 +1,6 @@
 import React, { useState } from "react";
 import "./CSS/Collections.scss";
 import CategoryCollections from "./CategoryCollections/CategoryCollections";
-import HeaderCollections from "./HeaderCollections/HeaderCollections";
 import SearchCollections from "./SearchCollections/SearchCollections";
 
 
@@ -9,7 +8,6 @@ function Collections() {
   return (
     <div>
       <div>
-        <HeaderCollections />
         {/* 搜尋 */}
         <SearchCollections />
         {/* 分類 */}

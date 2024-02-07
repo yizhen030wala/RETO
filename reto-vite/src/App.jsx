@@ -22,18 +22,20 @@ const App = () => {
       <Routes>
         {/* 定義首頁 */}
         <Route path="/home" element={<Home />} />
+        <Route path="/search" element={<Search />} />
         
         {/* 其他路由 */}
-        <Route path="/search" element={<Search />} />
+
         <Route path="/" element={<Reto />}>
           <Route path="/login" element={<Login />} />
           <Route path="/test" element={<Test />} />
           <Route path="/mytrip" element={<MyTrip />} />
           <Route path="/schedule" element={<Schedule />} />
           <Route path="/mymap" element={<MyMap />} />
+          <Route path="/Collections" element={<Collections />} />
         </Route>
 
-        <Route path="/Collections" element={<Collections />} />
+
 
         <Route path="/Header" element={<Header />} />
         <Route path="/Relevant_Card" element={<Relevant_Card />} />

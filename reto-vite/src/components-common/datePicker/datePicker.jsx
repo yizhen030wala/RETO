@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import DatePicker from 'react-datepicker';
 import '../../../node_modules/react-datepicker/dist/react-datepicker.css'
-import './CSS/datePicker.css'
+import './datePicker.scss'
 import { addDays } from 'date-fns';
 
 const datePicker = () => {

@@ -1,4 +1,6 @@
-@use '../CSS/reset'as *;
+@import "../../../assets/scssRule/rule";
+@import "../../../assets/scssRule/all";
+// ===============================================
 
 .bg_card_set {
     background-color: rgba(0, 0, 0, 0.6);

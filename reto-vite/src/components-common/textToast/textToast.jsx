@@ -1,5 +1,5 @@
 import React from 'react'
-import './CSS/textToast.css'
+import './textToast.scss'
 import Error from '../../assets/img/badge/error.svg'
 
 

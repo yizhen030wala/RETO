@@ -1,0 +1,450 @@
+@import "../../../assets/scssRule/all";
+@import "../../../assets//scssRule/rule";
+
+/*Index*/
+/*Header Area*/
+
+#land_page {
+    display: flex;
+    height: 100vh;
+
+    /* width: 1440px; */
+    width: 100%;
+}
+
+.page_left {
+    width: 93%;
+    height: 100%;
+}
+
+.area_attention {
+    height: 90vh;
+    width: 100%;
+}
+
+.box_attention {
+    height: 100%;
+    width: 100%;
+
+    .bg {
+        height: 100%;
+        width: 100%;
+    }
+}
+
+.bar_top_home {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #81E6FD;
+    height: 82px;
+    padding: 20px;
+}
+
+/* .logo_home {
+      margin: 16px 0;
+      margin-left: 20px;
+  } */
+
+.logo_home {
+    img {
+        width: 120px;
+        height: 48px;
+    }
+}
+
+/*置頂按鈕*/
+
+.nav_home {
+    .ul_home {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        /* width: 274px; */
+        /* margin: 25px 0; */
+        height: 32px;
+        padding: 5px 30px;
+        gap: 0 2rem;
+        background-color: #FFFFFF;
+        border-radius: 20px;
+        background: rgba(236, 236, 236, 0.5);
+        white-space: nowrap;
+
+        li {
+            font-size: 1rem;
+
+            &:hover {
+                font-weight: 500;
+            }
+        }
+    }
+}
+
+
+/* 佔位置協助排版的空div */
+
+
+.area_attention {
+    display: flex;
+}
+
+.box_attention {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    background-color: #FFFFFF;
+    background-repeat: no-repeat;
+    background-size: cover;
+
+    .bg {
+        img {
+            object-fit: cover;
+            width: 100%;
+            height: 100%;
+            object-position: right center;
+
+            /* 以右边为基准，垂直方向居中 */
+        }
+    }
+
+    p {
+        font-family: 'Noto Sans TC', sans-serif;
+
+        /* font-size: 64px; */
+        font-size: 4rem;
+        font-style: normal;
+        font-weight: 400;
+
+        /* line-height: 110px;  */
+        /*手動更動line-height(原設定normal)*/
+
+        background-color: white;
+        margin-bottom: 50px;
+
+        /* padding-right: 50px;
+      padding-left: 27px; */
+        padding: 12px 50px 12px 27px;
+        z-index: 1;
+    }
+}
+
+.slogan1 {
+    position: absolute;
+
+    /* left: 27px; */
+    top: 160px;
+}
+
+.slogan2 {
+    position: absolute;
+
+    /* left: 27px; */
+    top: 264px;
+}
+
+/* h1底色塊 */
+
+.box_attention {
+    .bg_white {
+        background-color: #FFFFFF;
+    }
+
+    .bar1 {
+        /* width: 779px; */
+        width: 58%;
+        height: 86px;
+        position: absolute;
+        left: 0;
+        top: 174px;
+    }
+
+    .bar2 {
+        /* width: 650px; */
+        width: 50%;
+        height: 94px;
+        position: absolute;
+        left: 0;
+        top: 278px;
+    }
+
+    .btn {
+        text-align: center;
+        position: absolute;
+        top: 390px;
+        left: 28px;
+        width: 232px;
+        height: 70px;
+        font-family: 'Noto Sans TC', sans-serif;
+        font-size: 32px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: 70px;
+        border-radius: 50px;
+        background-color: #FFDF06;
+    }
+}
+
+
+
+.login_home {
+    height: 82px;
+    width: 100%;
+    background-color: #FFFFFF;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+
+
+/*右側直立英文圖案*/
+
+/*Main Area*/
+
+/*About*/
+
+#about {
+    height: 50vh;
+
+    /* margin-top: 64px; */
+
+    .title_section_home {
+        text-align: center;
+        margin-bottom: 20px;
+        font-family: 'Noto Sans TC', sans-serif;
+        font-size: 32px;
+        font-style: normal;
+        font-weight: 600;
+        line-height: 48px;
+
+        /* 150% */
+    }
+
+    p {
+        text-align: center;
+        font-family: 'Noto Sans TC', sans-serif;
+        font-size: 24px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: 150%;
+
+        /* 36px */
+    }
+}
+
+/*Features*/
+
+#features .title_section_home {
+    text-align: center;
+    margin-bottom: 20px;
+    font-family: 'Noto Sans TC', sans-serif;
+    font-size: 32px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: 48px;
+
+    /* 150% */
+}
+
+.box_feat {
+    display: flex;
+
+    /* 讓box兩兩排列 */
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+
+    /* 創建兩列 */
+    grid-gap: 20px;
+
+    /* 根据需要调整网格间距 */
+}
+
+.item_feat {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    width: 297px;
+    height: 267px;
+
+    /* margin: 20px 10px; */
+    padding: 53px 25px;
+    gap: 8px;
+    border-radius: 20px;
+    position: relative;
+    overflow: hidden;
+
+    h3 {
+        font-family: 'Noto Sans TC', sans-serif;
+        font-size: 24px;
+        font-style: normal;
+        font-weight: 500;
+        line-height: 150%;
+
+        /* 36px */
+    }
+
+    p {
+        position: relative;
+        font-family: 'Noto Sans TC', sans-serif;
+        font-size: 16px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: 150%;
+
+        /* 24px */
+    }
+
+    figure {
+        position: absolute;
+        right: 0;
+        bottom: 0;
+    }
+}
+
+.box1 {
+    background-color: #3D9D35;
+
+    h3,
+    p {
+        color: white;
+    }
+}
+
+/*第一格字體顏色不同另外設定*/
+
+.box2 {
+    background-color: #FFDF06;
+}
+
+.box3 {
+    background-color: #81E6FD;
+}
+
+.box4 {
+    background-color: #B8EB35;
+}
+
+/*How*/
+
+#how {
+    gap: 24px;
+
+    .title_section_home {
+        text-align: center;
+        font-family: 'Noto Sans TC', sans-serif;
+        font-size: 32px;
+        font-style: normal;
+        font-weight: 600;
+    }
+}
+
+.guide {
+    display: flex;
+    height: 744px;
+}
+
+.btn_step {
+    ul {
+        display: flex;
+        justify-content: center;
+        align-items: flex-start;
+        gap: 12px;
+    }
+
+    a {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        padding: 8px 20px;
+        border-radius: 15px;
+        color: white;
+        background: #3D9D35;
+
+        /*Hover/Click 交換使用 #006D3B*/
+    }
+}
+
+.direction {
+    display: flex;
+    position: relative;
+    width: 824px;
+    height: 494px;
+    flex-shrink: 0;
+    border-radius: 20px;
+    background: #F5F5F5;
+
+    h3 {
+        position: absolute;
+        top: 171px;
+        left: 102px;
+        font-family: 'Noto Sans TC', sans-serif;
+        font-size: 32px;
+        font-style: normal;
+        font-weight: 700;
+        line-height: normal;
+    }
+
+    p {
+        position: absolute;
+        top: 250px;
+        left: 102px;
+        width: 270px;
+        font-family: 'Noto Sans TC', sans-serif;
+        font-size: 24px;
+        font-style: normal;
+        font-weight: 500;
+        line-height: 150%;
+
+        /* 36px */
+    }
+
+    figure {
+        width: 297px;
+        height: 577px;
+        flex-shrink: 0;
+        position: absolute;
+        right: 115px;
+        top: 89px;
+    }
+}
+
+/*Footer*/
+
+footer {
+    display: flex;
+    flex-direction: column;
+    height: 15vh;
+    background: #F5F5F5;
+
+    a {
+        font-family: Noto Sans TC;
+        font-size: 14px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: 160%;
+
+        /* 22.4px */
+    }
+}
+
+.btn_footer_upper,
+.btn_footer_lower {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.btn_footer_upper {
+    height: 30%;
+    margin-top: 24px;
+    gap: 60px;
+}
+
+.btn_footer_lower {
+    height: 30%;
+    margin-top: 12px;
+    margin-bottom: 24px;
+    gap: 120px;
+}

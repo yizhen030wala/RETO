@@ -1,8 +1,8 @@
 import React from 'react';
-import './CSS/home.css';
+import './CSS/home.scss';
 import guideimg from '../../assets/img_hsc/index/guideimg.svg';
 import FrontCover from './FrontCover/FrontCover';
-import Subtitle from './Subtitle/Subtitle';
+import Subtitle from './HeaderHome/Subtitle/Subtitle';
 import About from './About/About';
 import BoxFeat from './BoxFeat/BoxFeat';
 import Step from './Step/Step';

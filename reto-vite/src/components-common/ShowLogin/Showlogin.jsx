@@ -1,5 +1,5 @@
 import React from 'react'
-import './CSS/Showlogin.css'
+import './Showlogin.scss'
 import User from '../../assets/img/Avatar/Avatar login.svg'
 // import Icon from '../../assets/fonts/iconfont/icon'
 
@@ -11,9 +11,9 @@ const Showlogin = () => {
             <figure><img src={User} alt="" /></figure>
             <p className="hi">哈囉，小旅!</p>
             <ul className="menu">
-                <li><a href="#">開始探索</a></li>
-                <li><a href="#">我的景點</a></li>
-                <li><a href="#">行程表</a></li>
+                <li><Link to="/search">開始探索</Link></li>
+                <li><Link to="/Collections">我的景點</Link></li>
+                <li><Link to="/mytrip"> 行程表</Link></li>
             </ul>
             <p className='in'><span className="icon-log-out"></span>登出</p>
         </div>
