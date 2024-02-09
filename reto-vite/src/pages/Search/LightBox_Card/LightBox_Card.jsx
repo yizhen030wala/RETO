@@ -188,7 +188,7 @@ const LightBox_Card = ({ image, onClose }) => {
           <button className="btn_add collect">
             <img src={favorite_heart} alt="" />
           </button>
-          <button className="btn_add journey">加入行程</button>
+          <button className="btn_add journey_viewpoint">加入行程</button>
         </div>
       </div>
     </div>
