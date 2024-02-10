@@ -8,6 +8,7 @@
     display: flex;
     justify-content: center;
     align-items: center;
+    width: 100%;
 
     background-color: rgba(0, 0, 0, 0.6);
     /* 黑色，50% 不透明度 */
@@ -19,67 +20,68 @@
     bottom: 0;
     right: 0;
 
-    .card {
-        display: flex;
-        width: 875px;
-        border-radius: 20px;
-        background-color: white;
-        padding: 40px 30px;
-        margin: 50px;
 
-        overflow: auto;
-        position: relative;
+}
 
-        /* 動畫效果 */
-        animation: fadeIn 0.35s forwards;
+.card {
+    display: flex;
+    width: 875px;
+    border-radius: 20px;
+    background-color: white;
+    padding: 40px 30px;
+    margin: 50px;
 
-        @keyframes fadeIn {
-            from {
-                scale: 50%;
-                opacity: 0;
-                visibility: hidden;
-            }
+    overflow: auto;
+    position: relative;
 
-            to {
-                scale: 100%;
-                opacity: 1;
-                visibility: visible;
-            }
+    /* 動畫效果 */
+    animation: fadeIn 0.35s forwards;
+
+    @keyframes fadeIn {
+        from {
+            scale: 50%;
+            opacity: 0;
+            visibility: hidden;
         }
 
-        @keyframes fadeOut {
-            from {
-                scale: 100%;
-                opacity: 1;
-                visibility: visible;
-            }
-
-            to {
-                scale: 50%;
-                opacity: 0;
-                visibility: hidden;
-            }
+        to {
+            scale: 100%;
+            opacity: 1;
+            visibility: visible;
         }
+    }
 
-        /* 燈箱打開時的樣式 */
-        &.open {
-            /* 完全不透明，可見 */
+    @keyframes fadeOut {
+        from {
+            scale: 100%;
             opacity: 1;
             visibility: visible;
         }
 
-        .card_scrollbox {
-            height: 550px;
-            /* 剛好切到週五一部分的高度 */
-            display: flex;
-            /* max-height: 100%; 設置最大高度為容器的 80% */
-            overflow-y: auto;
-            /* 內容超出時顯示垂直滾動條 */
-
-            position: relative;
+        to {
+            scale: 50%;
+            opacity: 0;
+            visibility: hidden;
         }
     }
 
+    /* 燈箱打開時的樣式 */
+    &.open {
+        /* 完全不透明，可見 */
+        opacity: 1;
+        visibility: visible;
+    }
+
+    .card_scrollbox {
+        height: 550px;
+        /* 剛好切到週五一部分的高度 */
+        display: flex;
+        /* max-height: 100%; 設置最大高度為容器的 80% */
+        overflow-y: auto;
+        /* 內容超出時顯示垂直滾動條 */
+
+        position: relative;
+    }
 }
 
 /* 滾軸設定 */
@@ -93,6 +95,9 @@
     overflow-y: auto;
     /* 內容超出時顯示垂直滾動條 */
     position: relative;
+    width: 100%;
+
+
 
     &::-webkit-scrollbar {
         width: 3px;
