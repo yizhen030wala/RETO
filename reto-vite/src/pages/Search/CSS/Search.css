@@ -8,10 +8,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@300;400;500;600;700&display=swap');
 /*Google Fonts*/
 
-/* http://meyerweb.com/eric/tools/css/reset/ 
-   v2.0 | 20110126
-   License: none (public domain)
-*/
 
 html,
 body,
@@ -212,24 +208,14 @@ body {
 
 /*共用區*/
 
-section {
+/* section {
     height: 100vh;
-    /*100vh表示剛好一個視窗高，會自動彈性符合*/
     display: flex;
-    /*轉變後預設主軸方向變為水平*/
     flex-direction: column;
-    /*轉變主軸方向為垂直*/
     align-items: center;
-    /*副軸(水平)置中*/
     justify-content: center;
-    /*主軸(垂直)置中*/
-}
-
-
-
-/* a {
-    color: black;
 } */
+
 
 /*Nav*/
 
