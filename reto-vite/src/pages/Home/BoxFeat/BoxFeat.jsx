@@ -1,5 +1,5 @@
 import React from 'react';
-import '../CSS/home.css';
+import '../CSS/home.scss';
 import cardimg1 from '../../../assets/img_hsc/feat_box/cardimg1.svg';
 import cardimg2 from '../../../assets/img_hsc/feat_box/cardimg2.svg';
 import cardimg3 from '../../../assets/img_hsc/feat_box/cardimg3.svg';

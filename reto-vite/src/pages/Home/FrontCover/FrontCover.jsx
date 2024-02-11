@@ -15,8 +15,6 @@ const FrontCover = () => {
           {/* 標題及按鈕使用position */}
           <p className="slogan1">可愛又輕便的行程規劃器</p>
           <p className="slogan2">讓旅藤代替苦惱的你</p>
-          {/* <div className="bg_white bar1"></div>
-                            <div className="bg_white bar2"></div> */}
           <Link to="/Search">
             <div className="btn">
               <a href="#">免費開始</a>

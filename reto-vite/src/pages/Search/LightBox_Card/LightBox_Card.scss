@@ -8,7 +8,7 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    width: 100%;
+    // width: 100%;
 
     background-color: rgba(0, 0, 0, 0.6);
     /* 黑色，50% 不透明度 */
@@ -232,7 +232,7 @@
     .info_carousel {
         display: flex;
         flex-direction: column;
-        height: 280px;
+        height: 100%;
         width: 100%;
 
         margin-bottom: 40px;
