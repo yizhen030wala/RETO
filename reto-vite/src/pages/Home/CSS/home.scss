@@ -1,5 +1,5 @@
 @use "../../../assets/scssRule/all"as *;
-@use "../../../assets//scssRule/rule"as *;
+@use "../../../assets//scssRule/rule"as r;
 @use '../../../assets/scssRule/reset'as *;
 
 /*Index*/
@@ -76,13 +76,18 @@
                     left: 28px;
                     width: 232px;
                     height: 70px;
-                    font-family: 'Noto Sans TC', sans-serif;
-                    font-size: 32px;
-                    font-style: normal;
-                    font-weight: 400;
-                    line-height: 70px;
+
                     border-radius: 50px;
-                    background-color: #FFDF06;
+                    background-color: r.$color_yellow;
+
+                    a {
+                        font-family: 'Noto Sans TC', sans-serif;
+                        font-size: 32px;
+                        font-style: normal;
+                        font-weight: 400;
+                        line-height: 70px;
+                        color: r.$color_black;
+                    }
                 }
             }
         }
@@ -223,6 +228,9 @@
 
     .box_feat {
         display: flex;
+        position: relative;
+        height: 554px;
+        width: 614px;
 
         /* 讓box兩兩排列 */
         display: grid;
@@ -241,8 +249,11 @@
             padding: 53px 25px;
             gap: 8px;
             border-radius: 20px;
-            position: relative;
+            position: absolute;
             overflow: hidden;
+
+            transition: .35s;
+            cursor: pointer;
 
             h3 {
                 font-family: 'Noto Sans TC', sans-serif;
@@ -265,13 +276,23 @@
                 position: absolute;
                 right: 0;
                 bottom: 0;
+                transition: .35s;
+                transform-origin: bottom right;
+            }
+
+            img {
+                transition: .35s;
             }
         }
 
-        // 四格箱子分別設定底色
+        // 四格箱子分別設定
+
 
         .box1 {
             background-color: #3D9D35;
+            position: absolute;
+            left: 0;
+            top: 0;
 
             h3,
             p {
@@ -283,18 +304,88 @@
 
         .box2 {
             background-color: #FFDF06;
+            left: 0;
+            bottom: 0;
         }
 
         .box3 {
             background-color: #81E6FD;
+            right: 0;
+            top: 0;
         }
 
         .box4 {
             background-color: #B8EB35;
+            right: 0;
+            bottom: 0;
         }
+
+        .box1:hover {
+            height: calc(267px + 70px);
+            background-color: $color_gray1;
+
+            figure {
+                transform: scale(1.5);
+            }
+        }
+
+        .box1:hover~.box2 {
+            transform-origin: bottom;
+            height: calc(267px - 70px);
+
+            img {
+                opacity: 0;
+            }
+
+            ;
+        }
+
+        .box2:hover {
+            height: calc(267px + 70px);
+
+            figure {
+                transform: scale(1.5);
+                // right: 10%;
+                // bottom: 10%;
+            }
+        }
+
+        .box1.hovered {
+            transform-origin: top;
+            height: calc(267px - 70px);
+
+            img {
+                opacity: 0;
+            }
+
+            ;
+        }
+
+
+
+        // .box1 {
+        //     &:hover {
+        //         height: 297px;
+        //         // transform-origin: top;
+        //         background-color: $color_gray1;
+        //     }
+        // }
+
+        // .box3 {
+        //     &:hover {
+        //         height: 297px;
+        //     }
+        // }
+
+        // .hovered.box1 {
+        //     height: 327px; 
+
+        // }
+
+        // .hovered.box3 {
+        //     height: 237px; 
+        // }
     }
-
-
 }
 
 

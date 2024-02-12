@@ -40,7 +40,7 @@
     }
 
     /* 表頭功能列 */
-    .nav_btn {
+    .nav_btn_home {
         height: 30px;
         padding: 5px 30px;
         display: flex;
@@ -49,15 +49,18 @@
         border-radius: $border_radius_20px;
         background: rgba(236, 236, 236, 0.5);
 
-        ul {
+        
             li {
-                font-size: 1rem;
+                a {
+                    font-size: 1rem;
+                    color: $color_black;
 
-                &:hover {
-                    font-weight: 800;
+                    &:hover {
+                        font-weight: 800;
+                    }
                 }
             }
-        }
+        
 
         @media (max-width: 809px) {
             display: none;

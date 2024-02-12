@@ -15,10 +15,10 @@ const HeaderHome = () => {
       </div>
       {/* 置頂導覽按鈕  */}
       <nav>
-        <ul className="nav_btn">
+        <ul className="nav_btn_home">
           <li><Link to="/search">開始探索</Link></li>
           <li><Link to="/Collections">我的景點</Link></li>
-          <li><Link to="/mytrip"> 行程表</Link></li>
+          <li><Link to="/mytrip">行程表</Link></li>
         </ul>
       </nav>
       {/* 對齊用(空div) */}

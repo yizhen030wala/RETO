@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState } from 'react';
 import '../CSS/home.scss';
 import cardimg1 from '../../../assets/img_hsc/feat_box/cardimg1.svg';
 import cardimg2 from '../../../assets/img_hsc/feat_box/cardimg2.svg';
@@ -15,22 +15,38 @@ const content = [
 const num_card = [1, 2, 3, 4];
 const cardImages = [cardimg1, cardimg2, cardimg3, cardimg4];
 const data_box_feat = num_card.map((number, index) => {
-    
-    return {        
+
+    return {
         imgUrl: cardImages[index],
         class_name: `item_feat box${number}`,
         title: title[index],
         content: content[index],
     }
 });
+
+
+
 //Feat Box 
 const BoxFeat = () => {
+    const [isBox2Hovered, setIsBox2Hovered] = useState(false);
+
+    const handleBox2Hover = () => {
+        setIsBox2Hovered(true);
+    };
+
+    const handleBox2Leave = () => {
+        setIsBox2Hovered(false);
+    };
     return (
         <section id="features">
             <h2 className='title_section_home'>旅藤特點</h2>
             <div className="box_feat">
                 {data_box_feat.map((card, index) => (
-                    <div className={card.class_name} key={index}>
+                    <div className={`${card.class_name} ${index === 0 && isBox2Hovered ? 'hovered' : ''}`}
+                        key={index}
+                        onMouseEnter={index === 1 ? handleBox2Hover : undefined}
+                        onMouseLeave={index === 1 ? handleBox2Leave : undefined}
+                    >
                         <h3>{card.title}</h3>
                         <p dangerouslySetInnerHTML={{ __html: card.content }}></p>
                         <figure><img src={card.imgUrl} alt="" /></figure>
