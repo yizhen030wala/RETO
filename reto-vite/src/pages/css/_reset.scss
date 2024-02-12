@@ -155,19 +155,6 @@ input {
     /* 清除input點擊之後的黑色邊框 */
 }
 
-/*定義css變數*/
-:root {
-    /*灰階*/
-    --light_grey: #ccc;
-    --grey: #999;
-    --deep_grey: #666;
-    /*主色調*/
-    --major-color: #f2edf0;
-    --major-color2: #e6ece5;
-    --major-color3: #ecf0f4;
-    /*輔助色調*/
-    --lesser-color: #bf9899;
-}
 
 /*網頁常用設定*/
 
@@ -180,7 +167,6 @@ input {
 a {
     display: block;
     text-decoration: none;
-    color: black;
     /*a自帶有底線與點擊顏色*/
 }
 

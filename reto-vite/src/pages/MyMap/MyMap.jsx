@@ -1,6 +1,6 @@
 import React from 'react'
 // import "./MyMap.css"
-import "../css/MyMap.css"
+import "./MyMap.scss"
 import BreadCrumb from '../../components-common/BreadCrumb/BreadCrumb.tsx'
 // import ButtonDel_NB from '../../components-common/Button/ButtonDel_NB/ButtonDel_NB.jsx'
 import ScheduleSheet from '../../components-common/ScheduleSheet/ScheduleSheet.jsx'

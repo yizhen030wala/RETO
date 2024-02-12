@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import '../CSS/Search.css';
+import '../CSS/Search.scss';
 import Tags from '../Tags/Tags';
 import Marker from '../../../assets/img_hsc/search_card/selected_mark.svg';
 import star from '../../../assets/img_hsc/search_card/star.svg';

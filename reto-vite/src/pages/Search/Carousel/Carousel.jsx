@@ -2,7 +2,7 @@ import Masonry from "react-masonry-component";
 import React, { useState, useEffect } from 'react';
 import { data_img } from "./data.js";
 import { data_img as initialDataImg } from './data.js';
-import '../CSS/Search.css';
+import '../CSS/Search.scss';
 import Card from '../Card/Card.jsx';
 import Tags_carousel from '../Tags_carousel/Tags_carousel.jsx';
 import LightBox_Card from '../LightBox_Card/LightBox_Card.jsx';
