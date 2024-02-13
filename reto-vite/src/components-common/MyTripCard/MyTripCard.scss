@@ -1,10 +1,52 @@
 @import "../../assets/scssRule/rule";
 @import "../../assets/scssRule/all";
 
+
+// ======================= RWD ==========================
+// Extea small devices(phones, 600px and down)
+@media only screen and (max-width:600px) {
+    .mytripcard {
+        width: 100vh !important;
+        .mytripcard_cover{
+            height: 200px;
+        }
+    }
+}
+
+// small devices(portait tablets and large phone , 600px and up)
+@media only screen and (min-width:600px) {
+    .mytripcard {
+        width: 50vh;
+    }
+}
+
+// Medium devices(landscape tablets, 768px and up)
+@media only screen and (min-width:768px) {
+    .mytripcard {
+        width: 50vh;
+    }
+}
+
+// large devices(laptops/desktop, 992px and up)
+@media only screen and (max-width:992px) {
+    .mytripcard {
+        width: 30vh ;
+    }
+}
+
+// Extea large devices(large laptops/desktop, 1200px and up)
+@media only screen and (min-width:1200px) {
+    .mytripcard {
+        width: 25vh;
+    }
+}
+
+
 // ====================================
 
 .mytripcard {
-    width: 250px;
+    // margin: 0px 15px;
+    width: 25vh;
     gap: 10px;
 
     display: flex;
@@ -13,11 +55,6 @@
 
     overflow: hidden;
 
-    @media (max-width: 991px) {
-        .mytripcard {
-            width: 100%;
-        }
-    }
 
     .ctrl_ButtonDel {
         position: absolute;
@@ -38,13 +75,16 @@
         border-radius: 20px;
         background-color: #f5f5f5;
 
-        width: 100%; /* 調整封面容器的寬度為100%，填滿父級容器 */
-        height: 140px; /* 假設高度為250px，請根據需求自行調整 */
+        width: 100%;
+        /* 調整封面容器的寬度為100%，填滿父級容器 */
+        height: 140px;
+        /* 假設高度為250px，請根據需求自行調整 */
 
         img {
             width: 100%;
             height: 100%;
-            object-fit: cover; /* 讓圖片填滿容器並保持比例 */
+            object-fit: cover;
+            /* 讓圖片填滿容器並保持比例 */
         }
     }
 
@@ -54,7 +94,7 @@
         display: flex;
         flex-direction: column;
         width: 100%;
-    
+
         gap: 6px;
 
         .mytripcard_name {
@@ -67,10 +107,11 @@
             font-weight: 500;
             line-height: 150%;
         }
+
         .mytripcard_day {
             align-self: stretch;
             color: #747474;
-        
+
             /* (D)/body/16px */
             font-family: Noto Sans TC;
             font-size: 16px;

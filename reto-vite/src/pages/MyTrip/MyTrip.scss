@@ -1,20 +1,91 @@
 @import "../../assets/scssRule/rule";
 @import "../../assets/scssRule/all";
 
+
+// ======================= RWD ==========================
+// Extea small devices(phones, 600px and down)
+@media only screen and (max-width:600px) {
+    .MyTrip-container {
+        margin: 0 !important;
+        padding: 0 20px;
+
+        .MyTrip-content {
+            margin: 5vh 0px !important;
+
+            .title {
+                max-width: 100%;
+                flex-wrap: wrap;
+            }
+
+            .MyTrip_contain {
+                max-width: 100%;
+                // padding-right: 20px;
+            }
+        }
+    }
+}
+
+// small devices(portait tablets and large phone , 600px and up)
+@media only screen and (min-width:600px) {}
+
+// Medium devices(landscape tablets, 768px and up)
+@media only screen and (min-width:768px) {
+    .MyTrip-container {
+        // margin:0px 10% !important;
+        .MyTrip-content {
+            margin: 10% 0px !important;
+
+            .title {}
+
+            .MyTrip_contain {
+                // display: inline-flex;
+                // flex-wrap: wrap;
+                // gap: 30px;
+                // flex-direction: row;
+            }
+        }
+    }
+}
+
+// large devices(laptops/desktop, 992px and up)
+@media only screen and (max-width:992px) {
+    .MyTrip-container {
+
+
+        .MyTrip-content {
+
+            .title {}
+
+            .MyTrip_contain {}
+        }
+    }
+}
+
+// Extea large devices(large laptops/desktop, 1200px and up)
+@media only screen and (min-width:1200px) {
+    .MyTrip-container {
+
+
+        .MyTrip-content {
+            margin: 120px 0px !important;
+
+            .title {}
+
+            .MyTrip_contain {}
+        }
+    }
+}
+
 // ====================================
 
 .MyTrip-container {
+
     margin: 0px 14%;
     display: flex;
     justify-content: center;
     flex-direction: column;
 
-    @media (max-width: 991px) {
-        .MyTrip-container {
-            /* max-width: 100%; */
-            padding: 0 20px;
-        }
-    }
+
 
     .MyTrip-content {
         display: flex;
@@ -22,24 +93,11 @@
         margin: 120px 0px;
         gap: 35px;
 
-        @media (max-width: 991px) {
-            .MyTrip-content {
-                /* max-width: 100%; */
-                margin: 40px 10px 40px 0;
-            }
-        }
-
         .title {
             justify-content: space-between;
             align-items: center;
             display: flex;
             width: 100%;
-            @media (max-width: 991px) {
-                .title {
-                    max-width: 100%;
-                    flex-wrap: wrap;
-                }
-            }
 
             a {
                 text-decoration: none;
@@ -53,6 +111,7 @@
                     line-height: 150%;
                 }
             }
+
             .title-name {
                 color: var(--black1, #000);
                 font-family: Noto Sans TC;
@@ -61,14 +120,16 @@
                 font-weight: 400;
                 line-height: 150%;
             }
+
             .btn-add-wrap {
                 display: flex;
                 flex-direction: row;
                 gap: 10px;
 
-                &:hover{
+                &:hover {
+
                     .icon-add-map,
-                    .text-add{
+                    .text-add {
                         color: #333;
                     }
                 }
@@ -77,30 +138,24 @@
                     color: white;
                     font-size: 20px;
                 }
+
                 .text-add {
                     color: var(--white, #fff);
                     font-family: "Noto Sans TC";
                     font-size: 16px;
                     font-style: normal;
                     font-weight: 500;
-                    line-height: 150%; /* 24px */
+                    line-height: 150%;
+                    /* 24px */
                 }
             }
         }
-        .MyTrip_contain {
-            gap: 30px;
 
-            display: flex;
+        .MyTrip_contain {
+            display: inline-flex;
             flex-wrap: wrap;
+            gap: 30px;
             flex-direction: row;
-            align-content: flex-start;
-            align-items: center;
-            @media (max-width: 991px) {
-                .MyTrip_contain {
-                    max-width: 100%;
-                    padding-right: 20px;
-                }
-            }
         }
     }
 }
