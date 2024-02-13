@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState, useEffect } from "react";
 import './CSS/home.scss';
 import FrontCover from './FrontCover/FrontCover';
 import Subtitle from './HeaderHome/Subtitle/Subtitle';
@@ -6,12 +6,26 @@ import About from './About/About';
 import BoxFeat from './BoxFeat/BoxFeat';
 import Step from './Step/Step';
 
+function Home() {
+    const [scrollPosition, setScrollPosition] = useState(0);
 
-function Home() {      //做React元件必定要字首大寫(判斷字首大寫為元件)
+    useEffect(() => {
+        const handleScroll = () => {
+            const position = window.scrollY;
+            setScrollPosition(position);
+        };
+
+        window.addEventListener('scroll', handleScroll);
+
+        return () => {
+            window.removeEventListener('scroll', handleScroll);
+        };
+    }, []);
+    
     return (
         <div>
             {/* Front Cover Area */}
-            <div id="land_page">
+            <div id="land_page" style={{ position: scrollPosition > window.innerHeight ? 'relative' : 'fixed', top: scrollPosition > window.innerHeight ? '90vh' : '0' }}>
                 <FrontCover />
                 {/* Subtitle */}
                 <Subtitle />
@@ -43,3 +57,4 @@ function Home() {      //做React元件必定要字首大寫(判斷字首大寫�
 }
 
 export default Home;
+

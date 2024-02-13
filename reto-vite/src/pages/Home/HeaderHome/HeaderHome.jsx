@@ -1,10 +1,31 @@
-import React from "react";
+import React, { useState, useEffect } from "react";
 // import NavBar from "../NavBar/NavBar";
 import logo from "../../../assets/img_hsc/logo/logo.svg";
 import "./HeaderHome.scss";
 import { Link } from "react-router-dom"; 
 
 const HeaderHome = () => {
+
+  //背景變色
+  useEffect(() => {
+    const handleScroll = () => {
+      const scrollPosition = window.scrollY;
+      const headerHomeElement = document.querySelector('.header_home');
+      if (scrollPosition <= 100) {
+        headerHomeElement.classList.remove('change-bg-color-header');
+      } else {
+        headerHomeElement.classList.add('change-bg-color-header');
+      }
+    };
+
+    window.addEventListener("scroll", handleScroll);
+
+    return () => {
+      window.removeEventListener("scroll", handleScroll);
+    };
+  }, []);
+
+
   return (
     <header className="header_home">
       {/* LOGO  */}

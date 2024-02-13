@@ -1,53 +1,54 @@
-import React from 'react';
+import React, { useState } from 'react';
 import '../CSS/home.scss';
 import guideimg from '../../../assets/img_hsc/index/guideimg.svg';
 
-//Step Button 
+// Step Button 
 const Step = () => {
     const steps = ['第一步', '第二步', '第三步', '第四步', '第五步'];
+    const [currentStep, setCurrentStep] = useState(1);
+    const [direction, setDirection] = useState('forward');
+
+    const handleStepClick = (stepNumber) => {
+        setDirection(stepNumber > currentStep ? 'forward' : 'backward');
+        setCurrentStep(stepNumber);
+    };
+
     return (
         <section id="how">
-                    <h2 className='title_section_home'>如何使用旅藤?</h2>
-                    {/* 步驟按鈕 */}
-                    <div className="btn_step">
-                        <ul>
-                            {steps.map((step, index) => (
-                                <li key={index}><a href="#">{step}</a></li>
-                            ))}
-                        </ul>
+            <h2 className='title_section_home'>如何使用旅藤?</h2>
+            {/* 步驟按鈕 */}
+            <div className="btn_step">
+                <ul>
+                    {steps.map((step, index) => (
+                        <li key={index}>
+                            <button 
+                                className={currentStep === index + 1 ? 'btn_step_active' : ''}
+                                onClick={() => handleStepClick(index + 1)}>
+                                {step}
+                            </button>
+                        </li>
+                    ))}
+                </ul>
+            </div>
+            <div className="guide">
+                {steps.map((step, index) => (
+                    <div
+                        className={`direction step${index + 1} ${currentStep === index + 1 ? 'active' : ''} ${direction === 'forward' ? 'slide-in-right' : 'slide-in-left'}`}
+                        style={{ transform: `translateX(${(index + 1 - currentStep) * 100}%)` }}
+                        key={index}
+                    >
+                        <div className="text">
+                            <h3>使用說明{index + 1}</h3>
+                            <p>使用說明使用說明使用說明</p>
+                        </div>
+                        <figure><img src={guideimg} alt="使用說明" /></figure>
                     </div>
-                    {/* 說明區塊，尚待JS */}
-                    <div className="guide">
-                        <div className="direction">
-                            <div className="text">
-                                <h3>使用說明1</h3>
-                                <p>使用說明使用說明使用說明</p>
-                            </div>
-                            <figure><img src={guideimg} alt="使用說明" /></figure>
-                        </div>
-                        {/* <div className="direction">
-                            <h3>使用說明2</h3>
-                            <p>使用說明使用說明使用說明</p>
-                            <figure><img src="" alt="使用說明" /></figure>
-                        </div>
-                        <div className="direction">
-                            <h3>使用說明3</h3>
-                            <p>使用說明使用說明使用說明</p>
-                            <figure><img src="" alt="使用說明" /></figure>
-                        </div>
-                        <div className="direction">
-                            <h3>使用說明4</h3>
-                            <p>使用說明使用說明使用說明</p>
-                            <figure><img src="" alt="使用說明" /></figure>
-                        </div>
-                        <div className="direction">
-                            <h3>使用說明5</h3>
-                            <p>使用說明使用說明使用說明</p>
-                            <figure><img src="" alt="使用說明" /></figure>
-                        </div> */}
-                    </div>
-                </section>
+                ))}
+            </div>
+           
+        </section>
     )
 }
 
 export default Step;
+
