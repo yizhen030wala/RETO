@@ -28,7 +28,10 @@ const data_box_feat = num_card.map((number, index) => {
 
 //Feat Box 
 const BoxFeat = () => {
+
+    //處理特點box互動效果
     const [isBox2Hovered, setIsBox2Hovered] = useState(false);
+    const [isBox4Hovered, setIsBox4Hovered] = useState(false);
 
     const handleBox2Hover = () => {
         setIsBox2Hovered(true);
@@ -37,15 +40,26 @@ const BoxFeat = () => {
     const handleBox2Leave = () => {
         setIsBox2Hovered(false);
     };
+
+    const handleBox4Hover = () => {
+        setIsBox4Hovered(true);
+    };
+
+    const handleBox4Leave = () => {
+        setIsBox4Hovered(false);
+    };
     return (
         <section id="features">
             <h2 className='title_section_home'>旅藤特點</h2>
             <div className="box_feat">
                 {data_box_feat.map((card, index) => (
-                    <div className={`${card.class_name} ${index === 0 && isBox2Hovered ? 'hovered' : ''}`}
+
+                    //處理互動效果=>box2、box4屬於後方兄弟元素，可以用css控制，
+                    //反之以hover box2、4時給box1、3添加className:hovered並設定class
+                    <div className={`${card.class_name} ${index === 0 && isBox2Hovered ? 'hovered' : ''} ${index === 2 && isBox4Hovered ? 'hovered' : ''}`}
                         key={index}
-                        onMouseEnter={index === 1 ? handleBox2Hover : undefined}
-                        onMouseLeave={index === 1 ? handleBox2Leave : undefined}
+                        onMouseEnter={index === 1 ? handleBox2Hover : index === 3 ? handleBox4Hover : undefined}
+                        onMouseLeave={index === 1 ? handleBox2Leave : index === 3 ? handleBox4Leave : undefined}
                     >
                         <h3>{card.title}</h3>
                         <p dangerouslySetInnerHTML={{ __html: card.content }}></p>

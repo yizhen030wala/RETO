@@ -320,6 +320,8 @@
             bottom: 0;
         }
 
+        // 旅藤特點交互效果
+
         .box1:hover {
             height: calc(267px + 70px);
             background-color: $color_gray1;
@@ -336,8 +338,6 @@
             img {
                 opacity: 0;
             }
-
-            ;
         }
 
         .box2:hover {
@@ -345,8 +345,6 @@
 
             figure {
                 transform: scale(1.5);
-                // right: 10%;
-                // bottom: 10%;
             }
         }
 
@@ -357,34 +355,42 @@
             img {
                 opacity: 0;
             }
-
-            ;
         }
 
+        .box3:hover {
+            height: calc(267px + 70px);
+            background-color: $color_gray2;
 
+            figure {
+                transform: scale(1.5);
+            }
+        }
 
-        // .box1 {
-        //     &:hover {
-        //         height: 297px;
-        //         // transform-origin: top;
-        //         background-color: $color_gray1;
-        //     }
-        // }
+        .box3:hover~.box4 {
+            transform-origin: bottom;
+            height: calc(267px - 70px);
 
-        // .box3 {
-        //     &:hover {
-        //         height: 297px;
-        //     }
-        // }
+            img {
+                opacity: 0;
+            }
+        }
 
-        // .hovered.box1 {
-        //     height: 327px; 
+        .box4:hover {
+            height: calc(267px + 70px);
 
-        // }
+            figure {
+                transform: scale(1.5);
+            }
+        }
 
-        // .hovered.box3 {
-        //     height: 237px; 
-        // }
+        .box3.hovered {
+            transform-origin: top;
+            height: calc(267px - 70px);
+
+            img {
+                opacity: 0;
+            }
+        }
     }
 }
 
