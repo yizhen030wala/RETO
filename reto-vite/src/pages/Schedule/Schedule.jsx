@@ -1,6 +1,6 @@
 import React from 'react'
 import { Link } from 'react-router-dom';
-import "./Schedule.css"
+import "./Schedule.scss"
 // import "../css/Schedule.css"
 import Lightbox from '../../components-common/Lightbox/index'
 import LightboxLine from '../../components-common/LightboxLine/index'

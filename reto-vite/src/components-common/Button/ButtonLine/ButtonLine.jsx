@@ -1,5 +1,5 @@
 import React from 'react';
-import "./ButtonLine.css";
+import "./ButtonLine.scss";
 
 const ButtonLine = ({ onClick, className, children }) => {
   const handleClick = () => {

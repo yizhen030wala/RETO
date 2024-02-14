@@ -1,6 +1,56 @@
 @import "../../assets/scssRule/rule";
 @import "../../assets/scssRule/all";
 
+// =============== RWD =====================
+
+// Extea small devices(phones, 600px and down)
+@media only screen and (max-width:600px) {
+    .Schedule_container {
+        margin: 20px 16px !important;
+
+        .tripHead {
+            .tripTitle {
+                .h3_title {
+                    font-size: 16px !important;
+                }
+
+                .day_font {
+                    font-size: 10px !important;
+                }
+            }
+        }
+
+        .Schedule_date {
+            .btn-day-control {
+                display: none !important;
+            }
+            .btn_day-wrap{
+                margin: 0 !important;
+                .btn_day {
+                // width: 71px;
+                // @include h3_body ;
+                font-size: 12px !important;
+            }
+            }
+            
+        }
+    }
+
+
+}
+
+// small devices(portait tablets and large phone , 600px and up)
+@media only screen and (min-width:600px) {}
+
+// Medium devices(landscape tablets, 768px and up)
+@media only screen and (min-width:768px) {}
+
+// large devices(laptops/desktop, 992px and up)
+@media only screen and (max-width:992px) {}
+
+// Extea large devices(large laptops/desktop, 1200px and up)
+@media only screen and (min-width:1200px) {}
+
 // ====================================
 
 .Schedule_container {
@@ -8,28 +58,26 @@
     display: flex;
     flex-direction: column;
 
-    // .wrap {}
-
     // 行程表頭
     .tripHead {
+        padding: 20px 0;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+
         .tripTitle {
-            // 故意改的
-            padding: 0px 0px;
             display: flex;
-            align-items: center;
-            justify-content: space-between;
             flex-direction: column;
 
             .h3_title {
-                font-family: Noto Sans TC;
                 font-size: 24px;
                 font-style: normal;
                 font-weight: 500;
                 line-height: 150%;
             }
+
             .day_font {
                 &:hover {
-                    font-family: Noto Sans TC;
                     font-size: 14px;
                     font-style: normal;
                     font-weight: 400;
@@ -37,65 +85,72 @@
                     color: black;
                     /* 设置所有的 <h2> 初始为灰色 */
                 }
+
                 &:first-child {
                     color: #000;
                     /* 第一个 <h2> 设置为黑色 */
                 }
 
-                .day_select {
-                    font-family: Noto Sans TC;
-                    font-size: 14px;
-                    font-style: normal;
-                    font-weight: 400;
-                    line-height: 160%;
-                    color: #929292;
-                    /* 设置所有的 <h2> 初始为灰色 */
+
+            }
+
+            .day_select {
+                font-size: 14px;
+                font-style: normal;
+                font-weight: 400;
+                line-height: 160%;
+                color: #929292;
+                /* 设置所有的 <h2> 初始为灰色 */
+            }
+
+        }
+
+        // 功能按鈕
+        .tripFunc {
+            display: flex;
+            justify-content: space-between;
+            flex-direction: row;
+            gap: 10px;
+            align-items: center;
+            z-index: 20;
+
+            a {
+                text-decoration: none;
+            }
+
+            .LB-container {
+                position: relative;
+                z-index: 1000;
+                /* 設置一個足夠高的值 */
+
+                padding: 0px;
+            }
+
+            .set_icon {
+                padding: 10px 12px;
+                display: flex;
+                align-items: center;
+                text-align: center;
+                justify-items: center;
+                background-color: #3d9d35;
+                border-radius: 30px;
+                color: #fff;
+
+                cursor: pointer;
+
+                &:hover {
+                    background-color: $color_green3;
+                    color: #333;
+                    transition: 0.3s;
                 }
             }
 
-            // 功能按鈕
-            .tripFunc {
-                display: flex;
-                justify-content: space-between;
-                gap: 10px;
-                align-items: center;
-                z-index: 20;
-                a {
-                    text-decoration: none;
-                }
-
-                .LB-container {
-                    position: relative;
-                    z-index: 1000; /* 設置一個足夠高的值 */
-                    
-                    padding: 0px;
-                }
-
-                .set_icon {
-                    padding: 10px 12px;
-                    display: flex;
-                    align-items: center;
-                    text-align: center;
-                    justify-items: center;
-                    background-color: #3d9d35;
-                    border-radius: 30px;
-                    color: #fff;
-
-                    cursor: pointer;
-
-                    &:hover {
-                        background-color: #8eb91f;
-                        color: #333;
-                        transition: 0.3s;
-                    }
-                }
-
-                .icon-map {
-                    font-size: 20px;
-                }
+            .icon-map {
+                font-size: 20px;
             }
         }
     }
+
     .Schedule_date {
         padding-bottom: 20px;
         display: flex;
@@ -117,16 +172,26 @@
             align-items: center;
             cursor: pointer;
 
+            img {
+                width: 20px;
+            }
+
             &:hover {
                 background-color: #d9d9d9;
             }
         }
+
         .btn_day-wrap {
+            margin: 0px 12px;
+            display: flex;
+            flex-direction: row;
+            justify-content: flex-start;
+            align-items: center;
+
             .btn_day {
                 padding: 8px 20px;
                 display: flex;
                 align-items: center;
-
                 border-bottom: solid;
                 border-color: #929292;
 
@@ -145,6 +210,7 @@
                     border-bottom: solid;
                     border-color: black;
                 }
+
                 &:first-child {
                     color: black;
                     border-color: black;
@@ -167,12 +233,13 @@
                 width: 34px;
                 height: 34px;
                 background-color: #f5f5f5;
-            
+
                 border-radius: 20px;
                 display: flex;
                 align-items: center;
                 justify-content: center;
                 align-items: center;
+                margin: 0px 0px; //抓不到，莫名有東西變成0 12px
                 cursor: pointer;
 
                 &:hover {
@@ -180,7 +247,7 @@
                 }
 
                 // .icon-add {}
-                
+
                 .icon-add-color {
                     padding: 5px 5px;
                     display: flex;

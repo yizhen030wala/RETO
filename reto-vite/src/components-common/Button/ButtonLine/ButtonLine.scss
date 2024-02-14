@@ -1,0 +1,54 @@
+@import "../../../assets/scssRule/rule";
+@import "../../../assets/scssRule/all";
+
+// =============== RWD =====================
+// Extea small devices(phones, 600px and down)
+@media only screen and (max-width:600px) {
+    .btn_lightboxline {
+        @include text_btn_small;
+        font-size: 12px !important;
+
+    }
+}
+
+// small devices(portait tablets and large phone , 600px and up)
+@media only screen and (min-width:600px) {
+    .btn_lightboxline {
+        @include text_btn_big;
+        // font-size: 16px !important;
+    }
+}
+
+// ====================================
+
+
+.btn_lightboxline {
+    @include text_btn_big;
+}
+
+.btn_lightboxline-yes {
+    @include text_btn_big;
+
+    &:hover {
+        color: #333333;
+        background-color: #b8eb35;
+    }
+
+    span {
+        width: auto;
+        display: flex;
+        flex-direction: row;
+        padding: 8px 20px;
+        justify-content: center;
+        align-items: center;
+        gap: 10px;
+        border-radius: 20px;
+        color: #ffffff;
+        background-color: #3d9d35;
+        cursor: pointer;
+        transition: 0.3s;
+        border-color: transparent;
+        line-height: 1;
+    }
+
+}

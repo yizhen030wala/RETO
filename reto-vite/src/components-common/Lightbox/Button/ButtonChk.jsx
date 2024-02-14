@@ -32,7 +32,7 @@
 
 // ======================================================
 import React from 'react';
-import "./ButtonChk.css";
+import "./ButtonChk.scss";
 
 const ButtonChk = ({ onClick, className, children }) => {
   const handleClick = () => {

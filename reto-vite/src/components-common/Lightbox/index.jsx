@@ -3,8 +3,8 @@
 import React, { useState } from 'react';
 import Lightbox from './Lightbox';
 import ButtonChk from "../Button/ButtonChk/ButtonChk.jsx";
-// import "./index.css"
-import "../css/index.css"
+import "./index.scss"
+// import "../css/index.css"
 
 const App = () => {
   const [isLightboxOpen, setIsLightboxOpen] = useState(false);
