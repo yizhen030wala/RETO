@@ -9,6 +9,7 @@
     display: flex;
     flex-direction: column;
     align-items: center;
+    width: 100%;
 }
 
 // -------HeaderSearch.jsx
@@ -142,9 +143,9 @@
 
 // -------Carousel.jsx
 .box_carousel {
-    display: flex;
-    justify-content: center;
-    align-items: center;
+    // display: flex;
+    position: relative;
+    
     width: 100%;
     overflow: hidden;
     gap: 2%;
@@ -155,9 +156,13 @@
         flex-direction: column;
         align-items: flex-start;
         padding: 50px 40px;
-        margin: 70px 0;
         border-radius: $border_radius_20px;
         box-sizing: border-box;
+        transition: 0.5s ease;
+        flex-shrink: 0;
+
+        scale: 0.95;
+        margin: 10vh -494px;
 
         .search_text {
             display: flex;
@@ -166,7 +171,7 @@
             gap: 12px;
             margin-bottom: 12px;
 
-            .item {
+            .item_carousel {
                 h3 {
                     display: flex;
                     padding: 0px 30px;
@@ -174,7 +179,6 @@
                     align-items: center;
 
                     border-radius: 20px 0px;
-                    background: $color_yellow;
                     height: 36px;
 
                     font-size: 24px;
@@ -213,11 +217,42 @@
             transition無法正確運行，故用important覆蓋 */
         }
     }
+
+    .eat {
+        .item_carousel {
+            h3 {
+                background: $color_yellow;
+            }
+        }
+    }
+
+    .accommodation {
+        .item_carousel {
+            h3 {
+                background-color: $color_blue;
+                color: $color_white;
+            }
+        }
+    }
+
+    .fun {
+        .item_carousel {
+            h3 {
+                background-color: $color_green2;
+                color: $color_white;
+            }
+        }
+    }
 }
 
-.accommodation,
-.fun {
-    scale: 0.95;
+.box_turn.fun.current {
+    scale: 1;
+}
+.box_turn.accommodation.current {
+    scale: 1;
+}
+.box_turn.eat.current {
+    scale: 1;
 }
 
 // -------Tags_carousel.jsx
@@ -302,7 +337,8 @@
         justify-content: center;
         text-align: center;
 
-        a {
+        button {
+            text-decoration: none;
             @include text_btn_big;
             padding: 8px 16px;
         }

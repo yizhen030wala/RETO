@@ -5,13 +5,15 @@ import arrowRight from '../../../assets/img_hsc/fixed_btn/arrow-right.svg';
 
 
 //Fixed Button固定按鈕
-const FixedBtn = ({ selectedCount }) => {
+const FixedBtn = ({ handleArrowLeftClick, handleArrowRightClick, selectedCount }) => {
+
+    
     return (
         <div className="btn_fixed">
             <ul>
-                <li className="arrowLeft"><a href="#"><img src={arrowLeft} alt="" /></a></li>
-                <li className="arrowRight"><a href="#"><img src={arrowRight} alt="" /></a></li>
-                <li className="myJour"><a href="#">我的行程 ({selectedCount})</a></li>
+                <li className="arrowLeft"><button type='button' onClick={handleArrowLeftClick}><img src={arrowLeft} alt="" /></button></li>
+                <li className="arrowRight"><button type='button' onClick={handleArrowRightClick}><img src={arrowRight} alt="" /></button></li>
+                <li className="myJour"><button>我的行程 ({selectedCount})</button></li>
             </ul>
         </div>
     )

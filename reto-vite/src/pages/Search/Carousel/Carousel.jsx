@@ -7,9 +7,12 @@ import Card from '../Card/Card.jsx';
 import Tags_carousel from '../Tags_carousel/Tags_carousel.jsx';
 import LightBox_Card from '../LightBox_Card/LightBox_Card.jsx';
 
+
+
+
 //輪播區塊
-const Carousel = ({ updateSelectedCount }) => {
-  const arr_area = ["住", "吃", "玩"];
+const Carousel = ({ updateSelectedCount, currentIndex, arr_area }) => {
+  // const arr_area = ["住宿", "吃", "景點"];
   const arr_class = ["accommodation", "eat", "fun"];
 
   //管理選中的卡片
@@ -17,6 +20,7 @@ const Carousel = ({ updateSelectedCount }) => {
   //燈箱
   const [lightboxOpen, setLightboxOpen] = useState(false); // 燈箱開關狀態
   const [selectedImage, setSelectedImage] = useState(null); // 選中的圖片
+
 
 
 
@@ -35,7 +39,7 @@ const Carousel = ({ updateSelectedCount }) => {
     } else if (selectedCards.length < 10) {
       newSelectedCards = [...selectedCards, index];
     } else {
-      return; // 如果已经达到最大选中数量，则不进行任何操作
+      return; // 如果已经達到最大選中數量，則不進行任何操作
     }
 
     setSelectedCards(newSelectedCards); // 更新选中的卡片
@@ -60,14 +64,14 @@ const Carousel = ({ updateSelectedCount }) => {
       return;
     }
 
-    // 检查点击事件是否发生在卡片元素之外
+    // 檢查點擊事件是否發生在卡片元素之外
     if (!event.target.closest(".card_search")) {
-      setSelectedCards([]); // 取消所有卡片的选中
-      updateSelectedCount(0); // 将选中数量更新为0
+      setSelectedCards([]); // 取消所有卡片的選中
+      updateSelectedCount(0); // 將選中數量更新為0
     }
   };
 
-  // 使用 useEffect添加和移除事件监听器
+  // 使用 useEffect添加和移除事件監聽器
   React.useEffect(() => {
     document.addEventListener("click", handleClickOutside);
     // 強制執行一次 Masonry 布局更新
@@ -113,7 +117,7 @@ const Carousel = ({ updateSelectedCount }) => {
   }, []);
 
 
-  //↓↓監聽卷軸觸底載入更多↓↓
+  //↓↓監聽卷軸觸底載入更多↓↓ (尚未成功)
   const [images, setImages] = useState(initialDataImg); // 使用初始圖片數據初始化狀態
   // 捲軸到底部加載更多圖片
   useEffect(() => {
@@ -131,23 +135,21 @@ const Carousel = ({ updateSelectedCount }) => {
 
   return (
     <div className="box_carousel">
-      {" "}
       {/* 添加外層 div */}
       {arr_area.map((area, index) => (
-        <div className={`box_turn ${arr_class[index]}`} key={index}>
-          <div className="search_text">
-            <div className="item">
-              <ul>
-                <li>
-                  <h3>{area}</h3>
-                </li>
-                <li>
-                  <p>建議景點選3個喔 ~ </p>
-                </li>
-              </ul>
-            </div>
-            <Tags_carousel />
+        <div className={`box_turn ${arr_class[index]} ${index === currentIndex ? 'current' : ''}`} key={index} style={{ transform: `translateX(${(index - currentIndex) * 100}%)` }}>          <div className="search_text">
+          <div className="item_carousel">
+            <ul>
+              <li>
+                <h3>{area}</h3>
+              </li>
+              <li>
+                <p>建議景點選3個喔 ~ </p>
+              </li>
+            </ul>
           </div>
+          <Tags_carousel />
+        </div>
           {/* 瀑布流圖片內容 */}
           <div className="wrapper">
             <div id="card_container">
