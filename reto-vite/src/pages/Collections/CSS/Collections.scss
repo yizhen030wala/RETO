@@ -1,4 +1,6 @@
-@use '../../css/reset' as *;
+@use "../../../assets/scssRule/all"as *;
+@use "../../../assets//scssRule/rule"as r;
+@use '../../../assets/scssRule/reset'as *;
 
 .area_search_collections {
     height: 17vh;
@@ -146,29 +148,31 @@
     justify-content: center;
     align-items: center;
     border-radius: 12px;
+    color: white;
+    background-color: #3D9D35;
 
     font-size: 14px;
 
     white-space: nowrap;
 }
 
-.label1 a {
-    color: white;
-    background-color: #3D9D35;
-}
+// .label1 a {
+//     color: white;
+//     background-color: #3D9D35;
+// }
 
-.label2 a {
-    background-color: #81E6FD;
-}
+// .label2 a {
+//     background-color: #81E6FD;
+// }
 
-.label3 a {
-    background-color: #FFDF06;
-}
+// .label3 a {
+//     background-color: #FFDF06;
+// }
 
-.label4 a {
-    color: white;
-    background-color: #333;
-}
+// .label4 a {
+//     color: white;
+//     background-color: #333;
+// }
 
 
 
@@ -179,6 +183,7 @@
     width: 100%;
     /* padding: 0 240px; */
     justify-content: center;
+    height: auto;
 }
 
 .box_category {
@@ -190,20 +195,21 @@
     display: flex;
 }
 
-.category ul a {
+.category ul li {
     font-family: Noto Sans TC;
     font-size: 14px;
     font-style: normal;
     font-weight: 400;
     line-height: 160%;
-    /* 22.4px */
 
     padding: 8px 20px;
-    border-bottom: 2px solid #000;
+    border-bottom: 2px solid $color_gray2;
+    color: $color_gray2;
     white-space: nowrap;
 
     display: inline-block;
     text-align: center;
+    cursor: pointer;
 
 }
 
@@ -212,123 +218,142 @@
 
 /*瀑布流內容設定*/
 
-// main {
-//     display: flex;
-//     justify-content: center;
+// -------Carousel.jsx
+.box_carousel {
+    // display: flex;
+    position: relative;
+    
+    width: 100%;
+    overflow: hidden;
+    gap: 2%;
 
-//     padding-top: 24px;
-// }
+    .box_turn {
+        background-color: $color_gray3;
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        padding: 50px 40px;
+        border-radius: $border_radius_20px;
+        box-sizing: border-box;
+        transition: 0.5s ease;
+        flex-shrink: 0;
 
-// .wrapper {
-//     width: 980px;
-//     /* margin: 20px 35px 0; */
-//     height: auto;
-// }
+        scale: 0.95;
+        margin: 10vh -494px;
 
-// #card_container {
-//     position: relative;
-//     width: 100%;
-//     /*100vw;*/
-//     height: auto;
-// }
+        .search_text {
+            display: flex;
+            flex-direction: column;
+            align-items: flex-start;
+            gap: 12px;
+            margin-bottom: 12px;
 
-// .card_search {
-//     width: 230px;
-//     height: auto;
-//     /* position: absolute; */
-// }
+            .item_carousel {
+                h3 {
+                    display: flex;
+                    padding: 0px 30px;
+                    justify-content: center;
+                    align-items: center;
 
-// .card_search img {
-//     width: 100%;
-//     display: block;
-//     border-radius: 20px;
-//     /* box-shadow: 0 0 10px 0 rgb(0 0 0 / 30%); */
-// }
+                    border-radius: 20px 0px;
+                    height: 36px;
 
-// /* 卡片樣式 */
+                    font-size: 24px;
+                    font-style: normal;
+                    font-weight: 500;
+                    line-height: 150%;
+                }
 
-// /* 開始設置 */
+                p {
+                    text-align: center;
+                    font-size: 14px;
+                    font-style: normal;
+                    font-weight: 400;
+                    line-height: 160%;
+                    /* 22.4px */
 
-// .card_search {
-//     /* width: 230px; */
-//     /* height: auto; */
+                    margin-top: 10px;
+                }
+            }
+        }
 
-//     background-color: white;
-//     border-radius: 20px;
-//     overflow: hidden;
-//     margin-bottom: 20px;
-// }
+        .wrapper {
+            width: 980px;
+            height: auto;
 
-// .card_search img {
-//     object-fit: cover;
-//     border-radius: 15px;
-// }
+            #card_container {
+                position: relative;
+                @include size(100%, auto);
+            }
+        }
 
-// .card_search_info {
-//     padding: 12px;
-// }
+        .wrapper * {
+            transition-property: all !important;
+            /* 這裡會寫important是因為Masonry載入時，會動態給.card_search一個property設定，
+            並且是某些才給，無法找到規律，且因為是動態所以試過許多方法都無法覆蓋，因其設定會導致
+            transition無法正確運行，故用important覆蓋 */
+        }
+    }
 
-// /* 標題 */
+    .eat {
+        .item_carousel {
+            h3 {
+                background: $color_yellow;
+            }
+        }
+    }
 
-// .card_title {
-//     font-family: Noto Sans TC, sans-serif;
-//     font-size: 16px;
-//     font-style: normal;
-//     font-weight: 400;
-//     line-height: 150%;
+    .accommodation {
+        .item_carousel {
+            h3 {
+                background-color: $color_blue;
+                color: $color_white;
+            }
+        }
+    }
 
-//     margin-bottom: 6px;
-// }
+    .fun {
+        .item_carousel {
+            h3 {
+                background-color: $color_green2;
+                color: $color_white;
+            }
+        }
+    }
+}
 
-// /* 總評價、評論數及價格  */
-// .evaluate {
-//     display: flex;
-//     justify-content: space-between;
-//     align-items: center;
+.box_turn.fun.current {
+    scale: 1;
+}
+.box_turn.accommodation.current {
+    scale: 1;
+}
+.box_turn.eat.current {
+    scale: 1;
+}
 
-//     font-family: Noto Sans TC, sans-serif;
-//     font-size: 12px;
-//     font-style: normal;
-//     font-weight: 400;
+// -------Tags_carousel.jsx
+.tag_turn {
+    ul {
+        display: flex;
+        justify-content: flex-start;
 
-//     margin-bottom: 6px;
-// }
+        a {
+            @include h2_body;
+            line-height: 160%;
+            padding: 2px 20px;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
 
-// .evaluate figure,
-// .address figure,
-// .link figure {
-//     display: flex;
-//     align-items: center;
+            border-radius: $border_radius_10px;
+            background: $color-white;
+            margin-right: 8px;
 
-//     margin-right: 5px;
-// }
-
-// .evaluate_left {
-//     display: flex;
-// }
-
-// .evaluate_left img {
-//     width: 14px;
-//     height: 14px;
-// }
-
-// /* 標籤 */
-
-// .tag_search {
-//     display: flex;
-//     gap: 5px;
-// }
-
-// .tag_search a {
-//     font-family: Noto Sans TC, sans-serif;
-//     font-size: 12px;
-//     font-style: normal;
-//     font-weight: 400;
-//     line-height: 150%;
-//     /* 18px */
-
-//     border-radius: 5px;
-//     background: #F5F5F5;
-
-//     padding: 2.5px 12px;
-// }
+            &:active {
+                background-color: $color-black;
+                color: $color-white;
+            }
+        }
+    }
+}
