@@ -1,7 +1,8 @@
 // 替換行程按鈕
 import React, { useState } from 'react';
-// import ExchangeCard from '../ExchangeCard/ExchangeCard';
 import LightboxExchange from '../LightboxExchange/LightboxExchange.jsx'; // 引入燈箱組件
+
+import "./BtnExchange.scss"
 
 const BtnExchange = () => {
     const [isLightboxOpen, setIsLightboxOpen] = useState(false);
@@ -16,9 +17,9 @@ const BtnExchange = () => {
 
     return (
         <>
-            <span className="icon-exchange" onClick={openLightbox}></span >
-                { isLightboxOpen && <LightboxExchange onClose={closeLightbox} />
-} {/* 顯示燈箱 */ }
+            <span className="icon-exchange icon_point" onClick={openLightbox}></span >
+            {isLightboxOpen && <LightboxExchange onClose={closeLightbox} />}
+            {/* 顯示燈箱 */}
         </>
     )
 }

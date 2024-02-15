@@ -1,5 +1,5 @@
 import React, { useRef } from 'react';
-import '../css/LightboxExchange.css';
+import './LightboxExchange.scss';
 import ButtonChk from "../../../Button/ButtonChk/ButtonChk.jsx";
 import SpotCard from '../SpotCard.jsx';
 import ExchangeCard from '../ExchangeCard/ExchangeCard.jsx';
@@ -39,6 +39,7 @@ const LightboxExchange = ({ onClose }) => {
                             <div className='spottag_title'>一樣的有...</div>
                         </div>
                         <div className='cardEX_wrap'>
+
                             <div className='card_col'>
                                 <ExchangeCard
                                     imgSrc="https://images.unsplash.com/photo-1504669887860-f6d4cc3feb4b?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
@@ -59,7 +60,7 @@ const LightboxExchange = ({ onClose }) => {
                                     numReviews={1440}
                                     price="$"
                                     location="台南"
-                                />
+                                /> 
                             </div >
                             <div className='card_col'>
                                 <ExchangeCard
@@ -92,7 +93,7 @@ const LightboxExchange = ({ onClose }) => {
                         <ButtonChk onClick={handleClose}>替換行程</ButtonChk>
                     </div>
                 </div>
-            </div>
+            </div >
         </>
     )
 }

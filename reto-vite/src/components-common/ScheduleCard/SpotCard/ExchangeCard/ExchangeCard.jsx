@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import '../css/ExchangeCard.css';
+import './ExchangeCard.scss';
 import Marker from './selected_mark.svg';
 import Spottag from '../Spottag/Spottag';
 
@@ -22,7 +22,7 @@ const ExchangeCard = ({ imgSrc, imgAlt, index, onSelect, selected, onOpenLightbo
     };
 
     return (
-        <div className="card_search" onClick={handleOpenLightbox}>
+        <div className="cardEX_search" onClick={handleOpenLightbox}>
             {selected && showMarker && (
                 <div className={dotClass}>
                     <div className="checkmark"><img src={Marker} alt="" /></div>

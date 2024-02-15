@@ -10,7 +10,7 @@ const DateSwiper = () => {
         <>
             <div className="swiper-container">
                 <Swiper
-                    slidesPerView={3}
+                    slidesPerView={4}
                     spaceBetween={0}
                     loop={false}
                     navigation={{
@@ -34,6 +34,9 @@ const DateSwiper = () => {
                     </SwiperSlide>
                     <SwiperSlide>
                         <a href="#">第 5 天</a>
+                    </SwiperSlide>
+                    <SwiperSlide>
+                        <a href="#">第 6 天</a>
                     </SwiperSlide>
                 </Swiper>
                 <div className="swiper-button-prev"></div>

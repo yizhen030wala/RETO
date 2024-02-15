@@ -10,6 +10,7 @@ import BreadCrumb from '../../components-common/BreadCrumb/BreadCrumb.tsx'
 import SpotCard from '../../components-common/ScheduleCard/SpotCard/SpotCard.jsx'
 import TimeCard from '../../components-common/ScheduleCard/TimeCard/TimeCard.jsx'
 import ScheduleSheet from '../../components-common/ScheduleSheet/ScheduleSheet.jsx'
+import DateSwiper from '../../components-common/DateSwiper/DateSwiper.jsx';
 
 const Schedule = () => {
     return (
@@ -52,31 +53,9 @@ const Schedule = () => {
                 </div>
 
                 {/* 行程天數列 */}
-                <div className="Schedule_date">
-                    <div className='btn-day-control'>
-                        <img src={goleftImage} alt="" />
-                    </div>
-                    <div className="btn_day-wrap">
-                        <div className="btn_day">
-                            第 1 天
-                        </div>
-                        <div className="btn_day">
-                            第 2 天
-                        </div>
-                        <div className="btn_day">
-                            第 3 天
-                        </div>
-                        <div className="btn_day">
-                            第 4 天
-                        </div>
-                    </div>
-                    <div className='btn-day-control'>
-                        <img src={gorightImage} alt="" />
-                    </div>
-                    {/* 以此類推... */}
+                <div className='dataSwiper_wrap'>
+                <DateSwiper />
                 </div>
-
-
 
                 {/* 行程表顯示外框 */}
                 <div className="schedule-wrap">

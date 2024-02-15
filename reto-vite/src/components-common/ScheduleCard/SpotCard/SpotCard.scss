@@ -12,7 +12,6 @@
     overflow: hidden;
     position: relative;
 
-
     // 左側功能列
     .leftFunc_SpotCard {
         width: 8%;
@@ -20,10 +19,24 @@
         gap: 7px;
         flex-direction: column;
         align-items: center;
-        opacity: 50%;
+
+        .drag_point {
+            cursor: grab;
+            color: $color_black;
+            opacity: 0.5;
+
+            &:hover {
+                opacity: 1;
+            }
+
+            &:active {
+                cursor: grabbing;
+                opacity: 1;
+            }
+        }
     }
 
-    .InfoCard_wrap{
+    .InfoCard_wrap {
         width: 100%;
         border-radius: 14px;
         background: var(--white, #fff);
@@ -60,5 +73,11 @@
         top: 11px;
         right: 11px;
         opacity: 50%;
+    }
+
+    .btn_wrap{
+        position: absolute;
+    top: 0px;
+    right: 0px;
     }
 }

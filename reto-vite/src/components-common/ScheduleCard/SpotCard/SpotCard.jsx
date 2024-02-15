@@ -4,6 +4,7 @@ import React from 'react';
 import "./SpotCard.scss"
 import InfoCard from './InfoCard/InfoCard';
 import BtnExchange from "./BtnExchange/BtnExchange.jsx"
+import ButtonDel_Trash from '../../Button/ButtonDel_Trash/ButtonDel_Trash.jsx';
 
 
 const SpotCard = () => {
@@ -14,7 +15,7 @@ const SpotCard = () => {
                 {/* 左側功能列 */}
                 <div className="leftFunc_SpotCard">
                     {/* 拖曳 */}
-                    <span className="icon-drag_indicator"></span>
+                    <span className="icon-drag_indicator drag_point"></span>
                     {/* 替換 */}
                     <BtnExchange className="BtnExchange" />
                 </div>
@@ -26,10 +27,13 @@ const SpotCard = () => {
                     <InfoCard />
                 </div>
 
+                {/* 刪除鍵 */}
+                <div className='btn_wrap'>
+                    <ButtonDel_Trash />
+                </div>
 
-                <span className="icon-delete loc-delete"></span>
             </div>
-            {/* 刪除鍵 */}
+
 
         </>
     )

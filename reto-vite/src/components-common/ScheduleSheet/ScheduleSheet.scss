@@ -3,23 +3,27 @@
 
 // ======================= RWD ==========================
 // Extea small devices(phones, 600px and down)
-@media only screen and (max-width:600px) {
-    .schedule{
+@media only screen and (max-width: 600px) {
+    .schedule {
         width: 100% !important;
     }
 }
 
 // small devices(portait tablets and large phone , 600px and up)
-@media only screen and (min-width:600px) {}
+@media only screen and (min-width: 600px) {
+}
 
 // Medium devices(landscape tablets, 768px and up)
-@media only screen and (min-width:768px) {}
+@media only screen and (min-width: 768px) {
+}
 
 // large devices(laptops/desktop, 992px and up)
-@media only screen and (max-width:992px) {}
+@media only screen and (max-width: 992px) {
+}
 
 // Extea large devices(large laptops/desktop, 1200px and up)
-@media only screen and (min-width:1200px) {}
+@media only screen and (min-width: 1200px) {
+}
 
 // ====================================
 
@@ -41,6 +45,8 @@
     // 行程表刪除鍵
     .loc-icon-more_horiz {
         text-decoration: none;
+        opacity: 0;
+        transition: .3s;
 
         position: absolute;
         top: 12px;
@@ -50,7 +56,9 @@
             color: #333333;
         }
     }
-
+    &:hover .loc-icon-more_horiz {
+        opacity: 1;
+    }
 
     // 星期N
     .schedule_day {
@@ -106,7 +114,13 @@
             align-items: center;
             gap: 10px;
             border-radius: 20px;
-            background: var(--white, #fff);
+            background: $color_white;
+
+            &:hover,
+            &:active {
+                cursor: pointer;
+                background: $color_gray2;
+            }
 
             .btnAddSpotTitle {
                 display: flex;

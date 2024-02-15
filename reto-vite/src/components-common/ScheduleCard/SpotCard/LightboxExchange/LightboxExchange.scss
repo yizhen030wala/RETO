@@ -13,11 +13,11 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    z-index: 30;
+    z-index: 50;
 
     .lightboxEX-container {
         background-color: white;
-        width: 625px;
+        width: 700px;
         padding: 40px 38px 40px 40px;
         border-radius: 20px;
 
@@ -34,6 +34,7 @@
             width: 100%;
 
             max-height: 350px; /* 設定最大高度為850px，超過部分將出現卷軸 */
+            height: 350px;
             overflow-y: auto; /* 超過最大高度時顯示垂直卷軸 */
 
             padding: 0 20px;
@@ -109,6 +110,7 @@
                 .card_col {
                     display: flex;
                     flex-direction: column;
+
                 }
             }
         }

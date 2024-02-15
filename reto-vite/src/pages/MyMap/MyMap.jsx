@@ -32,7 +32,7 @@ const MyMap = () => {
                     </div>
 
                     {/* 行程天數列 */}
-                    <DateSwiper></DateSwiper>
+                    <DateSwiper />
                     {/* <div className="SM_date">
                         <div className="btn_day">全部</div>
                         <div className="btn_day">第 1 天</div>

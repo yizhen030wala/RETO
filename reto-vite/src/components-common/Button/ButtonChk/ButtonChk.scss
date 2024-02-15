@@ -30,11 +30,12 @@
     @include text_btn_big;
 
     &:hover {
+        transition: .3s;
         color: #333333;
         background-color: #b8eb35;
     }
 
-    span {
+    div {
         width: auto;
         display: flex;
         flex-direction: row;
@@ -46,7 +47,6 @@
         color: #ffffff;
         background-color: #3d9d35;
         cursor: pointer;
-        transition: 0.3s;
         border-color: transparent;
         line-height: 1;
     }

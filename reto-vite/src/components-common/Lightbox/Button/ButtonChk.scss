@@ -24,17 +24,15 @@
     @include text_btn_big;
 }
 
-.lightbox-c-green-yes {
+.lightbox-c-green {
     @include text_btn_big;
+    color: #d9d9d9;
 
     &:hover {
+        transition: .3s;
         color: #333333;
         background-color: #b8eb35;
     }
 
     gap: 10px;
-}
-
-.lightbox-c-white {
-    color: #d9d9d9;
 }
