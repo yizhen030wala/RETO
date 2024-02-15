@@ -1,0 +1,397 @@
+.lightbox-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5); /* 半透明黑色背景 */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .lightbox-container {
+    background-color: white;
+    width: 500px;
+    height: 500px;
+    border: 1px solid black;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    animation: lightbox-fade-in 0.5s ease, slide-from-center 0.5s ease; /* 新增滑入效果 */
+  }
+  
+  .lightbox-content {
+    text-align: center;
+  }
+  
+  @keyframes lightbox-fade-in {
+    from {
+      transform: translateY(-50%);
+      opacity: 0;
+    }
+    to {
+      transform: translateY(0);
+      opacity: 1;
+    }
+  }
+  @keyframes slide-from-center {
+    from {
+      transform: translateY(-50%);
+      opacity: 0;
+    }
+    to {
+      transform: translateY(0);
+      opacity: 1;
+    }
+  }
+
+  .lightbox-content input[type="checkbox"]:hover {
+    background-color: #f0f0f0; /* 淺灰色 */
+  }
+  .lightbox-content input[type="checkbox"] + label.checked::before {
+    content: "\2714"; /* 白色勾勾 */
+    color: white; /* 文字顏色 */
+    background-color: green; /* 綠色底色 */
+  }
+
+  .lightbox-content input[type="checkbox"] {
+    appearance: none;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    width: 20px;
+    height: 20px;
+    border: 1px solid #333; /* 深灰色邊框 */
+    border-radius: 4px; /* 圓角 */
+    background-color: white; /* 白色底色 */
+  }
+
+
+
+
+  /* ------------------第二次修改-------------------------------- */
+  .lightbox-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5); /* 半透明黑色背景 */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .lightbox-container {
+    background-color: white;
+    width: 300px;
+    height: 300px;
+    border: 1px solid black;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    animation: lightbox-fade-in 0.5s ease, slide-from-center 0.5s ease; /* 新增滑入效果 */
+  }
+  
+  .lightbox-content {
+    text-align: center;
+  }
+  
+  @keyframes lightbox-fade-in {
+    from {
+      transform: translateY(-30%);
+      opacity: 0;
+    }
+    to {
+      transform: translateY(0);
+      opacity: 1;
+    }
+  }
+  
+  @keyframes slide-from-center {
+    from {
+      transform: translateY(-30%);
+      opacity: 0;
+    }
+    to {
+      transform: translateY(0);
+      opacity: 1;
+    }
+  }
+
+
+  /* 新增的部分 */
+  .checkbox-container {
+    display: block;
+    position: relative;
+    padding-left: 35px;
+    margin-bottom: 12px;
+    cursor: pointer;
+    user-select: none;
+  }
+  
+  .checkbox-container input {
+    position: absolute;
+    opacity: 0;
+    cursor: pointer;
+    height: 0;
+    width: 0;
+  }
+  
+  .checkmark {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 20px;
+    width: 20px;
+    background-color: white;
+    border: 1px solid #333;
+    border-radius: 4px;
+  }
+  
+  .checkmark::after {
+    content: "";
+    position: absolute;
+    display: none;
+  }
+  
+  .checkbox-container input:checked ~ .checkmark::after {
+    display: block;
+  }
+  
+  .checkbox-container .checkmark::after {
+    content: "";
+    position: absolute;
+    left: 7px;
+    top: 2px;
+    width: 6px;
+    height: 12px;
+    border: solid red; /* 將邊框顏色改為紅色 */
+    border-width: 0 2px 2px 0;
+    transform: rotate(45deg);
+  }
+  
+  
+  
+  
+  /* ================================================================= */
+  
+
+
+.lightbox-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5); /* 半透明黑色背景 */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.lightbox-container {
+  background-color: white;
+  width: 300px;
+  height: 300px;
+  border: 1px solid black;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  animation: lightbox-fade-in 0.5s ease, slide-from-center 0.5s ease; /* 新增滑入效果 */
+}
+
+.lightbox-content {
+  text-align: center;
+}
+
+@keyframes lightbox-fade-in {
+  from {
+    transform: translateY(-30%);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+@keyframes slide-from-center {
+  from {
+    transform: translateY(-30%);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+
+/* ==================== */
+/* Lightbox.css */
+
+.lightbox-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5); /* 半透明黑色背景 */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.lightbox-container {
+  background-color: white;
+  width: 300px; /* 修改寬度為 300px */
+  /* height: 300px; 修改高度為 300px */
+  border: 1px solid black;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  animation: lightbox-fade-in 0.5s ease, slide-from-center 0.5s ease; /* 新增滑入效果 */
+}
+
+.lightbox-content {
+  text-align: center;
+}
+
+@keyframes lightbox-fade-in {
+  from {
+    transform: translateY(-10%); /* 調整起始位置 */
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+@keyframes slide-from-center {
+  from {
+    transform: translateY(-10%); /* 調整起始位置 */
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+/* 新增的部分 */
+.fade-out {
+  animation: fade-out 0.5s ease forwards;
+}
+
+.lightbox-fade-out {
+  animation: lightbox-fade-out 0.5s ease forwards, ;
+}
+
+@keyframes fade-out {
+  from {
+    opacity: 1;
+  }
+  to {
+    opacity: 0;
+  }
+}
+
+@keyframes lightbox-fade-out {
+  from {
+    transform: translateY(0);
+    opacity: 1;
+  }
+  to {
+    transform: translateY(-30%); /* 調整起始位置 */
+    opacity: 0;
+  }
+}
+/* ======================== */
+最新版本
+/* Lightbox.css */
+
+.lightbox-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5); /* 半透明黑色背景 */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.lightbox-container {
+  background-color: white;
+  width: 300px; /* 修改寬度為 300px */
+  height: 300px; /* 修改高度為 300px */
+  border: 1px solid black;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  animation: lightbox-fade-in 0.5s ease, slide-from-center 0.5s ease; /* 新增滑入效果 */
+}
+
+.lightbox-content {
+  text-align: center;
+}
+
+@keyframes lightbox-fade-in {
+  from {
+    transform: translateY(-10%); /* 調整起始位置 */
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+@keyframes slide-from-center {
+  from {
+    transform: translateY(-10%); /* 調整起始位置 */
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+/* 新增的部分 */
+.fade-out {
+  animation: fade-out 0.5s ease forwards;
+}
+
+@keyframes fade-out {
+  from {
+    opacity: 1;
+  }
+  to {
+    opacity: 0;
+  }
+}
+
+/* 新增的部分 */
+.slide-up-and-fade-out {
+  animation: slide-up-and-fade-out 0.5s ease forwards;
+}
+
+@keyframes slide-up-and-fade-out {
+  from {
+    transform: translateY(0);
+    opacity: 1;
+  }
+  to {
+    transform: translateY(-10%);
+    opacity: 0;
+  }
+}
