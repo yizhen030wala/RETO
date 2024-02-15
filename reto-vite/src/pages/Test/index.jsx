@@ -21,9 +21,9 @@ const index = () => {
     <div>
      <BtnExchange />
 
-      {/* <Spottag>下午茶</Spottag> */}
+      <Spottag>下午茶</Spottag>
 
-      {/* <LightboxLine />
+      <LightboxLine />
       <ButtonDel/>
       <AddToast/>
       <DeleteToast/>
@@ -33,7 +33,7 @@ const index = () => {
       <DatePicker/>
       <div id="calendar"></div>
       <Link to="/">登入頁</Link>
-      <p className="test">scss變數導入測試</p> */}
+      <p className="test">scss變數導入測試</p>
     </div>
   )
 }
