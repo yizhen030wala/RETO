@@ -1,5 +1,6 @@
 import React from 'react';
-import "../css/InfoCard.css";
+// import "../css/InfoCard.css";
+import "./InfoCard.scss"
 
 
 const InfoCard = () => {

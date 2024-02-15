@@ -9,6 +9,7 @@
         margin: 20px 16px !important;
 
         .tripHead {
+            padding: 10px 0 !important;
             .tripTitle {
                 .h3_title {
                     font-size: 16px !important;
@@ -33,6 +34,12 @@
             }
             }
             
+        }
+        .schedule-wrap{
+            .scheduleList{
+                margin: 25px 0px !important;
+                width: 112%;
+            }
         }
     }
 
@@ -87,7 +94,7 @@
                 }
 
                 &:first-child {
-                    color: #000;
+                    color: $color_gray1;
                     /* 第一个 <h2> 设置为黑色 */
                 }
 

@@ -16,8 +16,9 @@ const BtnExchange = () => {
 
     return (
         <>
-            <span className="icon-exchange" onClick={openLightbox}></span>
-            {isLightboxOpen && <LightboxExchange onClose={closeLightbox} />} {/* 顯示燈箱 */}
+            <span className="icon-exchange" onClick={openLightbox}></span >
+                { isLightboxOpen && <LightboxExchange onClose={closeLightbox} />
+} {/* 顯示燈箱 */ }
         </>
     )
 }

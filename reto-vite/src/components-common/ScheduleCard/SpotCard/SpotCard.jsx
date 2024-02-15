@@ -1,6 +1,7 @@
 // 行程頁和地圖頁當中景點卡片組件
 import React from 'react';
-import "../css/SpotCard.css";
+// import "../css/SpotCard.css";
+import "./SpotCard.scss"
 import InfoCard from './InfoCard/InfoCard';
 import BtnExchange from "./BtnExchange/BtnExchange.jsx"
 

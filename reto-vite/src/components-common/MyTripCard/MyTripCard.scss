@@ -3,58 +3,46 @@
 
 
 // ======================= RWD ==========================
-// Extea small devices(phones, 600px and down)
+/* small devices(portrait tablets and large phones, 600px and up) */
+@media only screen and (min-width:600px) {
+    .mytripcard {
+        width: calc(100%/2 - 30px) !important;
+        min-width: 25vh;
+    }
+}
+
+/* Medium devices (landscape tablets, 768px and up) */
+@media only screen and (min-width:768px) {
+    .mytripcard {
+        width: calc(100%/4 - 30px) !important;
+        
+    }
+}
+
+/* Extra small devices (phones, 600px and down) */
 @media only screen and (max-width:600px) {
     .mytripcard {
         width: 100vh !important;
-        .mytripcard_cover{
-            height: 200px;
+        .mytripcard_cover {
+            height: 200px !important;
         }
     }
 }
 
-// small devices(portait tablets and large phone , 600px and up)
-@media only screen and (min-width:600px) {
-    .mytripcard {
-        width: 50vh;
-    }
-}
 
-// Medium devices(landscape tablets, 768px and up)
-@media only screen and (min-width:768px) {
-    .mytripcard {
-        width: 50vh;
-    }
-}
-
-// large devices(laptops/desktop, 992px and up)
-@media only screen and (max-width:992px) {
-    .mytripcard {
-        width: 30vh ;
-    }
-}
-
-// Extea large devices(large laptops/desktop, 1200px and up)
-@media only screen and (min-width:1200px) {
-    .mytripcard {
-        width: 25vh;
-    }
-}
 
 
 // ====================================
 
 .mytripcard {
-    // margin: 0px 15px;
-    width: 25vh;
-    gap: 10px;
+    // width: 25vh;
+    width: calc(100%/4 + 30px);
 
+    gap: 10px;
     display: flex;
     flex-direction: column;
     position: relative;
-
     overflow: hidden;
-
 
     .ctrl_ButtonDel {
         position: absolute;
@@ -94,7 +82,6 @@
         display: flex;
         flex-direction: column;
         width: 100%;
-
         gap: 6px;
 
         .mytripcard_name {

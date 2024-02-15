@@ -5,9 +5,9 @@
 // ===================RWD============================
 
 // 手機
-@media screen and (max-width: 809px) {
+@media screen and (max-width: 600px) {
     .header {
-
+        padding: 5px 16px !important;
         ul.nav_btn {
             display: none;
         }

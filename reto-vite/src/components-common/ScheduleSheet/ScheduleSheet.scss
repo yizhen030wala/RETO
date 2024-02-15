@@ -1,6 +1,26 @@
 @import "../../assets/scssRule/all.scss";
 @import "../../assets/scssRule/rule.scss";
 
+// ======================= RWD ==========================
+// Extea small devices(phones, 600px and down)
+@media only screen and (max-width:600px) {
+    .schedule{
+        width: 100% !important;
+    }
+}
+
+// small devices(portait tablets and large phone , 600px and up)
+@media only screen and (min-width:600px) {}
+
+// Medium devices(landscape tablets, 768px and up)
+@media only screen and (min-width:768px) {}
+
+// large devices(laptops/desktop, 992px and up)
+@media only screen and (max-width:992px) {}
+
+// Extea large devices(large laptops/desktop, 1200px and up)
+@media only screen and (min-width:1200px) {}
+
 // ====================================
 
 .schedule {
@@ -26,11 +46,11 @@
         top: 12px;
         right: 33px;
 
-        &:hover{
+        &:hover {
             color: #333333;
         }
     }
-    
+
 
     // 星期N
     .schedule_day {
@@ -74,19 +94,20 @@
 
     .btn_addspot-wrap {
         width: 92%;
-    display: flex;
-    flex-direction: column;
-    gap: 12px;
-    padding-left: 35px;
+        display: flex;
+        flex-direction: column;
+        gap: 12px;
+        padding-left: 35px;
 
         .btn_addspot {
             display: flex;
-    padding: 10px 20px;
-    justify-content: center;
-    align-items: center;
-    gap: 10px;
-    border-radius: 20px;
-    background: var(--white, #fff);
+            padding: 10px 20px;
+            justify-content: center;
+            align-items: center;
+            gap: 10px;
+            border-radius: 20px;
+            background: var(--white, #fff);
+
             .btnAddSpotTitle {
                 display: flex;
                 flex-direction: row;
@@ -97,9 +118,11 @@
                 .icon-love {
                     font-size: 20px;
                 }
+
                 .icon-search {
                     font-size: 20px;
                 }
+
                 .h3_title {
                     color: var(--black2, #333);
                     font-family: Noto Sans TC;

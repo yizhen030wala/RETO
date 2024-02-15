@@ -1,5 +1,6 @@
 import React from 'react'
-import "../css/ScheduleSheet.css"
+// import "../css/ScheduleSheet.css"
+import "./ScheduleSheet.scss"
 import SpotCard from '../ScheduleCard/SpotCard/SpotCard.jsx'
 import TimeCard from '../ScheduleCard/TimeCard/TimeCard.jsx'
 import ButtonDel_NB from '../Button/ButtonDel_NB/ButtonDel_NB.jsx'
