@@ -1,6 +1,31 @@
 @import "../../assets/scssRule/rule";
 @import "../../assets/scssRule/all";
 
+// Extea small devices(phones, 600px and down)
+@media only screen and (max-width:600px) {
+    .lightbox-container {
+        width: 350px !important;
+        padding: 25px 16px !important;
+
+        // height: 618px;
+        .scroller {
+            max-height: 618px !important;
+        }
+    }
+}
+
+// small devices(portait tablets and large phone , 600px and up)
+@media only screen and (min-width:600px) {}
+
+// Medium devices(landscape tablets, 768px and up)
+@media only screen and (min-width:768px) {}
+
+// large devices(laptops/desktop, 992px and up)
+@media only screen and (max-width:992px) {}
+
+// Extea large devices(large laptops/desktop, 1200px and up)
+@media only screen and (min-width:1200px) {}
+
 // ====================================
 
 // 燈箱樣式
@@ -10,11 +35,13 @@
     left: 0;
     width: 100%;
     height: 100%;
-    background-color: rgba(0, 0, 0, 0.5); /* 半透明黑色背景 */
+    background-color: rgba(0, 0, 0, 0.5);
+    /* 半透明黑色背景 */
     display: flex;
     justify-content: center;
     align-items: center;
     z-index: 20;
+
     .lightbox-container {
         background-color: white;
         width: 500px;
@@ -25,16 +52,19 @@
         justify-content: center;
         align-items: center;
         position: relative;
-        animation: lightbox-fade-in 0.5s ease, slide-from-center 0.5s ease; /* 新增滑入效果 */
+        animation: lightbox-fade-in 0.5s ease, slide-from-center 0.5s ease;
+        /* 新增滑入效果 */
 
         // ----------------以下是動畫區------------
         /* 動畫 */
 
         @keyframes lightbox-fade-in {
             from {
-                transform: translateY(-10%); /* 調整起始位置 */
+                transform: translateY(-10%);
+                /* 調整起始位置 */
                 opacity: 0;
             }
+
             to {
                 transform: translateY(0);
                 opacity: 1;
@@ -43,9 +73,11 @@
 
         @keyframes slide-from-center {
             from {
-                transform: translateY(-10%); /* 調整起始位置 */
+                transform: translateY(-10%);
+                /* 調整起始位置 */
                 opacity: 0;
             }
+
             to {
                 transform: translateY(0);
                 opacity: 1;
@@ -61,6 +93,7 @@
             from {
                 opacity: 1;
             }
+
             to {
                 opacity: 0;
             }
@@ -76,6 +109,7 @@
                 transform: translateY(0);
                 opacity: 1;
             }
+
             to {
                 transform: translateY(-10%);
                 opacity: 0;
@@ -88,8 +122,10 @@
         .scroller {
             width: 100%;
 
-            max-height: 350px; /* 設定最大高度為850px，超過部分將出現卷軸 */
-            overflow-y: auto; /* 超過最大高度時顯示垂直卷軸 */
+            max-height: 350px;
+            /* 設定最大高度為850px，超過部分將出現卷軸 */
+            overflow-y: auto;
+            /* 超過最大高度時顯示垂直卷軸 */
 
             padding: 0 20px;
 
@@ -130,17 +166,21 @@
                 font-size: 24px;
                 font-style: normal;
                 font-weight: 500;
-                line-height: 150%; /* 36px */
+                line-height: 150%;
+                /* 36px */
 
                 color: #333333;
             }
+
             .filter-wrap {
                 display: flex;
                 flex-direction: row;
                 align-items: center;
+                flex-wrap: wrap;
                 justify-content: flex-start;
                 gap: 12px;
             }
+
             .list-wrap {
                 margin: 12px 0px;
             }
@@ -166,6 +206,7 @@
                 &:hover {
                     color: #333333;
                 }
+
                 &:active {
                     color: #333333;
                 }
