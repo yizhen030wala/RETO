@@ -14,6 +14,7 @@ import Collections from './pages/Collections/Collections';
 import Header from './components-common/Header/Header';
 import Relevant_Card from './pages/Search/Relevant_Card/Relevant_Card';
 import Set_Journey from './pages/Search/Set_Journey/Set_journey';
+import MapPhone from './pages/MyMap phone/MapPhone'
 
 const App = () => {
   return (
@@ -30,6 +31,7 @@ const App = () => {
           <Route path="/mytrip" element={<MyTrip />} />
           <Route path="/schedule" element={<Schedule />} />
           <Route path="/mymap" element={<MyMap />} />
+          <Route path="/mymapphone" element={<MapPhone />} />
           <Route path="/Collections" element={<Collections />} />
         </Route>
 
