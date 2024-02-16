@@ -1,5 +1,6 @@
 import React from 'react'
-import "../css/Spottag.css"
+import "./Spottag.scss"
+
 
 const Spottag = ({ children, color }) => {
 

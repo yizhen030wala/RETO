@@ -42,7 +42,9 @@ const ExchangeCard = ({ imgSrc, imgAlt, index, onSelect, selected, onOpenLightbo
                     </div>
                     <span>{price}</span>
                 </div>
-                <Spottag color="#f5f5f5">{location}</Spottag>
+                <div className="spottag_wrap">
+                    <Spottag color="#f5f5f5">{location}</Spottag>
+                </div>
             </div>
             <div className="dot_card" onClick={handleDotClick}></div>
         </div>

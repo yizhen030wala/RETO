@@ -106,7 +106,10 @@ $color_white: #FFFFFF;
     font-size: 12px;
 }
 
-
+@mixin text_btn_overlay_phone {
+    @include text_btn_big;
+    width: 90%;
+}
 
 // ====================================================圓角樣式設定====================================================
 $border_radius_10px: 10px;
