@@ -158,7 +158,12 @@
 
     // 設定一個寬度讓組件在最左邊，不然會置中
     .dataSwiper_wrap {
-        width: 440px
+        width: 440px;
+
+        //手機
+        @media only screen and (max-width: 600px) {
+            width: 100%;
+        }
     }
 
     .schedule-wrap {

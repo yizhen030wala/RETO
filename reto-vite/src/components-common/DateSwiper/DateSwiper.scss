@@ -10,6 +10,11 @@
     position: relative;
     height: 90px; /* 修改为适当的高度，或者使用其他的方式来设置容器高度 */
 
+    //手機
+    @media only screen and (max-width:600px) {
+        margin: 0;
+    }
+
     // 控制所有模型項目
     .swiper {
         margin-left: auto;
@@ -57,8 +62,14 @@
         top: 27px;
         width: 32px;
         height: 32px;
+        color: #828282;
         background-color: #f5f5f5;
         border-radius: 50%;
+
+        //手機
+        @media only screen and (max-width:600px) {
+            display: none;
+        }
 
         // 控制上下頁的按鈕，箭頭要用文字相關屬性控制
         &:after {
@@ -72,8 +83,8 @@
         }
 
         &:hover,
-        &:active{
-            background-color: #E7E7E7;
+        &:active {
+            background-color: #e7e7e7;
         }
     }
 
@@ -82,12 +93,10 @@
         // 讓箭頭的視覺置中
         padding-right: 2px;
         left: -55px;
-        color: #828282;
     }
     .swiper-button-next {
         padding-left: 2px;
         right: -55px;
-        color: #828282;
     }
 }
 
