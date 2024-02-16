@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import "./CSS/Collections.scss";
 import CategoryCollections from "./CategoryCollections/CategoryCollections";
 import SearchCollections from "./SearchCollections/SearchCollections";
-
+import CarouselCollections from "./CarouselCollections/CarouselCollections";
 
 function Collections() {
   return (
@@ -17,7 +17,7 @@ function Collections() {
       {/* 收藏 */}
       <main>
         {/* 區塊輪播/瀑布流搜尋結果 */}
-        {/* <Carousel /> */}
+         <CarouselCollections />
       </main>
     </div>
   );

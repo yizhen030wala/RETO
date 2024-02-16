@@ -8,10 +8,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@300;400;500;600;700&display=swap');
 /*Google Fonts*/
 
-/* http://meyerweb.com/eric/tools/css/reset/ 
-   v2.0 | 20110126
-   License: none (public domain)
-*/
 
 html,
 body,
@@ -103,7 +99,6 @@ video {
 }
 
 /* HTML5 display-role reset for older browsers */
-
 article,
 aside,
 details,
@@ -155,6 +150,18 @@ input {
     /* 清除input點擊之後的黑色邊框 */
 }
 
+/*清除button標籤自帶樣式*/
+button {
+    background: none;
+    border: none;
+    color: inherit;
+    font: inherit;
+    padding: 0;
+    cursor: pointer;
+    text-decoration: underline;
+}
+
+
 
 /*網頁常用設定*/
 
@@ -167,7 +174,6 @@ input {
 a {
     display: block;
     text-decoration: none;
-    /*a自帶有底線與點擊顏色*/
 }
 
 figure {
@@ -188,8 +194,6 @@ body {
         "蘋方-繁", "PingFang TC", "黑體-繁", "Heiti TC", "微軟正黑體", "Microsoft JhengHei", "Noto Sans TC", sans-serif;
 }
 
-* {
-	/*"*"表全域選擇器，改變所有標籤*/
-	box-sizing: border-box;
-	/*不累加邊框和內距，間距還是會累積*/
-}
+/*共用區*/
+
+

@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import "./LightBox_Card.css";
+import "./LightBox_Card.scss";
 
 //圖片載入
 import pic_main from '../../../assets/img_hsc/card_viewpoint/VP_pic_main.png';
@@ -85,8 +85,8 @@ const LightBox_Card = ({ image, onClose }) => {
           </section>
           {/* 景點卡片右半部 */}
           <section className="card_info_right">
-            <div className="info">
-              <h1>丹丹漢堡 仁德店</h1>
+            <div className="info_carousel">
+              <h1 className="title_card_viewpoint">丹丹漢堡 仁德店</h1>
               {/* 總評價、評論數及價格 */}
               <div className="evaluate">
                 <div className="evaluate_left">
@@ -100,14 +100,14 @@ const LightBox_Card = ({ image, onClose }) => {
                 <span>$$$</span>
               </div>
               {/* 地址 */}
-              <div className="address">
+              <div className="address_carousel">
                 <figure>
                   <img src={location} alt="" />
                 </figure>
                 <p>717台南市仁德區中山路272號</p>
               </div>
               {/* Facebook link */}
-              <a href="" className="link">
+              <a href="" className="link_carousel">
                 <figure>
                   <img src={internet} alt="" />
                 </figure>
@@ -118,10 +118,10 @@ const LightBox_Card = ({ image, onClose }) => {
               {/* <div className="icon_box">
                 <figure><img src="" alt=""/></figure>
                 <figure><img src="" alt=""/></figure>
-            </div> */}
-              <div className="tag_box">
-                <a href="">標籤</a>
-                <a href="">標籤</a>
+              </div> */}
+              <div className="tag_box_carousel">
+                <a href="" className="tag_carousel">標籤</a>
+                <a href="" className="tag_carousel">標籤</a>
               </div>
             </div>
             {/* 評論區 */}
@@ -188,7 +188,7 @@ const LightBox_Card = ({ image, onClose }) => {
           <button className="btn_add collect">
             <img src={favorite_heart} alt="" />
           </button>
-          <button className="btn_add journey">加入行程</button>
+          <button className="btn_add journey_viewpoint">加入行程</button>
         </div>
       </div>
     </div>

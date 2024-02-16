@@ -1,5 +1,6 @@
 @import "../../../assets/scssRule/rule";
 @import "../../../assets/scssRule/all";
+@import "../../../assets/scssRule/reset";
 
 // ==================Search================
 
@@ -8,6 +9,7 @@
     display: flex;
     flex-direction: column;
     align-items: center;
+    width: 100%;
 }
 
 // -------HeaderSearch.jsx
@@ -23,18 +25,10 @@
     padding-top: 42.5px;
 
     .bar_search {
-        //第一個.bar_search ..?
         display: flex;
         justify-content: space-between;
         align-items: center;
-        // background-color: $color-green1;
-        // padding: 20px;
-        // height: 82px;
 
-        //第二個.bar_search ..?
-        // display: flex;
-        // justify-content: space-between;
-        // align-items: center;
         padding: 8px 12px;
         gap: 4px;
         background-color: $color-white;
@@ -149,21 +143,26 @@
 
 // -------Carousel.jsx
 .box_carousel {
-    display: flex;
-    justify-content: center;
-    align-items: center;
+    // display: flex;
+    position: relative;
+    
     width: 100%;
     overflow: hidden;
     gap: 2%;
+
     .box_turn {
         background-color: $color_gray3;
         display: flex;
         flex-direction: column;
         align-items: flex-start;
         padding: 50px 40px;
-        margin: 70px 0;
         border-radius: $border_radius_20px;
         box-sizing: border-box;
+        transition: 0.5s ease;
+        flex-shrink: 0;
+
+        scale: 0.95;
+        margin: 10vh -494px;
 
         .search_text {
             display: flex;
@@ -172,7 +171,7 @@
             gap: 12px;
             margin-bottom: 12px;
 
-            .item {
+            .item_carousel {
                 h3 {
                     display: flex;
                     padding: 0px 30px;
@@ -180,7 +179,6 @@
                     align-items: center;
 
                     border-radius: 20px 0px;
-                    background: $color_yellow;
                     height: 36px;
 
                     font-size: 24px;
@@ -219,10 +217,42 @@
             transition無法正確運行，故用important覆蓋 */
         }
     }
+
+    .eat {
+        .item_carousel {
+            h3 {
+                background: $color_yellow;
+            }
+        }
+    }
+
+    .accommodation {
+        .item_carousel {
+            h3 {
+                background-color: $color_blue;
+                color: $color_white;
+            }
+        }
+    }
+
+    .fun {
+        .item_carousel {
+            h3 {
+                background-color: $color_green2;
+                color: $color_white;
+            }
+        }
+    }
 }
-.accommodation,
-.fun {
-    scale: 0.95;
+
+.box_turn.fun.current {
+    scale: 1;
+}
+.box_turn.accommodation.current {
+    scale: 1;
+}
+.box_turn.eat.current {
+    scale: 1;
 }
 
 // -------Tags_carousel.jsx
@@ -301,8 +331,18 @@
         // white-space: nowrap;
 
         //--------Jenny
-        @include text_btn_big;
-        padding: 0;
+
+        display: flex;
+        justify-content: center;
+        justify-content: center;
+        text-align: center;
+
+        button {
+            text-decoration: none;
+            @include text_btn_big;
+            padding: 8px 16px;
+        }
+
 
         &:focus {
             background-color: $color_green3;
@@ -354,7 +394,8 @@
     }
 
     .selected {
-        box-shadow: 1.5px 1.5px 5px 1px #7e7e7e;
+        box-shadow: 0 15px 60px 0 rgba(0, 0, 0, 0.1),
+            0 5px 25px 0 rgba(0, 0, 0, 0.1);
     }
 
     //標題
@@ -471,4 +512,46 @@
 }
 
 
-//未分類
+//輪播區塊
+
+.box_carousel {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    overflow: hidden;
+
+    gap: 2%;
+}
+
+.accommodation,
+.fun {
+    scale: 0.95;
+}
+
+//圖片尚未載入時的樣式
+
+.container_card_img.loading {
+    position: relative;
+    background-color: #E2E2E2;
+    width: 230px;
+    height: 300px;
+}
+
+
+.loading::after {
+    display: block;
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    transform: translateX(-100%);
+    background: linear-gradient(90deg, transparent, rgba(255, 255, 255, .2), transparent);
+    animation: loading 1.5s infinite;
+}
+
+@keyframes loading {
+    100% {
+        transform: translateX(100%);
+    }
+}

@@ -35,7 +35,7 @@
     }
 
     /* 表頭功能列 */
-    .nav_btn {
+    .nav_btn_search {
         height: 30px;
         padding: 5px 30px;
         display: flex;
@@ -45,10 +45,13 @@
         background-color: $color_gray3;
 
         li {
-            font-size: 1rem;
+            a {
+                font-size: 1rem;
+                color: $color_black;
 
-            &:hover {
-                font-weight: 800;
+                &:hover {
+                    font-weight: 800;
+                }
             }
         }
     }

@@ -5,7 +5,6 @@ import React from 'react';
 import { BrowserRouter as Router, Route, Routes, Navigate } from 'react-router-dom';
 import Home from './pages/Home';
 import Login from './pages/Login';
-import Test from './pages/Test';
 import MyTrip from './pages/MyTrip';
 import MyMap from './pages/MyMap';
 import Schedule from './pages/Schedule';
@@ -28,7 +27,6 @@ const App = () => {
 
         <Route path="/" element={<Reto />}>
           <Route path="/login" element={<Login />} />
-          <Route path="/test" element={<Test />} />
           <Route path="/mytrip" element={<MyTrip />} />
           <Route path="/schedule" element={<Schedule />} />
           <Route path="/mymap" element={<MyMap />} />

@@ -5,10 +5,7 @@ import React from 'react'
 import MyTripCard from '../../components-common/MyTripCard/MyTripCard.jsx';
 import ButtonChk from '../../components-common/Button/ButtonChk/ButtonChk.jsx';
 // import "./MyTrip.css";
-
-// import "../css/MyTrip.css"
 import "./MyTrip.scss"
-
 
 
 const MyTrip = () => {
