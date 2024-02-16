@@ -1,8 +1,8 @@
 import React from 'react'
 // import "./MyMap.css"
 import "./MyMap.scss"
-import BreadCrumb from '../../components-common/BreadCrumb/BreadCrumb.tsx'
-// import ButtonDel_NB from '../../components-common/Button/ButtonDel_NB/ButtonDel_NB.jsx'
+// import BreadCrumb_M from '../../components-common/BreadCrumb/BreadCrumb_M.tsx'
+import BreadCrumb_M from '../../components-common/BreadCrumb/BreadCrumb_M.jsx'
 import ScheduleSheet from '../../components-common/ScheduleSheet/ScheduleSheet.jsx'
 import DateSwiper from '../../components-common/DateSwiper/DateSwiper.jsx'
 
@@ -13,7 +13,7 @@ const MyMap = () => {
                 <div className="left_div">
                     {/* 麵包屑導覽列 */}
                     <div className="SM_wrap">
-                        <BreadCrumb />
+                        <BreadCrumb_M />
                     </div>
 
                     {/* 行程表表頭資訊 */}
@@ -32,15 +32,8 @@ const MyMap = () => {
                     </div>
 
                     {/* 行程天數列 */}
-                    <DateSwiper />
-                    {/* <div className="SM_date">
-                        <div className="btn_day">全部</div>
-                        <div className="btn_day">第 1 天</div>
-                        <div className="btn_day">第 2 天</div>
-                        <div className="btn_day">第 3 天</div>
-                        <div className="btn_day">第 4 天</div>
-                        <div className="btn_day">第 5 天</div>
-                    </div> */}
+                        <DateSwiper />
+                    
 
                     {/* 行程表顯示外框 */}
                     <div className="schedule-wrap">
@@ -49,9 +42,6 @@ const MyMap = () => {
                         <div className="SM_scheduleList">
                             {/* 行程表一 */}
                             <ScheduleSheet />
-
-
-
                         </div>
                     </div>
                 </div>

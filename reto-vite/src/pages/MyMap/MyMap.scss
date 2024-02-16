@@ -10,7 +10,7 @@
     /* width: 1440px; */
     margin: auto;
     padding: 2% 8%;
-    gap: 35px;
+    gap: 20px;
 
     .left_div {
         width: 35%;
@@ -22,7 +22,7 @@
         // 裡面放<BreadCrumb />
         // 行程表表頭資訊
         .tripHead {
-            padding: 20px 0;
+            padding-bottom: 20px;
             display: flex;
             align-items: center;
             justify-content: space-between;
@@ -62,46 +62,10 @@
         }
 
         // 行程天數列
-        .SM_date {
-            padding-bottom: 42px;
-            display: flex;
+        // .dataSwiper_wrap{
+        //     width: 100%;
+        // }
 
-            // div:first-child {
-            //     color: #333333;
-            //     /* 第一个 <h2> 设置为黑色 */
-            // }
-            .btn_day {
-                padding: 8px 15px;
-                display: flex;
-                align-items: center;
-
-                border-bottom: solid;
-                border-color: #828282;
-                opacity: .5;
-
-                font-family: Noto Sans TC;
-                font-size: 14px;
-                font-style: normal;
-                font-weight: 400;
-                line-height: 160%;
-                color: #828282;
-                
-            }
-
-            .btn_day:hover {
-                color: #333333;
-                
-                border-bottom: solid;
-                border-color: #333333;
-                opacity: 1;
-            }
-
-            .btn_day:first-child {
-                color: #333333;
-                border-color: #333333;
-                opacity: 1;
-            }
-        }
 
         // 行程表顯示外框
         .schedule-wrap {

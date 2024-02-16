@@ -33,7 +33,7 @@
         }
     }
 
-    & a {
+    & a{
         font-family: Noto Sans TC;
         font-size: 12px;
         font-style: normal;
@@ -45,4 +45,17 @@
             color: #3d9d35;
         }
     }
+
+    .btn_back{
+        color: #828282;
+    } 
+}
+
+.breadCrumb_M{
+    margin: auto;
+    display: flex;
+    flex-direction: row;
+    padding: 0px;
+
+
 }
