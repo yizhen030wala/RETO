@@ -44,7 +44,8 @@
           list-style: none;
           cursor: pointer;
           padding: 10px 21px;
-          border-bottom: 2.5px black solid;
+          color: $color_gray2;
+          border-bottom: 2.5px $color_gray2 solid;
 
           font-family: Noto Sans TC, sans-serif;
           font-size: 14px;
@@ -52,18 +53,48 @@
           font-weight: 500;
           line-height: 24px;
 
-          &:last-child {
-            color: lightgray;
-            border-bottom: 2.5px lightgray solid;
-          }
-
-          .btn_switch_set_journey {
-          }
-          .btn_switch_add_journey {
-          }
+          transition: 0.35s ease-in-out;
         }
       }
     }
+
+    //當前按鈕變為黑色
+
+    .btn_switch_set_journey.active {
+      color: $color_black;
+      border-bottom: 2.5px $color_black solid;
+      animation: colorTransition .35s ease-in-out;
+    }
+
+    .btn_switch_add_journey.active {
+      color: $color_black;
+      border-bottom: 2.5px $color_black solid;
+      animation: colorTransition .35s ease-in-out;
+    }
+
+    @keyframes colorTransition {
+      0% {
+        color: $color_gray2;
+        border-bottom: 2.5px $color_gray2 solid;
+      }
+
+      25% {
+        color: linear-gradient(to right, $color_gray2, $color_black);
+        border-bottom: 2.5px linear-gradient(to right, $color_gray2, $color_black) solid;
+      }
+
+      75% {
+        color: linear-gradient(to right, $color_black, $color_gray2);
+        border-bottom: 2.5px linear-gradient(to right, $color_black, $color_gray2) solid;
+      }
+
+      100% {
+        color: $color_black;
+        border-bottom: 2.5px $color_black solid;
+      }
+    }
+
+
 
     .carousel_set_journey {
       display: flex;
@@ -188,7 +219,7 @@
         width: 100%;
         position: absolute;
         left: 0;
-       
+
         .content_notyet {
           width: 100%;
           height: 275px;
@@ -254,6 +285,7 @@ button {
 }
 
 .journey {
+  display: none;
   background-color: #3d9d35;
   color: white;
 
@@ -271,6 +303,15 @@ button {
   position: absolute;
   right: 30px;
   bottom: 40px;
+  transition: .35s ease-in-out;
+}
+
+.btn_set.journey.set.active {
+  display: flex;
+}
+
+.btn_set.journey.add.active {
+  display: flex;
 }
 
 /* 打開燈箱時，禁止網頁卷軸滾動 */
