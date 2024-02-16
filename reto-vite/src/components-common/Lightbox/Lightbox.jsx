@@ -1,8 +1,8 @@
 // 行李清單的燈箱
 
 import React, { useRef, useState } from 'react';
-// import './Lightbox.css';
-import '../css/Lightbox.css';
+import './Lightbox.scss';
+// import '../css/Lightbox.css';
 
 import TodoList from './TodoList/TodoList';
 import TodoListStart from './TodoList/TodoListStart';
