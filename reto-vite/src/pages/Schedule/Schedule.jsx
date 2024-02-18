@@ -293,7 +293,7 @@
 
 // export default Schedule;
 
-
+// ===================================================================================================================
 import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
 import "./Schedule.scss"
@@ -304,16 +304,18 @@ import ScheduleSheet from '../../components-common/ScheduleSheet/ScheduleSheet.j
 import DateSwiper from '../../components-common/DateSwiper/DateSwiper.jsx';
 
 const Schedule = () => {
+    const daysOfWeek = ["五", "六", "日", "一", "二", "三", "四"]; // 定义星期数组
     const [sheets, setSheets] = useState([
-        { numCards: 4, ids: ['recC1ydc0AuJM8rj0', 'rec34Y8PSu4ZxjDqi', 'recKs9HcwW5Onj1Ku','rec1crANNsC9wnnKv'] },
-        { numCards: 1, ids: ['rec1crANNsC9wnnKv'] },
-        { numCards: 2, ids: ['rec1crANNsC9wnnKv', 'reci4j2Nns6QDNrG5'] },
-        { numCards: 3, ids: ['recC1ydc0AuJM8rj0', 'rec34Y8PSu4ZxjDqi', 'recKs9HcwW5Onj1Ku'] },
-        { numCards: 2, ids: ['rec1crANNsC9wnnKv', 'reci4j2Nns6QDNrG5'] }
+        { numCards: 4, ids: ['recC1ydc0AuJM8rj0', 'rec34Y8PSu4ZxjDqi', 'recKs9HcwW5Onj1Ku','rec1crANNsC9wnnKv'],dayOfWeek: "五" },
+        { numCards: 1, ids: ['rec1crANNsC9wnnKv'],dayOfWeek: "六"  },
+        { numCards: 2, ids: ['rec1crANNsC9wnnKv', 'reci4j2Nns6QDNrG5'],dayOfWeek: "日"  },
+        { numCards: 3, ids: ['recC1ydc0AuJM8rj0', 'rec34Y8PSu4ZxjDqi', 'recKs9HcwW5Onj1Ku'],dayOfWeek: "一"  },
+        { numCards: 2, ids: ['rec1crANNsC9wnnKv', 'reci4j2Nns6QDNrG5'],dayOfWeek: "二"  }
     ]);
 
     const addSheet = () => {
-        setSheets([...sheets, { numCards: 0, ids: [] }]);
+        const nextDayIndex = (sheets.length > 0 ? daysOfWeek.indexOf(sheets[sheets.length - 1].dayOfWeek) + 1 : 0) % 7; // 计算下一个星期的索引
+        setSheets([...sheets, { numCards: 0, ids: [], dayOfWeek: daysOfWeek[nextDayIndex] }]); // 添加下一个星期的数据
     };
 
     return (
@@ -364,7 +366,12 @@ const Schedule = () => {
                 <div className="schedule-wrap">
                     <div className="scheduleList">
                         {sheets.map((sheet, index) => (
-                            <ScheduleSheet key={index} numCards={sheet.numCards} ids={sheet.ids} />
+                            <ScheduleSheet
+                                key={index}
+                                numCards={sheet.numCards}
+                                ids={sheet.ids}
+                                dayOfWeek={sheet.dayOfWeek}
+                            />
                         ))}
                         <div className='btn-add-control' onClick={addSheet}>
                             <span className='icon-add icon-add-color'></span>
@@ -378,3 +385,6 @@ const Schedule = () => {
 }
 
 export default Schedule;
+
+
+

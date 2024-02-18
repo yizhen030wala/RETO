@@ -176,6 +176,8 @@
 // export default ScheduleSheet;
 
 
+// ========================================================================================
+
 import React from 'react';
 import "./ScheduleSheet.scss"
 import SpotCard from '../ScheduleCard/SpotCard/SpotCard.jsx'
@@ -183,7 +185,7 @@ import ButtonDel_NB from '../Button/ButtonDel_NB/ButtonDel_NB.jsx'
 import NoteInput from './NoteInput/NoteInput.jsx'
 import TimeCard from '../ScheduleCard/TimeCard/TimeCard.jsx'
 
-const ScheduleSheet = ({ numCards, ids }) => {
+const ScheduleSheet = ({ numCards, ids, dayOfWeek = "五" }) => {
 
 
     return (
@@ -192,8 +194,10 @@ const ScheduleSheet = ({ numCards, ids }) => {
             <div className="loc-icon-more_horiz">
                 <ButtonDel_NB />
             </div>
-            {/* 星期N */}
-            <div className="schedule_day">星期五</div>
+
+            {/* 星期N 動態生成星期幾的文字*/}
+            <div className="schedule_day">星期{dayOfWeek}</div>
+
             {/* 備註 */}
             <NoteInput defaultNote="備註:開心出遊╰(*°▽°*)╯" />
 
@@ -233,3 +237,4 @@ const ScheduleSheet = ({ numCards, ids }) => {
     );
 }
 export default ScheduleSheet;
+
