@@ -1,26 +1,39 @@
 import Masonry from "react-masonry-component";
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect, useRef } from 'react';
 import { data_img } from "./data.js";
 import { data_img as initialDataImg } from './data.js';
 import '../CSS/Collections.scss';
 import Card from '../../Search/Card/Card.jsx';
 
+import LazyLoad from 'react-lazyload';
 
 
+const rowRenderer = ({ index, style }) => (
+    <div style={style}>
+        <Card
+            key={index}
+            img={data_img[index]}
+            index={index}
+            onSelect={() => handleSelectCard(index)}
+            onOpenLightbox={() => handleOpenLightbox(data_img[index])}
+            selected={selectedCards.includes(index)}
+            order={selectedCards.indexOf(index) + 1}
+            data_img={data_img}
+        />
+    </div>
+);
 
 
 //輪播區塊
-const CarouselCollections = ({ updateSelectedCount }) => {
-    const arr_area = ["住宿", "吃", "景點"];
-    const arr_class = ["accommodation", "eat", "fun"];
+const CarouselCollections = ({ updateSelectedCount, currentIndex, arr_area }) => {
+    // const arr_area = ["吃", "住宿", "景點"];
+    const arr_class = ["eat", "accommodation", "fun"];
 
     //管理選中的卡片
     const [selectedCards, setSelectedCards] = useState([]);
     //燈箱
     const [lightboxOpen, setLightboxOpen] = useState(false); // 燈箱開關狀態
     const [selectedImage, setSelectedImage] = useState(null); // 選中的圖片
-
-
 
 
     //打開燈箱LightBox_Card
@@ -132,12 +145,17 @@ const CarouselCollections = ({ updateSelectedCount }) => {
     }, []); // 這裡不需要將 images 加入依賴數組
 
 
+
+
     return (
-        <div className="box_carousel">
+        <div className="box_carousel_collections">
             {/* 添加外層 div */}
             {arr_area.map((area, index) => (
-                <div className={`box_turn ${arr_class[index]}`}>
-                    {/* 瀑布流圖片內容 */}
+                <div
+                    className={`box_turn ${arr_class[index]} ${index === currentIndex ? 'current' : ''}`}
+                    key={index}
+                    style={{ transform: `translateX(${(index - currentIndex) * 100}%)` }}>
+                    <div className="area_collections">{area}</div>
                     <div className="wrapper">
                         <div id="card_container">
                             <Masonry
@@ -148,16 +166,15 @@ const CarouselCollections = ({ updateSelectedCount }) => {
                                 updateOnEachImageLoad={true}
                             >
                                 {data_img.map((img, idx) => (
-                                    <Card
-                                        key={idx}
-                                        img={img}
-                                        index={idx}
-                                        onSelect={() => handleSelectCard(idx)}
-                                        onOpenLightbox={() => handleOpenLightbox(img)}
-                                        selected={selectedCards.includes(idx)}
-                                        order={selectedCards.indexOf(idx) + 1} // 獲取選中順序
-                                        data_img={data_img}
-                                    />
+                                        <Card
+                                            img={img}
+                                            index={idx}
+                                            onSelect={() => handleSelectCard(idx)}
+                                            onOpenLightbox={() => handleOpenLightbox(img)}
+                                            selected={selectedCards.includes(idx)}
+                                            order={selectedCards.indexOf(idx) + 1}
+                                            data_img={data_img}
+                                        />
                                 ))}
                             </Masonry>
                         </div>

@@ -17,6 +17,11 @@
     /* gap: 3.2vh; */
 }
 
+.main_collections {
+    display: flex;
+    justify-content: center;
+}
+
 /*Nav*/
 
 .bar_top_collections {
@@ -193,6 +198,7 @@
 
 .category ul {
     display: flex;
+    
 }
 
 .category ul li {
@@ -209,8 +215,25 @@
 
     display: inline-block;
     text-align: center;
+    transition: .35s ease-in-out;
     cursor: pointer;
+    button {
+        text-decoration: none;
+    }
 
+}
+
+.eat_category.active {
+    border-bottom: 2px solid $color_black;
+    color: $color_black;
+}
+.accommodation_category.active {
+    border-bottom: 2px solid $color_black;
+    color: $color_black;
+}
+.fun_category.active {
+    border-bottom: 2px solid $color_black;
+    color: $color_black;
 }
 
 
@@ -219,27 +242,32 @@
 /*瀑布流內容設定*/
 
 // -------Carousel.jsx
-.box_carousel {
-    // display: flex;
+.box_carousel_collections {
+    display: flex;
     position: relative;
+    justify-content: center;
+
     
-    width: 100%;
+    width: 1060px;
     overflow: hidden;
     gap: 2%;
 
     .box_turn {
-        background-color: $color_gray3;
+        background-color: transparent;
         display: flex;
         flex-direction: column;
         align-items: flex-start;
         padding: 50px 40px;
         border-radius: $border_radius_20px;
         box-sizing: border-box;
-        transition: 0.5s ease;
+        transition: 0.35s ease;
         flex-shrink: 0;
 
-        scale: 0.95;
-        margin: 10vh -494px;
+        margin: 0 -540px;
+
+        .area_collections {
+            display: none;
+        }
 
         .search_text {
             display: flex;
@@ -295,65 +323,85 @@
         }
     }
 
-    .eat {
-        .item_carousel {
-            h3 {
-                background: $color_yellow;
-            }
-        }
-    }
-
-    .accommodation {
-        .item_carousel {
-            h3 {
-                background-color: $color_blue;
-                color: $color_white;
-            }
-        }
-    }
-
-    .fun {
-        .item_carousel {
-            h3 {
-                background-color: $color_green2;
-                color: $color_white;
-            }
-        }
-    }
 }
 
-.box_turn.fun.current {
-    scale: 1;
-}
-.box_turn.accommodation.current {
-    scale: 1;
-}
-.box_turn.eat.current {
-    scale: 1;
-}
+// .box_turn.fun.current {
+//     scale: 1;
+// }
+// .box_turn.accommodation.current {
+//     scale: 1;
+// }
+// .box_turn.eat.current {
+//     scale: 1;
+// }
 
-// -------Tags_carousel.jsx
-.tag_turn {
+
+// -------FixedBtn.jsx
+.btn_fixed {
+    position: fixed;
+    left: 43vw;
+    bottom: 15vh;
+    transition: 0.35s;
+    z-index: 999;
+
     ul {
         display: flex;
-        justify-content: flex-start;
+        padding: 10px 20px;
+        justify-content: center;
+        align-items: center;
+        gap: 8px;
 
-        a {
-            @include h2_body;
-            line-height: 160%;
-            padding: 2px 20px;
-            flex-direction: column;
-            justify-content: center;
-            align-items: center;
+        border-radius: 50px;
+        background: $color-white;
+        //--------Ralph
+        // box-shadow: 0px 2px 5px 0px rgba(0, 0, 0, 0.25);
+        //--------Jenny
+        @include shadow;
+    }
 
-            border-radius: $border_radius_10px;
-            background: $color-white;
-            margin-right: 8px;
+    .arrowLeft,
+    .arrowRight {
+        @include size(20px, 20px);
+    }
 
-            &:active {
-                background-color: $color-black;
-                color: $color-white;
-            }
+    .myJour {
+        //--------Ralph
+        // color: #FFF;
+        // font-family: Noto Sans TC;
+        // font-size: 16px;
+        // font-style: normal;
+        // font-weight: 500;
+        // line-height: 160%;
+        // /* 25.6px */
+
+        // padding: 8px 16px;
+        // justify-content: center;
+        // align-items: center;
+
+        // border-radius: 20px;
+        // background: #3D9D35;
+        // transition: 0.35s;
+
+        // transform-origin: bottom;
+        // white-space: nowrap;
+
+        //--------Jenny
+
+        display: flex;
+        justify-content: center;
+        justify-content: center;
+        text-align: center;
+
+        button {
+            text-decoration: none;
+            @include text_btn_big;
+            padding: 8px 16px;
+        }
+
+
+        &:focus {
+            background-color: $color_green3;
+            color: $color-black;
         }
     }
 }

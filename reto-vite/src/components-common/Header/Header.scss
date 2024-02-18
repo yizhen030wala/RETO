@@ -51,6 +51,10 @@
         li {
             font-size: 1rem;
 
+            a {
+                color: $color_black;
+            }
+
             &:hover {
                 font-weight: 800;
             }

@@ -21,8 +21,12 @@
     background-color: $color-green1;
     align-items: center;
     border-radius: 0px 0px 50px 50px;
-    height: 24vh;
+    height: 250px;
     padding-top: 42.5px;
+
+    * a {
+        color: black;
+    }
 
     .bar_search {
         display: flex;
@@ -111,6 +115,8 @@
     }
 }
 
+
+
 // -------LoginBtn_home.jsx
 //可import原先的css檔案，若有需要再建新的檔案覆蓋原先的css 
 
@@ -145,7 +151,7 @@
 .box_carousel {
     // display: flex;
     position: relative;
-    
+
     width: 100%;
     overflow: hidden;
     gap: 2%;
@@ -245,15 +251,20 @@
     }
 }
 
-.box_turn.fun.current {
-    scale: 1;
+.box_carousel {
+    .box_turn.fun.current {
+        scale: 1;
+    }
+
+    .box_turn.accommodation.current {
+        scale: 1;
+    }
+
+    .box_turn.eat.current {
+        scale: 1;
+    }
 }
-.box_turn.accommodation.current {
-    scale: 1;
-}
-.box_turn.eat.current {
-    scale: 1;
-}
+
 
 // -------Tags_carousel.jsx
 .tag_turn {
@@ -263,6 +274,7 @@
 
         a {
             @include h2_body;
+            color: $color_black;
             line-height: 160%;
             padding: 2px 20px;
             flex-direction: column;
@@ -432,6 +444,10 @@
             margin-right: 5px;
         }
 
+        a {
+            color: $color_black;
+        }
+
 
     }
 
@@ -522,12 +538,14 @@
     overflow: hidden;
 
     gap: 2%;
+
+    .accommodation,
+    .fun {
+        scale: 0.95;
+    }
 }
 
-.accommodation,
-.fun {
-    scale: 0.95;
-}
+
 
 //圖片尚未載入時的樣式
 
