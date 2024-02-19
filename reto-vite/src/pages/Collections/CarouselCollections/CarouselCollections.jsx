@@ -1,10 +1,17 @@
 import Masonry from "react-masonry-component";
 import React, { useState, useEffect, useRef } from "react";
 import { data_img } from "./data.js";
+<<<<<<< Updated upstream
 import { data_img as initialDataImg } from "./data.js";
 import "../CSS/Collections.scss";
 import Card from "../../Search/Card/Card.jsx";
 import LightBox_Card from '../../Search/LightBox_Card/LightBox_Card.jsx';
+=======
+import { data_img as initialDataImg } from './data.js';
+import '../CSS/Collections.scss';
+import Card from '../../Search/Card/Card.jsx';
+
+>>>>>>> Stashed changes
 
 //輪播區塊
 const CarouselCollections = ({
