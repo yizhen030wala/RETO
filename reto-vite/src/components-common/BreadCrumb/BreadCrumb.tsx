@@ -2,21 +2,21 @@
 
 import React from "react";
 import "../css/BreadCrumb.css";
-import { Link } from 'react-router-dom';
-import goright from '../../assets/img/icon/icon-go/goright.svg';
+import { Link } from "react-router-dom";
+import goright from "../../assets/img/icon/icon-go/goright.svg";
 
 const BreadCrumb = () => {
     return (
         <>
             <ul className="breadCrumb">
                 <li>
-                    <a href="#">首頁</a>
+                    <Link to="/">首頁</Link>
                 </li>
                 <li>
                     <img src={goright} alt="" />
                 </li>
                 <li>
-                    <Link to="/mytrip">行程表</Link>
+                    <Link to="/reto/mytrip">行程表</Link>
                 </li>
                 <li>
                     <img src={goright} alt="" />
@@ -25,7 +25,6 @@ const BreadCrumb = () => {
                     <a href="#">旅藤台南行</a>
                 </li>
             </ul>
-            
         </>
     );
 };

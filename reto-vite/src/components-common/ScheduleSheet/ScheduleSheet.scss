@@ -30,6 +30,7 @@
 .schedule {
     width: 440px;
     padding: 40px 30px 40px 20px;
+    margin-top: 40px;
 
     display: flex;
     flex-direction: column;
@@ -46,7 +47,7 @@
     .loc-icon-more_horiz {
         text-decoration: none;
         opacity: 0;
-        transition: .3s;
+        transition: 0.3s;
 
         position: absolute;
         top: 12px;
@@ -87,15 +88,15 @@
         background-color: $color_gray3;
         font-family: Noto Sans TC;
         color: $color_gray1;
-        opacity: .5;
+        opacity: 0.5;
         font-size: 16px;
         font-style: normal;
         font-weight: 400;
         line-height: 150%;
         border-radius: 8px;
 
-        &:hover{
-            transition: .3s;
+        &:hover {
+            transition: 0.3s;
             background-color: $color_gray2;
         }
     }
@@ -127,6 +128,9 @@
             &:active {
                 cursor: pointer;
                 background: $color_gray2;
+                .icon-set {
+                    color: $color-black;
+                }
             }
 
             .btnAddSpotTitle {
@@ -142,6 +146,10 @@
 
                 .icon-search {
                     font-size: 20px;
+                }
+
+                .icon-set {
+                    color: $color-black;
                 }
 
                 .h3_title {

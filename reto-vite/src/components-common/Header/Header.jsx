@@ -15,7 +15,7 @@ function Header() {
       <header className="header">
         {/* LOGO  */}
         <div className='logo'>
-          <Link to="/home">
+          <Link to="/">
             <img src={Logo} alt="RETO logo" />
           </Link>
         </div>
@@ -23,8 +23,8 @@ function Header() {
         <nav>
           <ul className="nav_btn">
             <li><Link to="/search">開始探索</Link></li>
-            <li><Link to="/Collections">我的景點</Link></li>
-            <li><Link to="/mytrip"> 行程表</Link></li>
+            <li><Link to="/reto/Collections">我的景點</Link></li>
+            <li><Link to="/reto/mytrip"> 行程表</Link></li>
           </ul>
         </nav>
         {/* 會員登入  */}
