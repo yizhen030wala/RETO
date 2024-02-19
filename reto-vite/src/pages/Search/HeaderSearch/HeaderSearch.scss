@@ -95,6 +95,9 @@
             right: 0;
             z-index: 999;
 
+            a {
+                color: $color_black;
+            }
 
         }
 
@@ -106,4 +109,10 @@
 
     }
 
+}
+
+@media (max-width:768px) {
+    .nav_btn_search {
+        display: none !important;
+    }
 }

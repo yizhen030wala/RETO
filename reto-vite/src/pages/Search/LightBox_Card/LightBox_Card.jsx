@@ -177,7 +177,7 @@ const LightBox_Card = ({ image, onClose }) => {
               </div>
             </section>
           </section>
-          <section className="empty"></section>
+          <div className="empty"></div>
         </div>
         {/* 關閉按鈕 */}
         <figure className="btn_cancel" onClick={onClose}>

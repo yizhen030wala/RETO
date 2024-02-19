@@ -137,7 +137,8 @@ const Carousel = ({ updateSelectedCount, currentIndex, arr_area }) => {
     <div className="box_carousel">
       {/* 添加外層 div */}
       {arr_area.map((area, index) => (
-        <div className={`box_turn ${arr_class[index]} ${index === currentIndex ? 'current' : ''}`} key={index} style={{ transform: `translateX(${(index - currentIndex) * 100}%)` }}>          <div className="search_text">
+        <div className={`box_turn ${arr_class[index]} ${index === currentIndex ? 'current' : ''}`} key={index} style={{ transform: `translateX(${(index - currentIndex) * 100}%)` }}>          
+        <div className="search_text">
           <div className="item_carousel">
             <ul>
               <li>

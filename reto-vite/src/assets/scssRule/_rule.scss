@@ -73,6 +73,7 @@ $color_white: #FFFFFF;
 
 // ====================================================按鈕設定====================================================
 @mixin text_btn_big {
+    font-family: Noto Sans TC;
     padding: 8px 20px;
     border-radius: 20px;
     color: $color-white;
