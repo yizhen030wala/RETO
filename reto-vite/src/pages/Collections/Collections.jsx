@@ -7,9 +7,9 @@ import FixedBtn from './FixedBtn/FixedBtn';
 
 function Collections() {
 
-  //讓選中的數量顯示
-  const [selectedCount, setSelectedCount] = useState(0); // 新的状态
-  // 更新选中计数的函数
+  // 讓選中的數量顯示
+  const [selectedCount, setSelectedCount] = useState(0); // 新的狀態
+  // 更新選中的計數
   const updateSelectedCount = (count) => {
     setSelectedCount(count);
   }
@@ -23,18 +23,6 @@ function Collections() {
     setCurrentIndex(index);
   };
 
-  //點擊往左箭頭 
-  const handleArrowLeftClick = () => {
-    if (currentIndex > 0) {
-      setCurrentIndex(currentIndex - 1);
-    }
-  };
-  //點擊往右箭頭 
-  const handleArrowRightClick = () => {
-    if (currentIndex < arr_area.length - 1) {
-      setCurrentIndex(currentIndex + 1);
-    }
-  };
 
   return (
     <div>
@@ -52,8 +40,8 @@ function Collections() {
       </main>
       <FixedBtn
         selectedCount={selectedCount}
-        handleArrowLeftClick={handleArrowLeftClick}
-        handleArrowRightClick={handleArrowRightClick}
+        // handleArrowLeftClick={handleArrowLeftClick}
+        // handleArrowRightClick={handleArrowRightClick}
       /> {/* 傳遞選中的數量 */}
     </div>
   );

@@ -177,7 +177,7 @@
                     }
 
                     .slogan2 {
-                        top: 18vh;
+                        top: 20vh;
                         z-index: 5;
                     }
 
@@ -186,7 +186,7 @@
                     }
 
                     .btn_freeStart {
-                        top: 28vh;
+                        top: 32vh;
 
                         a {
                             font-size: 2rem;
@@ -223,16 +223,16 @@
                     }
 
                     .slogan2 {
-                        top: 18vh;
+                        top: 20vh;
                         z-index: 5;
                     }
 
                     p {
-                        font-size: 3.5rem;
+                        font-size: 3.3rem;
                     }
 
                     .btn_freeStart {
-                        top: 28vh;
+                        top: 30vh;
 
                         a {
                             font-size: 2rem;
@@ -337,7 +337,7 @@
 //滾動改變顏色
 
 .box_attention.change-bg-color-bg {
-    background-color: $color_red !important;
+    background-color: #FD8F29 !important;
 }
 
 .sun.change-bg-color-sun {
@@ -449,7 +449,7 @@
     align-items: center;
     flex-direction: column;
 
-    margin-top: 100vh;
+    // margin-top: 100vh; //如果front要設置成 relative : fixed時留空位
 
 
     .title_section_home {
@@ -676,6 +676,7 @@
             justify-content: center;
             grid-template-columns: none;
             height: 100%;
+            width: 297px;
 
             .item_feat {
                 position: relative;
@@ -873,10 +874,9 @@
 @media (max-width:600px) {
     #how {
         .btn_step {
-            width: 100%;
-            margin-left: 5%;
-
-
+            width: 80%;
+            // margin-left: 20%;
+            overflow: hidden;
             ul {
                 align-self: flex-start;
                 justify-content: flex-start;

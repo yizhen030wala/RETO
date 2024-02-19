@@ -1,6 +1,6 @@
-@use '../../../assets/scssRule/reset'as *;
-@use '../../../assets/scssRule/all'as *;
-@use '../../../assets/scssRule/rule'as r;
+@import "../../../assets/scssRule/rule";
+@import "../../../assets/scssRule/all";
+@import "../../../assets/scssRule/reset";
 
 /* 設定景點卡片大小 */
 
@@ -24,6 +24,7 @@
 .card {
     display: flex;
     width: 875px;
+    height: 611px;
     border-radius: 20px;
     background-color: white;
     padding: 40px 30px;
@@ -135,20 +136,20 @@
     }
 }
 
-.card_info_left,
-.card_info_right,
-.empty {
-    // height: 100%;
-    // margin-top: 20vh;
-    height: 80vh;
-}
+// .card_info_left,
+// .card_info_right,
+// .empty {
+//     height: 100%;
+//     margin-top: 20vh;
+//     height: 80vh;
+// }
 
 /* 景點卡片左半部 */
 
 .card_info_left {
     width: 296px;
     margin-right: 32px;
-
+    height: 650px;
     display: flex;
     flex-direction: column;
     align-items: flex-start;
@@ -222,6 +223,7 @@
 
 .card_info_right {
     width: 296px;
+    height: 720px;
     margin-right: 10px;
 
     display: flex;
@@ -232,12 +234,12 @@
     .info_carousel {
         display: flex;
         flex-direction: column;
-        height: 100%;
         width: 100%;
 
         margin-bottom: 40px;
         overflow: hidden;
 
+        
 
         .title_card_viewpoint {
             display: flex;
@@ -337,6 +339,7 @@
                 font-style: normal;
                 font-weight: 400;
                 line-height: 14px;
+                color: $color-black;
             }
 
             figure {
@@ -368,10 +371,10 @@
                 font-size: 12px;
                 font-style: normal;
                 font-weight: 400;
-                // line-height: 150%;
                 border-radius: 5px;
-                background: #F5F5F5;
+                background: $color_gray2;
                 padding: 2.5px 12px;
+                color: $color-black;
             }
         }
     }

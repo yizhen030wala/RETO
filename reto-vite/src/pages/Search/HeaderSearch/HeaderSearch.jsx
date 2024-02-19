@@ -69,11 +69,11 @@ const HeaderSearch = () => {
             </div>
             <div>
               {/* 篩選圖片 */}
-              <button>
+              <figure className="btn_commit_search">
                 <img src={filter} alt="" />
-              </button>
+              </figure>
               {/* 查詢按鈕 */}
-              <a href="">查詢</a>
+              <button>查詢</button>
             </div>
           </div>
           {/* 建議/推薦 */}
