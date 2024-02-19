@@ -131,9 +131,8 @@ const CarouselCollections = ({
       {/* 添加外層 div */}
       {arr_area.map((area, index) => (
         <div
-          className={`box_turn ${arr_class[index]} ${
-            index === currentIndex ? "current" : ""
-          }`}
+          className={`box_turn ${arr_class[index]} ${index === currentIndex ? "current" : ""
+            }`}
           key={index}
           style={{ transform: `translateX(${(index - currentIndex) * 100}%)` }}
         >

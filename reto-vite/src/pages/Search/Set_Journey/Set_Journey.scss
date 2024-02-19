@@ -27,11 +27,48 @@
   background-color: white;
 
   position: relative;
+  /* 動畫效果 */
+  animation: fadeIn 0.35s forwards;
 
   .box_set_item {
     margin-left: 69px;
     width: 100%;
-    
+
+    @keyframes fadeIn {
+      from {
+        scale: 50%;
+        opacity: 0;
+        visibility: hidden;
+      }
+
+      to {
+        scale: 100%;
+        opacity: 1;
+        visibility: visible;
+      }
+    }
+
+    @keyframes fadeOut {
+      from {
+        scale: 100%;
+        opacity: 1;
+        visibility: visible;
+      }
+
+      to {
+        scale: 50%;
+        opacity: 0;
+        visibility: hidden;
+      }
+    }
+
+    /* 燈箱打開時的樣式 */
+    &.open {
+      /* 完全不透明，可見 */
+      opacity: 1;
+      visibility: visible;
+    }
+
 
     //頂部轉換按鈕
     .box_btn_switch_set_journey {
@@ -81,14 +118,12 @@
 
       25% {
         color: linear-gradient(to right, $color_gray2, $color_black);
-        border-bottom: 2.5px
-          linear-gradient(to right, $color_gray2, $color_black) solid;
+        border-bottom: 2.5px linear-gradient(to right, $color_gray2, $color_black) solid;
       }
 
       75% {
         color: linear-gradient(to right, $color_black, $color_gray2);
-        border-bottom: 2.5px
-          linear-gradient(to right, $color_black, $color_gray2) solid;
+        border-bottom: 2.5px linear-gradient(to right, $color_black, $color_gray2) solid;
       }
 
       100% {
@@ -219,7 +254,7 @@
         width: 100%;
         position: absolute;
         left: 0;
-      
+
       }
     }
   }
@@ -256,6 +291,7 @@
   overflow: hidden;
   overflow-y: scroll; // 啟用垂直滾動
   -webkit-overflow-scrolling: touch; // 使用webkit屬性啟用流暢的滾動
+
   &::-webkit-scrollbar {
     display: none; // 移除滾動條樣式
   }
@@ -303,6 +339,7 @@
         gap: 10px;
 
         &:hover {
+
           .icon-add-map,
           .text-add {
             color: #333;

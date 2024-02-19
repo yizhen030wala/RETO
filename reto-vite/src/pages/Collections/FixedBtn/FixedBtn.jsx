@@ -1,10 +1,13 @@
 import React from "react";
 import "../CSS/Collections.scss";
-import arrowLeft from "../../../assets/img_hsc/fixed_btn/arrow-left.svg";
-import arrowRight from "../../../assets/img_hsc/fixed_btn/arrow-right.svg";
 
 //Fixed Button固定按鈕
-const FixedBtn = ({ selectedCount }) => {
+const FixedBtn = ({ selectedCount, onOpenLightbox }) => {
+
+  const handleOpenLightbox = () => {
+    onOpenLightbox();
+  };
+
   return (
     <div className="btn_fixed">
       <ul>
@@ -14,7 +17,7 @@ const FixedBtn = ({ selectedCount }) => {
           {/* <span>delete</span> */}
         </li>
         <li className="myJour_collections">
-          <button>我的行程 ({selectedCount})</button>
+          <button onClick={handleOpenLightbox}>我的行程 ({selectedCount})</button>
         </li>
       </ul>
     </div>

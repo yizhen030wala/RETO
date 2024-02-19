@@ -5,7 +5,24 @@ import "./datepicker.scss";
 import cancel from "../../../assets/img_hsc/card_viewpoint/cancel.svg";
 import MyTripCard from "../../../components-common/MyTripCard/MyTripCard";
 
-const Set_Journey = () => {
+const Set_Journey = ({ image, onClose }) => {
+
+  // 點擊事件
+  const handleClickOutsideCard = (e) => {
+    // 如果點擊事件不在 .card_set_journey 元素及其子元素
+    if (!e.target.closest(".card_set_journey")) {
+      onClose(); // 關閉燈箱
+    }
+  };
+
+  // 假設 state 'open' 控制燈箱是否顯示
+  const [open, setOpen] = useState(false);
+  // 打開燈箱
+  const openLightbox = () => setOpen(true);
+  // 關閉燈箱
+  const closeLightbox = () => setOpen(false);
+
+
   // ↓↓處理變換頁面↓↓
   const [currentPage, setCurrentPage] = useState("set_journey");
 
@@ -72,8 +89,8 @@ const Set_Journey = () => {
   // });
 
   return (
-    <div className="bg_card_set">
-      <div className="card_set_journey">
+    <div className="bg_card_set" onClick={handleClickOutsideCard}>
+      <div className={`card_set_journey ${open ? "open" : ""}`}>
         <div className="box_set_item">
           {/* 頂部轉換按鈕 */}
           <div className="box_btn_switch_set_journey">
@@ -203,7 +220,7 @@ const Set_Journey = () => {
         </div>
         {/* <div className="empty_set_journey"></div> */}
         {/* 關閉按鈕 */}
-        <figure className="btn_cancel">
+        <figure className="btn_cancel" onClick={onClose}>
           <img src={cancel} alt="" />
         </figure>
         {/* 加入按鈕(置於右底) */}
