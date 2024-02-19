@@ -7,22 +7,6 @@ import BoxFeat from "./BoxFeat/BoxFeat";
 import Step from "./Step/Step";
 
 function Home() {
-  // const [scrollPosition, setScrollPosition] = useState(0);
-  // useEffect(() => {
-  //     const handleScroll = () => {
-  //         const position = window.scrollY;
-  //         setScrollPosition(position);
-  //     };
-
-  //     window.addEventListener('scroll', handleScroll);
-
-  //     return () => {
-  //         window.removeEventListener('scroll', handleScroll);
-  //     };
-  // }, []);
-
-
-
   return (
     <div>
       {/* Front Cover Area */}

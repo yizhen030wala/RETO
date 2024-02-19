@@ -31,6 +31,7 @@
   .box_set_item {
     margin-left: 69px;
     width: 100%;
+    
 
     //頂部轉換按鈕
     .box_btn_switch_set_journey {
@@ -63,13 +64,13 @@
     .btn_switch_set_journey.active {
       color: $color_black;
       border-bottom: 2.5px $color_black solid;
-      animation: colorTransition .35s ease-in-out;
+      animation: colorTransition 0.35s ease-in-out;
     }
 
     .btn_switch_add_journey.active {
       color: $color_black;
       border-bottom: 2.5px $color_black solid;
-      animation: colorTransition .35s ease-in-out;
+      animation: colorTransition 0.35s ease-in-out;
     }
 
     @keyframes colorTransition {
@@ -80,12 +81,14 @@
 
       25% {
         color: linear-gradient(to right, $color_gray2, $color_black);
-        border-bottom: 2.5px linear-gradient(to right, $color_gray2, $color_black) solid;
+        border-bottom: 2.5px
+          linear-gradient(to right, $color_gray2, $color_black) solid;
       }
 
       75% {
         color: linear-gradient(to right, $color_black, $color_gray2);
-        border-bottom: 2.5px linear-gradient(to right, $color_black, $color_gray2) solid;
+        border-bottom: 2.5px
+          linear-gradient(to right, $color_black, $color_gray2) solid;
       }
 
       100% {
@@ -93,8 +96,6 @@
         border-bottom: 2.5px $color_black solid;
       }
     }
-
-
 
     .carousel_set_journey {
       display: flex;
@@ -109,7 +110,6 @@
         width: 100%;
         position: absolute;
         left: 0;
-
 
         .title_set_journey {
           font-family: Noto Sans TC, sans-serif;
@@ -219,19 +219,13 @@
         width: 100%;
         position: absolute;
         left: 0;
-
-        .content_notyet {
-          width: 100%;
-          height: 275px;
-          background-color: #3d9d35;
-          flex-shrink: 0;
-        }
+      
       }
     }
   }
 }
 
-//頁面滑動效果設定 
+//頁面滑動效果設定
 
 .box_switch_set_journey,
 .box_switch_add_journey {
@@ -254,7 +248,92 @@
   transform: translateX(0);
 }
 
+.myTrip_contain_set_journey {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 15px;
 
+  overflow: hidden;
+  overflow-y: scroll; // 啟用垂直滾動
+  -webkit-overflow-scrolling: touch; // 使用webkit屬性啟用流暢的滾動
+  &::-webkit-scrollbar {
+    display: none; // 移除滾動條樣式
+  }
+
+  justify-content: center;
+  flex-direction: column;
+
+  .MyTrip-content {
+    display: flex;
+    flex-direction: column;
+    margin: 120px 0px;
+    gap: 35px;
+
+    .title {
+      justify-content: space-between;
+      align-items: center;
+      display: flex;
+      width: 100%;
+
+      a {
+        text-decoration: none;
+
+        div {
+          color: var(--white, #fff);
+          font-family: Noto Sans TC;
+          font-size: 16px;
+          font-style: normal;
+          font-weight: 500;
+          line-height: 150%;
+        }
+      }
+
+      .title-name {
+        color: var(--black1, #000);
+        font-family: Noto Sans TC;
+        font-size: 24px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: 150%;
+      }
+
+      .btn-add-wrap {
+        display: flex;
+        flex-direction: row;
+        gap: 10px;
+
+        &:hover {
+          .icon-add-map,
+          .text-add {
+            color: #333;
+          }
+        }
+
+        .icon-add {
+          color: white;
+          font-size: 20px;
+        }
+
+        .text-add {
+          color: var(--white, #fff);
+          font-family: "Noto Sans TC";
+          font-size: 16px;
+          font-style: normal;
+          font-weight: 500;
+          line-height: 150%;
+          /* 24px */
+        }
+      }
+    }
+
+    .MyTrip_contain {
+      display: inline-flex;
+      flex-wrap: wrap;
+      gap: 30px;
+      flex-direction: row;
+    }
+  }
+}
 
 /* 佔位元素 */
 
@@ -286,24 +365,14 @@ button {
 
 .journey {
   display: none;
-  background-color: #3d9d35;
-  color: white;
-
-  /* width: 26%; */
-  padding: 10px 20px;
-  border-radius: 20px;
-
-  font-family: Noto Sans TC, sans-serif;
-  font-size: 16px;
-  font-style: normal;
-  font-weight: 400;
-  line-height: 150%;
   text-decoration: none;
+  @include text_btn_big;
+  padding: 10px 20px;
 
   position: absolute;
   right: 30px;
   bottom: 40px;
-  transition: .35s ease-in-out;
+  transition: 0.35s ease-in-out;
 }
 
 .btn_set.journey.set.active {

@@ -1,13 +1,9 @@
 import React, { useState, useRef, useEffect } from "react";
 import DatePicker from "react-datepicker";
-// import { data_img } from "../Carousel/data";
-import { data_img } from "../Carousel/data.js";
-import Card from "../Card/Card";
-import Tags_carousel from "../Tags_carousel/Tags_carousel.jsx";
-import LightBox_Card from "../LightBox_Card/LightBox_Card.jsx";
 import "./Set_Journey.scss";
 import "./datepicker.scss";
 import cancel from "../../../assets/img_hsc/card_viewpoint/cancel.svg";
+import MyTripCard from "../../../components-common/MyTripCard/MyTripCard";
 
 const Set_Journey = () => {
   // ↓↓處理變換頁面↓↓
@@ -99,8 +95,9 @@ const Set_Journey = () => {
           <div className="carousel_set_journey">
             {/* 建立行程頁面 */}
             <div
-              className={`box_switch_set_journey ${currentPage === "set_journey" ? "active" : ""
-                }`}
+              className={`box_switch_set_journey ${
+                currentPage === "set_journey" ? "active" : ""
+              }`}
             >
               <h4 className="title_set_journey">行程設定</h4>
               {/* 可以編輯名稱區域 */}
@@ -138,7 +135,7 @@ const Set_Journey = () => {
                       setDateRange(update);
                     }}
                     placeholderText={`請選擇日期`} // 設置尚未選擇日期時顯示的預設文字
-                  // customInput={<CustomInput />}
+                    // customInput={<CustomInput />}
                   />
                 </div>
               </div>
@@ -148,11 +145,59 @@ const Set_Journey = () => {
             </div>
             {/* 加入行程頁面 */}
             <div
-              className={`box_switch_add_journey ${currentPage === "add_journey" ? "active" : ""
-                }`}
+              className={`box_switch_add_journey ${
+                currentPage === "add_journey" ? "active" : ""
+              }`}
             >
               {/* 這裡要放更新內容 */}
-              <div className="content_notyet"></div>
+              <div className="myTrip_contain_set_journey">
+                {/* 第一個行程集卡片 */}
+
+                <MyTripCard
+                  imageUrl="https://images.unsplash.com/photo-1583889659384-64d9df2347ba?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+                  name="台北吃到飽"
+                  days="3天2夜"
+                  // onNameClick={handleNameClick}
+                ></MyTripCard>
+
+                {/* <MyTripCard
+                  imageUrl="https://images.unsplash.com/photo-1583889659384-64d9df2347ba?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+                  name="台北吃到飽"
+                  days="3天2夜"
+                ></MyTripCard> */}
+
+                {/* 第二個行程集卡片 */}
+                <MyTripCard
+                  imageUrl="https://images.unsplash.com/photo-1580745168634-33c78f4c4177?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+                  name="西門浪流連"
+                  days="2天1夜"
+                  // onNameClick={handleNameClick}
+                />
+
+                {/* 第三個行程集卡片 */}
+                {/* <MyTripCard
+                  imageUrl="https://images.unsplash.com/photo-1630244024081-dc4039254a46?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+                  name="宜起蘭去玩"
+                  days="3天2夜"
+                  // onNameClick={handleNameClick}
+                /> */}
+
+                {/* 第四個行程集卡片
+                <MyTripCard
+                  imageUrl="https://images.unsplash.com/photo-1571474004502-c1def214ac6d?q=80&w=1931&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+                  name="快閃九份"
+                  days="1天0夜"
+                  // onNameClick={handleNameClick}
+                /> */}
+
+                {/* 第五個行程集卡片 */}
+                <MyTripCard
+                  imageUrl="https://images.unsplash.com/photo-1621316489519-77626e5e38fb?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+                  name="台男逛台南"
+                  days="3天2夜"
+                  // onNameClick={handleNameClick}
+                />
+              </div>
             </div>
           </div>
         </div>

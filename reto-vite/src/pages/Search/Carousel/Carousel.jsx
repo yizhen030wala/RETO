@@ -42,8 +42,8 @@ const Carousel = ({ updateSelectedCount, currentIndex, arr_area }) => {
       return; // 如果已经達到最大選中數量，則不進行任何操作
     }
 
-    setSelectedCards(newSelectedCards); // 更新选中的卡片
-    updateSelectedCount(newSelectedCards.length); // 使用新数组的长度更新选中的数量
+    setSelectedCards(newSelectedCards); // 更新選中的卡片
+    updateSelectedCount(newSelectedCards.length); // 使更新選中數量
 
     // 開啟燈箱並設置選中的圖片
     // setSelectedImage(data_img[index]);
@@ -59,7 +59,7 @@ const Carousel = ({ updateSelectedCount, currentIndex, arr_area }) => {
 
   //若點選空白區域，取消所有選取
   const handleClickOutside = (event) => {
-    // 如果燈箱打开，不取消选取
+    // 如果燈箱開啟，不取消選取
     if (event.target.closest(".box_card")) {
       return;
     }

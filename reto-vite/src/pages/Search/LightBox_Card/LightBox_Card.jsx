@@ -15,19 +15,19 @@ import cancel from '../../../assets/img_hsc/card_viewpoint/cancel.svg';
 import favorite_heart from '../../../assets/img_hsc/card_viewpoint/favorite_heart.svg';
 
 const LightBox_Card = ({ image, onClose }) => {
-  // 处理点击事件
+  // 點擊事件
   const handleClickOutsideCard = (e) => {
-    // 如果点击的不是 .card 元素及其子元素
+    // 如果點擊事件不在 .card 元素及其子元素
     if (!e.target.closest(".card")) {
-      onClose(); // 调用关闭燈箱的函数
+      onClose(); // 關閉燈箱
     }
   };
 
-  // 假设 state 'open' 控制燈箱是否显示
+  // 假設 state 'open' 控制燈箱是否顯示
   const [open, setOpen] = useState(false);
-  // 打开燈箱
+  // 打開燈箱
   const openLightbox = () => setOpen(true);
-  // 关闭燈箱
+  // 關閉燈箱
   const closeLightbox = () => setOpen(false);
 
   return (

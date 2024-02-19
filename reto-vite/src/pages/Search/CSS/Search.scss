@@ -410,10 +410,7 @@
     }
   }
 
-  .selected {
-    box-shadow: 0 15px 60px 0 rgba(0, 0, 0, 0.1),
-      0 5px 25px 0 rgba(0, 0, 0, 0.1);
-  }
+  
 
   //標題
   .card_search_info {
@@ -472,6 +469,11 @@
     justify-content: center;
     align-items: center;
   }
+}
+
+.card_search.selected {
+  box-shadow: 0 15px 60px 0 rgba(0, 0, 0, 0.1),
+    0 5px 25px 0 rgba(0, 0, 0, 0.1);
 }
 
 .dot {

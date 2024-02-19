@@ -9,7 +9,7 @@ function Search() {
     
     //讓選中的數量顯示
     const [selectedCount, setSelectedCount] = useState(0); // 新的状态
-    // 更新选中计数的函数
+    // 更新選中的數量
     const updateSelectedCount = (count) => {
         setSelectedCount(count);
     }

@@ -4,11 +4,7 @@ import arrowLeft from "../../../assets/img_hsc/fixed_btn/arrow-left.svg";
 import arrowRight from "../../../assets/img_hsc/fixed_btn/arrow-right.svg";
 
 //Fixed Button固定按鈕
-const FixedBtn = ({
-  handleArrowLeftClick,
-  handleArrowRightClick,
-  selectedCount,
-}) => {
+const FixedBtn = ({ selectedCount }) => {
   return (
     <div className="btn_fixed">
       <ul>
