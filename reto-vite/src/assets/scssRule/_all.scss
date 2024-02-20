@@ -3,11 +3,11 @@
 * {
   font-family: 'Noto Sans TC', 微軟正黑體;
   margin: 0;
-  box-sizing: border-box;
+  box-sizing: border-box; //影響到header高度
 
-  ul ol {
+  ul, ol {
     list-style: none;
-    padding: 0;
+    padding: 0px;
     margin: 0;
   }
 
