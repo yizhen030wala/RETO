@@ -404,7 +404,7 @@ import DateSwiper from '../../components-common/DateSwiper/DateSwiper.jsx';
 const Schedule = () => {
     const daysOfWeek = ["五", "六", "日", "一", "二", "三", "四"]; // 定義星期數組
     const [sheets, setSheets] = useState([
-        { numCards: 4, ids: ['recC1ydc0AuJM8rj0', 'rec34Y8PSu4ZxjDqi', 'recKs9HcwW5Onj1Ku','rec1crANNsC9wnnKv'], dayOfWeek: "五", times: ['10:00', '12:00', '14:00', '17:00'] },
+        { numCards: 3, ids: ['recC1ydc0AuJM8rj0', 'rec34Y8PSu4ZxjDqi', 'recKs9HcwW5Onj1Ku'], dayOfWeek: "五", times: ['10:00', '12:00', '14:00', '17:00'] },
         { numCards: 3, ids: ['rec1crANNsC9wnnKv', 'rec34Y8PSu4ZxjDqi', 'recKs9HcwW5Onj1Ku'],dayOfWeek: "六" , times:['11:00', '13:00', '14:00'] },
         { numCards: 2, ids: ['rec1crANNsC9wnnKv', 'reci4j2Nns6QDNrG5'],dayOfWeek: "日" , times: ['12:00', '14:00'] },
         { numCards: 3, ids: ['recC1ydc0AuJM8rj0', 'rec34Y8PSu4ZxjDqi', 'recKs9HcwW5Onj1Ku'],dayOfWeek: "一" , times: ['12:00', '14:00', '17:00'] },
