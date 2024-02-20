@@ -214,8 +214,8 @@
 .react-datepicker-popper {
 
   scale: 80%;
-  margin-top: 5%;
-  margin-left: 2.1%;
+  margin-top: 15px;
+  margin-left: -20px;
 }
 
 .react-datepicker__triangle {
@@ -237,6 +237,36 @@
   :focus-visible {
     outline: $color-green1 auto 0.5px;
 
+  }
+}
+
+.react-datepicker__navigation-icon {
+  color: $color-green1;
+  position: relative;
+  top: -1px;
+  font-size: 20px;
+  width: 0;
+
+  &::before {
+    // @extend %navigation-chevron;
+  }
+
+  &--next {
+    left: -2px;
+
+    &::before {
+      transform: rotate(45deg);
+      left: -7px;
+    }
+  }
+
+  &--previous {
+    right: -2px;
+
+    &::before {
+      transform: rotate(225deg);
+      right: -7px;
+    }
   }
 }
 

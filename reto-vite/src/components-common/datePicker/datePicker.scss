@@ -227,8 +227,15 @@
   display: inline-block;
   width: 100%;
 
+  input {
+    background-image: url('../../../assets/img_hsc/set_journey/selectdown.svg');
+    background-repeat: no-repeat;
+    background-position: right 27px top 27px;
+
+  }
+
   :focus-visible {
     outline: $color-green1 auto 0.5px;
-   
+
   }
 }

@@ -5,8 +5,16 @@
 // ===================RWD============================
 
 // 手機
-@media screen and (max-width: 809px) {
-    .header {
+@media screen and (max-width: 850px) {
+    .header_home {
+        padding: 5px 16px !important;
+        .only_logo {
+            display: block !important;
+        }
+
+        .logo {
+            display: none;
+        }
 
         ul.nav_btn {
             display: none;
@@ -29,7 +37,7 @@
 //處理滑動變色
 
 .header_home.change-bg-color-header {
-    background-color: #FD8F29    !important;
+    background-color: #FD8F29 !important;
 }
 
 .header_home {
@@ -39,13 +47,17 @@
     justify-content: space-between;
     align-items: center;
     padding: 5px 40px;
-    
+
     transition: background-color 1s ease;
 
 
     .logo {
         width: 120px;
 
+    }
+
+    .only_logo {
+        display: none;
     }
 
     /* 表頭功能列 */
@@ -58,20 +70,20 @@
         border-radius: $border_radius_20px;
         background: rgba(236, 236, 236, 0.5);
 
-        
-            li {
-                a {
-                    font-size: 1rem;
-                    color: $color_black;
 
-                    &:hover {
-                        font-weight: 600;
-                    }
+        li {
+            a {
+                font-size: 1rem;
+                color: $color_black;
+
+                &:hover {
+                    font-weight: 600;
                 }
             }
-        
+        }
 
-        @media (max-width: 809px) {
+
+        @media (max-width: 850px) {
             display: none;
         }
     }

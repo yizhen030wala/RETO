@@ -6,8 +6,8 @@ import './MapPhone.scss'
 
 const MapPhone = () => {
     return (
-        <>
-            <main className="mapphone_container">
+        <div className='mapphone_rwd'>
+            <div className="mapphone_container">
                 <div className="left_div">
                     {/* 麵包屑導覽列 */}
                     <div className="SM_wrap">
@@ -35,8 +35,7 @@ const MapPhone = () => {
                 </div>
 
 
-
-            </main >
+            </div >
 
             {/* mapphone--mp */}
             <div className="mp_wrap">
@@ -89,7 +88,7 @@ const MapPhone = () => {
 
             </div>
 
-        </>
+        </div >
     )
 }
 

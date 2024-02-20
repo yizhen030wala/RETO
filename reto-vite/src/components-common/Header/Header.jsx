@@ -6,6 +6,7 @@ import User from '../../assets/img/Avatar/Mask Group.svg'
 import Menu from '../../assets/img/icon/icon-black/menu.svg'
 import UnLogin from '../ShowUnlogin/ShowUnlogin.jsx'
 import Login from '../ShowLogin/Showlogin.jsx'
+import Onlylogo from '../../assets/img/RETO logo/logo/48px.svg'
 
 
 function Header() {
@@ -16,6 +17,11 @@ function Header() {
         <div className='logo'>
           <Link to="/">
             <img src={Logo} alt="RETO logo" />
+          </Link>
+        </div>
+        <div className="only_logo">
+           <Link to="/">
+            <img src={Onlylogo} alt="RETO logo" />
           </Link>
         </div>
         {/* 置頂導覽按鈕  */}

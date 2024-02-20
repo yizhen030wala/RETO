@@ -21,6 +21,7 @@ const datePicker = () => {
                 onChange={(update) => {
                     setDateRange(update);
                 }}
+                placeholderText={`請選擇日期`}
                 
             />
         </div>
