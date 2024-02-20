@@ -1,12 +1,12 @@
-import React from 'react'
-import Schedule from './Schedule'
+// import React from 'react'
+// import Schedule from './Schedule'
 
-const index = () => {
-    return (
-        <>
-            <Schedule />
-        </>
-    )
-}
+// const index = () => {
+//     return (
+//         <>
+//             <Schedule />
+//         </>
+//     )
+// }
 
-export default index
+// export default index

@@ -404,8 +404,8 @@ import DateSwiper from '../../components-common/DateSwiper/DateSwiper.jsx';
 const Schedule = () => {
     const daysOfWeek = ["五", "六", "日", "一", "二", "三", "四"]; // 定義星期數組
     const [sheets, setSheets] = useState([
-        { numCards: 3, ids: ['recC1ydc0AuJM8rj0', 'rec34Y8PSu4ZxjDqi', 'recKs9HcwW5Onj1Ku'], dayOfWeek: "五", times: ['10:00', '12:00', '14:00', '17:00'] },
-        { numCards: 3, ids: ['rec1crANNsC9wnnKv', 'rec34Y8PSu4ZxjDqi', 'recKs9HcwW5Onj1Ku'],dayOfWeek: "六" , times:['11:00', '13:00', '14:00'] },
+        { numCards: 5, ids: ['rec0vbwMgyWJ5IeCu', 'recvjJ772H4T94nK0', 'recqZlvW8XiL88RLw', 'recEIwQyt3o3creQ7', 'recu1EzORKvlSjM0L'], dayOfWeek: "五", times: ['10:00', '12:00', '14:00', '17:00', '19:00'] },
+        { numCards: 3, ids: ['recnN4yrnY4S93bBq', 'recKs9HcwW5Onj1Ku', 'recaoATObIwNp09oU'],dayOfWeek: "六" , times:['11:00', '13:00', '14:00'] },
         { numCards: 2, ids: ['rec1crANNsC9wnnKv', 'reci4j2Nns6QDNrG5'],dayOfWeek: "日" , times: ['12:00', '14:00'] },
         { numCards: 3, ids: ['recC1ydc0AuJM8rj0', 'rec34Y8PSu4ZxjDqi', 'recKs9HcwW5Onj1Ku'],dayOfWeek: "一" , times: ['12:00', '14:00', '17:00'] },
         { numCards: 2, ids: ['rec1crANNsC9wnnKv', 'reci4j2Nns6QDNrG5'],dayOfWeek: "二" , times: ['14:00', '17:00'] }
@@ -431,7 +431,7 @@ const Schedule = () => {
                         <div className="tripTitle">
                             {/* 行程表名稱 */}
                             <div>
-                                <h3 className='h3_title'>旅藤台南行</h3>
+                                <h3 className='h3_title'>RARASO之快閃九份</h3>
                             </div>
                             {/* 行程表日期 */}
                             <div>
