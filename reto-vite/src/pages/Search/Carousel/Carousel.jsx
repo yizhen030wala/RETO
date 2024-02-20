@@ -1,6 +1,7 @@
 import Masonry from "react-masonry-component";
 import axios from "axios";
-import React, { useState, useEffect } from "react";
+import LazyLoad from "react-lazyload";
+import React, { useState, useEffect, useRef } from "react";
 import "../CSS/Search.scss";
 import Card from "../Card/Card.jsx";
 import Tags_carousel from "../Tags_carousel/Tags_carousel.jsx";
@@ -109,7 +110,6 @@ const Carousel = ({ updateSelectedCount, currentIndex, arr_area }) => {
     };
   }, []);
 
-
   // ↓↓↓ API ↓↓↓
   const [records, setRecords] = useState([]);
 
@@ -134,6 +134,10 @@ const Carousel = ({ updateSelectedCount, currentIndex, arr_area }) => {
     fetchData();
   }, []);
   // ↑↑↑ API ↑↑↑
+
+  const CardPlaceholder = () => (
+    <div className="loading"></div>
+  )
 
   return (
     <div className="box_carousel">
@@ -170,16 +174,27 @@ const Carousel = ({ updateSelectedCount, currentIndex, arr_area }) => {
                 updateOnEachImageLoad={true}
               >
                 {records.map((record, idx) => (
-                  <Card
-                    key={idx}
-                    img={record.fields["location cover"]}
-                    index={idx}
-                    onSelect={() => handleSelectCard(idx)}
-                    onOpenLightbox={() => handleOpenLightbox(img)}
-                    selected={selectedCards.includes(idx)}
-                    order={selectedCards.indexOf(idx) + 1} // 獲取選中順序
-                    data={record.fields}
-                  />
+                  // <LazyLoad 
+                  // key={idx} 
+                  // offset={100} 
+                  // once={true}
+                  // overflow={true}
+                  // resize={true}
+                  // placeholder={<CardPlaceholder />}
+                  // >
+                    <Card
+                      key={idx}
+                      img={record.fields["location cover"]}
+                      index={idx}
+                      onSelect={() => handleSelectCard(idx)}
+                      onOpenLightbox={() =>
+                        handleOpenLightbox(record.fields["location cover"])
+                      }
+                      selected={selectedCards.includes(idx)}
+                      order={selectedCards.indexOf(idx) + 1} // 獲取選中順序
+                      data={record.fields}
+                    />
+                  // </LazyLoad>
                 ))}
               </Masonry>
             </div>

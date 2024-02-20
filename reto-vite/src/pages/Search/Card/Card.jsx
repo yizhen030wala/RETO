@@ -30,28 +30,28 @@ const Card = ({ img, index, onSelect, selected, onOpenLightbox, data }) => {
   const [isImageLoaded, setIsImageLoaded] = useState(false);
 
   // ↓↓↓ API ↓↓↓
-  const [records, setRecords] = useState([]);
+//   const [records, setRecords] = useState([]);
 
-  useEffect(() => {
-    const fetchData = async () => {
-      try {
-        const response = await axios.get(
-          "https://api.airtable.com/v0/appAZmHoN0ZgUBhGi/tblLuHs5ExVo7WrJM",
-          {
-            headers: {
-              Authorization: `Bearer patPf99e6W2EBor8W.e2fe347dbdcf5b651cc6be631787070d5152604b494f295525430af19409a4bf`,
-            },
-          }
-        );
-        setRecords(response.data.records);
-      } catch (error) {
-        console.error("Error fetching data:", error);
-        console.error("Error details:", error.response.data);
-      }
-    };
+//   useEffect(() => {
+//     const fetchData = async () => {
+//       try {
+//         const response = await axios.get(
+//           "https://api.airtable.com/v0/appAZmHoN0ZgUBhGi/tblLuHs5ExVo7WrJM",
+//           {
+//             headers: {
+//               Authorization: `Bearer patPf99e6W2EBor8W.e2fe347dbdcf5b651cc6be631787070d5152604b494f295525430af19409a4bf`,
+//             },
+//           }
+//         );
+//         setRecords(response.data.records);
+//       } catch (error) {
+//         console.error("Error fetching data:", error);
+//         console.error("Error details:", error.response.data);
+//       }
+//     };
 
-    fetchData();
-  }, []);
+//     fetchData();
+//   }, []);
   // ↑↑↑ API ↑↑↑
 
   return (

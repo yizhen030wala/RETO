@@ -566,6 +566,14 @@
   height: 300px;
 }
 
+.loading {
+  position: relative;
+  background-color: #e2e2e2;
+  width: 230px;
+  height: 500px;
+  border-radius: 20px;
+}
+
 .loading::after {
   display: block;
   content: "";
