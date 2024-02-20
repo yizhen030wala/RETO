@@ -1,5 +1,5 @@
 import React from 'react'
-import "./ButtonChk_M.css";
+import "./ButtonChk_M.scss";
 
 const ButtonChk_M = ({ onClick, className, children }) => {
     const handleClick = () => {

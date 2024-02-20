@@ -77,6 +77,13 @@
             align-items: center;
             gap: 5px;
 
+            .spotName{
+                white-space: nowrap; /* 禁止换行 */
+                overflow: hidden; /* 隐藏超出部分 */
+                text-overflow: ellipsis; /* 使用省略号代替被隐藏的文本 */
+                line-height: normal; /* 讓文字可以完整顯現 */
+            }
+
             &:hover {
                 .btn_copy,
                 .btn_copy .icon-content_copy {

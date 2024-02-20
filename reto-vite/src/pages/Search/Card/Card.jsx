@@ -12,12 +12,12 @@ const Card = ({ img, index, onSelect, selected, onOpenLightbox }) => {
     const dotClass = selected ? "circle" : "dot"; // 更新圓點的 class
 
     const handleOpenLightbox = (e) => {
-        // 检查事件是否发生在 .dot_card 或其子元素上
+        // 檢查事件發生位置 => .dot_card 或其子元素上
         if (e.target.closest('.dot_card')) {
-            // 如果是，不打开燈箱
+            // 如果是，不打開燈箱
             return;
         } else {
-            // 否则，打开燈箱
+            // 打開燈箱
             onOpenLightbox(img);
         }
     };
@@ -27,51 +27,10 @@ const Card = ({ img, index, onSelect, selected, onOpenLightbox }) => {
         onSelect(index);
     };
 
-    //卡片資訊部分
-    // const [evaluateContent, setEvaluateContent] = useState('');
-
-    // useEffect(() => {
-    //     // 模拟异步获取评价信息，然后更新状态
-    //     setTimeout(() => {
-    //         const evaluateHtml = (
-    //             <div className="evaluate_left loading">
-    //                 <span>4.5</span>
-    //                 <figure><img src={star} alt="" /></figure>
-    //                 <span>(123)</span>
-    //             </div>
-    //         );
-    //         setEvaluateContent(evaluateHtml);
-    //     }, 5000); // 假设5秒后获取到评价信息
-    // }, []); // 空依赖数组表示这个effect只在组件挂载时运行一次
 
 
     //處理預設圖片樣式(尚未加載前)
     const [isImageLoaded, setIsImageLoaded] = useState(false);
-    // const cardImage = document.querySelector('.container_card_img');
-    // // const cardTitle = document.querySelector('.card_title');
-    // // const cardDesc = document.querySelector('.evaluate_left');
-
-
-    // const renderCard = () => {
-    //     // cardTitle.textContent = '景點名稱';
-    //     // cardDesc.textContent = '';
-    //     createImage();
-    //     // cardTitle.classList.remove('loading');
-    //     // cardDesc.classList.remove('loading');
-    //     cardImage.classList.remove('loading');
-    // };
-
-    // function createImage() {
-    //     const imgLoad = new Image();
-    //     imgLoad.classList.add("image");
-    //     imgLoad.setAttribute('alt', '');
-    //     imgLoad.setAttribute('src', '{img.imgUrl}');
-    //     cardImage.appendChild(imgLoad);
-    // }
-
-    // setTimeout(() => {
-    //     renderCard();
-    // }, 5000);
 
 
 

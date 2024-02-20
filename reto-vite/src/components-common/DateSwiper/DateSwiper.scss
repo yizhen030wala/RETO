@@ -4,15 +4,17 @@
 
 // 使套件作用的範圍(可滑動範圍)
 .swiper-container {
-    margin: auto;
+    margin: 0 58px;;
     max-width: 325px;
     width: 100%;
     position: relative;
-    height: 90px; /* 修改为适当的高度，或者使用其他的方式来设置容器高度 */
+    // height: 90px; 
 
     //手機
-    @media only screen and (max-width:600px) {
+    @media only screen and (max-width: 600px) {
         margin: 0;
+        max-width: 100%;
+        height: 60px;
     }
 
     // 控制所有模型項目
@@ -38,6 +40,8 @@
             line-height: 160%;
             color: #828282;
 
+            cursor: pointer;
+
             &:hover {
                 color: #333333;
                 border-bottom: solid;
@@ -45,14 +49,22 @@
                 opacity: 1;
             }
 
-            &:first-child {
-                color: #333333;
-                border-color: #333333;
-                opacity: 1;
-            }
+            // &:first-child {
+            //     color: #333333;
+            //     border-color: #333333;
+            //     opacity: 1;
+            // }
 
             a {
                 text-decoration: none;
+            }
+
+            // 新增選中的樣式
+            &.selected {
+                color: #333333;
+                border-bottom: solid;
+                border-color: #333333;
+                opacity: 1;
             }
         }
     }
@@ -67,7 +79,7 @@
         border-radius: 50%;
 
         //手機
-        @media only screen and (max-width:600px) {
+        @media only screen and (max-width: 600px) {
             display: none;
         }
 

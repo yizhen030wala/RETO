@@ -24,16 +24,16 @@ const HeaderSearch = () => {
       <header className="header_search">
         {/* LOGO  */}
         <div className='logo'>
-          <Link to="/home">
+          <Link to="/">
             <img src={logoGreen} alt="RETO logo" />
           </Link>
         </div>
         {/* 置頂導覽按鈕  */}
         <nav>
           <ul className="nav_btn_search">
-            <li><Link to="/search">開始探索</Link></li>
-            <li><Link to="/Collections">我的景點</Link></li>
-            <li><Link to="/mytrip"> 行程表</Link></li>
+          <li><Link to="/search">開始探索</Link></li>
+            <li><Link to="/reto/Collections">我的景點</Link></li>
+            <li><Link to="/reto/mytrip"> 行程表</Link></li>
           </ul>
         </nav>
         {/* 會員登入  */}
@@ -69,11 +69,11 @@ const HeaderSearch = () => {
             </div>
             <div>
               {/* 篩選圖片 */}
-              <button>
+              <figure className="btn_commit_search">
                 <img src={filter} alt="" />
-              </button>
+              </figure>
               {/* 查詢按鈕 */}
-              <a href="">查詢</a>
+              <button>查詢</button>
             </div>
           </div>
           {/* 建議/推薦 */}

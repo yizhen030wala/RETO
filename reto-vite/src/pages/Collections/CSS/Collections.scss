@@ -1,36 +1,41 @@
-@use "../../../assets/scssRule/all"as *;
-@use "../../../assets//scssRule/rule"as r;
-@use '../../../assets/scssRule/reset'as *;
+@import "../../../assets/scssRule/rule";
+@import "../../../assets/scssRule/all";
+@import "../../../assets/scssRule/reset";
+
+.main_collections {
+  display: flex;
+  justify-content: center;
+}
 
 .area_search_collections {
-    height: 17vh;
-    /* 100vh表示剛好一                                      視窗高，會自動彈性符合 */
-    display: flex;
-    /*轉變後預設主軸方向變為水平*/
-    flex-direction: column;
-    /*轉變主軸方向為垂直*/
-    align-items: center;
-    /*副軸(水平)置中*/
-    /* justify-content: center; */
-    /*主軸(垂直)置中*/
-    width: 100%;
-    /* gap: 3.2vh; */
+  height: 17vh;
+  /* 100vh表示剛好一個視窗高，會自動彈性符合 */
+  display: flex;
+  /*轉變後預設主軸方向變為水平*/
+  flex-direction: column;
+  /*轉變主軸方向為垂直*/
+  align-items: center;
+  /*副軸(水平)置中*/
+  /* justify-content: center; */
+  /*主軸(垂直)置中*/
+  width: 100%;
+  /* gap: 3.2vh; */
 }
 
 /*Nav*/
 
 .bar_top_collections {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    background-color: white;
-    padding: 20px;
-    height: 10vh;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: $color-white;
+  padding: 20px;
+  height: 10vh;
 }
 
-
-.nav_collections ul {
-    background-color: #F5F5F5;
+.nav_collections {
+  ul {
+    background-color: $color_gray2;
     display: flex;
     width: 274px;
     height: 32px;
@@ -41,319 +46,416 @@
     gap: 40px;
 
     border-radius: 50px;
-    /* background: #F5F5F5; */
-
     flex: 1;
-}
 
-.nav_collections ul li a {
-    font-family: 'Noto Sans TC', sans-serif;
-    font-size: 14px;
-    font-style: normal;
-    font-weight: 600;
-    /*網頁上600看起來跟figma上400一樣*/
-    line-height: 160%;
+    li {
+      a {
+        font-family: "Noto Sans TC", sans-serif;
+        font-size: 14px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: 160%;
+      }
+    }
+  }
 }
 
 /*搜尋列*/
 
 .search_collections {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    /* width: 68%; */
-    width: 980px;
-    height: 24vh;
-    /* padding: 32px 70px 0 70px; */
-}
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 980px;
+  height: 24vh;
 
-.bar_search_collections {
+  .bar_search_collections {
     display: flex;
     padding: 8px 12px;
     gap: 4px;
-    background-color: white;
+    background-color: $color-white;
     width: 460px;
     height: 36px;
 
     border-radius: 6px;
     justify-content: space-between;
-    border: 1px solid rgba(0, 0, 0, 0.10);
+    border: 1px solid $color_gray1;
     align-items: center;
 
+    input {
+      overflow: hidden;
+      color: $color-black;
 
+      text-overflow: ellipsis;
+      white-space: nowrap;
+      font-family: Noto Sans TC;
+      font-size: 14px;
+      font-style: normal;
+      font-weight: 400;
+      line-height: 160%;
+
+      &::placeholder {
+        color: $color_gray2;
+      }
+    }
+    img {
+      width: 20px;
+      height: 20px;
+    }
+    div {
+      display: flex;
+      img {
+        margin: 4px;
+      }
+      a {
+        padding: 4px 16px;
+        justify-content: center;
+        align-items: center;
+        gap: 8.951px;
+
+        border-radius: 17.902px;
+        background: $color_yellow;
+
+        font-family: Noto Sans TC;
+        font-size: 14px;
+        font-style: normal;
+        font-weight: 500;
+        line-height: 160%;
+      }
+    }
+  }
 }
-
-.bar_search_collections input {
-    overflow: hidden;
-    color: rgba(0, 0, 0, 0.50);
-
-    text-overflow: ellipsis;
-    white-space: nowrap;
-    /* (D)/body/14px */
-    font-family: Noto Sans TC;
-    font-size: 14px;
-    font-style: normal;
-    font-weight: 400;
-    line-height: 160%;
-    /* 22.4px */
-}
-
-.bar_search_collections img {
-    width: 20px;
-    height: 20px;
-}
-
-.bar_search_collections div {
-    display: flex;
-}
-
-.bar_search_collections div img {
-    margin: 4px;
-}
-
-.bar_search_collections div a {
-    padding: 4px 16px;
-    justify-content: center;
-    align-items: center;
-    gap: 8.951px;
-
-    border-radius: 17.902px;
-    background: #FFDF06;
-
-    font-family: Noto Sans TC;
-    font-size: 14px;
-    font-style: normal;
-    font-weight: 500;
-    line-height: 160%;
-    /* 22.4px */
-}
-
-
 
 /*協助對齊用*/
 
 .assist {
-    width: 110px;
+  width: 110px;
 }
 
 /*地點標籤*/
 
-.locate ul {
+.locate {
+  ul {
     display: flex;
     gap: 10px;
+
+    li {
+
+      a{
+        padding: 10px 16px;
+        justify-content: center;
+        align-items: center;
+        border-radius: 12px;
+        color: white;
+        background-color: #3d9d35;
+      
+        font-size: 14px;
+        white-space: nowrap;
+      }
+    }
+  }
 }
-
-.locate a {
-    padding: 10px 16px;
-    justify-content: center;
-    align-items: center;
-    border-radius: 12px;
-    color: white;
-    background-color: #3D9D35;
-
-    font-size: 14px;
-
-    white-space: nowrap;
-}
-
-// .label1 a {
-//     color: white;
-//     background-color: #3D9D35;
-// }
-
-// .label2 a {
-//     background-color: #81E6FD;
-// }
-
-// .label3 a {
-//     background-color: #FFDF06;
-// }
-
-// .label4 a {
-//     color: white;
-//     background-color: #333;
-// }
-
 
 
 /*選擇區*/
 
 .area_category {
-    display: flex;
-    width: 100%;
-    /* padding: 0 240px; */
-    justify-content: center;
-    height: auto;
-}
+  display: flex;
+  width: 100%;
+  justify-content: center;
+  height: auto;
 
-.box_category {
-    /* width: 68%; */
+  .box_category {
     width: 980px;
+
+    .category {
+      ul {
+        display: flex;
+
+        li {
+          font-family: Noto Sans TC;
+          font-size: 14px;
+          font-style: normal;
+          font-weight: 400;
+          line-height: 160%;
+
+          padding: 8px 20px;
+          border-bottom: 2px solid $color_gray2;
+          color: $color_gray2;
+          white-space: nowrap;
+
+          display: inline-block;
+          text-align: center;
+          transition: 0.35s ease-in-out;
+          cursor: pointer;
+          button {
+            text-decoration: none;
+          }
+        }
+      }
+    }
+  }
 }
 
-.category ul {
-    display: flex;
+.eat_category.active {
+  border-bottom: 2px solid $color_black !important;
+  color: $color_black!important;
 }
-
-.category ul li {
-    font-family: Noto Sans TC;
-    font-size: 14px;
-    font-style: normal;
-    font-weight: 400;
-    line-height: 160%;
-
-    padding: 8px 20px;
-    border-bottom: 2px solid $color_gray2;
-    color: $color_gray2;
-    white-space: nowrap;
-
-    display: inline-block;
-    text-align: center;
-    cursor: pointer;
-
+.accommodation_category.active {
+  border-bottom: 2px solid $color_black!important;
+  color: $color_black!important;
 }
-
+.fun_category.active {
+  border-bottom: 2px solid $color_black!important;
+  color: $color_black!important;
+}
 
 /* 收藏區 */
 
 /*瀑布流內容設定*/
 
 // -------Carousel.jsx
-.box_carousel {
-    // display: flex;
-    position: relative;
-    
-    width: 100%;
-    overflow: hidden;
-    gap: 2%;
+.box_carousel_collections {
+  display: flex;
+  position: relative;
+  justify-content: center;
 
-    .box_turn {
-        background-color: $color_gray3;
-        display: flex;
-        flex-direction: column;
-        align-items: flex-start;
-        padding: 50px 40px;
-        border-radius: $border_radius_20px;
-        box-sizing: border-box;
-        transition: 0.5s ease;
-        flex-shrink: 0;
+  width: 1060px;
+  overflow: hidden;
+  gap: 2%;
 
-        scale: 0.95;
-        margin: 10vh -494px;
+  .box_turn {
+    background-color: transparent;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 50px 40px;
+    border-radius: $border_radius_20px;
+    box-sizing: border-box;
+    transition: 0.35s ease;
+    flex-shrink: 0;
 
-        .search_text {
-            display: flex;
-            flex-direction: column;
-            align-items: flex-start;
-            gap: 12px;
-            margin-bottom: 12px;
+    margin: 0 -540px;
 
-            .item_carousel {
-                h3 {
-                    display: flex;
-                    padding: 0px 30px;
-                    justify-content: center;
-                    align-items: center;
+    .area_collections {
+      display: none;
+    }
 
-                    border-radius: 20px 0px;
-                    height: 36px;
+    .search_text {
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
+      gap: 12px;
+      margin-bottom: 12px;
 
-                    font-size: 24px;
-                    font-style: normal;
-                    font-weight: 500;
-                    line-height: 150%;
-                }
+      .item_carousel {
+        h3 {
+          display: flex;
+          padding: 0px 30px;
+          justify-content: center;
+          align-items: center;
 
-                p {
-                    text-align: center;
-                    font-size: 14px;
-                    font-style: normal;
-                    font-weight: 400;
-                    line-height: 160%;
-                    /* 22.4px */
+          border-radius: 20px 0px;
+          height: 36px;
 
-                    margin-top: 10px;
-                }
-            }
+          font-size: 24px;
+          font-style: normal;
+          font-weight: 500;
+          line-height: 150%;
         }
 
-        .wrapper {
-            width: 980px;
-            height: auto;
+        p {
+          text-align: center;
+          font-size: 14px;
+          font-style: normal;
+          font-weight: 400;
+          line-height: 160%;
+          /* 22.4px */
 
-            #card_container {
-                position: relative;
-                @include size(100%, auto);
-            }
+          margin-top: 10px;
         }
+      }
+    }
 
-        .wrapper * {
-            transition-property: all !important;
-            /* 這裡會寫important是因為Masonry載入時，會動態給.card_search一個property設定，
+    .wrapper {
+      width: 980px;
+      height: auto;
+
+      #card_container {
+        position: relative;
+        @include size(100%, auto);
+      }
+    }
+
+    .wrapper * {
+      transition-property: all !important;
+      /* 這裡會寫important是因為Masonry載入時，會動態給.card_search一個property設定，
             並且是某些才給，無法找到規律，且因為是動態所以試過許多方法都無法覆蓋，因其設定會導致
             transition無法正確運行，故用important覆蓋 */
-        }
     }
-
-    .eat {
-        .item_carousel {
-            h3 {
-                background: $color_yellow;
-            }
-        }
-    }
-
-    .accommodation {
-        .item_carousel {
-            h3 {
-                background-color: $color_blue;
-                color: $color_white;
-            }
-        }
-    }
-
-    .fun {
-        .item_carousel {
-            h3 {
-                background-color: $color_green2;
-                color: $color_white;
-            }
-        }
-    }
+  }
 }
 
-.box_turn.fun.current {
-    scale: 1;
-}
-.box_turn.accommodation.current {
-    scale: 1;
-}
-.box_turn.eat.current {
-    scale: 1;
-}
+// -------FixedBtn.jsx
+.btn_fixed {
+  position: fixed;
+  left: 43vw;
+  bottom: 15vh;
+  transition: 0.35s;
+  z-index: 999;
 
-// -------Tags_carousel.jsx
-.tag_turn {
-    ul {
-        display: flex;
-        justify-content: flex-start;
+  ul {
+    display: flex;
+    padding: 10px 20px;
+    justify-content: center;
+    align-items: center;
+    gap: 8px;
 
-        a {
-            @include h2_body;
-            line-height: 160%;
-            padding: 2px 20px;
-            flex-direction: column;
-            justify-content: center;
-            align-items: center;
+    border-radius: 50px;
+    background: $color-white;
+    //--------Ralph
+    // box-shadow: 0px 2px 5px 0px rgba(0, 0, 0, 0.25);
+    //--------Jenny
+    @include shadow;
 
-            border-radius: $border_radius_10px;
-            background: $color-white;
-            margin-right: 8px;
+    //Trash Can---
 
-            &:active {
-                background-color: $color-black;
-                color: $color-white;
-            }
+    .trash_can {
+      position: relative;
+      cursor: pointer;
+      transform: scale(0.7);
+
+      .lid {
+        position: relative;
+        top: 2px;
+        width: 24px;
+        height: 6px;
+        background: white;
+        border: solid 2px rgb(100, 100, 100);
+        transition: all 0.2s ease-in-out;
+        transform-origin: left;
+        transform: rotate(0deg) translateY(0px);
+
+        &:before,
+        &:after {
+          content: "";
+          position: absolute;
         }
+
+        &:before {
+          width: 10px;
+          height: 5px;
+          top: -5px;
+          left: 5px;
+          background: rgb(100, 100, 100);
+        }
+
+        &:after {
+          width: 6px;
+          height: 4px;
+          top: -3px;
+          left: 7px;
+          background: white;
+        }
+      }
+
+      .can {
+        position: relative;
+        left: 2px;
+        width: 20px;
+        height: 20px;
+        background: white;
+        border: solid 2px rgb(100, 100, 100);
+        border-radius: 0 0 3px 3px;
+
+        &:before {
+          content: "";
+          position: absolute;
+          top: 0;
+          left: 0;
+          width: 0;
+          height: 0;
+          box-shadow: 4px 5px 0px 1px rgb(100, 100, 100),
+            4px 7px 0px 1px rgb(100, 100, 100),
+            4px 9px 0px 1px rgb(100, 100, 100),
+            4px 11px 0px 1px rgb(100, 100, 100),
+            4px 13px 0px 1px rgb(100, 100, 100),
+            8px 5px 0px 1px rgb(100, 100, 100),
+            8px 7px 0px 1px rgb(100, 100, 100),
+            8px 9px 0px 1px rgb(100, 100, 100),
+            8px 11px 0px 1px rgb(100, 100, 100),
+            8px 13px 0px 1px rgb(100, 100, 100),
+            12px 5px 0px 1px rgb(100, 100, 100),
+            12px 7px 0px 1px rgb(100, 100, 100),
+            12px 9px 0px 1px rgb(100, 100, 100),
+            12px 11px 0px 1px rgb(100, 100, 100),
+            12px 13px 0px 1px rgb(100, 100, 100);
+        }
+      }
+
+      //   span {
+      //     position: absolute;
+      //     background: rgb(100, 100, 100);
+      //     color: white;
+      //     font: normal 10px/15px Arial;
+      //     padding: 2px 4px;
+      //     border-radius: 2px;
+      //     left: -6px;
+      //     bottom: 0px;
+      //     opacity: 0;
+      //     z-index: -1;
+      //     transition: all 0.4s ease 0.4s;
+      //   }
+
+      &:hover .lid {
+        transform: rotate(-30deg) translateY(-2px);
+      }
+      &:hover span {
+        bottom: -22px;
+        opacity: 1;
+      }
     }
+
+    //Trash Can 結束---
+
+    .myJour_collections {
+      //--------Ralph
+      // color: #FFF;
+      // font-family: Noto Sans TC;
+      // font-size: 16px;
+      // font-style: normal;
+      // font-weight: 500;
+      // line-height: 160%;
+      // /* 25.6px */
+
+      // padding: 8px 16px;
+      // justify-content: center;
+      // align-items: center;
+
+      // border-radius: 20px;
+      // background: #3D9D35;
+      // transition: 0.35s;
+
+      // transform-origin: bottom;
+      // white-space: nowrap;
+
+      //--------Jenny
+
+      display: flex;
+      justify-content: center;
+      justify-content: center;
+      text-align: center;
+
+      button {
+        text-decoration: none;
+        @include text_btn_big;
+        padding: 8px 16px;
+      }
+
+      &:focus {
+        background-color: $color_green3;
+        color: $color-black;
+      }
+    }
+  }
 }
