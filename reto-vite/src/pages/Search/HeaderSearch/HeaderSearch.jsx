@@ -1,6 +1,6 @@
 import React from 'react';
 import { Link } from 'react-router-dom'; 
-import '../CSS/Search.Scss';
+import '../CSS/Search.scss';
 import Recommends from '../Recommends/Recommends';
 import magnifier from '../../../assets/img_hsc/search_bar/magnifier.svg';
 import filter from '../../../assets/img_hsc/search_bar/filter.svg';
