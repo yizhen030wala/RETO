@@ -12,8 +12,8 @@ const FixedBtn = ({ selectedCount, onOpenLightbox }) => {
     <div className="btn_fixed">
       <ul>
         <li className="trash_can">
-          <div class="lid"></div>
-          <div class="can"></div>
+          <div className="lid"></div>
+          <div className="can"></div>
           {/* <span>delete</span> */}
         </li>
         <li className="myJour_collections">

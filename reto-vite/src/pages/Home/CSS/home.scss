@@ -124,7 +124,7 @@
                     transition: .15s;
 
 
-                    a {
+                    .btn_start {
                         font-family: 'Noto Sans TC', sans-serif;
                         font-size: 2rem;
                         font-style: normal;
@@ -132,6 +132,7 @@
                         line-height: 70px;
                         color: r.$color_black;
                         transition: .15s;
+                        cursor: pointer;
 
                     }
 
@@ -188,7 +189,7 @@
                     .btn_freeStart {
                         top: 32vh;
 
-                        a {
+                        .btn_start {
                             font-size: 2rem;
                         }
                     }
@@ -234,7 +235,7 @@
                     .btn_freeStart {
                         top: 30vh;
 
-                        a {
+                        .btn_start {
                             font-size: 2rem;
                         }
                     }
@@ -279,7 +280,7 @@
                     .btn_freeStart {
                         top: 28vh;
 
-                        a {
+                        .btn_start {
                             font-size: 2rem;
                         }
                     }
@@ -324,7 +325,7 @@
                     .btn_freeStart {
                         top: 26vh;
 
-                        a {
+                        .btn_start {
                             font-size: 2rem;
                         }
                     }

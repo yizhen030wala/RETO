@@ -60,7 +60,7 @@ const FrontCover = () => {
           <p className="slogan2">讓旅藤代替苦惱的你</p>
           <Link to="/Search">
             <div className="btn_freeStart">
-              <a href="#">免費開始</a>
+              <div className="btn_start">免費開始</div>
             </div>
           </Link>
           <div className="bg_home">
