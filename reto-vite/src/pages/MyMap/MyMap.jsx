@@ -7,6 +7,10 @@ import ScheduleSheet from '../../components-common/ScheduleSheet/ScheduleSheet.j
 import DateSwiper from '../../components-common/DateSwiper/DateSwiper.jsx'
 
 const MyMap = () => {
+
+
+
+    
     return (
         <>
             <main className="SM_container">
