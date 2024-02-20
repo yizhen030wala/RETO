@@ -1,6 +1,5 @@
 import React from 'react'
 import { Link } from 'react-router-dom'; //物件內用到連結跳轉就需要放
-// import './CSS/header.css'
 import './Header.scss'
 import Logo from '../../assets/img/RETO logo//logo & text/32px.svg'
 import User from '../../assets/img/Avatar/Mask Group.svg'
@@ -15,7 +14,7 @@ function Header() {
       <header className="header">
         {/* LOGO  */}
         <div className='logo'>
-          <Link to="/home">
+          <Link to="/">
             <img src={Logo} alt="RETO logo" />
           </Link>
         </div>
@@ -23,8 +22,8 @@ function Header() {
         <nav>
           <ul className="nav_btn">
             <li><Link to="/search">開始探索</Link></li>
-            <li><Link to="/Collections">我的景點</Link></li>
-            <li><Link to="/mytrip"> 行程表</Link></li>
+            <li><Link to="/reto/Collections">我的景點</Link></li>
+            <li><Link to="/reto/mytrip"> 行程表</Link></li>
           </ul>
         </nav>
         {/* 會員登入  */}

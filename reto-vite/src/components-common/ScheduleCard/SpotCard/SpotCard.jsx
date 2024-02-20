@@ -120,16 +120,13 @@
 // }
 
 // export default SpotCard;
-
-
-
 import React from 'react';
 import "./SpotCard.scss"
 import InfoCard from './InfoCard/InfoCard';
 import BtnExchange from "./BtnExchange/BtnExchange.jsx"
 import ButtonDel_Trash from '../../Button/ButtonDel_Trash/ButtonDel_Trash.jsx';
 
-const SpotCard = ({ id }) => {
+const SpotCard = ({ id, time }) => {
     return (
         <>
             <div className="spot_SpotCard">
@@ -143,7 +140,7 @@ const SpotCard = ({ id }) => {
                 {/* 右側景點資訊 */}
                 <div className='InfoCard_wrap'>
 
-                    <InfoCard id={id} />
+                    <InfoCard id={id} time={time} />
                 </div>
                 {/* 刪除鍵 */}
                 <div className='btn_wrap'>

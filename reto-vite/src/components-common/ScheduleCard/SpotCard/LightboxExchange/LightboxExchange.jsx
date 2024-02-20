@@ -204,7 +204,7 @@ const LightboxExchange = ({ onClose }) => {
                     <div className="btn-close-wrap">
                         <span onClick={handleClose} className="icon-close"></span>
                     </div>
-                    <div className="btn-check-wrap">
+                    <div className="btn-check-wrap btn-check-phone">
                         <ButtonChk onClick={handleClose}>替換行程</ButtonChk>
                     </div>
                 </div>

@@ -2,7 +2,7 @@ import React, { useState, useEffect } from "react";
 // import NavBar from "../NavBar/NavBar";
 import logo from "../../../assets/img/RETO logo/logo white.svg";
 import "./HeaderHome.scss";
-import { Link } from "react-router-dom"; 
+import { Link } from "react-router-dom";
 
 const HeaderHome = () => {
 
@@ -30,7 +30,7 @@ const HeaderHome = () => {
     <header className="header_home">
       {/* LOGO  */}
       <div className='logo'>
-        <Link to="/home">
+        <Link to="/">
           <img src={logo} alt="RETO logo" />
         </Link>
       </div>
@@ -38,8 +38,8 @@ const HeaderHome = () => {
       <nav>
         <ul className="nav_btn_home">
           <li><Link to="/search">開始探索</Link></li>
-          <li><Link to="/Collections">我的景點</Link></li>
-          <li><Link to="/mytrip">行程表</Link></li>
+          <li><Link to="/reto/Collections">我的景點</Link></li>
+          <li><Link to="/reto/mytrip"> 行程表</Link></li>
         </ul>
       </nav>
       {/* 對齊用(空div) */}

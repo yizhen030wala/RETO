@@ -18,7 +18,7 @@ const MyTripCard = ({ imageUrl, name, days }) => {
 
 
             {/* 使用絕對路徑而不是相對路徑 */}
-            <Link to="/schedule">
+            <Link to="/reto/schedule">
                 {/* 圖片 */}
                 <div className="mytripcard_cover">
                     <img src={imageUrl} alt="spot" />

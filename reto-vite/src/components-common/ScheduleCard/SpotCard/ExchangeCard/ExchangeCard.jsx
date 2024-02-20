@@ -49,7 +49,9 @@ const ExchangeCard = ({ imgSrc, imgAlt, index, onSelect, selected, onOpenLightbo
                     {/* 價格 */}
                     <span>{price}</span>
                 </div>
-                <Spottag color="#f5f5f5">{location}</Spottag>
+                <div className="spottag_wrap">
+                    <Spottag color="#f5f5f5">{location}</Spottag>
+                </div>
             </div>
 
 

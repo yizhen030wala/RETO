@@ -80,9 +80,9 @@ const DateSwiper = () => {
                 >
                     {[1, 2, 3, 4, 5, 6].map((day, index) => (
                         <SwiperSlide key={index} className={index === selectedDateIndex ? "swiper-slide selected" : "swiper-slide"}>
-                            <a href="#" onClick={() => handleDateClick(index)}>
+                            <div href="#" onClick={() => handleDateClick(index)}>
                                 第 {day} 天
-                            </a>
+                            </div>
                         </SwiperSlide>
                     ))}
                 </Swiper>

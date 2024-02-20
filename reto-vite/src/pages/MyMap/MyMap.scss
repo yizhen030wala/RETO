@@ -9,7 +9,7 @@
     justify-content: space-between;
     /* width: 1440px; */
     margin: auto;
-    padding: 2% 8%;
+    padding: 2% 8% 0 8%;
     gap: 20px;
 
     .left_div {
@@ -65,287 +65,330 @@
         // .dataSwiper_wrap{
         //     width: 100%;
         // }
+        .scroll {
+            margin: 0;
+            width: 100%;
+            height: 520px;
+            overflow: hidden;
+            overflow-y: scroll;
+            position: relative;
 
+            // 卷軸控制
+            &::-webkit-scrollbar {
+                width: 8px;
+                border-radius: 10px;
+            }
 
-        // 行程表顯示外框
-        .schedule-wrap {
-            // 行程表內容
-            .SM_scheduleList {
-                display: flex;
-                justify-content: flex-start;
-                gap: 0 10px;
-                position: relative;
+            /* 卷軸高度的底色(軌跡底色)Track */
+            &::-webkit-scrollbar-track {
+                background: transparent;
+                border-radius: 10px;
+                /* 卷軸圓角 */
+                margin: 95px 40px 45px 10px;
+                /* 卷軸位置 */
+            }
 
-                .SM_day {
-                    z-index: 100;
-                    padding: 8px 20px;
-                    display: flex;
-                    align-items: center;
+            /* 卷軸控制塊 Handle */
+            &::-webkit-scrollbar-thumb {
+                background: #d9d9d9;
+                border-radius: 10px;
+            }
 
-                    color: #fff;
-                    line-height: 160%;
-                    background-color: #3d9d35;
-                    border-radius: 10px;
-                    position: absolute;
-                    top: -23px;
-                    left: 20px;
-                    font-family: Noto Sans TC;
-                    font-size: 14px;
-                    font-style: normal;
-                    font-weight: 400;
-                }
+            /* 卷軸控制塊 Handle on hover */
+            &::-webkit-scrollbar-thumb:hover {
+                background: #555;
+            }
 
-                // 行程表
-                .SM_schedule {
-                    width: 100%;
-                    padding: 40px 20px 20px 20px;
+            .sticky {
+                padding-bottom: 10px;
 
-                    display: flex;
-                    flex-direction: column;
-                    gap: 8px;
+                position: sticky;
+                top: 0;
+                z-index: 30;
+                background-color: #fff;
 
-                    /* border: solid black; */
-                    border: none;
-                    border-radius: 20px;
-                    background: var(--gray-light, #f5f5f5);
-
-                    position: relative;
-
-                    overflow-y: scroll;
-                    height: 500px;
-
-                    // 行程表刪除鍵
-
-                    // 備註
-                    .note {
-                        padding: 0 8%;
-                        /* background-color: gray; */
-                        font-family: Noto Sans TC;
-                        font-size: 16px;
-                        font-style: normal;
-                        font-weight: 400;
-                        line-height: 150%;
-                    }
-
-                    // 景點列表
-                    .spotList {
+                // 行程表顯示外框
+                .schedule-wrap {
+                    // 行程表內容
+                    .SM_scheduleList {
                         display: flex;
-                        margin: 8px 0;
-                        flex-direction: column;
-                        gap: 8px;
+                        justify-content: flex-start;
+                        gap: 0 10px;
+                        position: relative;
 
-                        // 景點卡片
-                        .spot {
+                        .SM_day {
+                            z-index: 100;
+                            padding: 8px 20px;
                             display: flex;
-                            overflow: hidden;
+                            align-items: center;
 
-                            .leftFunc {
-                                width: 8%;
-                                /* padding: 3px; */
-                                display: flex;
-                                gap: 7px;
-                                flex-direction: column;
-                                align-items: center;
+                            color: #fff;
+                            line-height: 160%;
+                            background-color: #3d9d35;
+                            border-radius: 10px;
+                            position: absolute;
+                            top: -23px;
+                            left: 20px;
+                            font-family: Noto Sans TC;
+                            font-size: 14px;
+                            font-style: normal;
+                            font-weight: 400;
+                        }
+
+                        // 行程表
+                        .SM_schedule {
+                            width: 100%;
+                            padding: 40px 20px 20px 20px;
+
+                            display: flex;
+                            flex-direction: column;
+                            gap: 8px;
+
+                            /* border: solid black; */
+                            border: none;
+                            border-radius: 20px;
+                            background: var(--gray-light, #f5f5f5);
+
+                            position: relative;
+
+                            overflow-y: scroll;
+                            height: 500px;
+
+                            // 行程表刪除鍵
+
+                            // 備註
+                            .note {
+                                padding: 0 8%;
+                                /* background-color: gray; */
+                                font-family: Noto Sans TC;
+                                font-size: 16px;
+                                font-style: normal;
+                                font-weight: 400;
+                                line-height: 150%;
                             }
 
-                            .info {
-                                width: 92%;
-                                background-color: floralwhite;
+                            // 景點列表
+                            .spotList {
                                 display: flex;
-                                flex-direction: row;
-                                position: relative;
+                                margin: 8px 0;
+                                flex-direction: column;
+                                gap: 8px;
 
-                                border-radius: 14px;
-                                background: var(--white, #fff);
-
-                                overflow: hidden;
-
-                                .num {
+                                // 景點卡片
+                                .spot {
                                     display: flex;
-                                    align-content: center;
-                                    justify-content: center;
-                                    position: absolute;
-                                    top: 5px;
-                                    left: 5px;
-                                    z-index: 1;
-
-                                    width: 20px;
-                                    height: 20px;
-                                    color: black;
-                                    background-color: white;
-                                    /* padding: 5px 10px; */
-                                    border-radius: 10px;
-
-                                    font-family: Noto Sans TC;
-                                    font-size: 12px;
-                                    font-style: normal;
-                                    font-weight: 400;
-                                    line-height: 150%;
-                                }
-                                // 圖片
-                                .pic {
-                                    width: 45%;
-                                    /* 讓 figure 佔滿父元素的寬度 */
-                                    height: 100%;
-                                    /* 讓 figure 佔滿父元素的高度 */
                                     overflow: hidden;
-                                    /* 隱藏超出 figure 的內容 */
 
-                                    img {
-                                        width: 100%;
-                                        /* 讓圖片寬度填滿 figure */
-                                        height: 100%;
-                                        /* 讓圖片高度填滿 figure */
-                                        object-fit: cover;
-                                        /* 讓圖片填滿整個容器，保持比例 */
+                                    .leftFunc {
+                                        width: 8%;
+                                        /* padding: 3px; */
+                                        display: flex;
+                                        gap: 7px;
+                                        flex-direction: column;
+                                        align-items: center;
                                     }
-                                }
 
-                                // 景點名稱相關資訊
-                                .spotInfo {
-                                    width: 55%;
-                                    padding: 10px 15px;
-                                    display: flex;
-                                    flex-direction: column;
-                                    justify-content: space-between;
-
-                                    // 景點時間抬頭
-                                    .spotTitle {
+                                    .info {
+                                        width: 92%;
+                                        background-color: floralwhite;
                                         display: flex;
                                         flex-direction: row;
-                                        justify-content: space-between;
-                                        align-items: center;
+                                        position: relative;
 
-                                        // 圖標時間集合
-                                        .iconTime {
+                                        border-radius: 14px;
+                                        background: var(--white, #fff);
+
+                                        overflow: hidden;
+
+                                        .num {
                                             display: flex;
-                                            flex-direction: row;
-                                            gap: 0px 10px;
-                                            justify-content: space-between;
-                                            align-items: center;
+                                            align-content: center;
+                                            justify-content: center;
+                                            position: absolute;
+                                            top: 5px;
+                                            left: 5px;
+                                            z-index: 1;
 
-                                            // 景點圖標
-                                            .icon {
-                                                width: 16px;
-                                                height: 16px;
-                                                display: flex;
-                                                align-content: center;
-                                                justify-content: center;
+                                            width: 20px;
+                                            height: 20px;
+                                            color: black;
+                                            background-color: white;
+                                            /* padding: 5px 10px; */
+                                            border-radius: 10px;
+
+                                            font-family: Noto Sans TC;
+                                            font-size: 12px;
+                                            font-style: normal;
+                                            font-weight: 400;
+                                            line-height: 150%;
+                                        }
+                                        // 圖片
+                                        .pic {
+                                            width: 45%;
+                                            /* 讓 figure 佔滿父元素的寬度 */
+                                            height: 100%;
+                                            /* 讓 figure 佔滿父元素的高度 */
+                                            overflow: hidden;
+                                            /* 隱藏超出 figure 的內容 */
+
+                                            img {
+                                                width: 100%;
+                                                /* 讓圖片寬度填滿 figure */
+                                                height: 100%;
+                                                /* 讓圖片高度填滿 figure */
+                                                object-fit: cover;
+                                                /* 讓圖片填滿整個容器，保持比例 */
                                             }
-                                            // 到達時間
-                                            .time {
+                                        }
+
+                                        // 景點名稱相關資訊
+                                        .spotInfo {
+                                            width: 55%;
+                                            padding: 10px 15px;
+                                            display: flex;
+                                            flex-direction: column;
+                                            justify-content: space-between;
+
+                                            // 景點時間抬頭
+                                            .spotTitle {
+                                                display: flex;
+                                                flex-direction: row;
+                                                justify-content: space-between;
+                                                align-items: center;
+
+                                                // 圖標時間集合
+                                                .iconTime {
+                                                    display: flex;
+                                                    flex-direction: row;
+                                                    gap: 0px 10px;
+                                                    justify-content: space-between;
+                                                    align-items: center;
+
+                                                    // 景點圖標
+                                                    .icon {
+                                                        width: 16px;
+                                                        height: 16px;
+                                                        display: flex;
+                                                        align-content: center;
+                                                        justify-content: center;
+                                                    }
+                                                    // 到達時間
+                                                    .time {
+                                                        font-family: Noto Sans
+                                                            TC;
+                                                        font-size: 12px;
+                                                        font-style: normal;
+                                                    }
+                                                }
+                                            }
+                                            // 刪除鍵
+                                            // .icon-delete{}
+                                            // .loc-delete{}
+
+                                            // 地點名稱
+                                            .spotName_Fuc {
+                                                display: flex;
+                                                align-items: center;
+                                                gap: 5px;
+
+                                                // .spotName{}
+                                                .btn-copy {
+                                                    .icon_copy {
+                                                        padding: auto;
+                                                        display: flex;
+                                                        align-items: center;
+                                                    }
+                                                }
+                                            }
+                                            .adviseTime {
                                                 font-family: Noto Sans TC;
                                                 font-size: 12px;
                                                 font-style: normal;
+                                                font-weight: 400;
+                                                line-height: 150%;
                                             }
                                         }
                                     }
-                                    // 刪除鍵
-                                    // .icon-delete{}
-                                    // .loc-delete{}
+                                }
+                                // 交通方式
+                                .traffic {
+                                    padding: 3% 8%;
 
-                                    // 地點名稱
-                                    .spotName_Fuc {
+                                    .trafficInfo {
                                         display: flex;
+                                        gap: 5px 10px;
+                                        padding: 6% 6%;
+                                        border-left: 3px solid #d9d9d9;
+
+                                        .icon-car {
+                                            padding: auto;
+                                            display: flex;
+                                            align-items: center;
+                                        }
+                                        .driveTime {
+                                            color: rgba(0, 0, 0, 0.5);
+                                            font-family: Noto Sans TC;
+                                            font-size: 14px;
+                                            font-style: normal;
+                                            font-weight: 400;
+                                            line-height: 160%;
+                                        }
+                                    }
+                                }
+                            }
+
+                            // 增加天數按鈕
+                            .btn_addspot-wrap {
+                                // 回到收藏
+                                .btn_addspot {
+                                    display: flex;
+                                    padding: 10px 20px;
+                                    justify-content: center;
+                                    align-items: center;
+                                    gap: 10px;
+
+                                    border-radius: 20px;
+                                    background: var(--white, #fff);
+
+                                    .btnAddSpotTitle {
+                                        display: flex;
+                                        flex-direction: row;
+                                        justify-content: center;
                                         align-items: center;
                                         gap: 5px;
 
-                                        // .spotName{}
-                                        .btn-copy {
-                                            .icon_copy {
-                                                padding: auto;
-                                                display: flex;
-                                                align-items: center;
-                                            }
+                                        // .icon-love{}
+                                        h3 {
+                                            color: var(--black2, #333);
+                                            font-family: Noto Sans TC;
+                                            font-size: 16px;
+                                            font-style: normal;
+                                            font-weight: 500;
+                                            line-height: 150%;
+                                            /* 24px */
                                         }
                                     }
-                                    .adviseTime {
-                                        font-family: Noto Sans TC;
-                                        font-size: 12px;
-                                        font-style: normal;
-                                        font-weight: 400;
-                                        line-height: 150%;
-                                    }
                                 }
                             }
                         }
-                        // 交通方式
-                        .traffic {
-                            padding: 3% 8%;
 
-                            .trafficInfo {
-                                display: flex;
-                                gap: 5px 10px;
-                                padding: 6% 6%;
-                                border-left: 3px solid #d9d9d9;
+                        /* 以下是消除卷軸的方式 */
 
-                                .icon-car {
-                                    padding: auto;
-                                    display: flex;
-                                    align-items: center;
-                                }
-                                .driveTime {
-                                    color: rgba(0, 0, 0, 0.5);
-                                    font-family: Noto Sans TC;
-                                    font-size: 14px;
-                                    font-style: normal;
-                                    font-weight: 400;
-                                    line-height: 160%;
-                                }
-                            }
+                        /* 卷軸寬度width */
+                        .SM_schedule::-webkit-scrollbar {
+                            width: 3px;
+                        }
+
+                        /* 卷軸高度的底色(軌跡底色)Track */
+                        .SM_schedule::-webkit-scrollbar-track {
+                            background: transparent;
+                        }
+
+                        /* 卷軸控制塊 Handle */
+                        .SM_schedule::-webkit-scrollbar-thumb {
+                            background: transparent;
                         }
                     }
-
-                    // 增加天數按鈕
-                    .btn_addspot-wrap {
-                        // 回到收藏
-                        .btn_addspot {
-                            display: flex;
-                            padding: 10px 20px;
-                            justify-content: center;
-                            align-items: center;
-                            gap: 10px;
-
-                            border-radius: 20px;
-                            background: var(--white, #fff);
-
-                            .btnAddSpotTitle {
-                                display: flex;
-                                flex-direction: row;
-                                justify-content: center;
-                                align-items: center;
-                                gap: 5px;
-
-                                // .icon-love{}
-                                h3 {
-                                    color: var(--black2, #333);
-                                    font-family: Noto Sans TC;
-                                    font-size: 16px;
-                                    font-style: normal;
-                                    font-weight: 500;
-                                    line-height: 150%;
-                                    /* 24px */
-                                }
-                            }
-                        }
-                    }
-                }
-
-                /* 以下是消除卷軸的方式 */
-
-                /* 卷軸寬度width */
-                .SM_schedule::-webkit-scrollbar {
-                    width: 3px;
-                }
-
-                /* 卷軸高度的底色(軌跡底色)Track */
-                .SM_schedule::-webkit-scrollbar-track {
-                    background: transparent;
-                }
-
-                /* 卷軸控制塊 Handle */
-                .SM_schedule::-webkit-scrollbar-thumb {
-                    background: transparent;
                 }
             }
         }
@@ -355,260 +398,8 @@
     .right_div {
         position: relative;
         width: 57%;
-        height: 730px;
+        height: 600px;
 
-        // 地圖本體
-        .SM_map {
-            width: 100%;
-            height: 100%;
-
-            border-radius: 20px;
-            background-color: #f5f5f5;
-
-            overflow: hidden;
-
-            iframe {
-                width: 100%;
-                height: 100%;
-            }
-        }
-        // 右上i右上icon
-        .link_google {
-            display: flex;
-            flex-direction: row;
-            align-items: center;
-            justify-content: center;
-
-            position: absolute;
-            top: 15px;
-            right: 15px;
-            z-index: 1;
-
-            padding: 10px 20px;
-            gap: 10px;
-
-            background-color: #fff;
-            border-radius: 20px;
-            text-decoration: none;
-
-            figure {
-                display: flex;
-            }
-
-            div {
-                p {
-                    color: var(--black2, #333);
-                    font-family: Noto Sans TC;
-                    font-size: 16px;
-                    font-style: normal;
-                    font-weight: 500;
-                    line-height: 150%;
-                }
-            }
-        }
-
-        // 下方景點卡片資料
-        .spot_card_wrapper {
-            padding: 30px 20px 20px 20px;
-
-            width: 80%;
-            height: 200px;
-            background-color: #fff;
-            border-radius: 20px;
-
-            display: flex;
-            overflow: auto;
-            position: absolute;
-            bottom: 20px;
-            left: 50%;
-            transform: translate(-50%);
-
-            // .icon-close{}
-            .btn_close {
-                position: absolute;
-                right: 15px;
-                top: 26px;
-                /* scale: 0.7 */
-
-                z-index: 999;
-            }
-            .spot_card {
-                overflow: auto;
-
-                position: relative;
-
-                display: flex;
-                flex-direction: row;
-                justify-content: space-between;
-
-                width: 100%;
-                /* padding:0px 0px 0px 0px; */
-                background-color: #fff;
-
-                overflow-y: scroll;
-                height: 200px;
-
-                // 地圖下方景點卡片(同左側景點卡片資料)
-                .map_card {
-                    width: 55%;
-                    display: flex;
-                    flex-direction: column;
-                    gap: 12px;
-
-                    .map_card_wrap {
-                        display: flex;
-                        flex-direction: column;
-                        gap: 17px;
-
-                        a {
-                            text-decoration: none;
-                        }
-                        // 景點名稱
-                        .spot_name {
-                            display: flex;
-                            align-items: center;
-
-                            font-family: Noto Sans TC;
-                            font-size: 16px;
-                            font-style: normal;
-                            font-weight: 400;
-                            line-height: 150%;
-                        }
-
-                        // 景點資訊
-                        .map_card_info {
-                            display: flex;
-                            flex-direction: row;
-                            justify-content: space-between;
-
-                            .map_card_score_money {
-                                display: flex;
-                                gap: 4px;
-                            }
-
-                            .map_card_score {
-                                display: flex;
-
-                                .map_card_text {
-                                    font-family: Noto Sans TC;
-                                    font-size: 12px;
-                                    font-style: normal;
-                                    font-weight: 400;
-                                    line-height: 150%;
-                                }
-                                .icon-grade{
-                                  font-family: Noto Sans TC;
-                                  font-size: 12px;
-                                  font-style: normal;
-                                  font-weight: 400;
-                                  line-height: 150%;
-                                }
-                            }
-                            .map_card_text{
-                              font-family: Noto Sans TC;
-                              font-size: 12px;
-                              font-style: normal;
-                              font-weight: 400;
-                              line-height: 150%;
-                            }
-                        }
-                        // .map_card_text{
-                          font-family: Noto Sans TC;
-                          font-size: 12px;
-                          font-style: normal;
-                          font-weight: 400;
-                          line-height: 150%;
-                        }
-                    }
-                    .card_info_list {
-                        display: flex;
-                        flex-direction: row;
-                        align-items: center
-
-                        span {
-                            margin-right: 2.5px;
-                        }
-                        // .icon-location_on{}
-                        // .map_card_text{}
-                        // .icon-website{}
-                        // .map_card_text{}
-                    }
-                    .card_info_list2 {
-                        display: flex;
-                        flex-direction: row;
-                        align-items: center
-
-                        span {
-                            margin-right: 10px;
-                        }
-                        // .icon-love{}
-                        // .icon-margin{}
-                        // .icon-map{}
-                        // .icon-margin{}
-                        .card_info_filter {
-                            padding: 2.5px 13px;
-                            margin-right: 3px;
-                            border-radius: 5px;
-                            background: #d9d9d9;
-
-                            display: flex;
-                            align-items: center;
-                            justify-content: center;
-
-                            font-family: Inter;
-                            font-size: 10px;
-                            font-style: normal;
-                        }
-                    }
-                }
-                .operation_time {
-                    gap: 10px;
-
-                    p {
-                        color: var(--white, #000000);
-                        font-family: Noto Sans TC;
-                        font-size: 16px;
-                        font-style: normal;
-                        font-weight: 400;
-                        line-height: 150%;
-                    }
-                }
-            }
-            .map_img {
-                width: 45%;
-                display: flex;
-
-                padding: 0px 60px 0 70px;
-
-                img {
-                    width: 100%;
-                    border-radius: 20px;
-                }
-            }
-        
-        /* 卷軸控制 */
-        /* 卷軸寬度width */
-        .spot_card::-webkit-scrollbar {
-            width: 3px;
-        }
-
-        /* 卷軸高度的底色(軌跡底色)Track */
-        .spot_card::-webkit-scrollbar-track {
-            background: transparent;
-            border-radius: 10px;
-            /* 卷軸圓角 */
-            margin: 70px 0px 0px 0px;
-            /* 卷軸位置 */
-        }
-
-        /* 卷軸控制塊 Handle */
-        .spot_card::-webkit-scrollbar-thumb {
-            background: #d9d9d9;
-        }
-
-        /* 卷軸控制塊 Handle on hover */
-        .spot_card::-webkit-scrollbar-thumb:hover {
-            background: #555;
-        }
+        // 引入 MapCard 元件
     }
 }
