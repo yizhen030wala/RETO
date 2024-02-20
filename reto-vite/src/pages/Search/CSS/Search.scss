@@ -429,6 +429,12 @@
       @include h1_body;
       line-height: 150%;
       margin-bottom: 6px;
+
+      //文字只顯示2行
+      display: -webkit-box;
+      -webkit-line-clamp: 2; /* 顯示的行數 */
+      -webkit-box-orient: vertical;
+      overflow: hidden;
     }
 
     .evaluate {
@@ -581,12 +587,10 @@
   width: 100%;
   height: 100%;
   transform: translateX(-100%);
-  background: linear-gradient(
-    90deg,
-    transparent,
-    rgba(255, 255, 255, 0.2),
-    transparent
-  );
+  background: linear-gradient(90deg,
+      transparent,
+      rgba(255, 255, 255, 0.2),
+      transparent);
   animation: loading 1.5s infinite;
 }
 

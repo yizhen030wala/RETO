@@ -1,7 +1,6 @@
 import Masonry from "react-masonry-component";
 import React, { useState, useEffect, useRef } from "react";
-import { data_img } from "./data.js";
-import { data_img as initialDataImg } from "./data.js";
+import axios from "axios";
 import "../CSS/Collections.scss";
 import Card from "../../Search/Card/Card.jsx";
 import LightBox_Card from '../../Search/LightBox_Card/LightBox_Card.jsx';
@@ -109,23 +108,36 @@ const CarouselCollections = ({
     };
   }, []);
 
-  //↓↓監聽卷軸觸底載入更多↓↓ (尚未成功)
-  const [images, setImages] = useState(initialDataImg); // 使用初始圖片數據初始化狀態
-  // 捲軸到底部加載更多圖片
+  
+
+  // ↓↓↓ API ↓↓↓
+  const [records, setRecords] = useState([]);
+
   useEffect(() => {
-    const handleScroll = () => {
-      if (
-        window.innerHeight + document.documentElement.scrollTop >=
-        document.documentElement.offsetHeight - 1
-      ) {
-        // 當滾動到底部，追加圖片數據
-        setImages((prevImages) => [...prevImages, ...prevImages]); // 使用當前 images 狀態來追加
+    const fetchData = async () => {
+      try {
+        const response = await axios.get(
+          "https://api.airtable.com/v0/appAZmHoN0ZgUBhGi/tblLuHs5ExVo7WrJM",
+          {
+            headers: {
+              Authorization: `Bearer patPf99e6W2EBor8W.e2fe347dbdcf5b651cc6be631787070d5152604b494f295525430af19409a4bf`,
+            },
+          }
+        );
+        setRecords(response.data.records);
+      } catch (error) {
+        console.error("Error fetching data:", error);
+        console.error("Error details:", error.response.data);
       }
     };
 
-    window.addEventListener("scroll", handleScroll);
-    return () => window.removeEventListener("scroll", handleScroll);
-  }, []); // 這裡不需要將 images 加入依賴數組
+    fetchData();
+  }, []);
+  // ↑↑↑ API ↑↑↑
+
+  const CardPlaceholder = () => (
+    <div className="loading"></div>
+  )
 
   return (
     <div className="box_carousel_collections">
@@ -147,15 +159,18 @@ const CarouselCollections = ({
                 disableImagesLoaded={false}
                 updateOnEachImageLoad={true}
               >
-                {data_img.map((img, idx) => (
+                {records.map((record, idx) => (
                   <Card
-                    img={img}
+                    key={idx}
+                    img={record.fields["location cover"]}
                     index={idx}
                     onSelect={() => handleSelectCard(idx)}
-                    onOpenLightbox={() => handleOpenLightbox(img)}
+                    onOpenLightbox={() =>
+                      handleOpenLightbox(record.fields["location cover"])
+                    }
                     selected={selectedCards.includes(idx)}
-                    order={selectedCards.indexOf(idx) + 1}
-                    data_img={data_img}
+                    order={selectedCards.indexOf(idx) + 1} // 獲取選中順序
+                    data={record.fields}
                   />
                 ))}
               </Masonry>
