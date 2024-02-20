@@ -11,7 +11,6 @@
   justify-content: center;
   align-items: center;
   width: 100%;
-  
 }
 
 // -------HeaderSearch.jsx
@@ -132,7 +131,6 @@
 .recommend {
   margin-top: 24px;
 
-
   ul {
     display: flex;
     padding: 0;
@@ -188,6 +186,10 @@
       margin-bottom: 12px;
 
       .item_carousel {
+        ul {
+          padding: 0;
+        }
+
         h3 {
           display: flex;
           padding: 0px 30px;
@@ -280,6 +282,7 @@
   ul {
     display: flex;
     justify-content: flex-start;
+    padding: 0;
 
     a {
       @include h2_body;
@@ -306,6 +309,8 @@
 .btn_fixed {
   position: fixed;
   bottom: 15vh;
+  left: 50%;
+  transform: translate(-50%, -50%);
 
   transition: 0.35s;
   z-index: 999;
@@ -325,12 +330,12 @@
     @include shadow;
   }
 
-    .arrowLeft,
-    .arrowRight {
-        // @include size(20px, 20px);
-        font-size: 16px;
-        transition: 0.35s;
-    }
+  .arrowLeft,
+  .arrowRight {
+    // @include size(20px, 20px);
+    font-size: 16px;
+    transition: 0.35s;
+  }
 
   .myJour {
     //--------Ralph
@@ -416,8 +421,6 @@
     }
   }
 
-  
-
   //標題
   .card_search_info {
     padding: 12px;
@@ -478,8 +481,7 @@
 }
 
 .card_search.selected {
-  box-shadow: 0 15px 60px 0 rgba(0, 0, 0, 0.1),
-    0 5px 25px 0 rgba(0, 0, 0, 0.1);
+  box-shadow: 0 15px 60px 0 rgba(0, 0, 0, 0.1), 0 5px 25px 0 rgba(0, 0, 0, 0.1);
 }
 
 .dot {

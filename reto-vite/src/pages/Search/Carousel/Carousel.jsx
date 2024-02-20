@@ -1,14 +1,10 @@
 import Masonry from "react-masonry-component";
-import React, { useState, useEffect } from 'react';
-import { data_img } from "./data.js";
-import { data_img as initialDataImg } from './data.js';
-import '../CSS/Search.scss';
-import Card from '../Card/Card.jsx';
-import Tags_carousel from '../Tags_carousel/Tags_carousel.jsx';
-import LightBox_Card from '../LightBox_Card/LightBox_Card.jsx';
-
-
-
+import axios from "axios";
+import React, { useState, useEffect } from "react";
+import "../CSS/Search.scss";
+import Card from "../Card/Card.jsx";
+import Tags_carousel from "../Tags_carousel/Tags_carousel.jsx";
+import LightBox_Card from "../LightBox_Card/LightBox_Card.jsx";
 
 //輪播區塊
 const Carousel = ({ updateSelectedCount, currentIndex, arr_area }) => {
@@ -20,9 +16,6 @@ const Carousel = ({ updateSelectedCount, currentIndex, arr_area }) => {
   //燈箱
   const [lightboxOpen, setLightboxOpen] = useState(false); // 燈箱開關狀態
   const [selectedImage, setSelectedImage] = useState(null); // 選中的圖片
-
-
-
 
   //打開燈箱LightBox_Card
   const handleOpenLightbox = (img) => {
@@ -96,7 +89,7 @@ const Carousel = ({ updateSelectedCount, currentIndex, arr_area }) => {
     isInitLayout: true,
     imagesLoaded: true,
     stagger: 0,
-    isAnimated: true
+    isAnimated: true,
   };
 
   //滾動卷軸時，使用ref更新布局
@@ -117,40 +110,55 @@ const Carousel = ({ updateSelectedCount, currentIndex, arr_area }) => {
   }, []);
 
 
-  //↓↓監聽卷軸觸底載入更多↓↓ (尚未成功)
-  const [images, setImages] = useState(initialDataImg); // 使用初始圖片數據初始化狀態
-  // 捲軸到底部加載更多圖片
+  // ↓↓↓ API ↓↓↓
+  const [records, setRecords] = useState([]);
+
   useEffect(() => {
-    const handleScroll = () => {
-      if (window.innerHeight + document.documentElement.scrollTop >= document.documentElement.offsetHeight - 1) {
-        // 當滾動到底部，追加圖片數據
-        setImages(prevImages => [...prevImages, ...prevImages]); // 使用當前 images 狀態來追加
+    const fetchData = async () => {
+      try {
+        const response = await axios.get(
+          "https://api.airtable.com/v0/appAZmHoN0ZgUBhGi/tblLuHs5ExVo7WrJM",
+          {
+            headers: {
+              Authorization: `Bearer patPf99e6W2EBor8W.e2fe347dbdcf5b651cc6be631787070d5152604b494f295525430af19409a4bf`,
+            },
+          }
+        );
+        setRecords(response.data.records);
+      } catch (error) {
+        console.error("Error fetching data:", error);
+        console.error("Error details:", error.response.data);
       }
     };
 
-    window.addEventListener('scroll', handleScroll);
-    return () => window.removeEventListener('scroll', handleScroll);
-  }, []); // 這裡不需要將 images 加入依賴數組
-
+    fetchData();
+  }, []);
+  // ↑↑↑ API ↑↑↑
 
   return (
     <div className="box_carousel">
       {/* 添加外層 div */}
       {arr_area.map((area, index) => (
-        <div className={`box_turn ${arr_class[index]} ${index === currentIndex ? 'current' : ''}`} key={index} style={{ transform: `translateX(${(index - currentIndex) * 100}%)` }}>          
-        <div className="search_text">
-          <div className="item_carousel">
-            <ul>
-              <li>
-                <h3>{area}</h3>
-              </li>
-              <li>
-                <p>建議景點選3個喔 ~ </p>
-              </li>
-            </ul>
+        <div
+          className={`box_turn ${arr_class[index]} ${
+            index === currentIndex ? "current" : ""
+          }`}
+          key={index}
+          style={{ transform: `translateX(${(index - currentIndex) * 100}%)` }}
+        >
+          <div className="search_text">
+            <div className="item_carousel">
+              <ul>
+                <li>
+                  <h3>{area}</h3>
+                </li>
+                <li>
+                  <p>建議景點選3個喔 ~ </p>
+                </li>
+              </ul>
+            </div>
+            <Tags_carousel />
           </div>
-          <Tags_carousel />
-        </div>
           {/* 瀑布流圖片內容 */}
           <div className="wrapper">
             <div id="card_container">
@@ -161,16 +169,16 @@ const Carousel = ({ updateSelectedCount, currentIndex, arr_area }) => {
                 disableImagesLoaded={false}
                 updateOnEachImageLoad={true}
               >
-                {data_img.map((img, idx) => (
+                {records.map((record, idx) => (
                   <Card
                     key={idx}
-                    img={img}
+                    img={record.fields["location cover"]}
                     index={idx}
                     onSelect={() => handleSelectCard(idx)}
                     onOpenLightbox={() => handleOpenLightbox(img)}
                     selected={selectedCards.includes(idx)}
                     order={selectedCards.indexOf(idx) + 1} // 獲取選中順序
-                    data_img={data_img}
+                    data={record.fields}
                   />
                 ))}
               </Masonry>
