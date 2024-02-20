@@ -348,7 +348,7 @@ const InfoCard = ({ id, time }) => {
                                     <img src="../src/assets/img/icon/icon-category/eat.svg" alt="" />
                                 </div>
                                 {/* 使用從SpotCard傳遞的時間屬性 */}
-                                <div className="time">{time} 到達</div>
+                                <div className="time">{time}</div>
                             </div>
                         </div>
                         <div className="spotName_Fuc">

@@ -248,7 +248,6 @@ import ButtonDel_NB from '../Button/ButtonDel_NB/ButtonDel_NB.jsx'
 import NoteInput from './NoteInput/NoteInput.jsx'
 import TimeCard from '../ScheduleCard/TimeCard/TimeCard.jsx'
 
-
 const ScheduleSheet = ({ numCards, ids, dayOfWeek = "五", times }) => {
 
     return (
@@ -297,4 +296,6 @@ const ScheduleSheet = ({ numCards, ids, dayOfWeek = "五", times }) => {
     );
 }
 
+
 export default ScheduleSheet;
+
