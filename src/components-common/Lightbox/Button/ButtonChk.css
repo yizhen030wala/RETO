@@ -1,0 +1,39 @@
+.lightbox-c-green,
+.lightbox-c-green-yes {
+  display: flex;
+  padding: 10px 20px;
+  /* justify-content: center;
+  align-items: center;
+  gap: 10px; */
+  border-radius: 20px;
+  color: #ffffff;
+  background-color: #3d9d35;
+  /* min-width: 100px; 设置一个适当的最小宽度 */
+
+  cursor: pointer;
+
+  border-color: transparent;
+  line-height: 1;
+}
+
+.lightbox-c-green:hover,
+.lightbox-c-green-yes:hover {
+  color: #333333;
+  background-color: #b8eb35;
+}
+
+.lightbox-c-green-yes {
+  gap: 10px;
+}
+
+.lightbox-c-white {
+  color: #d9d9d9;
+}
+
+.lightbox-c-green {
+  font-family: "Noto Sans TC";
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 160%; /* 22.4px */
+}

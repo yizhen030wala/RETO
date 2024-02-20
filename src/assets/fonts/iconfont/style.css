@@ -1,0 +1,127 @@
+@font-face {
+  font-family: 'icomoon';
+  src:  url('fonts/icomoon.eot?sydgpd');
+  src:  url('fonts/icomoon.eot?sydgpd#iefix') format('embedded-opentype'),
+    url('fonts/icomoon.ttf?sydgpd') format('truetype'),
+    url('fonts/icomoon.woff?sydgpd') format('woff'),
+    url('fonts/icomoon.svg?sydgpd#icomoon') format('svg');
+  font-weight: normal;
+  font-style: normal;
+  font-display: block;
+}
+
+[class^="icon-"], [class*=" icon-"] {
+  /* use !important to prevent issues with browser extensions that change fonts */
+  font-family: 'icomoon' !important;
+  speak: never;
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  text-transform: none;
+  line-height: 1;
+
+  /* Better Font Rendering =========== */
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.icon-eat .path1:before {
+  content: "\e900";
+  color: rgb(255, 223, 6);
+}
+.icon-eat .path2:before {
+  content: "\e901";
+  margin-left: -1em;
+  color: rgb(51, 51, 51);
+}
+.icon-landspot .path1:before {
+  content: "\e902";
+  color: rgb(184, 235, 53);
+}
+.icon-landspot .path2:before {
+  content: "\e903";
+  margin-left: -1em;
+  color: rgb(51, 51, 51);
+}
+.icon-sleep .path1:before {
+  content: "\e904";
+  color: rgb(129, 230, 253);
+}
+.icon-sleep .path2:before {
+  content: "\e905";
+  margin-left: -1em;
+  color: rgb(51, 51, 51);
+}
+.icon-less:before {
+  content: "\e906";
+}
+.icon-add:before {
+  content: "\e907";
+}
+.icon-arrow_left:before {
+  content: "\e908";
+}
+.icon-arrow_right:before {
+  content: "\e909";
+}
+.icon-back:before {
+  content: "\e90a";
+}
+.icon-car:before {
+  content: "\e90b";
+}
+.icon-close:before {
+  content: "\e90c";
+}
+.icon-content_copy:before {
+  content: "\e90d";
+}
+.icon-delete:before {
+  content: "\e90e";
+}
+.icon-drag_indicator:before {
+  content: "\e90f";
+}
+.icon-exchange:before {
+  content: "\e910";
+}
+.icon-grade:before {
+  content: "\e911";
+}
+.icon-love_hover:before {
+  content: "\e912";
+  color: #e80000;
+}
+.icon-location_on:before {
+  content: "\e913";
+}
+.icon-log-out:before {
+  content: "\e914";
+}
+.icon-love:before {
+  content: "\e915";
+}
+.icon-luggage:before {
+  content: "\e916";
+}
+.icon-map:before {
+  content: "\e917";
+}
+.icon-menu:before {
+  content: "\e918";
+}
+.icon-more_horiz:before {
+  content: "\e919";
+}
+.icon-pin:before {
+  content: "\e91a";
+}
+.icon-search:before {
+  content: "\e91b";
+}
+.icon-sort:before {
+  content: "\e91c";
+}
+.icon-website:before {
+  content: "\e91d";
+}

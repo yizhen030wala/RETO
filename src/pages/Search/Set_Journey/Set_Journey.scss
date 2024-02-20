@@ -1,0 +1,428 @@
+@import "../../../assets/scssRule/rule";
+@import "../../../assets/scssRule/all";
+// ===============================================
+
+.bg_card_set {
+  background-color: rgba(0, 0, 0, 0.6);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  z-index: 9999;
+  position: fixed;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+}
+
+.card_set_journey {
+  width: 850px;
+  height: 611px;
+
+  padding: 40px 50px;
+
+  display: flex;
+  border-radius: 20px;
+  background-color: white;
+
+  position: relative;
+  /* 動畫效果 */
+  animation: fadeIn 0.35s forwards;
+
+  .box_set_item {
+    margin-left: 69px;
+    width: 100%;
+
+    @keyframes fadeIn {
+      from {
+        scale: 50%;
+        opacity: 0;
+        visibility: hidden;
+      }
+
+      to {
+        scale: 100%;
+        opacity: 1;
+        visibility: visible;
+      }
+    }
+
+    @keyframes fadeOut {
+      from {
+        scale: 100%;
+        opacity: 1;
+        visibility: visible;
+      }
+
+      to {
+        scale: 50%;
+        opacity: 0;
+        visibility: hidden;
+      }
+    }
+
+    /* 燈箱打開時的樣式 */
+    &.open {
+      /* 完全不透明，可見 */
+      opacity: 1;
+      visibility: visible;
+    }
+
+
+    //頂部轉換按鈕
+    .box_btn_switch_set_journey {
+      display: flex;
+      margin-bottom: 37px;
+
+      ul {
+        display: flex;
+
+        li {
+          list-style: none;
+          cursor: pointer;
+          padding: 10px 21px;
+          color: $color_gray2;
+          border-bottom: 2.5px $color_gray2 solid;
+
+          font-family: Noto Sans TC, sans-serif;
+          font-size: 14px;
+          font-style: normal;
+          font-weight: 500;
+          line-height: 24px;
+
+          transition: 0.35s ease-in-out;
+        }
+      }
+    }
+
+    //當前按鈕變為黑色
+
+    .btn_switch_set_journey.active {
+      color: $color_black;
+      border-bottom: 2.5px $color_black solid;
+      animation: colorTransition 0.35s ease-in-out;
+    }
+
+    .btn_switch_add_journey.active {
+      color: $color_black;
+      border-bottom: 2.5px $color_black solid;
+      animation: colorTransition 0.35s ease-in-out;
+    }
+
+    @keyframes colorTransition {
+      0% {
+        color: $color_gray2;
+        border-bottom: 2.5px $color_gray2 solid;
+      }
+
+      25% {
+        color: linear-gradient(to right, $color_gray2, $color_black);
+        border-bottom: 2.5px linear-gradient(to right, $color_gray2, $color_black) solid;
+      }
+
+      75% {
+        color: linear-gradient(to right, $color_black, $color_gray2);
+        border-bottom: 2.5px linear-gradient(to right, $color_black, $color_gray2) solid;
+      }
+
+      100% {
+        color: $color_black;
+        border-bottom: 2.5px $color_black solid;
+      }
+    }
+
+    .carousel_set_journey {
+      display: flex;
+      width: 100%;
+      height: 85%;
+      position: relative;
+      overflow: hidden;
+
+      //建立行程頁面
+      .box_switch_set_journey {
+        //影響到轉場的流暢度
+        width: 100%;
+        position: absolute;
+        left: 0;
+
+        .title_set_journey {
+          font-family: Noto Sans TC, sans-serif;
+          font-size: 24px;
+          font-style: normal;
+          font-weight: 600;
+          line-height: 24px;
+
+          margin-bottom: 37px;
+        }
+
+        .name_editable {
+          border: 1px solid transparent;
+          width: 200px;
+          min-height: 20px;
+
+          font-family: Noto Sans TC, sans-serif;
+          font-size: 16px;
+          font-style: normal;
+          font-weight: 300;
+          line-height: 24px;
+          color: black;
+          letter-spacing: 0.1rem;
+
+          margin-bottom: 37px;
+        }
+
+        .name_editable_input {
+          border: 1px solid transparent;
+          width: 200px;
+          min-height: 20px;
+
+          font-family: Noto Sans TC, sans-serif;
+          font-size: 16px;
+          font-style: normal;
+          font-weight: 300;
+          line-height: 24px;
+          color: black;
+
+          margin-bottom: 37px;
+        }
+
+        .placeholder {
+          color: #c0c0c0; // 只有當顯示「未命名」提示時使用這個顏色
+        }
+
+        .date_set {
+          display: flex;
+          flex-direction: column;
+          margin-bottom: 37px;
+
+          .title_date {
+            font-family: Noto Sans TC, sans-serif;
+            font-size: 16px;
+            font-style: normal;
+            font-weight: 500;
+            line-height: 24px;
+            color: black;
+
+            margin-bottom: 5px;
+          }
+
+          .datePicker {
+            border: 2px solid #bdbdbd;
+            width: 225px;
+
+            display: flex;
+            justify-content: flex-start;
+
+            padding: 16.5px 25px;
+            border-radius: 10px;
+
+            font-family: Noto Sans TC, sans-serif;
+            font-size: 16px;
+            font-style: normal;
+            font-weight: 500;
+            // line-height: 150%;
+            line-height: 24px;
+            color: #4f4f4f;
+            text-decoration: none;
+            cursor: pointer;
+
+            &::placeholder {
+              color: #4f4f4f;
+              font-family: Noto Sans TC, sans-serif;
+              font-size: 16px;
+              font-style: normal;
+              font-weight: 500;
+              line-height: 24px;
+            }
+          }
+        }
+
+        .content_set_journey {
+          color: #000000;
+          font-family: Noto Sans TC, sans-serif;
+          font-size: 16px;
+          font-style: normal;
+          font-weight: 400;
+          line-height: 24px;
+        }
+      }
+
+      // 加入行程頁面
+
+      .box_switch_add_journey {
+        width: 100%;
+        position: absolute;
+        left: 0;
+
+      }
+    }
+  }
+}
+
+//頁面滑動效果設定
+
+.box_switch_set_journey,
+.box_switch_add_journey {
+  transition: 0.35s ease;
+}
+
+.box_switch_set_journey {
+  transform: translateX(-100%);
+}
+
+.box_switch_set_journey.active {
+  transform: translateX(0);
+}
+
+.box_switch_add_journey {
+  transform: translateX(100%);
+}
+
+.box_switch_add_journey.active {
+  transform: translateX(0);
+}
+
+.myTrip_contain_set_journey {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 15px;
+
+  overflow: hidden;
+  overflow-y: scroll; // 啟用垂直滾動
+  -webkit-overflow-scrolling: touch; // 使用webkit屬性啟用流暢的滾動
+
+  &::-webkit-scrollbar {
+    display: none; // 移除滾動條樣式
+  }
+
+  justify-content: center;
+  flex-direction: column;
+
+  .MyTrip-content {
+    display: flex;
+    flex-direction: column;
+    margin: 120px 0px;
+    gap: 35px;
+
+    .title {
+      justify-content: space-between;
+      align-items: center;
+      display: flex;
+      width: 100%;
+
+      a {
+        text-decoration: none;
+
+        div {
+          color: var(--white, #fff);
+          font-family: Noto Sans TC;
+          font-size: 16px;
+          font-style: normal;
+          font-weight: 500;
+          line-height: 150%;
+        }
+      }
+
+      .title-name {
+        color: var(--black1, #000);
+        font-family: Noto Sans TC;
+        font-size: 24px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: 150%;
+      }
+
+      .btn-add-wrap {
+        display: flex;
+        flex-direction: row;
+        gap: 10px;
+
+        &:hover {
+
+          .icon-add-map,
+          .text-add {
+            color: #333;
+          }
+        }
+
+        .icon-add {
+          color: white;
+          font-size: 20px;
+        }
+
+        .text-add {
+          color: var(--white, #fff);
+          font-family: "Noto Sans TC";
+          font-size: 16px;
+          font-style: normal;
+          font-weight: 500;
+          line-height: 150%;
+          /* 24px */
+        }
+      }
+    }
+
+    .MyTrip_contain {
+      display: inline-flex;
+      flex-wrap: wrap;
+      gap: 30px;
+      flex-direction: row;
+    }
+  }
+}
+
+/* 佔位元素 */
+
+.empty_set_journey {
+  width: 170px;
+}
+
+/* 刪除按鈕 */
+
+.btn_cancel {
+  position: absolute;
+  right: 30px;
+  cursor: pointer;
+}
+
+/* 加入行程按鈕 */
+
+/* 取消按钮样式重置 */
+button {
+  background: none;
+  border: none;
+  cursor: pointer;
+  /* 可以根據需要添加其他樣式，比如字體大小、字體加粗等 */
+}
+
+.btn_set {
+  height: auto;
+}
+
+.journey {
+  display: none;
+  text-decoration: none;
+  @include text_btn_big;
+  padding: 10px 20px;
+
+  position: absolute;
+  right: 30px;
+  bottom: 40px;
+  transition: 0.35s ease-in-out;
+}
+
+.btn_set.journey.set.active {
+  display: flex;
+}
+
+.btn_set.journey.add.active {
+  display: flex;
+}
+
+/* 打開燈箱時，禁止網頁卷軸滾動 */
+.no-scroll {
+  overflow: hidden;
+  height: 100%;
+  padding-right: 16px;
+}

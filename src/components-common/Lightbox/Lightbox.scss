@@ -1,0 +1,229 @@
+@import "../../assets/scssRule/rule";
+@import "../../assets/scssRule/all";
+
+// Extea small devices(phones, 600px and down)
+@media only screen and (max-width:600px) {
+    .lightbox-container {
+        width: 350px !important;
+        padding: 25px 16px !important;
+
+        // height: 618px;
+        .scroller {
+            max-height: 618px !important;
+        }
+    }
+}
+
+// small devices(portait tablets and large phone , 600px and up)
+@media only screen and (min-width:600px) {}
+
+// Medium devices(landscape tablets, 768px and up)
+@media only screen and (min-width:768px) {}
+
+// large devices(laptops/desktop, 992px and up)
+@media only screen and (max-width:992px) {}
+
+// Extea large devices(large laptops/desktop, 1200px and up)
+@media only screen and (min-width:1200px) {}
+
+// ====================================
+
+// 燈箱樣式
+.lightbox-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    /* 半透明黑色背景 */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 20;
+
+    .lightbox-container {
+        background-color: white;
+        width: 500px;
+        padding: 40px 38px 40px 40px;
+        border-radius: 20px;
+
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        position: relative;
+        animation: lightbox-fade-in 0.5s ease, slide-from-center 0.5s ease;
+        /* 新增滑入效果 */
+
+        // ----------------以下是動畫區------------
+        /* 動畫 */
+
+        @keyframes lightbox-fade-in {
+            from {
+                transform: translateY(-10%);
+                /* 調整起始位置 */
+                opacity: 0;
+            }
+
+            to {
+                transform: translateY(0);
+                opacity: 1;
+            }
+        }
+
+        @keyframes slide-from-center {
+            from {
+                transform: translateY(-10%);
+                /* 調整起始位置 */
+                opacity: 0;
+            }
+
+            to {
+                transform: translateY(0);
+                opacity: 1;
+            }
+        }
+
+        /* 新增的部分 */
+        .fade-out {
+            animation: fade-out 0.5s ease forwards;
+        }
+
+        @keyframes fade-out {
+            from {
+                opacity: 1;
+            }
+
+            to {
+                opacity: 0;
+            }
+        }
+
+        /* 新增的部分 */
+        .slide-up-and-fade-out {
+            animation: slide-up-and-fade-out 0.5s ease forwards;
+        }
+
+        @keyframes slide-up-and-fade-out {
+            from {
+                transform: translateY(0);
+                opacity: 1;
+            }
+
+            to {
+                transform: translateY(-10%);
+                opacity: 0;
+            }
+        }
+
+        // ----------------以上是動畫區------------
+
+        //   /* 卷軸控制 */
+        .scroller {
+            width: 100%;
+
+            max-height: 350px;
+            /* 設定最大高度為850px，超過部分將出現卷軸 */
+            overflow-y: auto;
+            /* 超過最大高度時顯示垂直卷軸 */
+
+            padding: 0 20px;
+
+            display: flex;
+            flex-direction: column;
+            align-items: flex-start;
+            justify-content: flex-start;
+            gap: 20px;
+
+            /* 消除卷軸樣式 */
+            /* 卷軸寬度width */
+            &::-webkit-scrollbar {
+                width: 3px;
+            }
+
+            /* 卷軸高度的底色(軌跡底色)Track */
+            &::-webkit-scrollbar-track {
+                background: transparent;
+                border-radius: 10px;
+                /* 卷軸圓角 */
+                margin: 65px 40px 45px 10px;
+                /* 卷軸位置 */
+            }
+
+            /* 卷軸控制塊 Handle */
+            &::-webkit-scrollbar-thumb {
+                background: #d9d9d9;
+            }
+
+            /* 卷軸控制塊 Handle on hover */
+            &::-webkit-scrollbar-thumb:hover {
+                background: #555;
+            }
+
+            .note-title {
+                margin: 0;
+                font-family: "Noto Sans TC";
+                font-size: 24px;
+                font-style: normal;
+                font-weight: 500;
+                line-height: 150%;
+                /* 36px */
+
+                color: #333333;
+            }
+
+            .filter-wrap {
+                display: flex;
+                flex-direction: row;
+                align-items: center;
+                flex-wrap: wrap;
+                justify-content: flex-start;
+                gap: 12px;
+            }
+
+            .list-wrap {
+                margin: 12px 0px;
+            }
+        }
+
+        .btn-close-wrap {
+            margin: 0;
+            padding: 0;
+
+            display: flex;
+            align-items: center;
+            justify-content: center;
+
+            position: absolute;
+            top: 45px;
+            right: 30px;
+
+            cursor: pointer;
+
+            .icon-close {
+                color: #d9d9d9;
+
+                &:hover {
+                    color: #333333;
+                }
+
+                &:active {
+                    color: #333333;
+                }
+            }
+        }
+
+        .btn-check-wrap {
+            margin: 0;
+            padding: 0;
+
+            display: flex;
+            align-items: center;
+            justify-content: center;
+
+            position: absolute;
+            bottom: 40px;
+            right: 30px;
+        }
+    }
+}

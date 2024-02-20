@@ -1,0 +1,202 @@
+// a 連結之所以樣式無法覆蓋是因為這份檔案，確定會用到的全域清除設定請放all.scss
+
+
+// @charset "UTF-8";
+// /*須設定才能抓得到中文字*/
+
+// @import url('https://fonts.googleapis.com/css2?family=Alegreya&family=Grenze+Gotisch:wght@200&display=swap');
+// /*Google Fonts*/
+
+
+// @import url('https://fonts.googleapis.com/css2?famil y=Noto+Sans+TC:wght@300;400;500;600;700&display=swap');
+// /*Google Fonts*/
+
+
+// html,
+// body,
+// div,
+// span,
+// applet,
+// object,
+// iframe,
+// h1,
+// h2,
+// h3,
+// h4,
+// h5,
+// h6,
+// p,
+// blockquote,
+// pre,
+// a,
+// abbr,
+// acronym,
+// address,
+// big,
+// cite,
+// code,
+// del,
+// dfn,
+// em,
+// img,
+// ins,
+// kbd,
+// q,
+// s,
+// samp,
+// small,
+// strike,
+// strong,
+// sub,
+// sup,
+// tt,
+// var,
+// b,
+// u,
+// i,
+// center,
+// dl,
+// dt,
+// dd,
+// ol,
+// ul,
+// li,
+// fieldset,
+// form,
+// label,
+// legend,
+// table,
+// caption,
+// tbody,
+// tfoot,
+// thead,
+// tr,
+// th,
+// td,
+// article,
+// aside,
+// canvas,
+// details,
+// embed,
+// figure,
+// figcaption,
+// footer,
+// header,
+// hgroup,
+// menu,
+// nav,
+// output,
+// ruby,
+// section,
+// summary,
+// time,
+// mark,
+// audio,
+// video {
+//     margin: 0;
+//     padding: 0;
+//     border: 0;
+//     font-size: 100%;
+//     font: inherit;
+//     vertical-align: baseline;
+// }
+
+// /* HTML5 display-role reset for older browsers */
+// article,
+// aside,
+// details,
+// figcaption,
+// figure,
+// footer,
+// header,
+// hgroup,
+// menu,
+// nav,
+// section {
+//     display: block;
+// }
+
+// body {
+//     line-height: 1;
+// }
+
+// ol,
+// ul {
+//     list-style: none;
+// }
+
+// blockquote,
+// q {
+//     quotes: none;
+// }
+
+// blockquote:before,
+// blockquote:after,
+// q:before,
+// q:after {
+//     content: '';
+//     content: none;
+// }
+
+// table {
+//     border-collapse: collapse;
+//     border-spacing: 0;
+// }
+
+// /*清除input標籤自帶樣式*/
+// input {
+//     border: 0;
+//     /* 清除自帶的2px的邊框 */
+//     padding: 0;
+//     /* 清除自帶的padding間距 */
+//     outline: none;
+//     /* 清除input點擊之後的黑色邊框 */
+// }
+
+// /*清除button標籤自帶樣式*/
+// button {
+//     background: none;
+//     border: none;
+//     color: inherit;
+//     font: inherit;
+//     padding: 0;
+//     cursor: pointer;
+//     text-decoration: underline;
+// }
+
+
+
+// /*網頁常用設定*/
+
+// * {
+//     /*"*"表全域選擇器，改變所有標籤*/
+//     box-sizing: border-box;
+//     /*不累加邊框和內距，間距還是會累積*/
+// }
+
+// a {
+//     display: block;
+//     text-decoration: none;
+// }
+
+// figure {
+//     position: relative;
+// }
+
+// img {
+//     display: block;
+//     width: 100%;
+// }
+
+// body {
+//     /* background-color: blanchedalmond; */
+//     font-family:
+//         /*西文*/
+//         -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Ubuntu, "Helvetica Neue", Helvetica, Arial,
+//         /*中文*/
+//         "蘋方-繁", "PingFang TC", "黑體-繁", "Heiti TC", "微軟正黑體", "Microsoft JhengHei", "Noto Sans TC", sans-serif;
+// }
+
+// /*共用區*/
+
+

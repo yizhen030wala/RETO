@@ -1,0 +1,93 @@
+@charset "UTF-8";
+@import url("https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@200;300;400;500;600;700;800;900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@200;300;400;500;600;700;800;900&display=swap");
+* {
+  font-family: "Noto Sans TC", 微軟正黑體;
+}
+* ul {
+  list-style: none;
+}
+* a {
+  text-decoration: none;
+}
+/* ----------------------------------------------------------- */
+.schedule_card {
+    width: 250px;
+    gap: 10px;
+
+    display: flex;
+    flex-direction: column;
+    position: relative;
+
+    overflow: hidden;
+}
+
+.ctrl_ButtonDel {
+    position: absolute;
+    top: 0px;
+    right: 0px;
+    z-index: 1;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.schedule_cover {
+    position: relative;
+    overflow: hidden;
+
+    border-radius: 20px;
+    background-color: #f5f5f5;
+
+    width: 100%; /* 調整封面容器的寬度為100%，填滿父級容器 */
+    height: 140px; /* 假設高度為250px，請根據需求自行調整 */
+}
+
+/* 行程卡片文字區域 */
+
+.schedule_text {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+
+    gap:6px
+}
+
+/* 去你的名字 */
+.schedule_name {
+    color: var(--black1, #000);
+
+    /* (D)/body/20px */
+    font-family: Noto Sans TC;
+    font-size: 24px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 150%;
+}
+.schedule_text a {
+    text-decoration: none;
+}
+.schedule_day {
+    align-self: stretch;
+    color: #747474;
+    
+    /* (D)/body/16px */
+    font-family: Noto Sans TC;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 150%
+}
+
+/* 編輯框 */
+.editable-input {
+    border: none; /* 移除外框 */
+    box-shadow: inset 0 0 5px rgba(0, 0, 0, 0.2); /* 添加內陰影 */
+    color: var(--black1, #000);
+    font-family: 'Noto Sans TC';
+    font-size: 24px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 150%;
+}

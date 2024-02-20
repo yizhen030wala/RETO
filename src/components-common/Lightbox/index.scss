@@ -1,0 +1,35 @@
+@import "../../assets/scssRule/rule";
+@import "../../assets/scssRule/all";
+
+// ====================================
+
+.btn-list {
+    &:hover {
+        .icon-luggage,
+        .text-wrap {
+            color: #333333;
+        }
+    }
+
+    .text-wrap {
+        align-items: center;
+        display: flex;
+        flex-direction: row;
+        gap: 10px;
+        padding: 0px 0px;
+
+        // font-family: "Noto Sans TC";
+        // font-size: 16px;
+        // font-style: normal;
+        // font-weight: 500;
+        // line-height: 150%;
+        // color: #fff;
+        // transition: 0.3s;
+        
+        // ---------Jenny
+    }
+    .icon-luggage {
+        color: #ffffff;
+        transition: 0.3s;
+    }
+}

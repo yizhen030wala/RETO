@@ -1,0 +1,173 @@
+// ====================================================色彩設定====================================================
+$color_green1: #3D9D35; //primary
+$color_green2: #006D3B;
+$color_green3: #B8EB35;
+$color_blue: #81E6FD;
+$color_yellow: #FFDF06;
+$color_red: #EB5757;
+$color_gray1: #828282;
+$color_gray2: #E7E7E7;
+$color_gray3: #F5F5F5;
+$color_black: #333333;
+$color_white: #FFFFFF;
+
+// ====================================================字體設定====================================================
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@200;300;400;500;600;700;800;900&display=swap');
+
+// ----------------------------------------------------desktop字體
+@mixin h1_desktop {
+    font-weight: 300;
+    font-size: 64px;
+    margin: 0px;
+}
+
+@mixin h2_desktop {
+    font-weight: 600;
+    font-size: 32px;
+    margin: 0px;
+}
+
+@mixin h3_desktop {
+    font-weight: 500;
+    font-size: 24px;
+    margin: 0px;
+}
+
+//----------------------------------------------------phone字體
+@mixin h1_phone {
+    font-weight: 300;
+    font-size: 25px;
+    margin: 0px;
+}
+
+@mixin h2_phone {
+    font-weight: 600;
+    font-size: 24px;
+    margin: 0px;
+}
+
+@mixin h3_phone {
+    font-weight: 500;
+    font-size: 16px;
+    margin: 0px;
+}
+
+// ----------------------------------------------------body字體
+@mixin h1_body {
+    font-weight: 400;
+    font-size: 16px;
+    margin: 0px;
+}
+
+@mixin h2_body {
+    font-weight: 400;
+    font-size: 14px;
+    margin: 0px;
+}
+
+@mixin h3_body {
+    font-weight: 400;
+    font-size: 12px;
+    margin: 0px;
+}
+
+// ====================================================按鈕設定====================================================
+@mixin text_btn_big {
+    font-family: Noto Sans TC;
+    padding: 8px 20px;
+    border-radius: 20px;
+    color: $color-white;
+    background-color: $color-green1;
+    border: none;
+    font-size: 16px;
+    font-weight: 500;
+    line-height: 150%;
+    letter-spacing: 0.5px;
+    transition: 0.5s;
+
+    &:hover {
+        cursor: pointer;
+        background-color: $color_green3;
+        color: $color-black;
+    }
+
+    &:focus {
+        background-color: $color-green2;
+        color: $color-white;
+    }
+}
+
+@mixin text_btn_middle {
+    @include text_btn_big;
+    font-size: 14px;
+}
+
+@mixin text_btn_small {
+    @include text_btn_big;
+    font-size: 12px;
+}
+
+@mixin text_btn_overlay_phone {
+    @include text_btn_big;
+    width: 90%;
+}
+
+// ====================================================圓角樣式設定====================================================
+$border_radius_10px: 10px;
+$border_radius_15px: 15px;
+$border_radius_20px: 20px;
+
+// ====================================================陰影樣式設定====================================================
+@mixin shadow {
+    box-shadow: 0px 3px 3px 0px rgba(0, 0, 0, 0.25);
+}
+
+//====================================================位置樣式設定====================================================
+@mixin size($w, $h) {
+    width: $w;
+    height: $h;
+}
+
+@mixin showFlex_row {
+    display: flex;
+    flex-direction: row;
+}
+
+@mixin showFlex_column {
+    display: flex;
+    flex-direction: column;
+}
+
+@mixin center {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+@mixin row-center {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+
+// 物件水平置中
+@mixin itemCenter {
+    display: flex;
+    align-content: center;
+    flex-wrap: wrap;
+    text-align: center;
+}
+
+// ====================================================icon樣式設定====================================================
+@mixin icon_20px {
+    @include size(20px, 20px);
+}
+
+@mixin icon_16px {
+    @include size(16px, 16px);
+}
+
+@mixin icon_14px {
+    @include size(14px, 14px);
+}

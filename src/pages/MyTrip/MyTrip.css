@@ -1,0 +1,223 @@
+@charset "UTF-8";
+@import url("https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@200;300;400;500;600;700;800;900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@200;300;400;500;600;700;800;900&display=swap");
+* {
+    font-family: "Noto Sans TC", 微軟正黑體;
+}
+* ul {
+    list-style: none;
+}
+* a {
+    text-decoration: none;
+}
+
+
+/* 我的旅行 */
+.title-name {
+    color: var(--black1, #000);
+
+    /* (D)/body/20px */
+    font-family: Noto Sans TC;
+    font-size: 24px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 150%;
+}
+
+/* 新增行程 */
+.title a {
+    text-decoration: none;
+}
+
+.title a div {
+    color: var(--white, #fff);
+    font-family: Noto Sans TC;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 150%;
+}
+
+/* 去你的名字 */
+.mytripcard_name {
+    color: var(--black1, #000);
+
+    /* (D)/body/20px */
+    font-family: Noto Sans TC;
+    font-size: 24px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 150%;
+}
+.mytripcard_text a {
+    text-decoration: none;
+}
+.mytripcard_day {
+    align-self: stretch;
+    color: #747474;
+
+    /* (D)/body/16px */
+    font-family: Noto Sans TC;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 150%;
+}
+
+
+
+/* -----------中間內容頁-------------- */
+
+.MyTrip-container {
+    margin: 0px 14%;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+}
+
+@media (max-width: 991px) {
+    .MyTrip-container {
+        /* max-width: 100%; */
+        padding: 0 20px;
+    }
+}
+
+.MyTrip-content {
+    display: flex;
+    flex-direction: column;
+    margin: 120px 0px;
+    gap: 35px;
+}
+
+@media (max-width: 991px) {
+    .MyTrip-content {
+        /* max-width: 100%; */
+        margin: 40px 10px 40px 0;
+    }
+}
+
+/* ---------------標題--------------------- */
+
+.title {
+    justify-content: space-between;
+    align-items: center;
+    display: flex;
+    width: 100%;
+}
+
+@media (max-width: 991px) {
+    .title {
+        max-width: 100%;
+        flex-wrap: wrap;
+    }
+}
+
+/* ---------------新增行程按鈕--------------------- */
+.add_schedule {
+    gap: 10px;
+    padding: 10px 20px;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    border-radius: 20px;
+    background-color: var(--Primary-green, #3d9d35);
+}
+
+/* ------------------行程卡片區域--------------------- */
+
+.MyTrip_contain {
+    gap: 30px;
+
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    align-content: flex-start;
+    align-items: center;
+}
+
+@media (max-width: 991px) {
+    .MyTrip_contain {
+        max-width: 100%;
+        padding-right: 20px;
+    }
+}
+
+.mytripcard {
+    width: 250px;
+    gap: 10px;
+
+    display: flex;
+    flex-direction: column;
+    position: relative;
+
+    overflow: hidden;
+}
+
+@media (max-width: 991px) {
+    .mytripcard {
+        width: 100%;
+    }
+}
+
+/* -----------右上刪除鍵--------------- */
+.mytripcard a {
+    text-decoration: none;
+}
+
+
+/* 行程頁面圖 */
+
+.mytripcard_cover {
+    position: relative;
+    overflow: hidden;
+
+    border-radius: 20px;
+    background-color: #f5f5f5;
+
+    width: 100%; /* 調整封面容器的寬度為100%，填滿父級容器 */
+    height: 140px; /* 假設高度為250px，請根據需求自行調整 */
+}
+
+.mytripcard_cover img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* 讓圖片填滿容器並保持比例 */
+}
+
+/* -------------行程卡片文字區域----------------- */
+
+.mytripcard_text {
+    margin-top: 12px;
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+
+    gap: 6px;
+}
+
+.btn-add-wrap {
+    display: flex;
+    flex-direction: row;
+    gap: 10px;
+}
+
+.icon-add-map {
+    color: white;
+    font-size: 20px;
+}
+
+.text-add {
+    color: var(--white, #fff);
+    font-family: "Noto Sans TC";
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 150%; /* 24px */
+}
+
+.btn-add-wrap:hover .icon-add-map,
+.btn-add-wrap:hover .text-add {
+    color: #333;
+}

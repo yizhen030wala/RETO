@@ -1,0 +1,118 @@
+@import "../../../assets/scssRule/rule";
+@import "../../../assets/scssRule/all";
+
+// ===============================================
+
+// 手機
+@media screen and (max-width: 809px) {
+    .header_search {
+
+        ul.nav_btn {
+            display: none;
+        }
+
+        .user {
+            .user_box {
+                display: none;
+            }
+        }
+    }
+}
+
+// ===============================================
+
+.header_search {
+    height: 8vh;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 5px 40px;
+    background-color: $color_green1;
+
+    .logo {
+        width: 120px;
+
+    }
+
+    /* 表頭功能列 */
+    .nav_btn_search {
+        height: 30px;
+        padding: 5px 30px;
+        display: flex;
+        align-items: center;
+        gap: 0 2rem;
+        border-radius: $border_radius_20px;
+        background-color: $color_gray3;
+
+        li {
+            a {
+                font-size: 1rem;
+                color: $color_black;
+
+                &:hover {
+                    font-weight: 600;
+                }
+            }
+        }
+    }
+
+    .user {
+        width: 120px;
+        display: flex;
+        justify-content: flex-end;
+        position: relative;
+
+
+        .user_box {
+            @include size(32px, 32px);
+            border-radius: 100%;
+            background-color: $color_yellow;
+            z-index: 0;
+
+            img {
+                width: 100%;
+            }
+        }
+
+        .menu_box {
+            display: none;
+            @include size(32px, 32px);
+
+            img {
+                width: 100%;
+
+            }
+
+            @media (max-width: 809px) {
+                display: block;
+            }
+        }
+
+        .popup-content {
+            display: none;
+            position: absolute;
+            top: 110%;
+            right: 0;
+            z-index: 999;
+
+            a {
+                color: $color_black;
+            }
+
+        }
+
+        .hover-trigger:hover+.popup-content,
+        .popup-content:hover {
+            display: block;
+        }
+
+
+    }
+
+}
+
+@media (max-width:768px) {
+    .nav_btn_search {
+        display: none !important;
+    }
+}

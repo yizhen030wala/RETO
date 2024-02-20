@@ -1,0 +1,35 @@
+@charset "UTF-8";
+.btn_content_del2 {
+  position: relative;
+  top: 0px;
+  right: 0px;
+}
+.btn_content_del2 .btn_wrap2 {
+  position: relative; /* 父元素需設置為相對定位 */
+}
+.btn_content_del2 .btn_wrap2 .btn_del2 {
+  z-index: 1;
+  width: 20px;
+  height: 20px;
+  background-color: #F5F5F5;
+  border-radius: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+}
+.btn_content_del2 .btn_wrap2 .btn_del2:hover {
+  background-color: #E7E7E7;
+}
+.btn_content_del2 .btn_wrap2 .btn_del2 .ctrl-icon-more {
+  font-size: 20px;
+  color: #828282;
+}
+.btn_content_del2 .btn_wrap2 .wrap-del2 {
+  margin: 0;
+  padding: 0;
+  position: absolute;
+  top: calc(100% - 10px);
+  right: -10px;
+  z-index: 1;
+}/*# sourceMappingURL=ButtonDel_NB.css.map */
