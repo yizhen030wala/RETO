@@ -5,6 +5,7 @@ import BreadCrumb_M from '../../components-common/BreadCrumb/BreadCrumb_M.jsx'
 import ScheduleSheet from '../../components-common/ScheduleSheet/ScheduleSheet.jsx'
 import DateSwiper from '../../components-common/DateSwiper/DateSwiper.jsx'
 import MapCard from './MapCard/MapCard.jsx';
+import MapPhone from '../MyMap phone/MapPhone.jsx';
 
 
 
@@ -80,7 +81,9 @@ const MyMap = () => {
                     <MapCard />
                 </div >
             </main >
-
+            <div className="phone_map_show">
+                <MapPhone />
+            </div>
         </>
     )
 }
