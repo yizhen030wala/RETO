@@ -1,0 +1,238 @@
+@import "../../assets/scssRule/rule";
+@import "../../assets/scssRule/all";
+
+// =============== RWD =====================
+
+// Extea small devices(phones, 600px and down)
+@media only screen and (max-width: 600px) {
+    .Schedule_container {
+        margin: 20px 16px !important;
+
+        .tripHead {
+            padding: 10px 0 !important;
+            .tripTitle {
+                .h3_title {
+                    font-size: 16px !important;
+                }
+
+                .day_font {
+                    font-size: 10px !important;
+                }
+            }
+        }
+
+        .Schedule_date {
+            .btn-day-control {
+                display: none !important;
+            }
+            .btn_day-wrap {
+                margin: 0 !important;
+                .btn_day {
+                    // width: 71px;
+                    // @include h3_body ;
+                    font-size: 12px !important;
+                }
+            }
+        }
+        .schedule-wrap {
+            .scheduleList {
+                margin: 25px 0px !important;
+                width: 112%;
+            }
+        }
+    }
+}
+
+// small devices(portait tablets and large phone , 600px and up)
+@media only screen and (min-width: 600px) {
+}
+
+// Medium devices(landscape tablets, 768px and up)
+@media only screen and (min-width: 768px) {
+}
+
+// large devices(laptops/desktop, 992px and up)
+@media only screen and (max-width: 992px) {
+}
+
+// Extea large devices(large laptops/desktop, 1200px and up)
+@media only screen and (min-width: 1200px) {
+}
+
+// ====================================
+
+.Schedule_container {
+    margin: 20px 9%;
+    display: flex;
+    flex-direction: column;
+
+    // 行程表頭
+    .tripHead {
+        padding: 20px 0;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+
+        .tripTitle {
+            display: flex;
+            flex-direction: column;
+
+            .h3_title {
+                font-size: 24px;
+                font-style: normal;
+                font-weight: 500;
+                line-height: 150%;
+            }
+
+            .day_font {
+                &:hover {
+                    font-size: 14px;
+                    font-style: normal;
+                    font-weight: 400;
+                    line-height: 160%;
+                    color: black;
+                    /* 设置所有的 <h2> 初始为灰色 */
+                }
+
+                &:first-child {
+                    color: $color_gray1;
+                    /* 第一个 <h2> 设置为黑色 */
+                }
+            }
+
+            .day_select {
+                font-size: 14px;
+                font-style: normal;
+                font-weight: 400;
+                line-height: 160%;
+                color: #929292;
+                /* 设置所有的 <h2> 初始为灰色 */
+            }
+        }
+
+        // 功能按鈕
+        .tripFunc {
+            display: flex;
+            justify-content: space-between;
+            flex-direction: row;
+            gap: 10px;
+            align-items: center;
+            z-index: 20;
+
+            a {
+                text-decoration: none;
+            }
+
+            .LB-container {
+                position: relative;
+                // z-index: 1;
+                /* 設置一個足夠高的值 */
+
+                padding: 0px;
+            }
+
+            .set_icon {
+                padding: 10px 12px;
+                display: flex;
+                align-items: center;
+                text-align: center;
+                justify-items: center;
+                background-color: #3d9d35;
+                border-radius: 30px;
+                color: #fff;
+
+                cursor: pointer;
+
+                &:hover {
+                    background-color: $color_green3;
+                    color: #333;
+                    transition: 0.3s;
+                }
+            }
+
+            .icon-map {
+                font-size: 20px;
+            }
+        }
+    }
+
+    // 設定一個寬度讓組件在最左邊，不然會置中
+    .dataSwiper_wrap {
+        width: 440px;
+
+        //手機
+        @media only screen and (max-width: 600px) {
+            width: 100%;
+        }
+    }
+
+    .schedule-wrap {
+        width: 100%;
+        overflow: auto;
+        overflow-x: scroll;
+
+        // 卷軸控制
+        &::-webkit-scrollbar {
+            height: 8px;
+            border-radius: 10px;
+        }
+
+        /* 卷軸高度的底色(軌跡底色)Track */
+        &::-webkit-scrollbar-track {
+            background: transparent;
+            border-radius: 10px;
+            /* 卷軸圓角 */
+            // margin: 65px 40px 45px 10px;
+            /* 卷軸位置 */
+        }
+
+        /* 卷軸控制塊 Handle */
+        &::-webkit-scrollbar-thumb {
+            background: #d9d9d9;
+            border-radius: 10px;
+        }
+
+        /* 卷軸控制塊 Handle on hover */
+        &::-webkit-scrollbar-thumb:hover {
+            background: #555;
+        }
+
+        .scheduleList {
+            width: fit-content;
+            margin: 20px 0px;
+            gap: 0 20px;
+
+            display: flex;
+            // justify-content: flex-start;
+            // align-items: flex-start;
+
+            .btn-add-control {
+                width: 34px;
+                height: 34px;
+                background-color: #f5f5f5;
+
+                border-radius: 20px;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                align-items: center;
+                margin: 0px 0px; //抓不到，莫名有東西變成0 12px
+                cursor: pointer;
+
+                &:hover {
+                    background-color: #d9d9d9;
+                }
+
+                // .icon-add {}
+
+                .icon-add-color {
+                    padding: 5px 5px;
+                    display: flex;
+                    align-items: center;
+                    color: #333333;
+                    font-size: 20px;
+                }
+            }
+        }
+    }
+}

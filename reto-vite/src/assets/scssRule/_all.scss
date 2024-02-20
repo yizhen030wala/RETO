@@ -1,12 +1,42 @@
 @import "rule";
 
-*{
-    font-family: 'Noto Sans TC', 微軟正黑體;
-    ul{
-      list-style: none;
-    }
-    a{
-      text-decoration: none;
-      color: $color_black;
-    }
+* {
+  font-family: 'Noto Sans TC', 微軟正黑體;
+  margin: 0;
+
+  ul ol {
+    list-style: none;
   }
+
+  a {
+    text-decoration: none;
+    color: $color-black; //有危險
+  }
+
+  input {
+    border: 0;
+    padding: 0;
+    outline: none;
+  }
+
+  figure {
+    position: relative;
+    display: block;
+  }
+
+  img {
+    display: block;
+    width: 100%;
+  }
+
+  input{
+    border: 0;
+    padding: 0;
+    outline: none;
+  }
+
+  section {
+    height: 100vh;
+    @include center;
+  }
+}

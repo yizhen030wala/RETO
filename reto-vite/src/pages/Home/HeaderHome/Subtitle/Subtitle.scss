@@ -1,0 +1,94 @@
+@import "../../../../assets/scssRule/all";
+@import "../../../../assets//scssRule/rule";
+
+// ===============================================
+
+/*免費開始*/
+
+.page_right {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+
+    /* width: 140px; */
+    // width: 7%;
+    margin-left: 1%;
+
+    .user {
+        // padding: 0px 40px 5px 40px;
+        // width: 120px;
+        height: 8vh;
+        display: flex;
+        justify-content: center;
+        position: relative;
+
+
+        .user_box {
+            @include size(32px, 32px);
+            border-radius: 100%;
+            background-color: $color_yellow;
+            z-index: 0;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+
+            img {
+                width: 100%;
+            }
+
+            @media (max-width: 809px) {
+                display: none;
+            }
+
+        }
+
+        .menu_box {
+            display: none;
+            @include size(32px, 32px);
+
+            img {
+                width: 100%;
+
+            }
+
+            @media (max-width: 809px) {
+                display: block;
+            }
+        }
+
+        .popup-content {
+            display: none;
+            position: absolute;
+            top: 100%;
+            right: 0;
+            z-index: 999;
+
+
+        }
+
+        .hover-trigger {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .hover-trigger:hover+.popup-content,
+        .popup-content:hover {
+            display: block;
+        }
+
+
+    }
+
+}
+
+.bar_col {
+    height: 90vh;
+
+    img {
+        object-fit: cover;
+        width: 100%;
+        height: 100%;
+    }
+}

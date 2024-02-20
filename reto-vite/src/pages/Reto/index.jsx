@@ -2,7 +2,7 @@ import React from 'react'
 import Header from '../../components-common/Header/Header'
 import { Outlet } from 'react-router-dom'
 
-const index = () => {
+const Reto = () => {
     return (
         <>
             <Header />
@@ -11,4 +11,4 @@ const index = () => {
     )
 }
 
-export default index
+export default Reto

@@ -1,0 +1,359 @@
+@use "../../../assets/scssRule/all"as *;
+@use "../../../assets//scssRule/rule"as r;
+@use '../../../assets/scssRule/reset'as *;
+
+.area_search_collections {
+    height: 17vh;
+    /* 100vh表示剛好一                                      視窗高，會自動彈性符合 */
+    display: flex;
+    /*轉變後預設主軸方向變為水平*/
+    flex-direction: column;
+    /*轉變主軸方向為垂直*/
+    align-items: center;
+    /*副軸(水平)置中*/
+    /* justify-content: center; */
+    /*主軸(垂直)置中*/
+    width: 100%;
+    /* gap: 3.2vh; */
+}
+
+/*Nav*/
+
+.bar_top_collections {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: white;
+    padding: 20px;
+    height: 10vh;
+}
+
+
+.nav_collections ul {
+    background-color: #F5F5F5;
+    display: flex;
+    width: 274px;
+    height: 32px;
+
+    padding: 5px 20px;
+    justify-content: center;
+    align-items: center;
+    gap: 40px;
+
+    border-radius: 50px;
+    /* background: #F5F5F5; */
+
+    flex: 1;
+}
+
+.nav_collections ul li a {
+    font-family: 'Noto Sans TC', sans-serif;
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 600;
+    /*網頁上600看起來跟figma上400一樣*/
+    line-height: 160%;
+}
+
+/*搜尋列*/
+
+.search_collections {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    /* width: 68%; */
+    width: 980px;
+    height: 24vh;
+    /* padding: 32px 70px 0 70px; */
+}
+
+.bar_search_collections {
+    display: flex;
+    padding: 8px 12px;
+    gap: 4px;
+    background-color: white;
+    width: 460px;
+    height: 36px;
+
+    border-radius: 6px;
+    justify-content: space-between;
+    border: 1px solid rgba(0, 0, 0, 0.10);
+    align-items: center;
+
+
+}
+
+.bar_search_collections input {
+    overflow: hidden;
+    color: rgba(0, 0, 0, 0.50);
+
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    /* (D)/body/14px */
+    font-family: Noto Sans TC;
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 160%;
+    /* 22.4px */
+}
+
+.bar_search_collections img {
+    width: 20px;
+    height: 20px;
+}
+
+.bar_search_collections div {
+    display: flex;
+}
+
+.bar_search_collections div img {
+    margin: 4px;
+}
+
+.bar_search_collections div a {
+    padding: 4px 16px;
+    justify-content: center;
+    align-items: center;
+    gap: 8.951px;
+
+    border-radius: 17.902px;
+    background: #FFDF06;
+
+    font-family: Noto Sans TC;
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 160%;
+    /* 22.4px */
+}
+
+
+
+/*協助對齊用*/
+
+.assist {
+    width: 110px;
+}
+
+/*地點標籤*/
+
+.locate ul {
+    display: flex;
+    gap: 10px;
+}
+
+.locate a {
+    padding: 10px 16px;
+    justify-content: center;
+    align-items: center;
+    border-radius: 12px;
+    color: white;
+    background-color: #3D9D35;
+
+    font-size: 14px;
+
+    white-space: nowrap;
+}
+
+// .label1 a {
+//     color: white;
+//     background-color: #3D9D35;
+// }
+
+// .label2 a {
+//     background-color: #81E6FD;
+// }
+
+// .label3 a {
+//     background-color: #FFDF06;
+// }
+
+// .label4 a {
+//     color: white;
+//     background-color: #333;
+// }
+
+
+
+/*選擇區*/
+
+.area_category {
+    display: flex;
+    width: 100%;
+    /* padding: 0 240px; */
+    justify-content: center;
+    height: auto;
+}
+
+.box_category {
+    /* width: 68%; */
+    width: 980px;
+}
+
+.category ul {
+    display: flex;
+}
+
+.category ul li {
+    font-family: Noto Sans TC;
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 160%;
+
+    padding: 8px 20px;
+    border-bottom: 2px solid $color_gray2;
+    color: $color_gray2;
+    white-space: nowrap;
+
+    display: inline-block;
+    text-align: center;
+    cursor: pointer;
+
+}
+
+
+/* 收藏區 */
+
+/*瀑布流內容設定*/
+
+// -------Carousel.jsx
+.box_carousel {
+    // display: flex;
+    position: relative;
+    
+    width: 100%;
+    overflow: hidden;
+    gap: 2%;
+
+    .box_turn {
+        background-color: $color_gray3;
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        padding: 50px 40px;
+        border-radius: $border_radius_20px;
+        box-sizing: border-box;
+        transition: 0.5s ease;
+        flex-shrink: 0;
+
+        scale: 0.95;
+        margin: 10vh -494px;
+
+        .search_text {
+            display: flex;
+            flex-direction: column;
+            align-items: flex-start;
+            gap: 12px;
+            margin-bottom: 12px;
+
+            .item_carousel {
+                h3 {
+                    display: flex;
+                    padding: 0px 30px;
+                    justify-content: center;
+                    align-items: center;
+
+                    border-radius: 20px 0px;
+                    height: 36px;
+
+                    font-size: 24px;
+                    font-style: normal;
+                    font-weight: 500;
+                    line-height: 150%;
+                }
+
+                p {
+                    text-align: center;
+                    font-size: 14px;
+                    font-style: normal;
+                    font-weight: 400;
+                    line-height: 160%;
+                    /* 22.4px */
+
+                    margin-top: 10px;
+                }
+            }
+        }
+
+        .wrapper {
+            width: 980px;
+            height: auto;
+
+            #card_container {
+                position: relative;
+                @include size(100%, auto);
+            }
+        }
+
+        .wrapper * {
+            transition-property: all !important;
+            /* 這裡會寫important是因為Masonry載入時，會動態給.card_search一個property設定，
+            並且是某些才給，無法找到規律，且因為是動態所以試過許多方法都無法覆蓋，因其設定會導致
+            transition無法正確運行，故用important覆蓋 */
+        }
+    }
+
+    .eat {
+        .item_carousel {
+            h3 {
+                background: $color_yellow;
+            }
+        }
+    }
+
+    .accommodation {
+        .item_carousel {
+            h3 {
+                background-color: $color_blue;
+                color: $color_white;
+            }
+        }
+    }
+
+    .fun {
+        .item_carousel {
+            h3 {
+                background-color: $color_green2;
+                color: $color_white;
+            }
+        }
+    }
+}
+
+.box_turn.fun.current {
+    scale: 1;
+}
+.box_turn.accommodation.current {
+    scale: 1;
+}
+.box_turn.eat.current {
+    scale: 1;
+}
+
+// -------Tags_carousel.jsx
+.tag_turn {
+    ul {
+        display: flex;
+        justify-content: flex-start;
+
+        a {
+            @include h2_body;
+            line-height: 160%;
+            padding: 2px 20px;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+
+            border-radius: $border_radius_10px;
+            background: $color-white;
+            margin-right: 8px;
+
+            &:active {
+                background-color: $color-black;
+                color: $color-white;
+            }
+        }
+    }
+}

@@ -1,5 +1,6 @@
 import React, { useState, useRef, useEffect } from 'react';
-import "./ButtonDel.css";
+// import "./ButtonDel.css";
+import "../css/ButtonDel.css";
 import DeleteToast from '../../deleteToast/deleteToast.jsx'
 
 const ButtonDel = () => {
@@ -29,9 +30,9 @@ const ButtonDel = () => {
         <>
             <div className='content-del'>
                 <div className="btn_wrap">
-                    <a href="#" className={`btn_del ${showWrapDel ? 'clicked' : ''}`} onClick={handleButtonClick} ref={buttonRef}>
-                        <span className="icon-more_horiz"></span>
-                    </a>
+                    <div className={`btn_del ${showWrapDel ? 'clicked' : ''}`} onClick={handleButtonClick} ref={buttonRef}>
+                        <span className="icon-more_horiz ctrl-icon-more"></span>
+                    </div>
 
                     {showWrapDel && (
                         <div className='wrap-del' ref={wrapDelRef}>

@@ -1,5 +1,5 @@
 import React from 'react'
-import './CSS/memberToast.css'
+import './memberToast.scss'
 import Noted from '../../assets/img/badge/!.svg'
 
 const memberToast = () => {

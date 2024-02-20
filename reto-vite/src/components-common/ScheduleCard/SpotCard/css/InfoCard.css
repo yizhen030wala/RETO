@@ -1,0 +1,106 @@
+@charset "UTF-8";
+@import url("https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@200;300;400;500;600;700;800;900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@200;300;400;500;600;700;800;900&display=swap");
+* {
+  font-family: "Noto Sans TC", 微軟正黑體;
+}
+* ul {
+  list-style: none;
+}
+* a {
+  text-decoration: none;
+}
+
+.info_SpotCard {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: row;
+  position: relative;
+  overflow: hidden;
+}
+.info_SpotCard .pic_SpotCard {
+  width: 45%;
+  /* 讓 figure 佔滿父元素的寬度 */
+  /* 讓 figure 佔滿父元素的高度 */
+  overflow: hidden;
+  /* 隱藏超出 figure 的內容 */
+}
+.info_SpotCard .pic_SpotCard img {
+  width: 100%;
+  /* 讓圖片寬度填滿 figure */
+  height: 100%;
+  /* 讓圖片高度填滿 figure */
+  object-fit: cover;
+  /* 讓圖片填滿整個容器，保持比例 */
+}
+.info_SpotCard .spotInfo_SpotCard {
+  width: 55%;
+  padding: 10px 15px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+.info_SpotCard .spotInfo_SpotCard .spotTitle {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+}
+.info_SpotCard .spotInfo_SpotCard .spotTitle .iconTime {
+  display: flex;
+  flex-direction: row;
+  gap: 0px 10px;
+  justify-content: space-between;
+  align-items: center;
+}
+.info_SpotCard .spotInfo_SpotCard .spotTitle .iconTime .icon {
+  width: 16px;
+  height: 16px;
+  display: flex;
+  align-content: center;
+  justify-content: center;
+}
+.info_SpotCard .spotInfo_SpotCard .spotTitle .iconTime .time {
+  font-family: Noto Sans TC;
+  font-size: 12px;
+  font-style: normal;
+}
+.info_SpotCard .spotInfo_SpotCard .spotName_Fuc {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+}
+.info_SpotCard .spotInfo_SpotCard .spotName_Fuc:hover .btn_copy,
+.info_SpotCard .spotInfo_SpotCard .spotName_Fuc:hover .btn_copy .icon-content_copy {
+  opacity: 1;
+}
+.info_SpotCard .spotInfo_SpotCard .spotName_Fuc .btn_copy {
+  width: 18px;
+  height: 18px;
+  border-radius: 10px;
+  background-color: #F5F5F5;
+  display: flex;
+  align-content: center;
+  justify-content: center;
+  align-items: center;
+  opacity: 0;
+  transition: 0.3s;
+  cursor: pointer;
+}
+.info_SpotCard .spotInfo_SpotCard .spotName_Fuc .btn_copy .icon-content_copy {
+  font-size: 12px;
+  color: #333333;
+  opacity: 0;
+  transition: 0.3s;
+}
+.info_SpotCard .spotInfo_SpotCard .spotName_Fuc .btn_copy:hover {
+  background-color: #d9d9d9;
+}
+.info_SpotCard .spotInfo_SpotCard .adviseTime {
+  font-family: Noto Sans TC;
+  font-size: 12px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 150%;
+}/*# sourceMappingURL=InfoCard.css.map */

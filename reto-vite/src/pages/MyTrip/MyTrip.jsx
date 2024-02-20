@@ -1,7 +1,11 @@
+// 頁面 - 行程總頁/我的行程
+
 import React from 'react'
+// import { Link } from 'react-router-dom';
 import MyTripCard from '../../components-common/MyTripCard/MyTripCard.jsx';
 import ButtonChk from '../../components-common/Button/ButtonChk/ButtonChk.jsx';
-import "./MyTrip.css";
+// import "./MyTrip.css";
+import "./MyTrip.scss"
 
 
 const MyTrip = () => {
@@ -13,25 +17,36 @@ const MyTrip = () => {
     return (
         <>
             <main className="MyTrip-container">
-                <div className="content">
+                <div className="MyTrip-content">
                     {/* 標題欄 */}
                     <div className="title">
                         <div className="title-name">我的旅行</div>
                         <ButtonChk className="btn-add-wrap">
-                            <span className="icon-add icon-add-map"></span>
+                            <div className="icon-add-map icon-add"></div>
                             <div className="text-add">新增行程</div>
                         </ButtonChk>
 
                     </div>
 
-                    <div className="schedule_contain">
+                    <div className="MyTrip_contain">
                         {/* 第一個行程集卡片 */}
+                        
+                            <MyTripCard
+                                imageUrl="https://images.unsplash.com/photo-1583889659384-64d9df2347ba?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+                                name="台北吃到飽"
+                                days="3天2夜"
+                            // onNameClick={handleNameClick}
+                            >
+                            </MyTripCard>
+                        
+
                         <MyTripCard
                             imageUrl="https://images.unsplash.com/photo-1583889659384-64d9df2347ba?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
                             name="台北吃到飽"
                             days="3天2夜"
-                        // onNameClick={handleNameClick}
-                        />
+                        >
+                        </MyTripCard>
+
 
                         {/* 第二個行程集卡片 */}
                         <MyTripCard
@@ -71,7 +86,7 @@ const MyTrip = () => {
 
                     </div>
                 </div>
-            </main>
+            </main >
         </>
     )
 }

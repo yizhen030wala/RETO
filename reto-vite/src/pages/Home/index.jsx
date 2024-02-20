@@ -1,11 +1,12 @@
 import React from 'react'
-import { Link,Outlet } from 'react-router-dom';
-import Header from '../../components-common/Header/Header'
+// import { Link,Outlet } from 'react-router-dom';
+import Home from './home.jsx'
 
 const index = () => {
   return (
     <div>
-      <Header/>
+      <Home />
+      {/* <Header/>
       <p><Link to="/login">登入頁</Link></p>
       <br></br>
       <p>here is 首頁</p>
@@ -16,9 +17,9 @@ const index = () => {
       <Link to="/MyTrip">我的行程MyTrip</Link>
       <br></br>
       <Link to="/Schedule">行程頁</Link>
-      <Outlet />
+      <Outlet /> */}
     </div>
   )
 }
 
-export default index
+export default index;

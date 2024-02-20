@@ -6,7 +6,7 @@ $color_blue: #81E6FD;
 $color_yellow: #FFDF06;
 $color_red: #EB5757;
 $color_gray1: #828282;
-$color_gray2: #D9D9D9;
+$color_gray2: #E7E7E7;
 $color_gray3: #F5F5F5;
 $color_black: #333333;
 $color_white: #FFFFFF;
@@ -73,7 +73,7 @@ $color_white: #FFFFFF;
 
 // ====================================================按鈕設定====================================================
 @mixin text_btn_big {
-    padding: 10px 20px;
+    padding: 8px 20px;
     border-radius: 20px;
     color: $color-white;
     background-color: $color-green1;
@@ -106,7 +106,10 @@ $color_white: #FFFFFF;
     font-size: 12px;
 }
 
-
+@mixin text_btn_overlay_phone {
+    @include text_btn_big;
+    width: 90%;
+}
 
 // ====================================================圓角樣式設定====================================================
 $border_radius_10px: 10px;

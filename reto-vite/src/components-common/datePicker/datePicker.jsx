@@ -1,28 +1,27 @@
 import React, { useState } from 'react';
 import DatePicker from 'react-datepicker';
 import '../../../node_modules/react-datepicker/dist/react-datepicker.css'
-import './CSS/datePicker.css'
+import './datePicker.scss'
 import { addDays } from 'date-fns';
 
 const datePicker = () => {
-    const [startDate, setStartDate] = useState(null);
-    const [endDate, setEndDate] = useState(null);
-
-    const handleDateChange = (dates) => {
-        const [start, end] = dates;
-        setStartDate(start);
-        setEndDate(end);
-    };
+    const [dateRange, setDateRange] = useState([null, null]);
+    const [startDate, endDate] = dateRange;
 
     return (
         <div>
             <DatePicker
-                selected={startDate}
-                onChange={handleDateChange}
+                selectsRange={true}
                 startDate={startDate}
                 endDate={endDate}
-                selectsRange
-                inline
+                formatWeekDay={nameOfDay => nameOfDay.substr(0, 1)}
+                // excludeDates={[addDays(new Date(), 1), addDays(new Date(), 5)]}
+                minDate={new Date()}
+                dateFormat="M月d日"
+                onChange={(update) => {
+                    setDateRange(update);
+                }}
+                
             />
         </div>
     );

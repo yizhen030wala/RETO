@@ -1,0 +1,52 @@
+@import "../../../assets/scssRule/rule";
+@import "../../../assets/scssRule/all";
+
+// ====================================
+
+.content-del {
+    position: relative;
+    top: 0px;
+    right: 0px;
+    z-index: 10;
+
+    .btn_wrap {
+        position: relative; /* 父元素需設置為相對定位 */
+
+        .btn_del {
+            position: absolute;
+            top: 15px;
+            right: 15px;
+            z-index: 1;
+
+            width: 20px;
+            height: 20px;
+
+            border-radius: 10px;
+            background-color: #f5f5f5;
+
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            cursor: pointer;
+
+            &:hover {
+                background-color: #e7e7e7;
+            }
+
+            // .icon-more_horiz {
+            // }
+            // .ctrl-icon-more {
+            // }
+
+            
+        }
+        .wrap-del {
+            margin: 0;
+            padding: 0;
+            position: absolute;
+            top: calc(100% + 30px); /* 框框在按鈕的下方，可以調整間距 */
+            right: 5px; /* 與按鈕右邊對齊 */
+            z-index: 1; /* 確保框框在最上層 */
+        }
+    }
+}

@@ -1,0 +1,83 @@
+@import "../../../assets/scssRule/rule";
+@import "../../../assets/scssRule/all";
+
+
+// ===================RWD============================
+
+// 手機
+@media screen and (max-width: 809px) {
+    .header {
+
+        ul.nav_btn {
+            display: none;
+        }
+
+        .user {
+            .user_box {
+                display: none;
+            }
+
+            // .menu_box {
+            //     display: block;
+            // }顯示不出來所以放到下面QQ
+        }
+    }
+}
+
+// ===============================================
+
+//處理滑動變色
+
+.header_home.change-bg-color-header {
+    background-color: $color_red !important;
+}
+
+.header_home {
+    background-color: $color_blue;
+    height: 8vh;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 5px 40px;
+    
+    transition: background-color 1s ease;
+
+
+    .logo {
+        width: 120px;
+
+    }
+
+    /* 表頭功能列 */
+    .nav_btn_home {
+        height: 30px;
+        padding: 5px 30px;
+        display: flex;
+        align-items: center;
+        gap: 0 2rem;
+        border-radius: $border_radius_20px;
+        background: rgba(236, 236, 236, 0.5);
+
+        
+            li {
+                a {
+                    font-size: 1rem;
+                    color: $color_black;
+
+                    &:hover {
+                        font-weight: 600;
+                    }
+                }
+            }
+        
+
+        @media (max-width: 809px) {
+            display: none;
+        }
+    }
+
+    .empty_header {
+        width: 0.55%;
+    }
+
+}

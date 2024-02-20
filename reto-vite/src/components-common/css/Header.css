@@ -9,7 +9,6 @@
 }
 * a {
   text-decoration: none;
-  color: #333333;
 }
 
 @media screen and (max-width: 809px) {
@@ -37,14 +36,14 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 0 40px;
+  padding: 5px 40px;
   /* 表頭功能列 */
 }
 .header .logo {
   width: 120px;
 }
 .header .nav_btn {
-  height: 32px;
+  height: 30px;
   padding: 5px 30px;
   display: flex;
   align-items: center;
@@ -90,7 +89,7 @@
 .header .user .popup-content {
   display: none;
   position: absolute;
-  top: 5vh;
+  top: 110%;
   right: 0;
   z-index: 1;
 }

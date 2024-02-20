@@ -1,5 +1,5 @@
 import React from 'react'
-import './CSS/addToast.css'
+import './addToast.scss'
 import Checked from '../../assets/img/badge/checked.svg'
 
 

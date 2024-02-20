@@ -9,7 +9,7 @@
 }
 * a {
   text-decoration: none;
-  color: #333333;
+
 }
 
 .UnLogin-box {
@@ -23,6 +23,7 @@
   text-align: center;
   justify-content: center;
   gap: 16px;
+  z-index: 900;
 }
 .UnLogin-box figure {
   height: 48px;
@@ -52,6 +53,7 @@
   align-items: center;
   gap: 10px;
   align-self: stretch;
+  display: none;
 }
 .UnLogin-box .menu li {
   gap: 10px;
@@ -63,4 +65,9 @@
   font-weight: 600;
   padding-bottom: 0px;
   text-decoration: #3D9D35 wavy underline;
+}
+@media (max-width: 809px) {
+  .UnLogin-box .menu {
+    display: block;
+  }
 }/*# sourceMappingURL=ShowUnlogin.css.map */
