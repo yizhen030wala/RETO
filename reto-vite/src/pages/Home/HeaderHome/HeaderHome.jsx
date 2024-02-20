@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from "react";
 // import NavBar from "../NavBar/NavBar";
-import logo from "../../../assets/img_hsc/logo/logo.svg";
+import logo from "../../../assets/img/RETO logo/logo white.svg";
 import "./HeaderHome.scss";
 import { Link } from "react-router-dom";
 
