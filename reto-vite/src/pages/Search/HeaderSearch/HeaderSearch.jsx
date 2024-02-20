@@ -4,7 +4,7 @@ import '../CSS/Search.scss';
 import Recommends from '../Recommends/Recommends';
 import magnifier from '../../../assets/img_hsc/search_bar/magnifier.svg';
 import filter from '../../../assets/img_hsc/search_bar/filter.svg';
-import logoGreen from '"../../../assets/img/RETO logo/logo white.svg"';
+import logoGreen from '../../../assets/img/RETO logo/logo white.svg';
 
 // import NavBar from '../NavBar/NavBar';
 // import login from '../../../assets/img_hsc/login/login-yellow.svg';

@@ -28,28 +28,10 @@ function Home() {
         <Step />
       </main>
       {/* Footer Area */}
-      <footer>
-        <ul className="btn_footer_upper">
-          <li>
-            <a href="./search.html">關於我們</a>
-          </li>
-          <li>
-            <a href="">問題回報</a>
-          </li>
-          <li>
-            <a href="">服務條款</a>
-          </li>
-          <li>
-            <a href="">隱私權政策</a>
-          </li>
-        </ul>
+      <footer >
         <ul className="btn_footer_lower">
-          <li>
-            <a href="">版權申告</a>
-          </li>
-          <li>
-            <a href="">使用技術</a>
-          </li>
+          <li>Copyright © 2024 <a href="https://github.com/yizhen030wala/RETO">旅藤 RETO</a>. All rights reserved.</li>
+          <li>此網頁為前端學習作品，無實際功能</li>
         </ul>
       </footer>
     </div>
