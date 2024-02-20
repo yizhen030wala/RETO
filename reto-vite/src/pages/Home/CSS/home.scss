@@ -128,6 +128,7 @@
 
 
                     .btn_start {
+                    .btn_start {
                         font-family: 'Noto Sans TC', sans-serif;
                         font-size: 2rem;
                         font-style: normal;
@@ -135,6 +136,7 @@
                         line-height: 70px;
                         color: r.$color_black;
                         transition: .15s;
+                        cursor: pointer;
 
                     }
 
@@ -272,21 +274,26 @@
                     }
 
                     .slogan1 {
-                        display: none;
-                     }
-     
-                     .slogan2 {
-                         display: none;
-                     }
-     
-                     .mobile_slogan {
-                         transform-origin: left bottom;
-                         transform: scale(1);
-                         display: block;
-                         position: absolute;
-                         top: 5vh;
-                         left: 5%;
-                     }
+                        top: 8vh;
+                        z-index: 5;
+                    }
+
+                    .slogan2 {
+                        top: 17vh;
+                        z-index: 5;
+                    }
+
+                    p {
+                        font-size: 3rem;
+                    }
+
+                    .btn_freeStart {
+                        top: 28vh;
+
+                        a {
+                            font-size: 2rem;
+                        }
+                    }
                 }
             }
         }
@@ -329,53 +336,11 @@
                      }
 
                     .btn_freeStart {
-                        top: calc(3vh + 150px);
-                        transform: scale(.8);
-                    }
-                }
-            }
-        }
-    }
-}
+                        top: 26vh;
 
-@media (max-width:400px) {
-    #land_page {
-        .page_left {
-            .area_attention {
-                .box_attention {
-                    .bg_home {
-                        .sun {
-                            width: 650px;
-                            height: 650px;
-                            right: -115%;
-                            top: 35%;
+                        a {
+                            font-size: 2rem;
                         }
-
-                        .bg_clean {
-                            height: 40%;
-                        }
-                    }
-
-                    .slogan1 {
-                        display: none;
-                     }
-     
-                     .slogan2 {
-                         display: none;
-                     }
-     
-                     .mobile_slogan {
-                         transform-origin: left bottom;
-                         transform: scale(1);
-                         display: block;
-                         position: absolute;
-                         top: 5vh;
-                         left: 12%;
-                     }
-
-                     .btn_freeStart {
-                        top: calc(5vh + 150px);
-                        transform: scale(.8);
                     }
                 }
             }
