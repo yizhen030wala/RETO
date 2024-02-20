@@ -93,6 +93,20 @@ const Carousel = ({ updateSelectedCount, currentIndex, arr_area }) => {
     isAnimated: true,
   };
 
+  // 解析圖片URL並計算高度
+  const calculateHeightFromUrl = (imageUrl, targetWidth = 230) => {
+    const regex = /w(\d+)-h(\d+)/; // 寬高的正式表達式
+    const match = imageUrl.match(regex);
+    if (match) {
+      const width = parseInt(match[1], 10);
+      const height = parseInt(match[2], 10);
+      // 根据目標寬度計算新高度，保持寬高比
+      const newHeight = (height / width) * targetWidth;
+      return newHeight;
+    }
+    return null; // 如果URL中沒有寬高信息，返回null
+  };
+
   //滾動卷軸時，使用ref更新布局
   const masonryRef = React.useRef(null);
   React.useEffect(() => {
@@ -144,9 +158,8 @@ const Carousel = ({ updateSelectedCount, currentIndex, arr_area }) => {
       {/* 添加外層 div */}
       {arr_area.map((area, index) => (
         <div
-          className={`box_turn ${arr_class[index]} ${
-            index === currentIndex ? "current" : ""
-          }`}
+          className={`box_turn ${arr_class[index]} ${index === currentIndex ? "current" : ""
+            }`}
           key={index}
           style={{ transform: `translateX(${(index - currentIndex) * 100}%)` }}
         >
@@ -173,39 +186,36 @@ const Carousel = ({ updateSelectedCount, currentIndex, arr_area }) => {
                 disableImagesLoaded={false}
                 updateOnEachImageLoad={true}
               >
-                {records.map((record, idx) => (
-                  // <LazyLoad 
-                  // key={idx} 
-                  // offset={100} 
-                  // once={true}
-                  // overflow={true}
-                  // resize={true}
-                  // placeholder={<CardPlaceholder />}
-                  // >
+                {records.map((record, idx) => {
+                  const imageUrl = record.fields["location cover"];
+                  const height = calculateHeightFromUrl(imageUrl); // 計算高度
+                  return (
                     <Card
                       key={idx}
-                      img={record.fields["location cover"]}
+                      img={imageUrl}
+                      height={height} 
                       index={idx}
                       onSelect={() => handleSelectCard(idx)}
-                      onOpenLightbox={() =>
-                        handleOpenLightbox(record.fields["location cover"])
-                      }
+                      onOpenLightbox={() => handleOpenLightbox(imageUrl)}
                       selected={selectedCards.includes(idx)}
-                      order={selectedCards.indexOf(idx) + 1} // 獲取選中順序
+                      order={selectedCards.indexOf(idx) + 1}
                       data={record.fields}
                     />
-                  // </LazyLoad>
-                ))}
+                  );
+                })}
               </Masonry>
             </div>
           </div>
         </div>
-      ))}
+      ))
+      }
       {/* 條件渲染 LightBox_Card */}
-      {lightboxOpen && (
-        <LightBox_Card image={selectedImage} onClose={closeLightbox} />
-      )}
-    </div>
+      {
+        lightboxOpen && (
+          <LightBox_Card image={selectedImage} onClose={closeLightbox} />
+        )
+      }
+    </div >
   );
 };
 

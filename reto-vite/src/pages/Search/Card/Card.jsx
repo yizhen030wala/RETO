@@ -6,7 +6,7 @@ import Marker from "../../../assets/img_hsc/search_card/selected_mark.svg";
 import star from "../../../assets/img_hsc/search_card/star.svg";
 
 //卡片元件
-const Card = ({ img, index, onSelect, selected, onOpenLightbox, data }) => {
+const Card = ({ img, index, onSelect, selected, onOpenLightbox, data, height }) => {
   const cardClass = selected ? "card_search selected" : "card_search";
   const dotClass = selected ? "circle" : "dot"; // 更新圓點的 class
 
@@ -30,28 +30,28 @@ const Card = ({ img, index, onSelect, selected, onOpenLightbox, data }) => {
   const [isImageLoaded, setIsImageLoaded] = useState(false);
 
   // ↓↓↓ API ↓↓↓
-//   const [records, setRecords] = useState([]);
+  //   const [records, setRecords] = useState([]);
 
-//   useEffect(() => {
-//     const fetchData = async () => {
-//       try {
-//         const response = await axios.get(
-//           "https://api.airtable.com/v0/appAZmHoN0ZgUBhGi/tblLuHs5ExVo7WrJM",
-//           {
-//             headers: {
-//               Authorization: `Bearer patPf99e6W2EBor8W.e2fe347dbdcf5b651cc6be631787070d5152604b494f295525430af19409a4bf`,
-//             },
-//           }
-//         );
-//         setRecords(response.data.records);
-//       } catch (error) {
-//         console.error("Error fetching data:", error);
-//         console.error("Error details:", error.response.data);
-//       }
-//     };
+  //   useEffect(() => {
+  //     const fetchData = async () => {
+  //       try {
+  //         const response = await axios.get(
+  //           "https://api.airtable.com/v0/appAZmHoN0ZgUBhGi/tblLuHs5ExVo7WrJM",
+  //           {
+  //             headers: {
+  //               Authorization: `Bearer patPf99e6W2EBor8W.e2fe347dbdcf5b651cc6be631787070d5152604b494f295525430af19409a4bf`,
+  //             },
+  //           }
+  //         );
+  //         setRecords(response.data.records);
+  //       } catch (error) {
+  //         console.error("Error fetching data:", error);
+  //         console.error("Error details:", error.response.data);
+  //       }
+  //     };
 
-//     fetchData();
-//   }, []);
+  //     fetchData();
+  //   }, []);
   // ↑↑↑ API ↑↑↑
 
   return (
@@ -73,14 +73,17 @@ const Card = ({ img, index, onSelect, selected, onOpenLightbox, data }) => {
       {/* 搜尋圖片 */}
       <figure
         className={`container_card_img ${!isImageLoaded ? "loading" : ""}`}
+        // className={`container_card_img`}
+        style={{ height: height ? `${height}px` : 'auto' }} // 根據Carsouel中的height調整高度
       >
         <img
           src={img}
-          alt={img.desc}
+          alt={data.location}
           onLoad={() => setIsImageLoaded(true)}
-          style={{ display: isImageLoaded ? "block" : "none" }}
+        // style={{ display: isImageLoaded ? "block" : "none" }}
         />
-        {!isImageLoaded && <div className="loading"></div>}
+        {/* {!isImageLoaded && <div className="loading"></div>} */}
+        {!isImageLoaded && <div className="loading-placeholder" style={{ height: height ? `${height}px` : 'auto' }}></div>} {/* 顯示一個與圖片相同高度的佔位區 */}
       </figure>
       <div className="card_search_info">
         {/* Title */}

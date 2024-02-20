@@ -22,7 +22,7 @@
   background-color: $color-green1;
   align-items: center;
   border-radius: 0px 0px 50px 50px;
-  height: 250px;
+  height: 220px;
   padding-top: 42.5px;
 
   * a {
@@ -93,11 +93,18 @@
         color: $color-black;
         padding: 4px 16px;
         text-decoration: none;
+        white-space: nowrap;
       }
     }
   }
 }
 
+@media (max-width:600px){
+  .bar_search {
+    width: 90% !important;
+    padding: 8px 8px !important;
+  }
+} 
 // -------NavBar.jsx
 .nav_search {
   ul {
@@ -130,9 +137,14 @@
 // -------Recommends.jsx
 .recommend {
   margin-top: 24px;
+  width: 100%;
+  display: flex;
+  justify-content: center;
 
   ul {
+    width: 460px;
     display: flex;
+    justify-content: space-between;
     padding: 0;
   }
 
@@ -145,15 +157,26 @@
 
     @include h2_body;
     line-height: 160%;
-    /* 22.4px */
-    margin: 8px;
+    white-space: nowrap;
 
-    &:active {
+    &:focus {
       background-color: $color-black;
       color: $color-white;
     }
   }
 }
+
+@media (max-width:600px){
+  .recommend {
+
+    ul {
+      width: 90% !important;
+      a {
+        padding: 2px 10px !important;
+      }
+    }
+  }
+} 
 
 // -------Carousel.jsx
 .box_carousel {
@@ -432,7 +455,8 @@
 
       //文字只顯示2行
       display: -webkit-box;
-      -webkit-line-clamp: 2; /* 顯示的行數 */
+      -webkit-line-clamp: 2;
+      /* 顯示的行數 */
       -webkit-box-orient: vertical;
       overflow: hidden;
     }
@@ -592,6 +616,26 @@
       rgba(255, 255, 255, 0.2),
       transparent);
   animation: loading 1.5s infinite;
+}
+
+.loading-placeholder {
+  position: relative;
+  background-color: #e2e2e2;
+  border-radius: 20px;
+
+  &::after {
+    display: block;
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    transform: translateX(-100%);
+    background: linear-gradient(90deg,
+        transparent,
+        rgba(255, 255, 255, 0.2),
+        transparent);
+    animation: loading 1.5s infinite;
+  }
 }
 
 @keyframes loading {
