@@ -16,8 +16,13 @@ const LightboxLine = ({ onClose }) => {
         overlay.classList.add('fade-out');
 
         // 監聽燈箱的滑出並且淡出動畫結束事件
-        lightbox.addEventListener('animationend', onClose, { once: true });
+        lightbox.addEventListener('animationend', () => {
+            // 在動畫結束後進行頁面導向
+            window.location.href = "/reto/schedule2"; // 或者使用 history.push("/reto/schedule2");
+        }, { once: true });
         overlay.addEventListener('animationend', onClose, { once: true });
+
+
     };
 
     return (
@@ -36,12 +41,14 @@ const LightboxLine = ({ onClose }) => {
                             <ButtonCancel_M onClick={handleClose}>取消</ButtonCancel_M>
                         </div>
                         <div className="LL-btn-check-wrap">
+
                             <ButtonChk_M onClick={handleClose}>確定</ButtonChk_M>
+
                         </div>
                     </div>
                 </div>
-            </div>
-        </div>
+            </div >
+        </div >
     );
 };
 
