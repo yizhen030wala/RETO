@@ -21,11 +21,18 @@
 
   figure {
     position: relative;
+    display: block;
   }
 
   img {
     display: block;
     width: 100%;
+  }
+
+  input{
+    border: 0;
+    padding: 0;
+    outline: none;
   }
 
   section {
