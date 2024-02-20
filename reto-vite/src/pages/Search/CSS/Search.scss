@@ -8,8 +8,10 @@
 .main_search {
   display: flex;
   flex-direction: column;
+  justify-content: center;
   align-items: center;
   width: 100%;
+  
 }
 
 // -------HeaderSearch.jsx
@@ -130,8 +132,10 @@
 .recommend {
   margin-top: 24px;
 
+
   ul {
     display: flex;
+    padding: 0;
   }
 
   a {
@@ -301,8 +305,8 @@
 // -------FixedBtn.jsx
 .btn_fixed {
   position: fixed;
-  left: 43vw;
   bottom: 15vh;
+
   transition: 0.35s;
   z-index: 999;
 
@@ -360,6 +364,7 @@
       text-decoration: none;
       @include text_btn_big;
       padding: 8px 16px;
+      white-space: nowrap;
     }
 
     &:focus {
