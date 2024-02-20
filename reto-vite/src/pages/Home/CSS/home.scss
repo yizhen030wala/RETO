@@ -80,40 +80,42 @@
 
                 .slogan1 {
                     position: absolute;
-                    // top: 160px;
-                    top: 20vh;
+                    top: 10vh;
+                    left: 25px;
                     z-index: 5;
                 }
 
                 .slogan2 {
                     position: absolute;
-                    // top: 264px;
-                    top: 32vh;
+                    top: calc(10vh + 150px);
+                    left: -5px;
                     z-index: 5;
                 }
 
-                p {
-                    font-family: 'Noto Sans TC', sans-serif;
-
-                    font-size: 4rem;
-                    font-style: normal;
-                    font-weight: 400;
-
-                    background-color: white;
-                    margin-bottom: 50px;
-
-                    padding: 12px 50px 12px 27px;
-                    z-index: 1;
+                .mobile_slogan {
+                    display: none;
                 }
+
+                // p {
+                //     font-family: 'Noto Sans TC', sans-serif;
+
+                //     font-size: 4rem;
+                //     font-style: normal;
+                //     font-weight: 400;
+
+                //     background-color: white;
+                //     margin-bottom: 50px;
+
+                //     padding: 12px 50px 12px 27px;
+                //     z-index: 1;
+                // }
 
                 // 免費開始(按鈕)
 
                 .btn_freeStart {
                     text-align: center;
                     position: absolute;
-                    // top: 390px;
-                    top: 45vh;
-                    // left: 28px;
+                    top: calc(10vh + 150px + 170px);
                     left: 4%;
                     width: 232px;
                     height: 70px;
@@ -122,9 +124,10 @@
                     background-color: r.$color_yellow;
                     z-index: 5;
                     transition: .15s;
+                    cursor: pointer;
 
 
-                    a {
+                    .btn_start {
                         font-family: 'Noto Sans TC', sans-serif;
                         font-size: 2rem;
                         font-style: normal;
@@ -159,9 +162,8 @@
                 .box_attention {
                     .bg_home {
                         .sun {
-                            width: 800px;
-                            height: 800px;
-                            padding-top: 55%;
+                            width: 900px;
+                            height: 900px;
                             right: -20%;
                             top: 33%;
                         }
@@ -172,23 +174,28 @@
                     }
 
                     .slogan1 {
-                        top: 10vh;
+                        position: absolute;
+                        top: 8vh;
+                        left: 25px;
                         z-index: 5;
                     }
-
+    
                     .slogan2 {
-                        top: 20vh;
+                        position: absolute;
+                        top: calc(8vh + 150px);
+                        left: -5px;
                         z-index: 5;
                     }
-
-                    p {
-                        font-size: 3.5rem;
+    
+                    .mobile_slogan {
+                        display: none;
                     }
+
 
                     .btn_freeStart {
-                        top: 32vh;
+                        top: calc(8vh + 150px + 170px);
 
-                        a {
+                        .btn_start {
                             font-size: 2rem;
                         }
                     }
@@ -205,10 +212,9 @@
                 .box_attention {
                     .bg_home {
                         .sun {
-                            width: 700px;
-                            height: 700px;
-                            padding-top: 55%;
-                            right: -20%;
+                            width: 800px;
+                            height: 800px;
+                            right: -25%;
                             top: 35%;
                         }
 
@@ -218,23 +224,26 @@
                     }
 
                     .slogan1 {
-                        top: 10vh;
-                        z-index: 5;
+                       display: none;
                     }
-
+    
                     .slogan2 {
-                        top: 20vh;
-                        z-index: 5;
+                        display: none;
                     }
-
-                    p {
-                        font-size: 3.3rem;
+    
+                    .mobile_slogan {
+                        transform-origin: left bottom;
+                        transform: scale(1.5);
+                        display: block;
+                        position: absolute;
+                        top: 8vh;
+                        left: 5%;
                     }
 
                     .btn_freeStart {
-                        top: 30vh;
+                        top: calc(8vh + 170px);
 
-                        a {
+                        .btn_start {
                             font-size: 2rem;
                         }
                     }
@@ -263,26 +272,21 @@
                     }
 
                     .slogan1 {
-                        top: 8vh;
-                        z-index: 5;
-                    }
-
-                    .slogan2 {
-                        top: 17vh;
-                        z-index: 5;
-                    }
-
-                    p {
-                        font-size: 3rem;
-                    }
-
-                    .btn_freeStart {
-                        top: 28vh;
-
-                        a {
-                            font-size: 2rem;
-                        }
-                    }
+                        display: none;
+                     }
+     
+                     .slogan2 {
+                         display: none;
+                     }
+     
+                     .mobile_slogan {
+                         transform-origin: left bottom;
+                         transform: scale(1);
+                         display: block;
+                         position: absolute;
+                         top: 5vh;
+                         left: 5%;
+                     }
                 }
             }
         }
@@ -299,7 +303,7 @@
                             width: 650px;
                             height: 650px;
                             right: -85%;
-                            top: 42%;
+                            top: 35%;
                         }
 
                         .bg_clean {
@@ -308,25 +312,70 @@
                     }
 
                     .slogan1 {
-                        top: 10vh;
-                        z-index: 5;
-                    }
-
-                    .slogan2 {
-                        top: 17vh;
-                        z-index: 5;
-                    }
-
-                    p {
-                        font-size: 1.6rem;
-                    }
+                        display: none;
+                     }
+     
+                     .slogan2 {
+                         display: none;
+                     }
+     
+                     .mobile_slogan {
+                         transform-origin: left bottom;
+                         transform: scale(1);
+                         display: block;
+                         position: absolute;
+                         top: 3vh;
+                         left: 12%;
+                     }
 
                     .btn_freeStart {
-                        top: 26vh;
+                        top: calc(3vh + 150px);
+                        transform: scale(.8);
+                    }
+                }
+            }
+        }
+    }
+}
 
-                        a {
-                            font-size: 2rem;
+@media (max-width:400px) {
+    #land_page {
+        .page_left {
+            .area_attention {
+                .box_attention {
+                    .bg_home {
+                        .sun {
+                            width: 650px;
+                            height: 650px;
+                            right: -115%;
+                            top: 35%;
                         }
+
+                        .bg_clean {
+                            height: 40%;
+                        }
+                    }
+
+                    .slogan1 {
+                        display: none;
+                     }
+     
+                     .slogan2 {
+                         display: none;
+                     }
+     
+                     .mobile_slogan {
+                         transform-origin: left bottom;
+                         transform: scale(1);
+                         display: block;
+                         position: absolute;
+                         top: 5vh;
+                         left: 12%;
+                     }
+
+                     .btn_freeStart {
+                        top: calc(5vh + 150px);
+                        transform: scale(.8);
                     }
                 }
             }
@@ -341,7 +390,7 @@
 }
 
 .sun.change-bg-color-sun {
-    background-color: $color_white !important;
+    background-color: $color_gray3 !important;
 }
 
 .bar_top_home {
@@ -722,6 +771,7 @@
 
 
         ul {
+            padding: 0;
             display: flex;
             justify-content: center;
             align-items: flex-start;
@@ -888,6 +938,7 @@
             width: 80%;
             // margin-left: 20%;
             overflow: hidden;
+            padding: 0;
             
             ul {
                 align-self: flex-start;
