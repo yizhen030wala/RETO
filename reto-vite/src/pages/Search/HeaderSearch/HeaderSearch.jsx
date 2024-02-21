@@ -16,7 +16,7 @@ import logoGreen from '../../../assets/img/RETO logo/logo white.svg';
 import UnLogin from '../../../components-common/ShowUnlogin/ShowUnlogin.jsx'
 import './HeaderSearch.scss';
 import User from '../../../assets/img/Avatar/Mask Group.svg'
-import Menu from '../../../assets/img/icon/icon-black/menu.svg'
+import Menu from '../../../assets/img/icon/icon-white/menu.svg'
 import Onlylogo from '../../../assets/img/RETO logo/logo/logo-white.svg'
 
 const HeaderSearch = () => {

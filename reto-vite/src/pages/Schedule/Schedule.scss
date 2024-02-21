@@ -6,9 +6,15 @@
 // Extea small devices(phones, 600px and down)
 @media only screen and (max-width: 600px) {
     .Schedule_container {
+
         margin: 20px 16px !important;
 
+        .bar_stick {
+            margin-top: 8vh !important;
+        }
+
         .tripHead {
+
             padding: 10px 0 !important;
             @include showFlex_column;
             align-items: start !important;
@@ -64,12 +70,18 @@
 // ====================================
 
 .Schedule_container {
+    margin-top: 8vh;
     margin: 20px 9%;
     display: flex;
     flex-direction: column;
 
+    .bar_stick {
+        margin-top: 8vh !important;
+    }
+
     // 行程表頭
     .tripHead {
+
         padding: 20px 0;
         display: flex;
         align-items: center;
