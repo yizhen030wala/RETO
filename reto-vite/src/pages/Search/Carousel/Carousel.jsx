@@ -81,7 +81,7 @@ const Carousel = ({ updateSelectedCount, currentIndex, arr_area }) => {
 
   const masonryOptions = {
     itemSelector: ".card_search",
-    columnWidth: 460,
+    columnWidth:230,
     gutter: 20,
     percentPosition: true,
     fitWidth: false,
