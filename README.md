@@ -12,7 +12,7 @@ Reto is a travel planning tool that aims to help users plan their travels easily
 <img alt="home page" src="./reto-vite/src//assets/img/features/readme 1.png">
 
 ######  Search page
-<img alt="search page" src="./reto-vite/src//assets/img/features/readme .png">
+<img alt="search page" src="./reto-vite/src//assets/img/features/readme 2.png">
 
 ######  Trip planning page
 <img alt="trip planning page" src="./reto-vite/src//assets/img/features/readme 3.png">
