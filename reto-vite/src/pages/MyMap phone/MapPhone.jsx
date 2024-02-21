@@ -20,11 +20,11 @@ const MapPhone = () => {
                         <div className="tripTitle">
                             {/* 行程表名稱 */}
                             <div>
-                                <h3>旅藤台南行</h3>
+                                <h3>桃園台北RARASO</h3>
                             </div>
                             {/* 行程表日期 */}
                             <div>
-                                <h2>2022/2/23-2/26</h2>
+                                <h2>2022/2/23-2/27</h2>
                             </div>
                         </div>
                     </div>
