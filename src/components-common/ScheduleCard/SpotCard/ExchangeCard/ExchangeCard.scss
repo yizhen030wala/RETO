@@ -1,0 +1,164 @@
+@import "../../../../assets/scssRule/all.scss";
+@import "../../../../assets/scssRule/rule.scss";
+
+// ================= RWD ===================
+
+// Extea small devices(phones, 600px and down)
+@media only screen and (max-width:600px) {
+    .cardEX_search{
+        width: 90% !important;
+    }
+}
+
+// ====================================
+
+
+.cardEX_search {
+    width: 230px;
+    height: auto;
+    background-color: white;
+    border-radius: 20px;
+    overflow: hidden;
+    margin-bottom: 20px;
+    cursor: pointer;
+    box-shadow: 0px 0px 10px 2px transparent;
+    transition: box-shadow 0.35s, transform 0.35s;
+
+    img{
+        border-radius: $border_radius_20px;
+    }
+
+
+// Prevent text selection on the card
+.card_search {
+    user-select: none;
+}
+
+
+// Styles for the dot indicating selection
+.dot_card {
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    text-align: center;
+    line-height: 20px;
+    cursor: pointer;
+    // z-index: 90;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.dot {
+    position: absolute;
+    top: 15px;
+    right: 15px;
+    width: 20px;
+    height: 20px;
+    background-color: #fff;
+    border-radius: 50%;
+    font-weight: bold;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2),
+        inset -1px -1px 0.5px 0.5px #c7c7c7;
+}
+
+// Checkmark for selected cards
+.circle {
+    position: absolute;
+    top: 15px;
+    right: 15px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    // z-index: 950;
+}
+
+.checkmark {
+    // z-index: 901;
+    object-fit: cover;
+    height: 100%;
+    width: 100%;
+    // z-index: 960;
+}
+
+// Styles for selected cards
+.card_search.selected {
+    box-shadow: 1.5px 1.5px 5px 1px #7e7e7e;
+}
+
+.card_search figure {
+    overflow: hidden;
+    object-fit: cover;
+    border-radius: 20px;
+}
+
+.card_search img {
+    width: 100%;
+    display: block;
+    border-radius: 20px;
+    transition: 0.35s;
+}
+
+// Enlarge image on hover
+.card_search:hover img {
+    cursor: pointer;
+    transform: scale(110%);
+}
+
+// Card content styles
+.card_search_info {
+    @include showFlex_column;
+    padding: 12px;
+    gap: 6px;
+}
+
+.card_title {
+    font-family: "Noto Sans TC", sans-serif;
+    font-size: 16px;
+    font-weight: 400;
+    margin-bottom: 6px;
+}
+
+.evaluate {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-family: "Noto Sans TC", sans-serif;
+    font-size: 12px;
+    font-weight: 400;
+    margin-bottom: 6px;
+}
+
+.evaluate figure,
+.address figure,
+.link figure {
+    display: flex;
+    align-items: center;
+    margin-right: 5px;
+}
+
+.evaluate_left img {
+    width: 14px;
+    height: 14px;
+}
+
+// Tag styles
+.tag_search {
+    display: flex;
+    gap: 5px;
+}
+
+.tag_search a {
+    font-family: "Noto Sans TC", sans-serif;
+    font-size: 12px;
+    font-weight: 400;
+    line-height: 150%;
+    border-radius: 5px;
+    background: #f5f5f5;
+    padding: 2.5px 12px;
+}
+
+}

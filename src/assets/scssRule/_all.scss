@@ -1,0 +1,45 @@
+@import "rule";
+
+* {
+  font-family: 'Noto Sans TC', 微軟正黑體;
+  margin: 0;
+  box-sizing: border-box; //影響到header高度
+
+  ul, ol {
+    list-style: none;
+    padding: 0px;
+    margin: 0;
+  }
+
+  a {
+    text-decoration: none;
+    color: $color-black; //有危險
+  }
+
+  input {
+    border: 0;
+    padding: 0;
+    outline: none;
+  }
+
+  figure {
+    position: relative;
+    display: block;
+  }
+
+  img {
+    display: block;
+    width: 100%;
+  }
+
+  input{
+    border: 0;
+    padding: 0;
+    outline: none;
+  }
+
+  section {
+    height: 100vh;
+    @include center;
+  }
+}

@@ -1,0 +1,37 @@
+
+@import "../../assets/scssRule/rule";
+@import "../../assets/scssRule/all";
+
+
+// ====================================
+.remove-box {
+    margin: 10px; //用來看設計
+    background-color: white;
+    width: 158px;
+    height: 40px;
+    @include shadow;
+    border-radius: $border_radius_10px;
+    display: inline-flex;
+    padding: 0px 10px;
+
+    figure {
+        margin: auto;
+        position: relative;
+        background-color: $color_black;
+        @include size(20px, 20px);
+        align-items: center;
+        border-radius: 100%;
+        margin-right: 0;
+
+        img {
+            position: absolute;
+            top: 4.5px;
+            left: 2.5px;
+            width: 80%;
+        }
+    }
+    p{
+        font-size: 0.9rem;
+        margin: auto;
+    }
+}

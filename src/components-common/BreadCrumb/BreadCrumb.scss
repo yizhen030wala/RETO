@@ -1,0 +1,61 @@
+@import "../../assets/scssRule/rule";
+@import "../../assets/scssRule/all";
+
+// ====================================
+
+.breadCrumb {
+    margin: auto;
+    display: flex;
+    flex-direction: row;
+    padding: 0px;
+
+    ul {
+        list-style: none;
+        
+    }
+
+    li {
+        padding: 0 8px;
+        display: flex;
+        align-items: center;
+
+        &:last-child a {
+            color: #3d9d35;
+        }
+
+        & + li {
+            padding-left: 0;
+        }
+
+        &:first-child {
+            padding-left: 0;
+            /* 设置第一个 li 的左边距为 0 */
+        }
+    }
+
+    & a{
+        font-family: Noto Sans TC;
+        font-size: 12px;
+        font-style: normal;
+        font-weight: 400;
+        text-decoration: none;
+        color: #828282;
+
+        &:hover {
+            color: #3d9d35;
+        }
+    }
+
+    .btn_back{
+        color: #828282;
+    } 
+}
+
+.breadCrumb_M{
+    margin: auto;
+    display: flex;
+    flex-direction: row;
+    padding: 0px;
+
+
+}

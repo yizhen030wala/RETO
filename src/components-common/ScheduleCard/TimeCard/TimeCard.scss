@@ -1,0 +1,33 @@
+@import "../../../assets/scssRule/all.scss";
+@import "../../../assets/scssRule/rule.scss";
+
+// ====================================
+
+//  交通區塊
+.traffic {
+    // width: 440px;;
+    width: 100%;
+    padding: 3% 8%;
+
+    // 交通資訊
+    .trafficInfo {
+        display: flex;
+        gap: 5px 10px;
+        padding: 6% 6%;
+        border-left: 3px solid #d9d9d9;
+
+        .icon-car {
+            font-size: 20px;
+            color: #333333;
+        }
+
+        .driveTime {
+            color: rgba(0, 0, 0, 0.5);
+            font-family: Noto Sans TC;
+            font-size: 14px;
+            font-style: normal;
+            font-weight: 400;
+            line-height: 160%;
+        }
+    }
+}

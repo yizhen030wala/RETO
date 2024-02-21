@@ -1,0 +1,35 @@
+// 行程頁的垃圾桶刪除按鈕
+@import "../../../assets/scssRule/rule";
+@import "../../../assets/scssRule/all";
+// ====================================
+
+.btn_wrap_t {
+    position: relative; /* 父元素需設置為相對定位 */
+
+    .btn_del_t {
+        z-index: 1;
+
+        width: 20px;
+        height: 20px;
+
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        cursor: pointer;
+
+        .loc-delete {
+            position: absolute;
+            top: 11px;
+            right: 11px;
+            opacity: 50%;
+        }
+    }
+    .wrap-del_t {
+        margin: 0;
+        padding: 0;
+        position: absolute;
+        top: calc(100% - 0px);
+        right: 3px;
+        z-index: 1;
+    }
+}

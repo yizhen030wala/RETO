@@ -1,0 +1,206 @@
+@import "../../assets/scssRule/rule";
+@import "../../assets/scssRule/all";
+// ======================= RWD ==========================
+
+// Medium devices(landscape tablets, 1024px and up)
+@media only screen and (min-width:1020px) {
+    .mapphone_rwd {
+        display: none !important;
+    }
+
+}
+
+// ====================================
+.mapphone_rwd {
+    .mapphone_container {
+        // display: none;
+        @include showFlex_column;
+        justify-content: space-between;
+        margin: auto;
+        padding: 0% 16px;
+        height: 25%;
+        gap: 6px;
+
+        .left_div {
+            width: 100%;
+            height: 15vh;
+
+            // 行程表表頭資訊
+            .tripHead {
+                display: flex;
+                align-items: center;
+                justify-content: space-between;
+
+                .tripTitle {
+                    display: flex;
+                    flex-direction: column;
+
+                    h2 {
+                        font-family: Noto Sans TC;
+                        font-size: 14px;
+                        font-style: normal;
+                        font-weight: 400;
+                        line-height: 160%;
+                        color: #929292;
+                        /* 设置所有的 <h2> 初始为灰色 */
+                    }
+
+                    h2:hover {
+                        font-family: Noto Sans TC;
+                        font-size: 14px;
+                        font-style: normal;
+                        font-weight: 400;
+                        line-height: 160%;
+                        color: black;
+                        /* 设置所有的 <h2> 初始为灰色 */
+                    }
+
+                    h3 {
+                        // 行程標題：旅藤台南行
+                        font-family: Noto Sans TC;
+                        font-size: 24px;
+                        font-style: normal;
+                        font-weight: 500;
+                        line-height: 150%;
+                    }
+                }
+            }
+
+            .swiper-container {
+                height: 40px;
+            }
+
+
+        }
+
+
+    }
+
+    .mp_wrap {
+        display: block;
+        height: 77vh;
+        position: relative;
+        width: 100%;
+
+        // 地圖本體
+        .SM_map {
+            width: 100%;
+            height: 100%;
+            background-color: #f5f5f5;
+            overflow: hidden;
+
+            iframe {
+                width: 100%;
+                height: 100%;
+            }
+        }
+
+        // 右上i右上icon
+        .link_google {
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+            justify-content: center;
+
+            position: absolute;
+            top: 15px;
+            right: 15px;
+            z-index: 1;
+
+            padding: 10px 20px;
+            gap: 10px;
+
+            background-color: #fff;
+            border-radius: 20px;
+            text-decoration: none;
+
+            figure {
+                display: flex;
+            }
+
+            div {
+                p {
+                    color: var(--black2, #333);
+                    font-family: Noto Sans TC;
+                    font-size: 16px;
+                    font-style: normal;
+                    font-weight: 500;
+                    line-height: 150%;
+                }
+            }
+        }
+
+
+        .map_img {
+            width: 45%;
+            display: flex;
+
+            padding: 0px 60px 0 70px;
+
+            img {
+                width: 100%;
+                border-radius: 20px;
+            }
+        }
+
+        //底部地點選單
+        .mapphone_itinerary {
+            position: absolute;
+            background-color: $color_white;
+            height: 12vh;
+            border-radius: 20px;
+            top: 77.5%;
+            width: 100%;
+            overflow: hidden;
+            @include row-center;
+            padding: 5% 5%;
+            gap: 0px;
+            justify-content: space-between;
+
+            h3 {
+                @include h3_body;
+            }
+
+            p {
+                @include h3_body;
+                font-size: 10px;
+            }
+
+            .day {
+                background-color: $color-green1;
+                color: $color-white;
+                @include size(20%, 60%);
+                border-radius: $border_radius_10px;
+                @include center;
+                gap: 5px;
+
+            }
+
+            .box {
+                background-color: $color_gray3;
+                @include size(40%, 60%);
+                border-radius: $border_radius_10px;
+                @include row-center;
+                gap: 5px;
+
+                .nb_badge {
+                    background-color: $color-white;
+                    border-radius: 100%;
+                    font-size: 12px;
+                    width: 16px;
+                    @include center;
+                }
+            }
+
+            .time_box {
+                @include size(30%, 60%);
+                border-radius: $border_radius_10px;
+                @include center;
+                gap: 5px;
+
+            }
+        }
+
+
+    }
+}

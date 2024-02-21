@@ -1,0 +1,82 @@
+@import "../../assets/scssRule/rule";
+@import "../../assets/scssRule/all";
+
+// ===============================================
+
+.login-box {
+  height: 90vh;
+  // border: 1px solid red;
+  @include center;
+  z-index: 999;
+
+  a {
+    color: $color_gray1;
+  }
+
+  p {
+    padding: 1rem;
+
+  }
+
+  .imgBox {
+    // border: 1px solid red;
+    text-align: right;
+    min-width: 235px;
+    padding: 0;
+    margin: 0;
+    z-index: 500;
+
+    .logo {
+      width: 100px;
+      // margin: -4px;
+
+    }
+  }
+
+
+  .login {
+    img {
+      @include icon_20px;
+    }
+
+    min-width: 235px;
+    font-size: 1rem;
+    display: flex;
+    padding: 1.3rem 3.5rem;
+    justify-content: center;
+    align-items: center;
+    gap: 0.8rem;
+    border-radius: 1.5rem;
+    background-color:$color_gray3;
+    border: none;
+    cursor: pointer;
+    transition: 0.3s;
+    z-index: 800;
+
+    &:hover {
+      background-color: $color_gray2;
+
+    }
+  }
+
+
+
+  .agree {
+    font-size: 0.8rem;
+    margin-top: 0;
+    color: $color_gray1;
+
+    a {
+      text-decoration-line: underline;
+      color: $color_gray1;
+      cursor: pointer;
+
+
+      &:hover {
+        color: #333;
+      }
+    }
+
+  }
+
+}
