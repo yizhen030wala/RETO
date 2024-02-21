@@ -76,11 +76,45 @@ const CarouselCollections = ({
     };
   }, []);
 
-  const masonryOptions = {
+  useEffect(() => {
+    const handleResize = () => {
+      if (window.innerWidth <= 768) {
+        setMasonryOptions({
+          ...masonryOptions,
+          columnWidth: 500,
+          gutter: -450,
+        
+        });
+      } else if (window.innerWidth <= 1200) {
+        setMasonryOptions({
+          ...masonryOptions,
+          columnWidth: 350,
+          gutter: -100,
+        });
+      } else {
+        setMasonryOptions({
+          ...masonryOptions,
+          columnWidth: 230,
+          gutter: 20,
+        });
+      }
+    };
+  
+    handleResize(); // 初始化
+  
+    window.addEventListener('resize', handleResize);
+  
+    return () => {
+      window.removeEventListener('resize', handleResize);
+    };
+  }, []); // 空依賴陣列確保只有在組件初始化時才會設置事件監聽器
+  // 根據列數計算容器的寬度
+
+  const [masonryOptions, setMasonryOptions] = useState({
     itemSelector: ".card_search",
     columnWidth: 230,
     gutter: 20,
-    percentPosition: false,
+    percentPosition: true,
     fitWidth: false,
     transitionDuration: "0.35s",
     horizontalOrder: true,
@@ -88,7 +122,7 @@ const CarouselCollections = ({
     imagesLoaded: true,
     stagger: 0,
     isAnimated: true,
-  };
+  });
 
   // 解析圖片URL並計算高度
   const calculateHeightFromUrl = (imageUrl, targetWidth = 230) => {

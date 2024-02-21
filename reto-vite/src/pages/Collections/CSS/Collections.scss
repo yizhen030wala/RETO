@@ -140,6 +140,8 @@
   }
 }
 
+
+
 /*協助對齊用*/
 
 .assist {
@@ -172,7 +174,7 @@
 
 @media (max-width:1200px) {
   .search_collections {
-    width: 98%;
+    width: 90%;
 
     .bar_search_collections {
       width: 55%;
@@ -237,10 +239,10 @@
   }
 }
 
-@media (max-width:992px) {
+@media (max-width:1200px) {
   .area_category {
     .box_category {
-      width: 96%;
+      width: 90%;
     }
   }
 }
@@ -248,7 +250,7 @@
 @media (max-width:600px) {
   .area_category {
     .box_category {
-      width: 90%;
+      width: 80%;
     }
   }
 }
@@ -364,6 +366,46 @@
     }
   }
 }
+
+//僅提供iPad Pro
+@media (max-width:1200px) {
+  .box_carousel_collections {
+    width: 90%;
+    .box_turn {
+      width: 100%;
+      margin: 0 -485px;
+    }
+  }
+}
+@media (max-width:900px) {
+  
+  .box_carousel_collections {
+    overflow: visible;
+    // width: 90%;
+    .box_turn {
+      width: 100%;
+      margin: 0 -360px;
+    }
+  }
+}
+
+@media (max-width:600px) {
+  
+  .box_carousel_collections {
+    overflow: visible;
+    // width: 90%;
+    .box_turn {
+      width: 100%;
+      margin: 0 -176px;
+      .card_search {
+        margin-right: -20px !important;
+      }
+    }
+  }
+}
+
+
+
 
 // -------FixedBtn.jsx
 .btn_fixed {

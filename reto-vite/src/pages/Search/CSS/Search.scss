@@ -182,10 +182,12 @@
 
 // -------Carousel.jsx
 .box_carousel {
-  // display: flex;
+  display: flex;
+  justify-content: center;
+  align-items: center;
   position: relative;
 
-  // width: 100%;
+  width: 100%;
   overflow: hidden;
   gap: 2%;
 
@@ -200,6 +202,7 @@
     transition: 0.5s ease;
     flex-shrink: 0;
     min-height: 700px;
+    // width: 730px;
 
     scale: 0.97;
     margin: 10vh -494px;
@@ -302,6 +305,7 @@
   width: 1060px;
   border-radius: 20px;
 
+
   &::after {
     display: block;
     content: "";
@@ -312,7 +316,7 @@
     transform: translateX(-100%);
     background: linear-gradient(90deg,
         transparent,
-         rgba(255, 255, 255, 0.5),
+        rgba(255, 255, 255, 0.5),
         transparent);
     animation: loading 1.5s infinite;
 
@@ -325,11 +329,36 @@
 }
 
 @media (max-width:1200px) {
-  .wrapper {
-    .card_container {
-      div {
-        width: 730px !important;
-      }
+  .loading_search {
+    background: url('../../../assets/img/loading/searchmd.png');
+    width: 100%;
+  }
+}
+
+@media (max-width:768px) {
+  .loading_search {
+    background: url('../../../assets/img/loading/searchsm.png');
+  }
+}
+
+//僅提供iPad Pro
+@media (max-width:1200px) {
+  .box_carousel {
+    .box_turn {
+      scale: 1;
+      width: 800px;
+      margin: 5vh -400px;
+    }
+  }
+}
+
+@media (max-width:768px) {
+  .box_carousel {
+    .box_turn {
+      padding: 30px 26px;
+      // width: 420px;
+      width: 100%;
+      margin: 5vh -220px;
     }
   }
 }
@@ -408,6 +437,17 @@
     transition: 0.35s;
   }
 
+  //========================
+
+  @media (max-width:768px) {
+    .arrowLeft,
+    .arrowRight {
+      transform: scale(4.5) translateY(-4.5px);
+    }
+  }
+
+  //========================
+
   .myJour {
     //--------Ralph
     // color: #FFF;
@@ -453,6 +493,7 @@
 // -------Card.jsx
 .card_search * {
   user-select: none;
+  white-space: nowrap;
 }
 
 .card_search {
@@ -620,20 +661,7 @@
 
 //輪播區塊
 
-.box_carousel {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  width: 100%;
-  // overflow: hidden;
 
-  gap: 2%;
-
-  // .accommodation,
-  // .fun {
-  //   scale: 0.95;
-  // }
-}
 
 //圖片尚未載入時的樣式
 
@@ -689,5 +717,16 @@
 @keyframes loading {
   100% {
     transform: translateX(100%);
+  }
+}
+
+
+@media (max-width:768px) {
+  .card_search {
+    width: 180px;
+
+    .container_card_img {
+      height: 80% !important;
+    }
   }
 }

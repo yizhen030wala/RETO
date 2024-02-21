@@ -80,7 +80,42 @@ const Carousel = ({ updateSelectedCount, currentIndex, arr_area }) => {
     };
   }, []);
 
-  const masonryOptions = {
+  
+  useEffect(() => {
+    const handleResize = () => {
+      if (window.innerWidth <= 768) {
+        setMasonryOptions({
+          ...masonryOptions,
+          columnWidth: 500,
+          gutter: -450,
+        
+        });
+      } else if (window.innerWidth <= 1200) {
+        setMasonryOptions({
+          ...masonryOptions,
+          columnWidth: 350,
+          gutter: -100,
+        });
+      } else {
+        setMasonryOptions({
+          ...masonryOptions,
+          columnWidth: 230,
+          gutter: 20,
+        });
+      }
+    };
+  
+    handleResize(); // 初始化
+  
+    window.addEventListener('resize', handleResize);
+  
+    return () => {
+      window.removeEventListener('resize', handleResize);
+    };
+  }, []); // 空依賴陣列確保只有在組件初始化時才會設置事件監聽器
+  // 根據列數計算容器的寬度
+
+  const [masonryOptions, setMasonryOptions] = useState({
     itemSelector: ".card_search",
     columnWidth: 230,
     gutter: 20,
@@ -92,7 +127,16 @@ const Carousel = ({ updateSelectedCount, currentIndex, arr_area }) => {
     imagesLoaded: true,
     stagger: 0,
     isAnimated: true,
+  });
+
+  
+  const calculateContainerWidth = (columnWidth, gutter, columns) => {
+    return columns * (columnWidth + gutter) - gutter;
   };
+
+  // 在組件中設置列數和容器寬度
+  // const columns = 3; // 新的列數
+  // const containerWidth = calculateContainerWidth(masonryOptions.columnWidth, masonryOptions.gutter, columns);
 
   // 解析圖片URL並計算高度
   const calculateHeightFromUrl = (imageUrl, targetWidth = 230) => {
@@ -158,7 +202,7 @@ const Carousel = ({ updateSelectedCount, currentIndex, arr_area }) => {
   )
 
   return (
-    <div className="box_carousel">
+    <div className="box_carousel" >
       {loading ? (
         arr_area.map((area, index) => (
           <div
@@ -167,6 +211,7 @@ const Carousel = ({ updateSelectedCount, currentIndex, arr_area }) => {
             style={{
               transform: `translateX(${(index - currentIndex) * 85}%) ${index !== currentIndex ? "scale(0.8)" : ""}`, // 添加縮放效果
               transition: "transform 0.5s ease", // 添加過渡效果
+              // width: `${containerWidth}px`
             }}
           >
             <div className="loading_search"></div>
