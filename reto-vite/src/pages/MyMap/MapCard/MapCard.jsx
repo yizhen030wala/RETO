@@ -1,16 +1,19 @@
-// MyMap 頁面 右側地圖區塊
+import React from 'react';
+import "./MapCard.scss";
+// 增加的部分
+// import InfoCard from "../../../components-common/ScheduleCard/SpotCard/InfoCard/InfoCard"
 
-import React from 'react'
-import "./MapCard.scss"
+const MapCard = (props) => {
 
-const MapCard = () => {
+
+
     return (
         <>
             {/* 地圖本體 */}
             <div div className="SM_map" >
 
                 <iframe
-                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d14457.513043160428!2d121.50391680386691!3d25.055165444839425!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3442a96d2ecfd72b%3A0x21c4c5b2853cd189!2z5aSn56i75Z-V6a2v6IKJ6aOv!5e0!3m2!1szh-TW!2stw!4v1706777706117!5m2!1szh-TW!2stw"
+                    src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d14468.60756967815!2d121.2128567!3d24.9609463!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x346823ca6bb94541%3A0x5b136096a5d374b0!2z57ag5rKQ5oGs5ou-IENhZsOpICYgUMOidGlzc2VyaWU!5e0!3m2!1szh-TW!2stw!4v1708498479408!5m2!1szh-TW!2stw"
                     style={{ width: '100%', height: '100%', border: '0' }}
                     allowFullScreen="" loading="lazy" />
             </div >
@@ -34,9 +37,13 @@ const MapCard = () => {
                     {/* 左側景點卡片資料 */}
                     <div className="map_card">
                         <div className="map_card_wrap">
+                            
+                            {/*  */}
+                            {/* <p>{props.varOne}, {props.varTwo}</p> */}
+                            
                             {/* 景點名稱 */}
                             <p className="spot_name">
-                                大稻埕魯肉飯
+                            綠沐恬拾 Café & Pâtisserie
                             </p>
                             {/* 景點資訊 */}
                             <div className="map_card_info">
@@ -47,22 +54,22 @@ const MapCard = () => {
                                     </div>
                                     <div className="map_card_text">(123)</div>
                                 </div>
-                                <p className="map_card_text">$$$</p>
+                                <p className="map_card_text">$$</p>
                             </div>
                             {/* 地址 */}
                             <div className="card_info_list" href="#">
                                 <span className="icon-location_on"></span>
-                                <p className="map_card_text">224新北市瑞芳區基山街90號</p>
+                                <p className="map_card_text">桃園市中壢區中央西路二段229-1號</p>
                             </div>
                             {/* FB */}
                             <a className="card_info_list" href="#">
                                 <span className="icon-website"></span>
-                                <p className="map_card_text">Facebook.com</p>
+                                <p className="map_card_text">https://www.facebook.com/greenco2291?locale=zh_TW</p>
                             </a>
                             {/* 篩選標籤 */}
                             <div className="card_info_list2">
-                                <div className="card_info_filter">篩選器</div>
-                                <div className="card_info_filter">篩選器</div>
+                                <div className="card_info_filter">台北</div>
+                                <div className="card_info_filter">下午茶</div>
                             </div>
                         </div>
                         {/* 景點營業日期 */}
@@ -79,7 +86,7 @@ const MapCard = () => {
                     {/* 右邊景點卡片圖片 */}
                     <div className="map_img">
                         <figure>
-                            <img src="https://images.unsplash.com/photo-1617422725360-45b7671f980b?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="" />
+                            <img src="https://lh5.googleusercontent.com/p/AF1QipMSgBJLo_yhUvCE1X5dou3lRx9XrB9v5zYZ1v-o=w408-h271-k-no" alt="" />
                         </figure>
                     </div>
                     {/* 關閉視窗與下滑 */}

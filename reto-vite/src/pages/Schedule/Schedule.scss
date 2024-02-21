@@ -6,10 +6,19 @@
 // Extea small devices(phones, 600px and down)
 @media only screen and (max-width: 600px) {
     .Schedule_container {
+
         margin: 20px 16px !important;
 
+        .bar_stick {
+            margin-top: 8vh !important;
+        }
+
         .tripHead {
+
             padding: 10px 0 !important;
+            @include showFlex_column;
+            align-items: start !important;
+
             .tripTitle {
                 .h3_title {
                     font-size: 16px !important;
@@ -25,8 +34,10 @@
             .btn-day-control {
                 display: none !important;
             }
+
             .btn_day-wrap {
                 margin: 0 !important;
+
                 .btn_day {
                     // width: 71px;
                     // @include h3_body ;
@@ -34,6 +45,7 @@
                 }
             }
         }
+
         .schedule-wrap {
             .scheduleList {
                 margin: 25px 0px !important;
@@ -44,30 +56,32 @@
 }
 
 // small devices(portait tablets and large phone , 600px and up)
-@media only screen and (min-width: 600px) {
-}
+@media only screen and (min-width: 600px) {}
 
-// Medium devices(landscape tablets, 768px and up)
-@media only screen and (min-width: 768px) {
-}
+// Medium devices(landscape tablets, 850px and up)
+@media only screen and (min-width: 850px) {}
 
 // large devices(laptops/desktop, 992px and up)
-@media only screen and (max-width: 992px) {
-}
+@media only screen and (max-width: 992px) {}
 
 // Extea large devices(large laptops/desktop, 1200px and up)
-@media only screen and (min-width: 1200px) {
-}
+@media only screen and (min-width: 1200px) {}
 
 // ====================================
 
 .Schedule_container {
+    margin-top: 8vh;
     margin: 20px 9%;
     display: flex;
     flex-direction: column;
 
+    .bar_stick {
+        margin-top: 8vh !important;
+    }
+
     // 行程表頭
     .tripHead {
+
         padding: 20px 0;
         display: flex;
         align-items: center;

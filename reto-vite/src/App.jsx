@@ -7,7 +7,8 @@ import Home from './pages/Home';
 import Login from './pages/Login';
 import MyTrip from './pages/MyTrip';
 import MyMap from './pages/MyMap';
-import Schedule from './pages/Schedule';
+import Schedule from './pages/Schedule/Schedule.jsx';
+import Schedule2 from './pages/Schedule/Schedule2.jsx';
 import Reto from './pages/Reto';
 import Search from './pages/Search/Search';
 import Collections from './pages/Collections/Collections';
@@ -32,6 +33,7 @@ const App = () => {
           <Route path="login" element={<Login />} />
           <Route path="mytrip" element={<MyTrip />} />
           <Route path="schedule" element={<Schedule />} />
+          <Route path="schedule2" element={<Schedule2 />} />
           <Route path="mymap" element={<MyMap />} />
           <Route path="Collections" element={<Collections />} />
         </Route>

@@ -165,6 +165,10 @@
                             font-style: normal;
                             font-weight: 400;
                             line-height: 150%;
+
+                            white-space: nowrap; /* 禁止換行 */
+                            overflow: hidden; /* 隱藏超出範圍的內容 */
+                            text-overflow: ellipsis; /* 使用省略號表示被省略的文本 */
                         }
                         .icon-grade {
                             font-family: Noto Sans TC;
@@ -180,6 +184,10 @@
                         font-style: normal;
                         font-weight: 400;
                         line-height: 150%;
+
+                        white-space: nowrap; /* 禁止換行 */
+                        overflow: hidden; /* 隱藏超出範圍的內容 */
+                        text-overflow: ellipsis; /* 使用省略號表示被省略的文本 */
                     }
                 }
                 // .map_card_text{

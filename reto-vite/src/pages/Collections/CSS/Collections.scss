@@ -8,6 +8,7 @@
 }
 
 .area_search_collections {
+  margin-top: 8vh;
   height: 17vh;
   /* 100vh表示剛好一個視窗高，會自動彈性符合 */
   display: flex;
@@ -79,7 +80,7 @@
 
     border-radius: 6px;
     justify-content: space-between;
-    border: 1px solid $color_gray1;
+    border: 1px solid $color_gray2;
     align-items: center;
 
     input {

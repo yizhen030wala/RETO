@@ -4,7 +4,7 @@ import '../CSS/Search.scss';
 import Recommends from '../Recommends/Recommends';
 import magnifier from '../../../assets/img_hsc/search_bar/magnifier.svg';
 import filter from '../../../assets/img_hsc/search_bar/filter.svg';
-import logoGreen from '../../../assets/img_hsc/logo/logo_green.svg';
+import logoGreen from '../../../assets/img/RETO logo/logo white.svg';
 
 // import NavBar from '../NavBar/NavBar';
 // import login from '../../../assets/img_hsc/login/login-yellow.svg';
@@ -16,7 +16,8 @@ import logoGreen from '../../../assets/img_hsc/logo/logo_green.svg';
 import UnLogin from '../../../components-common/ShowUnlogin/ShowUnlogin.jsx'
 import './HeaderSearch.scss';
 import User from '../../../assets/img/Avatar/Mask Group.svg'
-import Menu from '../../../assets/img/icon/icon-black/menu.svg'
+import Menu from '../../../assets/img/icon/icon-white/menu.svg'
+import Onlylogo from '../../../assets/img/RETO logo/logo/logo-white.svg'
 
 const HeaderSearch = () => {
   return (
@@ -26,6 +27,11 @@ const HeaderSearch = () => {
         <div className='logo'>
           <Link to="/">
             <img src={logoGreen} alt="RETO logo" />
+          </Link>
+        </div>
+        <div className='only_logo'>
+          <Link to="/">
+            <img src={Onlylogo} alt="RETO logo" />
           </Link>
         </div>
         {/* 置頂導覽按鈕  */}

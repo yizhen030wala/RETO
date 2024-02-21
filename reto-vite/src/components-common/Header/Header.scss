@@ -5,9 +5,15 @@
 // ===================RWD============================
 
 // 手機
-@media screen and (max-width: 600px) {
+@media screen and (max-width: 850px) {
     .header {
         padding: 5px 16px !important;
+        .only_logo{
+            display: block !important;
+        }
+        .logo{
+            display: none;
+        }
         ul.nav_btn {
             display: none;
         }
@@ -27,19 +33,30 @@
 // ===============================================
 
 .header {
+    top: 0;
+    position: fixed;
+    width: 100%;
     height: 8vh;
+    
     display: flex;
     justify-content: space-between;
     align-items: center;
     padding: 5px 40px;
+    background-color: $color_white;
+    z-index: 800;
 
     .logo {
         width: 120px;
 
     }
 
+    .only_logo {
+        display: none;
+    }
+
     /* 表頭功能列 */
     .nav_btn {
+        box-sizing: content-box;
         height: 30px;
         padding: 5px 30px;
         display: flex;
@@ -88,7 +105,7 @@
 
             }
 
-            @media (max-width: 809px) {
+            @media (max-width: 850px) {
                 display: block;
             }
         }
@@ -111,4 +128,16 @@
 
     }
 
+}
+
+.visible {
+    /* display: flex; */
+    top: 0;
+    transition: top 0.5s ease-in-out;
+}
+
+.hidden {
+    display: none;
+    // top: -80px;
+    transition: top 0.5s ease-in-out;
 }

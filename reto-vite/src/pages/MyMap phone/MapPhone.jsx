@@ -6,8 +6,8 @@ import './MapPhone.scss'
 
 const MapPhone = () => {
     return (
-        <>
-            <main className="mapphone_container">
+        <div className='mapphone_rwd'>
+            <div className="mapphone_container">
                 <div className="left_div">
                     {/* 麵包屑導覽列 */}
                     <div className="SM_wrap">
@@ -20,11 +20,11 @@ const MapPhone = () => {
                         <div className="tripTitle">
                             {/* 行程表名稱 */}
                             <div>
-                                <h3>旅藤台南行</h3>
+                                <h3>桃園台北RARASO</h3>
                             </div>
                             {/* 行程表日期 */}
                             <div>
-                                <h2>2022/2/23-2/26</h2>
+                                <h2>2022/2/23-2/27</h2>
                             </div>
                         </div>
                     </div>
@@ -35,8 +35,7 @@ const MapPhone = () => {
                 </div>
 
 
-
-            </main >
+            </div >
 
             {/* mapphone--mp */}
             <div className="mp_wrap">
@@ -47,7 +46,7 @@ const MapPhone = () => {
                 <div div className="SM_map" >
 
                     <iframe
-                        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d14457.513043160428!2d121.50391680386691!3d25.055165444839425!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3442a96d2ecfd72b%3A0x21c4c5b2853cd189!2z5aSn56i75Z-V6a2v6IKJ6aOv!5e0!3m2!1szh-TW!2stw!4v1706777706117!5m2!1szh-TW!2stw"
+                       src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d14468.60756967815!2d121.2128567!3d24.9609463!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x346823ca6bb94541%3A0x5b136096a5d374b0!2z57ag5rKQ5oGs5ou-IENhZsOpICYgUMOidGlzc2VyaWU!5e0!3m2!1szh-TW!2stw!4v1708498479408!5m2!1szh-TW!2stw"
                         style={{ width: '100%', height: '100%', border: '0' }}
                         allowfullscreen="" loading="lazy" />
                 </div >
@@ -70,26 +69,26 @@ const MapPhone = () => {
                     <div className='icon'><img src="/src/assets/img/icon/icon-go/goright.svg" alt="" /></div>
                     <div className="box">
                         <div className="nb_badge">1</div>
-                        <h3>地點名稱</h3>
+                        <h3>綠沐恬拾</h3>
                     </div>
                     <div className="time_box">
                         <div className='icon-car'></div>
-                        <h3>00時00分</h3>
+                        <h3>10時00分</h3>
                     </div>
                     <div className="box">
-                        <div className="nb_badge">1</div>
-                        <h3>地點名稱</h3>
+                        <div className="nb_badge">2</div>
+                        <h3>在一起 One</h3>
                     </div>
                     <div className="time_box">
                         <div className='icon-car'></div>
-                        <h3>00時00分</h3>
+                        <h3>12時00分</h3>
                     </div>
 
                 </div>
 
             </div>
 
-        </>
+        </div >
     )
 }
 

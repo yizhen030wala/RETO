@@ -7,6 +7,8 @@
   .MyTrip-container {
     margin: 0 !important;
     padding: 0 16px;
+    margin-top: 8vh !important;
+
 
     .MyTrip-content {
       margin: 5vh 0px !important;
@@ -24,40 +26,13 @@
   }
 }
 
-// small devices(portait tablets and large phone , 600px and up)
-@media only screen and (min-width: 600px) {
-}
-
 // Medium devices(landscape tablets, 768px and up)
-@media only screen and (min-width: 768px) {
+@media only screen and (min-width: 850px) {
   .MyTrip-container {
-    // margin:0px 10% !important;
+    margin-top: 8vh !important;
 
     .MyTrip-content {
       margin: 10% 0px !important;
-
-      .title {
-      }
-
-      .MyTrip_contain {
-        // display: inline-flex;
-        // flex-wrap: wrap;
-        // gap: 30px;
-        // flex-direction: row;
-      }
-    }
-  }
-}
-
-// large devices(laptops/desktop, 992px and up)
-@media only screen and (max-width: 992px) {
-  .MyTrip-container {
-    .MyTrip-content {
-      .title {
-      }
-
-      .MyTrip_contain {
-      }
     }
   }
 }
@@ -67,12 +42,10 @@
   .MyTrip-container {
     .MyTrip-content {
       margin: 120px 0px !important;
+      margin-top: 8vh !important;
 
       .title {
         padding-right: 30px;
-      }
-
-      .MyTrip_contain {
       }
     }
   }
@@ -81,6 +54,7 @@
 // ====================================
 
 .MyTrip-container {
+  margin-top: 8vh;
   margin: 0px 14%;
   display: flex;
   justify-content: center;

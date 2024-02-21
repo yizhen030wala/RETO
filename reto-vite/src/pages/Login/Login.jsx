@@ -16,7 +16,7 @@ function App() {
                 <div className="login-box">
                     <figure className='imgBox' ><img src={Logo} alt="logo" className='logo' /></figure>
 
-                    <Link to="/schedule">
+                    <Link to="/reto/schedule">
                         <button className="login">
                             <img src={Gooogle} alt="google" />
                             Google 登入

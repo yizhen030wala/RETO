@@ -4,9 +4,15 @@
 // ===============================================
 
 // 手機
-@media screen and (max-width: 809px) {
+@media screen and (max-width: 850px) {
     .header_search {
-
+        padding: 5px 16px !important;
+        .only_logo{
+            display: block !important;
+        }
+        .logo{
+            display: none;
+        }
         ul.nav_btn {
             display: none;
         }
@@ -33,9 +39,13 @@
         width: 120px;
 
     }
+    .only_logo{
+        display: none;
+    }
 
     /* 表頭功能列 */
     .nav_btn_search {
+        box-sizing:content-box;
         height: 30px;
         padding: 5px 30px;
         display: flex;
@@ -83,7 +93,7 @@
 
             }
 
-            @media (max-width: 809px) {
+            @media (max-width: 850px) {
                 display: block;
             }
         }

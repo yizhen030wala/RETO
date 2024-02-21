@@ -1,20 +1,29 @@
 
 @import "../../assets/scssRule/rule";
 @import "../../assets/scssRule/all";
+// ======================= RWD ==========================
+// Extea small devices(phones, 600px and down)
+@media only screen and (max-width:850px){
+    .SM_container{
+       display: none !important; 
+    } 
+}
+
 
 // ====================================
 
 .SM_container {
+    margin-top: 8vh !important;
     display: flex;
     flex-direction: row;
-    justify-content: space-between;
+    justify-content: space-evenly;
     /* width: 1440px; */
     margin: auto;
     padding: 2% 8% 0 8%;
     gap: 20px;
 
     .left_div {
-        width: 35%;
+        width: 33%;
 
         // 麵包屑導覽列
         .SM_wrap {
@@ -85,7 +94,7 @@
                 background: transparent;
                 border-radius: 10px;
                 /* 卷軸圓角 */
-                margin: 95px 40px 45px 10px;
+                margin: 95px 0px 45px 0px;
                 /* 卷軸位置 */
             }
 

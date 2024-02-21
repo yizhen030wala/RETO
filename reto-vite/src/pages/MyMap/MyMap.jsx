@@ -1,10 +1,12 @@
 import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
 import "./MyMap.scss"
-import BreadCrumb_M from '../../components-common/BreadCrumb/BreadCrumb_M.jsx'
+// import BreadCrumb_M from '../../components-common/BreadCrumb/BreadCrumb_M.jsx'
 import ScheduleSheet from '../../components-common/ScheduleSheet/ScheduleSheet.jsx'
 import DateSwiper from '../../components-common/DateSwiper/DateSwiper.jsx'
 import MapCard from './MapCard/MapCard.jsx';
+import MapPhone from '../MyMap phone/MapPhone.jsx';
+import BreadCrumb from '../../components-common/BreadCrumb/BreadCrumb.tsx'
 
 
 
@@ -26,13 +28,29 @@ const MyMap = () => {
         setSheets([...sheets, { numCards: 0, ids: [], dayOfWeek: daysOfWeek[nextDayIndex] }]); // 增加下一個星期的數據
     };
 
+
+    // const [selectedSpot, setSelectedSpot] = useState(null);
+
+    // const handleSpotClick = (spot) => {
+    //     setSelectedSpot(spot);
+    // };
+
+    
+
+    const [selectedSpotData, setSelectedSpotData] = useState(null);
+
+    const handleSpotClick = (data) => {
+        setSelectedSpotData(data);
+        console.log(data)
+    };
+
     return (
         <>
             <main className="SM_container">
                 <div className="left_div">
                     {/* 麵包屑導覽列 */}
                     <div className="SM_wrap">
-                        <BreadCrumb_M />
+                        <BreadCrumb />
                     </div>
 
                     {/* 行程表表頭資訊 */}
@@ -41,11 +59,11 @@ const MyMap = () => {
                         <div className="tripTitle">
                             {/* 行程表名稱 */}
                             <div>
-                                <h3>旅藤台南行</h3>
+                                <h3>北桃RARASO</h3>
                             </div>
                             {/* 行程表日期 */}
                             <div>
-                                <h2>2022/2/23-2/26</h2>
+                                <h2>2022/2/23-2/27</h2>
                             </div>
                         </div>
                     </div>
@@ -66,6 +84,8 @@ const MyMap = () => {
                                         ids={sheet.ids}
                                         dayOfWeek={sheet.dayOfWeek}
                                         times={sheet.times} // 將時間屬性傳遞給 ScheduleSheet
+
+                                        onSpotClick={handleSpotClick}
                                     />
                                 ))}
                             </div>
@@ -77,10 +97,12 @@ const MyMap = () => {
 
                 {/* 地圖欄位 */}
                 < div className="right_div" >
-                    <MapCard />
+                    <MapCard selectedSpotData={selectedSpotData} />
                 </div >
             </main >
-
+            <div className="phone_map_show">
+                <MapPhone />
+            </div>
         </>
     )
 }

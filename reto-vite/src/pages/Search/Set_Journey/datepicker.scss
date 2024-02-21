@@ -53,11 +53,11 @@
 
 //<>鍵 沒動過
 .react-datepicker__navigation {
-  align-items: center;
+  // align-items: center;
   background: none;
   display: flex;
-  justify-content: center;
-  text-align: center;
+  justify-content: space-around;
+  // text-align: center;
   cursor: pointer;
   position: absolute;
   top: 2px;
@@ -65,7 +65,7 @@
   border: none;
   z-index: 1;
   height: 32px;
-  width: 32px;
+  width: 100%;
   text-indent: -999em;
   overflow: hidden;
 }
@@ -214,8 +214,8 @@
 .react-datepicker-popper {
 
   scale: 80%;
-  margin-top: 5%;
-  margin-left: 2.1%;
+  margin-top: 15px;
+  margin-left: -28%;
 }
 
 .react-datepicker__triangle {
@@ -238,6 +238,46 @@
     outline: $color-green1 auto 0.5px;
 
   }
+}
+
+.react-datepicker__navigation-icon {
+  color: $color-green1;
+  position: relative;
+  top: -1px;
+  font-size: 20px;
+  width: 0;
+
+  &--next {
+    left: 100px;
+    top: 5px;
+
+    &::before {
+      transform: rotate(45deg);
+      left: -7px;
+    }
+  }
+
+  &--previous {
+    right: 100px;
+    top: 5px;
+
+    &::before {
+      transform: rotate(225deg);
+      right: -7px;
+    }
+  }
+}
+
+.react-datepicker__aria-live {
+  position: absolute;
+  clip-path: circle(0);
+  border: 0;
+  height: 1px;
+  margin: -1px;
+  overflow: hidden;
+  padding: 0;
+  width: 1px;
+  white-space: nowrap;
 }
 
 /* 新增樣式：當輸入框有內容時移除背景圖標 */
