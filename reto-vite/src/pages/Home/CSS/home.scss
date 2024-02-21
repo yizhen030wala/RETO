@@ -1,6 +1,6 @@
-@use "../../../assets/scssRule/all" as *;
-@use "../../../assets//scssRule/rule" as r;
-@use "../../../assets/scssRule/reset" as *;
+@use "../../../assets/scssRule/all"as *;
+@use "../../../assets//scssRule/rule"as r;
+// @use "../../../assets/scssRule/reset" as *;
 
 /*Index*/
 /*Header Area*/
@@ -605,7 +605,7 @@
       }
     }
 
-    .box1:hover ~ .box2 {
+    .box1:hover~.box2 {
       transform-origin: bottom;
       height: calc(267px - 70px);
 
@@ -640,7 +640,7 @@
       }
     }
 
-    .box3:hover ~ .box4 {
+    .box3:hover~.box4 {
       transform-origin: bottom;
       height: calc(267px - 70px);
 
@@ -955,40 +955,70 @@
 
 /*Footer*/
 
+// footer {
+//   display: flex;
+//   flex-direction: column;
+//   height: 15vh;
+//   background: #f5f5f5;
+
+//   a {
+//     font-family: Noto Sans TC;
+//     font-size: 14px;
+//     font-style: normal;
+//     font-weight: 400;
+//     line-height: 160%;
+//     color: $color_black;
+//     white-space: nowrap;
+//     margin-top: 5vh;
+//   }
+// }
+
+// .btn_footer_upper,
+// .btn_footer_lower {
+//   display: flex;
+//   justify-content: center;
+//   align-items: center;
+// }
+
+// .btn_footer_upper {
+//   height: 30%;
+//   margin-top: 24px;
+//   gap: 10%;
+// }
+
+// .btn_footer_lower {
+//   height: 30%;
+//   margin-top: 12px;
+//   // margin-bottom: 24px;
+//   gap: 20%;
+// }
+
+// ===================
 footer {
   display: flex;
   flex-direction: column;
   height: 15vh;
   background: #f5f5f5;
+  @include center;
 
-  a {
-    font-family: Noto Sans TC;
-    font-size: 14px;
-    font-style: normal;
-    font-weight: 400;
-    line-height: 160%;
-    color: $color_black;
-    white-space: nowrap;
-    margin-top: 5vh;
+  .btn_footer_lower {
+    @include center;
+
+    a {
+      text-decoration: underline;
+      font-size: 16px;
+    }
+
+    a,
+    p {
+      font-size: 16px;
+
+      @media screen and (max-width: 850px) {
+        font-size: 12px;
+      }
+    }
+
+
+
   }
-}
-
-.btn_footer_upper,
-.btn_footer_lower {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-
-.btn_footer_upper {
-  height: 30%;
-  margin-top: 24px;
-  gap: 10%;
-}
-
-.btn_footer_lower {
-  height: 30%;
-  margin-top: 12px;
-  // margin-bottom: 24px;
-  gap: 20%;
 }

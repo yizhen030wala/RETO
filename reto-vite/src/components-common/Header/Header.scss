@@ -5,9 +5,15 @@
 // ===================RWD============================
 
 // 手機
-@media screen and (max-width: 600px) {
+@media screen and (max-width: 850px) {
     .header {
         padding: 5px 16px !important;
+        .only_logo{
+            display: block !important;
+        }
+        .logo{
+            display: none;
+        }
         ul.nav_btn {
             display: none;
         }
@@ -36,6 +42,10 @@
     .logo {
         width: 120px;
 
+    }
+
+    .only_logo{
+        display: none;
     }
 
     /* 表頭功能列 */
@@ -88,7 +98,7 @@
 
             }
 
-            @media (max-width: 809px) {
+            @media (max-width: 850px) {
                 display: block;
             }
         }

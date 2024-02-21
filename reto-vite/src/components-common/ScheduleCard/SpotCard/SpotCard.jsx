@@ -126,7 +126,12 @@ import InfoCard from './InfoCard/InfoCard';
 import BtnExchange from "./BtnExchange/BtnExchange.jsx"
 import ButtonDel_Trash from '../../Button/ButtonDel_Trash/ButtonDel_Trash.jsx';
 
-const SpotCard = ({ id, time }) => {
+const SpotCard = ({ id, time , onClick }) => {
+    const handleClick = (data) => {
+        onClick(data);
+        
+    };
+
     return (
         <>
             <div className="spot_SpotCard">
@@ -140,7 +145,7 @@ const SpotCard = ({ id, time }) => {
                 {/* 右側景點資訊 */}
                 <div className='InfoCard_wrap'>
 
-                    <InfoCard id={id} time={time} />
+                    <InfoCard id={id} time={time} onClick={handleClick}/>
                 </div>
                 {/* 刪除鍵 */}
                 <div className='btn_wrap'>

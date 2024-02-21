@@ -30,14 +30,12 @@ const MyTrip = () => {
 
                     <div className="MyTrip_contain">
                         {/* 第一個行程集卡片 */}
-                        
-                            <MyTripCard
-                                imageUrl="https://images.unsplash.com/photo-1583889659384-64d9df2347ba?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
-                                name="台北吃到飽"
-                                days="3天2夜"
-                            // onNameClick={handleNameClick}
-                            >
-                            </MyTripCard>
+                        <MyTripCard
+                            imageUrl="https://images.unsplash.com/photo-1571474004502-c1def214ac6d?q=80&w=1931&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+                            name="RARASO之快閃九份"
+                            days="6天5夜"
+                        // onNameClick={handleNameClick}
+                        />
                         
 
                         <MyTripCard
@@ -68,11 +66,13 @@ const MyTrip = () => {
 
                         {/* 第四個行程集卡片 */}
                         <MyTripCard
-                            imageUrl="https://images.unsplash.com/photo-1571474004502-c1def214ac6d?q=80&w=1931&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
-                            name="快閃九份"
-                            days="1天0夜"
-                        // onNameClick={handleNameClick}
-                        />
+                                imageUrl="https://engage.nsysu.edu.tw/wp-content/uploads/2021/11/0_嘉義中央噴水池ok.jpg"
+                                name="你要嘉義嗎?"
+                                days="3天2夜"
+                            // onNameClick={handleNameClick}
+                            >
+                            </MyTripCard>
+                        
 
 
                         {/* 第五個行程集卡片 */}

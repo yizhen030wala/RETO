@@ -3,6 +3,7 @@ import React, { useState, useEffect } from "react";
 import logo from "../../../assets/img/RETO logo/logo white.svg";
 import "./HeaderHome.scss";
 import { Link } from "react-router-dom";
+import Onlylogo from '../../../assets/img/RETO logo/logo/logo-white.svg'
 
 const HeaderHome = () => {
 
@@ -32,6 +33,11 @@ const HeaderHome = () => {
       <div className='logo'>
         <Link to="/">
           <img src={logo} alt="RETO logo" />
+        </Link>
+      </div>
+      <div className='only_logo'>
+        <Link to="/">
+          <img src={Onlylogo} alt="RETO logo" />
         </Link>
       </div>
       {/* 置頂導覽按鈕  */}
