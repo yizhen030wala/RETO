@@ -172,7 +172,7 @@ const Set_Journey = ({ image, onClose }) => {
 
                 <JourneyCard
                   imageUrl="https://images.unsplash.com/photo-1583889659384-64d9df2347ba?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
-                  name="台北吃到飽"
+                  name="北桃RARASO"
                   days="3天2夜"
                   // onNameClick={handleNameClick}
                 ></JourneyCard>
