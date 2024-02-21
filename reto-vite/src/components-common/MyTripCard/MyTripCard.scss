@@ -3,21 +3,6 @@
 
 
 // ======================= RWD ==========================
-/* small devices(portrait tablets and large phones, 600px and up) */
-@media only screen and (min-width:600px) {
-    .mytripcard {
-        width: calc(100%/2 - 30px) !important;
-        min-width: 25vh;
-    }
-}
-
-/* Medium devices (landscape tablets, 768px and up) */
-@media only screen and (min-width:768px) {
-    .mytripcard {
-        width: calc(100%/4 - 30px) !important;
-        
-    }
-}
 
 /* Extra small devices (phones, 600px and down) */
 @media only screen and (max-width:600px) {
@@ -28,8 +13,19 @@
         }
     }
 }
-
-
+/* small devices(portrait tablets and large phones, 600px and up) */
+@media only screen and (min-width:600px) {
+    .mytripcard {
+        width: calc(100%/2 - 30px) !important;
+    }
+}
+/* Medium devices (landscape tablets, 768px and up) */
+@media only screen and (min-width:850px) {
+    .mytripcard {
+        width: calc(100%/4 - 30px) !important;
+        
+    }
+}
 
 
 // ====================================

@@ -62,6 +62,7 @@
 
     /* 表頭功能列 */
     .nav_btn_home {
+        box-sizing:content-box;
         height: 30px;
         padding: 5px 30px;
         display: flex;
