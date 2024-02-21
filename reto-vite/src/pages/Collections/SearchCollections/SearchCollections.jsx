@@ -10,18 +10,33 @@ const SearchCollections = () => {
       <div className="search_collections">
         <div className="bar_search_collections">
           <div>
-            <input type="text" placeholder="想去哪裡玩？" />
-          </div>
-          <div>
             {/* 放大鏡icon */}
-            <figure className="S1">
+            <figure>
               <img src={magnifier} alt="" />
             </figure>
+            <input type="text" placeholder="想去哪裡玩" />
+          </div>
+          <div>
             {/* 篩選圖片 */}
-            <figure className="S2">
+            <figure className="btn_commit_search">
               <img src={filter} alt="" />
             </figure>
+            {/* 查詢按鈕 */}
+            <button>查詢</button>
           </div>
+          {/* <div>
+            <input type="text" placeholder="想去哪裡玩？" />
+          </div>
+          <div> */}
+          {/* 放大鏡icon */}
+          {/* <figure className="S1">
+              <img src={magnifier} alt="" />
+            </figure> */}
+          {/* 篩選圖片 */}
+          {/* <figure className="S2">
+              <img src={filter} alt="" />
+            </figure> */}
+          {/* </div> */}
         </div>
         {/* 地點 */}
         <Location />

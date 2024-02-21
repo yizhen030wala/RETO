@@ -403,6 +403,7 @@
         font-weight: 400;
         line-height: 160%;
         position: relative;
+
         // border-bottom: 1px solid black;
         &::after {
           content: "";
@@ -458,15 +459,45 @@
   }
 
   .collect {
-    background-color: #f5f5f5;
+    background-color: $color_gray2;
     border-radius: 50px;
     padding: 10px;
 
+    &:hover {
+      transition: 0.3s;
+    }
+
+    &:focus~.confirm_collect {
+      display: flex;
+    }
+
     img {
-      display: block;
       width: 20px;
       height: 20px;
     }
+
+    .heart_nor {
+      display: block;
+    }
+
+    .heart_foc {
+      display: none;
+    }
+
+    &:focus {
+      // background-color: $color_gray1;
+      background-color: $color_gray3;
+      .heart_nor {
+        display: none;
+
+      }
+
+      .heart_foc {
+        display: block;
+        transform: scale(1.01);
+      }
+    }
+
   }
 
   .journey_viewpoint {
@@ -482,6 +513,47 @@
     // text-decoration: none;
   }
 }
+
+//加入收藏按鈕
+.confirm_collect {
+  margin: 10px; //用來看設計
+  background-color: white;
+  width: 170px;
+  height: 40px;
+  @include shadow;
+  border-radius: $border_radius_10px;
+  display: none;
+  padding: 0 10px;
+  cursor: pointer;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  transition: 1s;
+  position: absolute;
+  top: -60px;
+  right: -20px;
+
+  p {
+    font-size: 0.9rem;
+    margin: auto;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    white-space: nowrap;
+
+    span {
+      font-size: 20px;
+    }
+  }
+
+  &:hover {
+    transition: 0.3s;
+    background-color: $color_gray3;
+  }
+
+}
+
 
 /* 打開燈箱時，禁止網頁卷軸滾動 */
 .no-scroll {
@@ -499,8 +571,10 @@
 @media (max-width: 1200px) {
   .card {
     height: 650px;
+
     .card_scrollbox {
       height: 100%;
+
       .info_carousel {
         height: 200px;
         padding-bottom: 80px;
@@ -514,6 +588,7 @@
   .card {
     height: 618px;
     width: 550px;
+
     .card_scrollbox {
       display: flex;
       flex-direction: column;
@@ -537,6 +612,7 @@
       height: auto;
       margin: 0;
     }
+
     .card_info_right {
       height: auto;
       margin: 0;
@@ -549,12 +625,15 @@
     right: 15px !important;
     top: 15px;
   }
+
   .card {
     padding: 30px 15px;
+
     .card_info_left {
       width: 90%;
       margin: 0;
     }
+
     .card_info_right {
       width: 90%;
       margin: 0;
@@ -565,9 +644,11 @@
       // left: 0;
       right: auto;
       bottom: 15px;
+
       .collect {
         display: none;
       }
+
       .journey_viewpoint {
         width: 90%;
       }

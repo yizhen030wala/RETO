@@ -44,11 +44,11 @@ const Step = () => {
                         style={{ transform: `translateX(${(index + 1 - currentStep) * 100}%)` }}
                         key={index}
                     >
-                        <div className="text">
+                        {/* <div className="text">
                             <h3>第 <span>{index + 1}</span> 步</h3>
                             <p dangerouslySetInnerHTML={{ __html: content[index] }}></p>
                         </div>
-                        <figure><img src={guideimg} alt="使用說明" /></figure>
+                        <figure><img src={guideimg} alt="使用說明" /></figure> */}
                     </div>
                 ))}
             </div>

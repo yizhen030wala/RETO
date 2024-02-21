@@ -13,6 +13,8 @@ import location from '../../../assets/img_hsc/card_viewpoint/location.svg';
 import internet from '../../../assets/img_hsc/card_viewpoint/internet.svg';
 import cancel from '../../../assets/img_hsc/card_viewpoint/cancel.svg';
 import favorite_heart from '../../../assets/img_hsc/card_viewpoint/favorite_heart.svg';
+import favorite_heart_focus from '../../../assets/img_hsc/card_viewpoint/favorite_heart_focus.svg';
+import checkMark_black from '../../../assets/img_hsc/card_viewpoint/checkMark_black.svg';
 
 const LightBox_Card = ({ image, onClose }) => {
   // 點擊事件
@@ -197,8 +199,12 @@ const LightBox_Card = ({ image, onClose }) => {
         {/* 加入按鈕(置於右底) */}
         <div className="card_button">
           <button className="btn_add collect">
-            <img src={favorite_heart} alt="" />
+            <img className="heart_nor" src={favorite_heart} alt="" />
+            <img className="heart_foc" src={favorite_heart_focus} alt="" />
           </button>
+          <div className="confirm_collect">
+                <p><img src={checkMark_black} alt="黑勾勾" />已加入我的景點!</p>
+            </div>
           <button className="btn_add journey_viewpoint">加入行程</button>
         </div>
       </div>
