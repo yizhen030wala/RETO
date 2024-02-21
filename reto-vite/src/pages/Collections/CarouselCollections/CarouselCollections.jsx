@@ -3,8 +3,7 @@ import React, { useState, useEffect, useRef } from "react";
 import axios from "axios";
 import "../CSS/Collections.scss";
 import Card from "../../Search/Card/Card.jsx";
-import LightBox_Card from '../../Search/LightBox_Card/LightBox_Card.jsx';
-
+import LightBox_Card from "../../Search/LightBox_Card/LightBox_Card.jsx";
 
 //輪播區塊
 const CarouselCollections = ({
@@ -91,6 +90,20 @@ const CarouselCollections = ({
     isAnimated: true,
   };
 
+  // 解析圖片URL並計算高度
+  const calculateHeightFromUrl = (imageUrl, targetWidth = 230) => {
+    const regex = /w(\d+)-h(\d+)/; // 寬高的正式表達式
+    const match = imageUrl.match(regex);
+    if (match) {
+      const width = parseInt(match[1], 10);
+      const height = parseInt(match[2], 10);
+      // 根据目標寬度計算新高度，保持寬高比
+      const newHeight = (height / width) * targetWidth;
+      return newHeight;
+    }
+    return null; // 如果URL中沒有寬高信息，返回null
+  };
+
   //滾動卷軸時，使用ref更新布局
   const masonryRef = React.useRef(null);
   React.useEffect(() => {
@@ -107,8 +120,6 @@ const CarouselCollections = ({
       window.removeEventListener("scroll", handleScroll);
     };
   }, []);
-
-  
 
   // ↓↓↓ API ↓↓↓
   const [records, setRecords] = useState([]);
@@ -135,17 +146,16 @@ const CarouselCollections = ({
   }, []);
   // ↑↑↑ API ↑↑↑
 
-  const CardPlaceholder = () => (
-    <div className="loading"></div>
-  )
+  const CardPlaceholder = () => <div className="loading"></div>;
 
   return (
     <div className="box_carousel_collections">
       {/* 添加外層 div */}
       {arr_area.map((area, index) => (
         <div
-          className={`box_turn ${arr_class[index]} ${index === currentIndex ? "current" : ""
-            }`}
+          className={`box_turn ${arr_class[index]} ${
+            index === currentIndex ? "current" : ""
+          }`}
           key={index}
           style={{ transform: `translateX(${(index - currentIndex) * 100}%)` }}
         >
@@ -159,20 +169,23 @@ const CarouselCollections = ({
                 disableImagesLoaded={false}
                 updateOnEachImageLoad={true}
               >
-                {records.map((record, idx) => (
-                  <Card
-                    key={idx}
-                    img={record.fields["location cover"]}
-                    index={idx}
-                    onSelect={() => handleSelectCard(idx)}
-                    onOpenLightbox={() =>
-                      handleOpenLightbox(record.fields["location cover"])
-                    }
-                    selected={selectedCards.includes(idx)}
-                    order={selectedCards.indexOf(idx) + 1} // 獲取選中順序
-                    data={record.fields}
-                  />
-                ))}
+                {records.map((record, idx) => {
+                  const imageUrl = record.fields["location cover"];
+                  const height = calculateHeightFromUrl(imageUrl); // 計算高度
+                  return (
+                    <Card
+                      key={idx}
+                      img={imageUrl}
+                      height={height}
+                      index={idx}
+                      onSelect={() => handleSelectCard(idx)}
+                      onOpenLightbox={() => handleOpenLightbox(imageUrl)}
+                      selected={selectedCards.includes(idx)}
+                      order={selectedCards.indexOf(idx) + 1}
+                      data={record.fields}
+                    />
+                  );
+                })}
               </Masonry>
             </div>
           </div>

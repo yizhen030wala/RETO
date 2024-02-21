@@ -71,7 +71,7 @@ const LightBox_Card = ({ image, onClose }) => {
               {/*image && <figure><img src={image.url} alt={image.alt} /></figure>*/}
             </div>
             {/* 營業資訊 */}
-            <div className="info_business">
+            <div className="info_business norwd">
               <h6>停留時間約 1 小時</h6>
               {/* 營業時間 */}
               <p>星期一、07:00-21:30</p>
@@ -123,6 +123,17 @@ const LightBox_Card = ({ image, onClose }) => {
                 <a href="" className="tag_carousel">標籤</a>
                 <a href="" className="tag_carousel">標籤</a>
               </div>
+              <div className="info_business rwd">
+              <h6>停留時間約 1 小時</h6>
+              {/* 營業時間 */}
+              <p>星期一、07:00-21:30</p>
+              <p>星期二、07:00-21:30</p>
+              <p>星期三、休息</p>
+              <p>星期四、07:00-21:30</p>
+              <p>星期五、07:00-21:30</p>
+              <p>星期六、07:00-21:30</p>
+              <p>星期日、07:00-21:30</p>
+            </div>
             </div>
             {/* 評論區 */}
             <section className="commends_box">
