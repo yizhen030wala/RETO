@@ -183,8 +183,8 @@
   // display: flex;
   position: relative;
 
-  width: 100%;
-  overflow: hidden;
+  // width: 100%;
+  // overflow: hidden;
   gap: 2%;
 
   .box_turn {
@@ -197,6 +197,7 @@
     box-sizing: border-box;
     transition: 0.5s ease;
     flex-shrink: 0;
+    min-height: 700px;
 
     scale: 0.97;
     margin: 10vh -494px;
@@ -241,6 +242,7 @@
       }
     }
 
+
     .wrapper {
       width: 980px;
       height: auto;
@@ -281,6 +283,16 @@
       h3 {
         background-color: $color_green2;
         color: $color_white;
+      }
+    }
+  }
+}
+
+@media (max-width:1200px) {
+  .wrapper {
+    .card_container {
+      div {
+        width: 730px !important;
       }
     }
   }
@@ -331,7 +343,7 @@
 // -------FixedBtn.jsx
 .btn_fixed {
   position: fixed;
-  bottom: 15vh;
+  bottom: 30px;
   left: 50%;
   transform: translate(-50%, -50%);
 
@@ -577,7 +589,7 @@
   justify-content: center;
   align-items: center;
   width: 100%;
-  overflow: hidden;
+  // overflow: hidden;
 
   gap: 2%;
 

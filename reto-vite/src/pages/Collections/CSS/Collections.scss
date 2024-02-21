@@ -228,7 +228,7 @@
   justify-content: center;
 
   width: 1060px;
-  overflow: hidden;
+  // overflow: hidden;
   gap: 2%;
 
   .box_turn {
@@ -308,7 +308,7 @@
   position: fixed;
   left: 50%;
   transform: translate(-50%, -50%);
-  bottom: 15vh;
+  bottom: 30px;
   transition: 0.35s;
   z-index: 999;
 
@@ -393,11 +393,11 @@
             8px 9px 0px 1px rgb(100, 100, 100),
             8px 11px 0px 1px rgb(100, 100, 100),
             8px 13px 0px 1px rgb(100, 100, 100),
-            // 12px 5px 0px 1px rgb(100, 100, 100),
-            // 12px 7px 0px 1px rgb(100, 100, 100),
-            // 12px 9px 0px 1px rgb(100, 100, 100),
-            // 12px 11px 0px 1px rgb(100, 100, 100),
-            // 12px 13px 0px 1px rgb(100, 100, 100);
+            12px 5px 0px 1px rgb(100, 100, 100),
+            12px 7px 0px 1px rgb(100, 100, 100),
+            12px 9px 0px 1px rgb(100, 100, 100),
+            12px 11px 0px 1px rgb(100, 100, 100),
+            12px 13px 0px 1px rgb(100, 100, 100);
         }
       }
 
@@ -458,6 +458,7 @@
         text-decoration: none;
         @include text_btn_big;
         padding: 8px 16px;
+        white-space: nowrap;
       }
 
       &:focus {
