@@ -1,14 +1,12 @@
-@import "../../assets/scssRule/rule";
-@import "../../assets/scssRule/all";
-
+@import "../../../assets/scssRule/rule";
+@import "../../../assets/scssRule/all";
 
 // ======================= RWD ==========================
 
-
 /* Extra small devices (phones, 600px and down) */
 @media only screen and (max-width:600px) {
-    .mytripcard {
-        width: 100vh !important;
+    .journey_Card {
+        // width: 100vh !important;
         .mytripcard_cover {
             height: 200px !important;
         }
@@ -16,25 +14,24 @@
 }
 /* small devices(portrait tablets and large phones, 600px and up) */
 @media only screen and (min-width:600px) {
-    .mytripcard {
-        width: calc(100%/2 - 30px) !important;
+    .journey_Card {
+        width: calc(100% - 30px) !important;
     }
 }
 /* Medium devices (landscape tablets, 768px and up) */
 @media only screen and (min-width:850px) {
-    .mytripcard {
-        width: calc(100%/4 - 30px) !important;
+    .journey_Card {
+        width: calc(100% - 30px) !important;
         
     }
 }
 
 
-
 // ====================================
 
-.mytripcard {
+.journey_Card {
     // width: 25vh;
-    width: calc(100% + 30px);
+    width: calc(100% - 30px);
 
     gap: 10px;
     display: flex;

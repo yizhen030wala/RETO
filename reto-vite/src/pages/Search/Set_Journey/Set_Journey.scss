@@ -14,7 +14,7 @@
   left: 0;
   bottom: 0;
   right: 0;
-}
+
 
 .card_set_journey {
   width: 850px;
@@ -139,6 +139,11 @@
       height: 85%;
       position: relative;
       overflow: hidden;
+      overflow-y: scroll;
+
+      &::-webkit-scrollbar {
+        display: none; // 移除滾動條樣式
+      }
 
       //建立行程頁面
       .box_switch_set_journey {
@@ -284,10 +289,24 @@
   transform: translateX(0);
 }
 
+
+@media only screen and (max-width:600px) {
+  .myTrip_contain_set_journey {
+    display: flex !important;
+    flex-direction: column !important;
+    width: 240px;
+    gap: 15px;
+  }
+}
+
+
 .myTrip_contain_set_journey {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
   gap: 15px;
+
+
+
 
   overflow: hidden;
   overflow-y: scroll; // 啟用垂直滾動
@@ -436,4 +455,5 @@ button {
       margin-left: 10%;
     }
   }
+}
 }
