@@ -18,7 +18,8 @@
 
 .card_set_journey {
   width: 850px;
-  height: 611px;
+  // height: 611px;
+  height: 650px;
 
   padding: 40px 50px;
 
@@ -261,6 +262,41 @@
   }
 }
 
+@media (max-width:1200px) {
+  .card_set_journey {
+    .box_set_item {
+      margin-left: 5%;
+    }
+  }
+}
+
+@media (max-width:900px) {
+  .card_set_journey {
+    width: 80%;
+
+    .box_set_item {
+      margin-left: 2%;
+    }
+  }
+}
+
+@media (max-width:600px) {
+  .card_set_journey {
+    width: 95%;
+    padding: 30px 20px;
+    .box_set_item {
+      margin-left: 1%;
+    }
+  }
+}
+
+@media (max-width:400px) {
+  .card_set_journey {
+    width: 90%;
+  }
+}
+
+
 //頁面滑動效果設定
 
 .box_switch_set_journey,
@@ -373,6 +409,15 @@
   }
 }
 
+@media (max-width:1200px) {
+  .myTrip_contain_set_journey {
+    // display: flex;
+    // flex-direction: column;
+
+  }
+}
+
+
 /* 佔位元素 */
 
 .empty_set_journey {
@@ -428,12 +473,22 @@ button {
   padding-right: 16px;
 }
 
-@media (max-width:900px) {
-  .card_set_journey {
-    width: 80%;
+@media (max-width:600px) {
+  .btn_set {
+    &.set {
+      width: 90%;
+      right: auto;
+      bottom: 20px;
+      display: flex;
+      justify-content: center;
+    }
 
-    .box_set_item {
-      margin-left: 10%;
+    &.add {
+      width: 90%;
+      right: auto;
+      bottom: 20px;
+      display: flex;
+      justify-content: center;
     }
   }
 }
