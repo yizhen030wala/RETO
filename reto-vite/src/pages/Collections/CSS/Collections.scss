@@ -288,6 +288,7 @@
   justify-content: center;
 
   width: 1060px;
+  min-height: 1200px;
   overflow: hidden;
   gap: 2%;
 
@@ -526,6 +527,43 @@
       &:focus {
         background-color: $color_green3;
         color: $color-black;
+      }
+    }
+  }
+}
+
+//loading畫面 
+
+.loading_collections {
+  position: absolute;
+  left: -15px;
+  top: -15px;
+  background: url('../../../assets/img/loading/collectionslg.png');
+  /* 將 URL 替換為你的圖片路徑 */
+  background-size: cover;
+  /* 調整背景圖片大小以填滿元素 */
+  height: 1185px;
+  width: 1060px;
+  border-radius: 20px;
+  
+
+  &::after {
+    display: block;
+    content: "";
+    position: absolute;
+    width: 1060px;
+    height: 1060px;
+    border-radius: 20px;
+    transform: translateX(-100%);
+    background: linear-gradient(90deg,
+        transparent,
+         rgba(255, 255, 255, 0.5),
+        transparent);
+    animation: loading 1.5s infinite;
+
+    @keyframes loading {
+      100% {
+        transform: translateX(100%);
       }
     }
   }

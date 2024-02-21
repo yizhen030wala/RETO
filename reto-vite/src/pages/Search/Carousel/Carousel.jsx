@@ -6,6 +6,7 @@ import "../CSS/Search.scss";
 import Card from "../Card/Card.jsx";
 import Tags_carousel from "../Tags_carousel/Tags_carousel.jsx";
 import LightBox_Card from "../LightBox_Card/LightBox_Card.jsx";
+import loading_search from "../../../assets/img/loading/searchlg.png";
 
 //輪播區塊
 const Carousel = ({ updateSelectedCount, currentIndex, arr_area }) => {
@@ -81,7 +82,7 @@ const Carousel = ({ updateSelectedCount, currentIndex, arr_area }) => {
 
   const masonryOptions = {
     itemSelector: ".card_search",
-    columnWidth:230,
+    columnWidth: 230,
     gutter: 20,
     percentPosition: true,
     fitWidth: false,
@@ -126,6 +127,7 @@ const Carousel = ({ updateSelectedCount, currentIndex, arr_area }) => {
 
   // ↓↓↓ API ↓↓↓
   const [records, setRecords] = useState([]);
+  const [loading, setLoading] = useState(true);
 
   useEffect(() => {
     const fetchData = async () => {
@@ -139,6 +141,7 @@ const Carousel = ({ updateSelectedCount, currentIndex, arr_area }) => {
           }
         );
         setRecords(response.data.records);
+        setLoading(false); // 資料載入完成後設置 loading 為 false
       } catch (error) {
         console.error("Error fetching data:", error);
         console.error("Error details:", error.response.data);
@@ -147,6 +150,7 @@ const Carousel = ({ updateSelectedCount, currentIndex, arr_area }) => {
 
     fetchData();
   }, []);
+
   // ↑↑↑ API ↑↑↑
 
   const CardPlaceholder = () => (
@@ -155,60 +159,73 @@ const Carousel = ({ updateSelectedCount, currentIndex, arr_area }) => {
 
   return (
     <div className="box_carousel">
-      {/* 添加外層 div */}
-      {arr_area.map((area, index) => (
-        <div
-          className={`box_turn ${arr_class[index]} ${index === currentIndex ? "current" : ""
-            }`}
-          key={index}
-          style={{ transform: `translateX(${(index - currentIndex) * 100}%)` }}
-        >
-          <div className="search_text">
-            <div className="item_carousel">
-              <ul>
-                <li>
-                  <h3>{area}</h3>
-                </li>
-                <li>
-                  <p>建議景點選3個喔 ~ </p>
-                </li>
-              </ul>
-            </div>
-            <Tags_carousel />
+      {loading ? (
+        arr_area.map((area, index) => (
+          <div
+            className={`box_turn ${arr_class[index]} ${index === currentIndex ? "current" : ""}`}
+            key={index}
+            style={{
+              transform: `translateX(${(index - currentIndex) * 85}%) ${index !== currentIndex ? "scale(0.8)" : ""}`, // 添加縮放效果
+              transition: "transform 0.5s ease", // 添加過渡效果
+            }}
+          >
+            <div className="loading_search"></div>
           </div>
-          {/* 瀑布流圖片內容 */}
-          <div className="wrapper">
-            <div id="card_container">
-              <Masonry
-                // key={images.length}
-                options={masonryOptions}
-                ref={masonryRef}
-                disableImagesLoaded={false}
-                updateOnEachImageLoad={true}
-              >
-                {records.map((record, idx) => {
-                  const imageUrl = record.fields["location cover"];
-                  const height = calculateHeightFromUrl(imageUrl); // 計算高度
-                  return (
-                    <Card
-                      key={idx}
-                      img={imageUrl}
-                      height={height} 
-                      index={idx}
-                      onSelect={() => handleSelectCard(idx)}
-                      onOpenLightbox={() => handleOpenLightbox(imageUrl)}
-                      selected={selectedCards.includes(idx)}
-                      order={selectedCards.indexOf(idx) + 1}
-                      data={record.fields}
-                    />
-                  );
-                })}
-              </Masonry>
+        ))
+      ) : (
+        arr_area.map((area, index) => (
+          <div
+            className={`box_turn ${arr_class[index]} ${index === currentIndex ? "current" : ""
+              }`}
+            key={index}
+            style={{ transform: `translateX(${(index - currentIndex) * 100}%)` }}
+          >
+            <div className="search_text">
+              <div className="item_carousel">
+                <ul>
+                  <li>
+                    <h3>{area}</h3>
+                  </li>
+                  <li>
+                    <p>建議景點選3個喔 ~ </p>
+                  </li>
+                </ul>
+              </div>
+              <Tags_carousel />
+            </div>
+            {/* 瀑布流圖片內容 */}
+            <div className="wrapper">
+              <div id="card_container">
+                <Masonry
+                  // key={images.length}
+                  options={masonryOptions}
+                  ref={masonryRef}
+                  disableImagesLoaded={false}
+                  updateOnEachImageLoad={true}
+                >
+                  {records.map((record, idx) => {
+                    const imageUrl = record.fields["location cover"];
+                    const height = calculateHeightFromUrl(imageUrl); // 計算高度
+                    return (
+                      <Card
+                        key={idx}
+                        img={imageUrl}
+                        height={height}
+                        index={idx}
+                        onSelect={() => handleSelectCard(idx)}
+                        onOpenLightbox={() => handleOpenLightbox(imageUrl)}
+                        selected={selectedCards.includes(idx)}
+                        order={selectedCards.indexOf(idx) + 1}
+                        data={record.fields}
+                      />
+                    );
+                  })}
+                </Masonry>
+              </div>
             </div>
           </div>
-        </div>
-      ))
-      }
+        ))
+      )}
       {/* 條件渲染 LightBox_Card */}
       {
         lightboxOpen && (
