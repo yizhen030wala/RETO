@@ -48,11 +48,11 @@ const InfoCard = ({ id, time , onClick }) => {
                     <div className="spotInfo_SpotCard">
                         <div className="spotTitle">
                             <div className="iconTime">
-                                <div className="icon">
+                                {/* <div className="icon">
                                     <img src="../src/assets/img/icon/icon-category/eat.svg" alt="" />
-                                </div>
+                                </div> */}
                                 {/* 使用從SpotCard傳遞的時間屬性 */}
-                                <div className="time">{time}</div>
+                                <div className="time">約 {time} 抵達</div>
                             </div>
                         </div>
                         <div className="spotName_Fuc">
