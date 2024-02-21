@@ -71,7 +71,7 @@ import "./InfoCard.scss"
 // 增加的部分
 import MapCard from "../../../../pages/MyMap/MapCard/MapCard.jsx"
 
-const InfoCard = ({ id, time , onClick }) => {
+const InfoCard = ({ id, time, onClick }) => {
     const handleClick = () => {
         // 假設 data 是從 Airtable 中獲取的數據
         const data = { id: 'recC1ydc0AuJM8rj0', /* 其他數據 */ };
@@ -79,6 +79,7 @@ const InfoCard = ({ id, time , onClick }) => {
     };
 
     const [data, setData] = useState(null);
+    const [isLoading, setIsLoading] = useState(true); // 新增 isLoading 狀態，用於控制加載動畫的顯示
 
     useEffect(() => {
         const fetchData = async () => {
@@ -93,6 +94,8 @@ const InfoCard = ({ id, time , onClick }) => {
                 setData(result);
             } catch (error) {
                 console.error('Error fetching data:', error);
+            } finally {
+                setIsLoading(false); // 數據加載完畢後設置 isLoading 為 false
             }
         };
 
@@ -105,6 +108,12 @@ const InfoCard = ({ id, time , onClick }) => {
 
     return (
         <>
+
+            {isLoading && ( // 根據 isLoading 的值來決定是否顯示加載動畫
+                <div className="card_loading">
+                    
+                </div>
+            )}
             {data && (
                 <div className="info_SpotCard" onClick={handleClick}>
                     <figure className="pic_SpotCard">
@@ -131,6 +140,7 @@ const InfoCard = ({ id, time , onClick }) => {
                 </div>
             )}
             {/* <MapCard varOne={varOne} varTwo={varTwo} /> */}
+
         </>
     );
 }
