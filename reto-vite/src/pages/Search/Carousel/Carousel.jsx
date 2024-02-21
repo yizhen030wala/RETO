@@ -93,6 +93,41 @@ const Carousel = ({ updateSelectedCount, currentIndex, arr_area }) => {
     isAnimated: true,
   };
 
+  //RWD Masonry
+
+  // 根據螢幕寬度動態調整Masonry的配置
+  const getMasonryOptions = () => {
+    let columns;
+    if (window.innerWidth < 600) {
+      columns = 2; // 螢幕寬度小於600時，顯示為兩列
+    } else if (window.innerWidth < 900) {
+      columns = 3; // 螢幕寬度小於900時，顯示為三列
+    } else {
+      columns = 4; // 螢幕寬度大於或等於900時，顯示為四列
+    }
+    return {
+      itemSelector: ".card_search",
+      columnWidth: `.card_search:nth-child(${columns}n)`, // 動態設定列寬選擇器
+      gutter: 20,
+      isFitWidth: true, // 使容器居中顯示
+    };
+  };
+
+  // 監聽窗口大小變化並更新Masonry配置
+  useEffect(() => {
+    const handleResize = () => {
+      if (masonryRef.current) {
+        masonryRef.current.masonry.reloadItems();
+        masonryRef.current.masonry.layout();
+      }
+    };
+
+    window.addEventListener("resize", handleResize);
+    handleResize(); // 初始調用以設定正確的列數
+
+    return () => window.removeEventListener("resize", handleResize);
+  }, []);
+
   // 解析圖片URL並計算高度
   const calculateHeightFromUrl = (imageUrl, targetWidth = 230) => {
     const regex = /w(\d+)-h(\d+)/; // 寬高的正式表達式
@@ -149,17 +184,16 @@ const Carousel = ({ updateSelectedCount, currentIndex, arr_area }) => {
   }, []);
   // ↑↑↑ API ↑↑↑
 
-  const CardPlaceholder = () => (
-    <div className="loading"></div>
-  )
+  const CardPlaceholder = () => <div className="loading"></div>;
 
   return (
     <div className="box_carousel">
       {/* 添加外層 div */}
       {arr_area.map((area, index) => (
         <div
-          className={`box_turn ${arr_class[index]} ${index === currentIndex ? "current" : ""
-            }`}
+          className={`box_turn ${arr_class[index]} ${
+            index === currentIndex ? "current" : ""
+          }`}
           key={index}
           style={{ transform: `translateX(${(index - currentIndex) * 100}%)` }}
         >
@@ -193,7 +227,7 @@ const Carousel = ({ updateSelectedCount, currentIndex, arr_area }) => {
                     <Card
                       key={idx}
                       img={imageUrl}
-                      height={height} 
+                      height={height}
                       index={idx}
                       onSelect={() => handleSelectCard(idx)}
                       onOpenLightbox={() => handleOpenLightbox(imageUrl)}
@@ -207,15 +241,12 @@ const Carousel = ({ updateSelectedCount, currentIndex, arr_area }) => {
             </div>
           </div>
         </div>
-      ))
-      }
+      ))}
       {/* 條件渲染 LightBox_Card */}
-      {
-        lightboxOpen && (
-          <LightBox_Card image={selectedImage} onClose={closeLightbox} />
-        )
-      }
-    </div >
+      {lightboxOpen && (
+        <LightBox_Card image={selectedImage} onClose={closeLightbox} />
+      )}
+    </div>
   );
 };
 
