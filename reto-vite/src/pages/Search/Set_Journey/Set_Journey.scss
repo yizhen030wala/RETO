@@ -427,3 +427,13 @@ button {
   height: 100%;
   padding-right: 16px;
 }
+
+@media (max-width:900px) {
+  .card_set_journey {
+    width: 80%;
+
+    .box_set_item {
+      margin-left: 10%;
+    }
+  }
+}
