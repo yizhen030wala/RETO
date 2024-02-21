@@ -293,6 +293,7 @@ const InfoCard = ({ id, time , onClick }) => {
                     
                 </div>
             )}
+            
             {data && (
                 <div className="info_SpotCard">
                     <figure className="pic_SpotCard">

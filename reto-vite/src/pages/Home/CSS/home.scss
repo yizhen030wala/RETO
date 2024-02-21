@@ -771,11 +771,16 @@
         font-style: normal;
         font-weight: 700;
         line-height: normal;
+        margin-bottom: 33px;
+
+        span{
+        font-size: 4rem;
+        }
       }
 
       p {
         position: absolute;
-        top: 250px;
+        top: 280px;
         left: 102px;
         width: 270px;
         font-family: "Noto Sans TC", sans-serif;
