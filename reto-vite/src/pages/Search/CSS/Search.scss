@@ -8,6 +8,7 @@
 .main_search {
   display: flex;
   flex-direction: column;
+  justify-content: center;
   align-items: center;
   width: 100%;
 }
@@ -21,7 +22,7 @@
   background-color: $color-green1;
   align-items: center;
   border-radius: 0px 0px 50px 50px;
-  height: 250px;
+  height: 220px;
   padding-top: 42.5px;
 
   * a {
@@ -92,11 +93,18 @@
         color: $color-black;
         padding: 4px 16px;
         text-decoration: none;
+        white-space: nowrap;
       }
     }
   }
 }
 
+@media (max-width:600px){
+  .bar_search {
+    width: 90% !important;
+    padding: 8px 8px !important;
+  }
+} 
 // -------NavBar.jsx
 .nav_search {
   ul {
@@ -129,9 +137,15 @@
 // -------Recommends.jsx
 .recommend {
   margin-top: 24px;
+  width: 100%;
+  display: flex;
+  justify-content: center;
 
   ul {
+    width: 460px;
     display: flex;
+    justify-content: space-between;
+    padding: 0;
   }
 
   a {
@@ -143,15 +157,26 @@
 
     @include h2_body;
     line-height: 160%;
-    /* 22.4px */
-    margin: 8px;
+    white-space: nowrap;
 
-    &:active {
+    &:focus {
       background-color: $color-black;
       color: $color-white;
     }
   }
 }
+
+@media (max-width:600px){
+  .recommend {
+
+    ul {
+      width: 90% !important;
+      a {
+        padding: 2px 10px !important;
+      }
+    }
+  }
+} 
 
 // -------Carousel.jsx
 .box_carousel {
@@ -184,6 +209,10 @@
       margin-bottom: 12px;
 
       .item_carousel {
+        ul {
+          padding: 0;
+        }
+
         h3 {
           display: flex;
           padding: 0px 30px;
@@ -250,7 +279,7 @@
   .fun {
     .item_carousel {
       h3 {
-        background-color: $color_green2;
+        background-color: $color_green1;
         color: $color_white;
       }
     }
@@ -276,6 +305,7 @@
   ul {
     display: flex;
     justify-content: flex-start;
+    padding: 0;
 
     a {
       @include h2_body;
@@ -301,8 +331,10 @@
 // -------FixedBtn.jsx
 .btn_fixed {
   position: fixed;
-  left: 43vw;
   bottom: 15vh;
+  left: 50%;
+  transform: translate(-50%, -50%);
+
   transition: 0.35s;
   z-index: 999;
 
@@ -321,12 +353,12 @@
     @include shadow;
   }
 
-    .arrowLeft,
-    .arrowRight {
-        // @include size(20px, 20px);
-        font-size: 16px;
-        transition: 0.35s;
-    }
+  .arrowLeft,
+  .arrowRight {
+    // @include size(20px, 20px);
+    font-size: 16px;
+    transition: 0.35s;
+  }
 
   .myJour {
     //--------Ralph
@@ -360,6 +392,7 @@
       text-decoration: none;
       @include text_btn_big;
       padding: 8px 16px;
+      white-space: nowrap;
     }
 
     &:focus {
@@ -411,8 +444,6 @@
     }
   }
 
-  
-
   //標題
   .card_search_info {
     padding: 12px;
@@ -421,6 +452,13 @@
       @include h1_body;
       line-height: 150%;
       margin-bottom: 6px;
+
+      //文字只顯示2行
+      display: -webkit-box;
+      -webkit-line-clamp: 2;
+      /* 顯示的行數 */
+      -webkit-box-orient: vertical;
+      overflow: hidden;
     }
 
     .evaluate {
@@ -473,8 +511,7 @@
 }
 
 .card_search.selected {
-  box-shadow: 0 15px 60px 0 rgba(0, 0, 0, 0.1),
-    0 5px 25px 0 rgba(0, 0, 0, 0.1);
+  box-shadow: 0 15px 60px 0 rgba(0, 0, 0, 0.1), 0 5px 25px 0 rgba(0, 0, 0, 0.1);
 }
 
 .dot {
@@ -559,6 +596,14 @@
   height: 300px;
 }
 
+.loading {
+  position: relative;
+  background-color: #e2e2e2;
+  width: 230px;
+  height: 500px;
+  border-radius: 20px;
+}
+
 .loading::after {
   display: block;
   content: "";
@@ -566,13 +611,31 @@
   width: 100%;
   height: 100%;
   transform: translateX(-100%);
-  background: linear-gradient(
-    90deg,
-    transparent,
-    rgba(255, 255, 255, 0.2),
-    transparent
-  );
+  background: linear-gradient(90deg,
+      transparent,
+      rgba(255, 255, 255, 0.2),
+      transparent);
   animation: loading 1.5s infinite;
+}
+
+.loading-placeholder {
+  position: relative;
+  background-color: #e2e2e2;
+  border-radius: 20px;
+
+  &::after {
+    display: block;
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    transform: translateX(-100%);
+    background: linear-gradient(90deg,
+        transparent,
+        rgba(255, 255, 255, 0.2),
+        transparent);
+    animation: loading 1.5s infinite;
+  }
 }
 
 @keyframes loading {

@@ -5,24 +5,9 @@
 // Extea small devices(phones, 600px and down)
 @media only screen and (max-width: 600px) {
     .schedule {
-        width: 100% !important;
+        width: 15.5% !important;
+        // min-width: 250px !important;
     }
-}
-
-// small devices(portait tablets and large phone , 600px and up)
-@media only screen and (min-width: 600px) {
-}
-
-// Medium devices(landscape tablets, 768px and up)
-@media only screen and (min-width: 768px) {
-}
-
-// large devices(laptops/desktop, 992px and up)
-@media only screen and (max-width: 992px) {
-}
-
-// Extea large devices(large laptops/desktop, 1200px and up)
-@media only screen and (min-width: 1200px) {
 }
 
 // ====================================

@@ -33,11 +33,24 @@
 // ===============================================
 
 .header {
+
     height: 8vh;
     display: flex;
     justify-content: space-between;
     align-items: center;
     padding: 5px 40px;
+
+    // scorll設定
+    // position: fixed;
+    // top: 0;
+    // left: 0;
+    // width: 100%;
+    // background-color: #ffffff; /* 假設背景色為白色 */
+    // transition: transform 0.3s ease;
+    // transform: translateY(-100%);
+    // &:active {
+    //     transform: translateY(0);
+    // }
 
     .logo {
         width: 120px;
@@ -50,6 +63,7 @@
 
     /* 表頭功能列 */
     .nav_btn {
+        box-sizing:content-box;
         height: 30px;
         padding: 5px 30px;
         display: flex;

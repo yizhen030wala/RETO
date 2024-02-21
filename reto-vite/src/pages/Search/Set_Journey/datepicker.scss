@@ -53,11 +53,11 @@
 
 //<>鍵 沒動過
 .react-datepicker__navigation {
-  align-items: center;
+  // align-items: center;
   background: none;
   display: flex;
-  justify-content: center;
-  text-align: center;
+  justify-content: space-around;
+  // text-align: center;
   cursor: pointer;
   position: absolute;
   top: 2px;
@@ -65,7 +65,7 @@
   border: none;
   z-index: 1;
   height: 32px;
-  width: 32px;
+  width: 100%;
   text-indent: -999em;
   overflow: hidden;
 }
@@ -252,7 +252,8 @@
   }
 
   &--next {
-    left: -2px;
+    left: 100px;
+    top: 5px;
 
     &::before {
       transform: rotate(45deg);
@@ -261,7 +262,8 @@
   }
 
   &--previous {
-    right: -2px;
+    right: 100px;
+    top: 5px;
 
     &::before {
       transform: rotate(225deg);

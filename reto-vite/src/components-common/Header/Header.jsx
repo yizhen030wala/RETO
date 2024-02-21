@@ -10,6 +10,21 @@ import Onlylogo from '../../assets/img/RETO logo/logo/48px.svg'
 
 
 function Header() {
+  // const [prevScrollPos, setPrevScrollPos] = useState(0);
+  // const [visible, setVisible] = useState(true);
+
+  // useEffect(() => {
+  //   function handleScroll() {
+  //     const currentScrollPos = window.pageYOffset;
+  //     setVisible(prevScrollPos > currentScrollPos || currentScrollPos === 0);
+  //     setPrevScrollPos(currentScrollPos);
+  //   }
+
+  //   window.addEventListener('scroll', handleScroll);
+  //   return () => window.removeEventListener('scroll', handleScroll);
+  // }, [prevScrollPos, visible]);
+
+
   return (
     <>
       <header className="header">
@@ -20,7 +35,7 @@ function Header() {
           </Link>
         </div>
         <div className="only_logo">
-           <Link to="/">
+          <Link to="/">
             <img src={Onlylogo} alt="RETO logo" />
           </Link>
         </div>
