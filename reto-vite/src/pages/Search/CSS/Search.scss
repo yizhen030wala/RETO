@@ -198,8 +198,8 @@
     transition: 0.5s ease;
     flex-shrink: 0;
 
-    scale: 0.95;
-    margin: 10vh -494px;
+    scale: 0.97;
+    margin: 10vh -40%;
 
     .search_text {
       display: flex;
@@ -581,10 +581,10 @@
 
   gap: 2%;
 
-  .accommodation,
-  .fun {
-    scale: 0.95;
-  }
+  // .accommodation,
+  // .fun {
+  //   scale: 0.95;
+  // }
 }
 
 //圖片尚未載入時的樣式

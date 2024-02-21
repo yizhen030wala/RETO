@@ -29,7 +29,7 @@
   padding: 40px 30px;
   margin: 50px;
 
-  overflow: auto;
+  // overflow: auto;
   position: relative;
 
   /* 動畫效果 */
@@ -76,7 +76,7 @@
     /* 剛好切到週五一部分的高度 */
     display: flex;
     /* max-height: 100%; 設置最大高度為容器的 80% */
-    overflow-y: auto;
+    overflow-y: scroll;
     /* 內容超出時顯示垂直滾動條 */
     overflow-x: hidden;
 
@@ -87,10 +87,10 @@
 /* 滾軸設定 */
 
 .card_scrollbox {
-
   &::-webkit-scrollbar {
     width: 3px;
     background: #ddd;
+    height: 0;
   }
 
   &::-webkit-scrollbar:horizontal {
@@ -177,35 +177,35 @@
       }
     }
   }
+}
 
-  /*營業資訊*/
+/*營業資訊*/
 
-  .info_business {
-    display: flex;
-    flex-direction: column;
-    height: 100%;
+.info_business {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
 
-    h6 {
-      font-family: Noto Sans TC, sans-serif;
-      font-size: 16px;
-      font-style: normal;
-      font-weight: 400;
-      line-height: 160%;
-      margin: 20px 0;
+  h6 {
+    font-family: Noto Sans TC, sans-serif;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 160%;
+    margin: 20px 0;
 
-      width: 100%;
-    }
+    width: 100%;
+  }
 
-    p {
-      font-family: Noto Sans TC, sans-serif;
-      font-size: 16px;
-      font-style: normal;
-      font-weight: 400;
-      line-height: 160%;
+  p {
+    font-family: Noto Sans TC, sans-serif;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 160%;
 
-      width: 100%;
-      margin-bottom: 10px;
-    }
+    width: 100%;
+    margin-bottom: 10px;
   }
 }
 
@@ -496,8 +496,24 @@
   display: none;
 }
 
+@media (max-width: 1200px) {
+  .card {
+    height: 650px;
+    .card_scrollbox {
+      height: 100%;
+      .info_carousel {
+        height: 200px;
+        padding-bottom: 80px;
+        margin-bottom: 10px;
+      }
+    }
+  }
+}
+
 @media (max-width: 900px) {
   .card {
+    height: 618px;
+    width: 550px;
     .card_scrollbox {
       display: flex;
       flex-direction: column;
@@ -505,19 +521,56 @@
       .info_carousel {
         margin-top: 22px;
       }
-      
+
       .norwd {
         display: none;
       }
 
-      .rwd {
+      .info_business.rwd {
         display: flex;
+        flex-direction: column;
+        height: 300px;
       }
     }
 
+    .card_info_left {
+      height: auto;
+      margin: 0;
+    }
+    .card_info_right {
+      height: auto;
+      margin: 0;
+    }
   }
 }
 
-@media (max-width:600px) {
-  
+@media (max-width: 600px) {
+  .btn_cancel {
+    right: 15px !important;
+    top: 15px;
+  }
+  .card {
+    padding: 30px 15px;
+    .card_info_left {
+      width: 90%;
+      margin: 0;
+    }
+    .card_info_right {
+      width: 90%;
+      margin: 0;
+    }
+
+    .card_button {
+      width: 100%;
+      // left: 0;
+      right: auto;
+      bottom: 15px;
+      .collect {
+        display: none;
+      }
+      .journey_viewpoint {
+        width: 90%;
+      }
+    }
+  }
 }
