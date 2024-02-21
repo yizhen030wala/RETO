@@ -1,8 +1,26 @@
-# React + Vite
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+## RETO旅藤
 
-Currently, two official plugins are available:
+Reto is a travel planning tool that aims to help users plan their travels easily.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+> This is school project based on React vite, no actual function.
+
+
+## Picture
+
+######  Home page
+<img alt="home page" src="./src//assets/img//features/readme 1.png">
+
+######  Search page
+<img alt="search page" src="./src//assets/img//features/readme 2.png">
+
+######  Trip planning page
+<img alt="trip planning page" src="./src//assets/img//features/readme 3.png">
+
+## Installation
+
+Clone this repository and installed, run
+
+    $ npm install 
+
+Note that this project is React 17, we used some api like Masorny and Swiper to build this project.
