@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useState, useEffect } from 'react'
 import { Link } from 'react-router-dom'; //物件內用到連結跳轉就需要放
 import './Header.scss'
 import Logo from '../../assets/img/RETO logo//logo & text/32px.svg'
@@ -10,24 +10,29 @@ import Onlylogo from '../../assets/img/RETO logo/logo/48px.svg'
 
 
 function Header() {
-  // const [prevScrollPos, setPrevScrollPos] = useState(0);
-  // const [visible, setVisible] = useState(true);
+  const [position, setPosition] = useState(window.scrollY)
+  // console.log(`position:${position}`);
+  const [visible, setVisible] = useState(true)
+  useEffect(() => {
+    const handleScroll = () => {
+      let moving = window.scrollY;
+      // console.log(`moving:${moving}`);
 
-  // useEffect(() => {
-  //   function handleScroll() {
-  //     const currentScrollPos = window.pageYOffset;
-  //     setVisible(prevScrollPos > currentScrollPos || currentScrollPos === 0);
-  //     setPrevScrollPos(currentScrollPos);
-  //   }
+      setVisible(position > moving);
+      setPosition(moving)
+    };
+    window.addEventListener("scroll", handleScroll);
+    return (() => {
+      window.removeEventListener("scroll", handleScroll);
+    })
+  })
 
-  //   window.addEventListener('scroll', handleScroll);
-  //   return () => window.removeEventListener('scroll', handleScroll);
-  // }, [prevScrollPos, visible]);
+  const cls = visible ? "visible" : "hidden";
 
 
   return (
-    <>
-      <header className="header">
+    <div className={cls}>
+      <div className="header">
         {/* LOGO  */}
         <div className='logo'>
           <Link to="/">
@@ -65,8 +70,8 @@ function Header() {
 
         </div>
 
-      </header>
-    </>
+      </div>
+    </div>
   )
 }
 

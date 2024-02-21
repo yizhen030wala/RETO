@@ -247,10 +247,6 @@
   font-size: 20px;
   width: 0;
 
-  &::before {
-    // @extend %navigation-chevron;
-  }
-
   &--next {
     left: 100px;
     top: 5px;
