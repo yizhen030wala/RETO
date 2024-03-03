@@ -187,9 +187,11 @@
   align-items: center;
   position: relative;
 
+  min-height: 8200px; //目前是手動設置
   width: 100%;
   overflow: hidden;
   gap: 2%;
+
 
   .box_turn {
     background-color: $color_gray3;
@@ -204,8 +206,10 @@
     min-height: 700px;
     // width: 730px;
 
-    scale: 0.97;
-    margin: 10vh -494px;
+    scale: 0.98;
+    // margin: 10vh -494px;
+    top: 10vh;
+    position: absolute;
 
     .search_text {
       display: flex;
@@ -548,6 +552,10 @@
       /* 顯示的行數 */
       -webkit-box-orient: vertical;
       overflow: hidden;
+
+      //文字自動換行 
+      word-wrap: break-word;
+      white-space: normal;
     }
 
     .evaluate {

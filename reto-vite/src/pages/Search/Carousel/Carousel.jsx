@@ -13,6 +13,33 @@ const Carousel = ({ updateSelectedCount, currentIndex, arr_area }) => {
   // const arr_area = ["住宿", "吃", "景點"];
   const arr_class = ["accommodation", "eat", "fun"];
 
+  // 計算子元素(box_turn)高度後，給父元素(box_carousel)
+  const [boxCarouselHeight, setBoxCarouselHeight] = useState(0);
+  const boxCarouselRef = useRef(null);
+  const masonryRef = useRef(null); // 單一定義位置
+
+  useEffect(() => {
+    // 更新 box_carousel 的高度為 Masonry 內容的高度
+    const updateHeight = () => {
+      if (boxCarouselRef.current && masonryRef.current) {
+        const masonryHeight = masonryRef.current.offsetHeight; // 獲取 Masonry 組件的當前高度
+        setBoxCarouselHeight(masonryHeight);
+      }
+    };
+
+    // 窗口大小變化時更新高度
+    window.addEventListener('resize', updateHeight);
+    // 初始更新一次高度
+    updateHeight();
+
+    // 清理函數
+    return () => {
+      window.removeEventListener('resize', updateHeight);
+    };
+  }, [arr_area, currentIndex]); // 依賴於 arr_area 和 currentIndex 以在這些值變化時更新高度
+
+
+
   //管理選中的卡片
   const [selectedCards, setSelectedCards] = useState([]);
   //燈箱
@@ -74,13 +101,13 @@ const Carousel = ({ updateSelectedCount, currentIndex, arr_area }) => {
       if (masonryRef.current) {
         masonryRef.current.performLayout();
       }
-    }, 1000); // 500 毫秒後執行
+    }, 500);
     return () => {
       document.removeEventListener("click", handleClickOutside);
     };
   }, []);
 
-  
+
   useEffect(() => {
     const handleResize = () => {
       if (window.innerWidth <= 768) {
@@ -88,7 +115,7 @@ const Carousel = ({ updateSelectedCount, currentIndex, arr_area }) => {
           ...masonryOptions,
           columnWidth: 500,
           gutter: -450,
-        
+
         });
       } else if (window.innerWidth <= 1200) {
         setMasonryOptions({
@@ -104,11 +131,11 @@ const Carousel = ({ updateSelectedCount, currentIndex, arr_area }) => {
         });
       }
     };
-  
+
     handleResize(); // 初始化
-  
+
     window.addEventListener('resize', handleResize);
-  
+
     return () => {
       window.removeEventListener('resize', handleResize);
     };
@@ -129,7 +156,7 @@ const Carousel = ({ updateSelectedCount, currentIndex, arr_area }) => {
     isAnimated: true,
   });
 
-  
+
   const calculateContainerWidth = (columnWidth, gutter, columns) => {
     return columns * (columnWidth + gutter) - gutter;
   };
@@ -153,7 +180,7 @@ const Carousel = ({ updateSelectedCount, currentIndex, arr_area }) => {
   };
 
   //滾動卷軸時，使用ref更新布局
-  const masonryRef = React.useRef(null);
+  // const masonryRef = React.useRef(null);
   React.useEffect(() => {
     const handleScroll = () => {
       // 在這裡觸發 Masonry 布局更新
@@ -202,14 +229,14 @@ const Carousel = ({ updateSelectedCount, currentIndex, arr_area }) => {
   )
 
   return (
-    <div className="box_carousel" >
+    <div className="box_carousel" ref={boxCarouselRef} style={{ height: `${boxCarouselHeight}px` }}>
       {loading ? (
         arr_area.map((area, index) => (
           <div
             className={`box_turn ${arr_class[index]} ${index === currentIndex ? "current" : ""}`}
             key={index}
             style={{
-              transform: `translateX(${(index - currentIndex) * 85}%) ${index !== currentIndex ? "scale(0.8)" : ""}`, // 添加縮放效果
+              transform: `translateX(${(index - currentIndex) * 100}%) ${index !== currentIndex ? "scale(0.8)" : ""}`, // 添加縮放效果
               transition: "transform 0.5s ease", // 添加過渡效果
               // width: `${containerWidth}px`
             }}
@@ -223,7 +250,7 @@ const Carousel = ({ updateSelectedCount, currentIndex, arr_area }) => {
             className={`box_turn ${arr_class[index]} ${index === currentIndex ? "current" : ""
               }`}
             key={index}
-            style={{ transform: `translateX(${(index - currentIndex) * 100}%)` }}
+            style={{ transform: `translateX(${(index - currentIndex) * 105}%)` }}
           >
             <div className="search_text">
               <div className="item_carousel">
@@ -242,11 +269,14 @@ const Carousel = ({ updateSelectedCount, currentIndex, arr_area }) => {
             <div className="wrapper">
               <div id="card_container">
                 <Masonry
+                  className={"my-gallery-class"}
+                  elementType={"ul"}
                   // key={images.length}
                   options={masonryOptions}
                   ref={masonryRef}
                   disableImagesLoaded={false}
                   updateOnEachImageLoad={true}
+                  onImagesLoaded={() => setBoxCarouselHeight(masonryRef.current.offsetHeight)}
                 >
                   {records.map((record, idx) => {
                     const imageUrl = record.fields["location cover"];
